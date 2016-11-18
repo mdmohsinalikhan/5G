@@ -1,0 +1,6 @@
+@inproceedings{IIS_Ruhr_2009,
+  author =       {David Szczesny and Anas Showk and Sebastian Hessel and Attila Bilgic and Uwe Hildebrand and Valerio Frascolla},
+  title =        {Performance analysis of LTE protocol processing on an ARM based mobile platform},
+  booktitle =    {System-on-Chip, 2009. SOC 2009. International Symposium on},
+  year =         {2009}
+}

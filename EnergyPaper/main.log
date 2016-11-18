@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  16 NOV 2016 18:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  18 NOV 2016 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -117,38 +117,57 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
-) (./main.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+) (./main.aux
+
+LaTeX Warning: Label `fig:protocl_stack' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 Unknown journal: specify \journalname{<name of your journal>} in preambel
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
+\scratchcounter=\count107
 \scratchdimen=\dimen117
 \scratchbox=\box29
-\nofMPsegments=\count107
-\nofMParguments=\count108
+\nofMPsegments=\count108
+\nofMParguments=\count109
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count109
+\MPscratchCnt=\count110
 \MPscratchDim=\dimen118
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks18
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -200,69 +219,74 @@ e
 ))
 SVJour3 warning: Missing \journalname
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 96.
+(Font)              <7> on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 96.
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 96.
+(Font)              <5> on input line 103.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.5> on input line 96.
+(Font)              <8.5> on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.94997> on input line 96.
+(Font)              <5.94997> on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.25> on input line 96.
+(Font)              <4.25> on input line 103.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1038) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+<lte_architecture.jpg, id=12, 562.1pt x 335.2525pt>
+File: lte_architecture.jpg Graphic file (type jpg)
+ <use lte_architecture.jpg>
+Package pdftex.def Info: lte_architecture.jpg used on input line 127.
+(pdftex.def)             Requested size: 222.74849pt x 132.85043pt.
 
-LaTeX Warning: Citation `IIS_Ruhr_2009' on page 2 undefined on input line 112.
+<protocl_stack.png, id=13, 700.86844pt x 319.94531pt>
+File: protocl_stack.png Graphic file (type png)
+ <use protocl_stack.png>
+Package pdftex.def Info: protocl_stack.png used on input line 138.
+(pdftex.def)             Requested size: 247.5pt x 112.98334pt.
 
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 138--140
+[][] 
+ []
 
-LaTeX Warning: Citation `IIS_Ruhr_2010' on page 2 undefined on input line 112.
-
-
-LaTeX Warning: Citation `KTH_2014' on page 2 undefined on input line 114.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
-
+[2 <./lte_architecture.jpg> <./protocl_stack.png>]
+Overfull \hbox (7.03615pt too wide) in paragraph at lines 160--161
+[]\OT1/cmr/m/n/10 Researchers have fo-cused on im-ple-ment-ing these cryp-
  []
 
 
-LaTeX Warning: Citation `Ruhr_2009' on page 2 undefined on input line 142.
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
+ []
 
-LaTeX Warning: Citation `Ruhr_2011' on page 2 undefined on input line 145.
+(./main.bbl) [3] (./main.aux)
 
+LaTeX Warning: There were multiply-defined labels.
 
-LaTeX Warning: Citation `KTH_2014' on page 2 undefined on input line 148.
-
-
-LaTeX Warning: Citation `IIS_Ruhr_2010' on page 2 undefined on input line 151.
-
-[2] (./main.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 2193 strings out of 493304
- 32860 string characters out of 6139871
- 93708 words of memory out of 5000000
- 5649 multiletter control sequences out of 15000+600000
- 9692 words of font info for 34 fonts, out of 8000000 for 9000
+ 2589 strings out of 493304
+ 37865 string characters out of 6139871
+ 98481 words of memory out of 5000000
+ 6028 multiletter control sequences out of 15000+600000
+ 10001 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,7n,33p,2318b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (2 pages, 100346 bytes).
+ 38i,9n,33p,1451b,234s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (3 pages, 142598 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
