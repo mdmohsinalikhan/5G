@@ -50,6 +50,7 @@ grestore
 %added by the author himself
 \usepackage{color}
 \usepackage[numbers]{natbib}
+\usepackage{calc}
 
 
 
@@ -119,7 +120,7 @@ The paper is organized by first giving a very short introduction to the architec
 
 \section{LTE specifications}
 \label{sec:lte_specifications}
-An LTE network is comprised of broadly three components. The user equipment (UE), evolved radio network (E-UTRAN) known as radio network and evolved packet core (EPC) known as core network. The user equipment consists of a mobile equipment (ME) or a mobile phone for the context of this paper, and an universal integrated circuit card (UICC). The UICC hosts an application called subscriber identification module (SIM). In this paper when we refer to the user equipment, we mean it to be the mobile phone since the UICC does not have much functionality to consume a lot of energy.
+An LTE network is comprised of broadly three components. The user equipment (UE), evolved radio network (E-UTRAN) known as radio network and evolved packet core (EPC) known as core network. The user equipment consists of a mobile equipment (ME) or a mobile phone for the context of this paper, and an universal integrated circuit card (UICC). The UICC hosts an application called subscriber identification module (SIM). In this paper when we refer to the user equipment, we mean it to be the mobile phone since the UICC does not have much functionality to consume a lot of energy. \textcolor{red}{(cite)}
 
 \begin{figure}
 % Use the relevant command to insert your figure file.
@@ -130,7 +131,7 @@ An LTE network is comprised of broadly three components. The user equipment (UE)
 \label{fig:protocl_stack}       % Give a unique label
 \end{figure}
 
-The UE is connected to the network via a radio link only with the radio network. The entity of the E-UTRAN that has the radio link with the UE is called eNodeB which is tradionally known as a base station. However, the UE also establishes a direct logical connection with an entity of the core network known as mobility management entity (MME). This logical connection is used only for the control signals for the core network and hence we do not focus on it in this paper. The user data as mentioned in the introduction travels from the UE to the eNodeB. Figure \ref{fig:protocl_stack} shows the protocol stack that the data travel across at the UE and at eNodeB. The L1 layer is the physical layer. We logically bundle the PDCP,RLC and MAC layers as layer 2 (L2) layer. All the encryption and decryption takes place at the PDCP layer \textcolor{red}{(cite)}
+The UE is connected to the network via a radio link only with the radio network. The entity of the E-UTRAN that has the radio link with the UE is called eNodeB which is tradionally known as a base station. However, the UE also establishes a direct logical connection with an entity of the core network known as mobility management entity (MME). This logical connection is used only for the control signals for the core network and hence we do not focus on it in this paper. The user data as mentioned in the introduction travels from the UE to the eNodeB. Figure \ref{fig:protocl_stack} shows the protocol stack that the data travel across at the UE and at eNodeB. The L1 layer is the physical layer. We logically bundle the PDCP, RLC and MAC layers as layer 2 (L2) layer. All the encryption and decryption takes place at the PDCP layer \textcolor{red}{(cite)}
 
 \begin{figure}
 % Use the relevant command to insert your figure file.
@@ -141,25 +142,61 @@ The UE is connected to the network via a radio link only with the radio network.
 \label{fig:protocl_stack}       % Give a unique label
 \end{figure}
 
-According to %\cite{EEA1_EEA2}, 
-there are two encryption schemes in the 4th generation cellular network (LTE) developed by 3GPP. One is EEA1 in which the stream cipher SNOW 3G is used. The other is EEA2 in which the block cipher AES is used. The aspiration about 5G networks is to obtain at least 1Gbps data-rate. The question arises, if there are implementations of these two encryption systems that can achieve the required throughput and still be enough energy efficient to use in a mobile phone.
+According to \cite{EEA1_EEA2}, there are two encryption schemes in the 4th generation cellular network (LTE) developed by 3GPP. One is EEA1 in which the stream cipher SNOW 3G is used. The other is EEA2 in which the block cipher AES is used. The aspiration about 5G networks is to obtain at least 1Gbps data-rate. The question arises, if there are implementations of these two encryption systems that can achieve the required throughput and still be enough energy efficient to use in a mobile phone.
 
 \section{Throughput and energy requirements of AES and SNOW 3G}
 \label{sec:throughput_and_energy_requirements_of_aes_snow3g}
-In \cite{IIS_Ruhr_2009}, the authors in their experiment showed that the computing power of a single embedded processor at reasonable clock frequencies is not enough to cope with the L2 requirements of LTE and next generation mobile devices. They illustrated that a conventional hardware acceleration approach for the encryption algorithms fail to offer the performance required by LTE and future mobile devices. The AES decryption was identified as the major time critical software algorithm, demanding half of the entire L2 DL execution time.
+In \cite{IIS_Ruhr_2009}, the authors in their experiment showed that the computing power of a single embedded processor at reasonable clock frequencies is not enough to cope with the L2 requirements of LTE and next generation mobile devices. They illustrated that a conventional hardware acceleration approach for the encryption algorithms fail to offer the performance required by LTE and future mobile devices. The AES decryption was identified as the major time critical software algorithm, demanding half of the entire L2 DL execution time. So, more advanced hardware acceleration methods were required while keeping the energy and area requirement at a reasonable level for a mobile phone.
+
+In \cite{IIS_Ruhr_2010}, a study conducted on the L2 DL (MAC, PDCP, RLC) layer, the authors have shown that by a smart DMA (direct memory access) controller, the required throughput for LTE which is at most 100 Mbps can be achieved. However, to achive this required throughput, the implementation consumed 9.5 mW of power whereas AES and SNOW 3G each required .5 and .57 mW of power respectively. Which means the decryption consumes around 5 percent of the power budget of L2 DL. From energy point of view, it consumes 5.7 micro joule energy to decrypt one giga bit of information. The area effort is also only 15 percent of the total requirement of L2 DL. The figure 6 and 8 in \cite{IIS_Ruhr_2010} presents the detailed comparison. 
+
+In more recent studies, we have found that there have been even further improvement on the energy and area efficiency in the implementations of AES and SNOW 3G. Since the adoption of Rijndael as AES by NIST, there have been a number of hardware implementations of AES to achieve efficiency and high throughput. The below table gives a picture \newline
+
+\begin{tiny}
+\noindent
+\begin{tabular}{|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.05\textwidth-2\tabcolsep}
+				|p{0.04\textwidth-2\tabcolsep}
+				|p{0.04\textwidth-2\tabcolsep}|
+				}
+%|p{1cm}|p{.7cm}|p{.5cm}|p{1.2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|}
+\hline
+\multicolumn{10}{|c|}{AES Implementations} \\
+\hline
+Year & Tech & Ref & TP (Gbps) & Gates (K) & Clock Speed (MHz)  &Power (mW) & Scal-able (Y/N) & Throughput per Kilo Gates in Gpbs & Energy per Gbit in $\mu$Joule \\
+\hline
+2001 & $.11 \mu$ & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & 0& - & Y & 0.122 & - \\ \hline
+2001 & $.11 \mu$ & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & 0& - & Y & 0.0576 & - \\ \hline
+2001 & - & \cite{IBM_India_IIT_2001} &$.24$ &$4$  & 0& - & Y & 0.06 & - \\ \hline
+2006 & $.18 \mu$ & \cite{Taiwan_2006} &$.570$ & - & 48&20.34 &Y & - & 35684 \\ \hline
+2006 & $.35 \mu$ & \cite{Taiwan_2006} &$.569$ & - & 48&192.5 &Y & - & 338312 \\ \hline
+2007 & $.18 \mu$ & \cite{IIT_Kharagpur_2007} &$.384$ &$21$ & 120&- &Y & 0.018 & - \\ \hline
+2009 & $.18 \mu$ & \cite{IME_China_Tsinghua_Univerisity_2009} &$1.16$ &$19.47$ & - & - &Y & 0.056 & - \\ \hline
+2009 & $.09 \mu$ & \cite{Ruhr_2009} &$1.86$ &$15.25$ & 450&.78 &Y & 0.015 & 419 \\ \hline
+2011 & $ - $ & \cite{Ruhr_2011} &$.114$ &$ - $ & 300&.02 &Y & -  & 186.18 \\ \hline
+2012 & $.18 \mu$ & \cite{Pune_2012} &$1.6$ &$58.445$ & 125&22.85 &Y & - & 14281 \\ \hline
+\end{tabular}
+\end{tiny}
+
+So far the best power figure is found in %\cite{Ruhr_2009}. The implementation is scalable. Interestingly the power figure doesn't increase linearly with the number of AES engines used. Let us assume that the required data rate in 5G is 1 Gbps. So, the timing requirement is: 7.45 nano seconds per byte. 
 
 
-In a study in 
-%\cite{IIS_Ruhr_2010}
- conducted in 2010 on the L2 DL layer (MAC,PDCP,RLC) layer, it has has been shown that by an sDMA, the authors did not mention anything about the achieved throughput but said that, it is enough for an LTE terminal. However, to achive this required throughput, the implementation consumed 9.5 mW of power whereas AES and SNOW 3G each required .5 and .57 mW of power respectively. Which means the encryption/decryption consumes around 5 percent of the power budget of L2 DL. (see in figure 6)AES
+According to figure 9 in %\cite{Ruhr_2011}, it will take roughly $.02*5=.1 mW$ for 1Gbps throughput. Because SAME has throughput of 114Mbps. And it achieves $5.5Mbps/ \mu J$. Which means it spends $114/5.5 = 20.72\mu J = .02 mW$. Now, by scaling up by 10 times, it will spend $.02*10=.2mW$ to achieve 1.14Gbps throughput
 
-Whereas, a very recent study done in 2014, presented in 
-%\cite{KTH_2014},
-conducted on the UDP/IP layer, shows that (in Table II) an ASIC implementation consumes $14.62$ nano Joule of energy for a Kilobyte data in this layer. Which means it takes $(14.62/8)*1000 = 1827$ micro Joule of energy for 1 Giga bit data while providing throughtput of 2.24 Gbps..
 
-Researchers have focused on implementing these cryptosystems both in hardware and software to achieve the required throughput. Looking up in the existing literature, it has been found that there exists implementations of these two cryptosystems that can achieve the required throughput even for a 5G network, that is at least 1 Gbps. However, there is no concrete account available of the power consumption of these implementations that enables the readers to estimate the energy share of the task of encryption across the entire protocol stack.
+Comparing the best figure from the above table with %\cite{KTH_2014}, we see that ciphering takes $186/1827=.1$ or 10 percent energy of data communication on a ASIC packet processor.
 
-We have studied, collected and rendered the relevant information available in the literature into this single article in an easily comprehensible and comparable manner and make a case that the energy share of data encryption is too low to think of any alternative lightweight encryption for 5G enabled mobile phone.
+
+In the study in %\cite{IIS_Ruhr_2010}, it was found that encryption was taking 5 or 6 percent of the power budget. However, as because other aspects of the protocol stack could be made more efficient, the power budget of encryption/decryption has increased.
+
+So, with the current best implementation of the encryptor/decryptor hardware engine, in near future the power budget will only increase. However, now we need to check if 10 percent of the power budget for encryption will be good enough for a 5G phone or not.
+
 
 
 
@@ -178,40 +215,18 @@ We have studied, collected and rendered the relevant information available in th
 \section{AES}
 \label{sec:aes}
 
-Since the adoption of Rijndael as AES by NIST, there have been number of hardware implementations of AES to achieve efficiency and high throughput. The below table gives a picture \newline
-
-
-%\begin{tabular}{ |p{1cm}|p{.7cm}|p{.5cm}|p{1.2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|}
-%\hline
-%\multicolumn{10}{|c|}{AES Implementations} \\
-%\hline
-%Year &Tech &Ref &TP (Gbps) &Gates (K) & Clock Speed (MHz)&Power (mW) & Scal-able (Y/N) & Throughput per Kilo Gates in Gpbs & Energy per Gbit in $\mu$Joule \\ %\hline
-%2001 & $.11 \mu$ & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & 0& - & Y & 0.122 & - \\ \hline
-%2001 & $.11 \mu$ & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & 0& - & Y & 0.0576 & - \\ \hline
-%2001 & - & \cite{IBM_India_IIT_2001} &$.24$ &$4$  & 0& - & Y & 0.06 & - \\ \hline
-%2006 & $.18 \mu$ & \cite{Taiwan_2006} &$.570$ & - & 48&20.34 &Y & - & 35684 \\ \hline
-%2006 & $.35 \mu$ & \cite{Taiwan_2006} &$.569$ & - & 48&192.5 &Y & - & 338312 \\ \hline
-%2007 & $.18 \mu$ & \cite{IIT_Kharagpur_2007} &$.384$ &$21$ & 120&- &Y & 0.018 & - \\ \hline
-%2009 & $.18 \mu$ & \cite{IME_China_Tsinghua_Univerisity_2009} &$1.16$ &$19.47$ & - & - &Y & 0.056 & - \\ \hline
-%2009 & $.09 \mu$ & \cite{Ruhr_2009} &$1.86$ &$15.25$ & 450&.78 &Y & 0.015 & 419 \\ \hline
-%2011 & $ - $ & \cite{Ruhr_2011} &$.114$ &$ - $ & 300&.02 &Y & -  & 186.18 \\ \hline
-%2012 & $.18 \mu$ & \cite{Pune_2012} &$1.6$ &$58.445$ & 125&22.85 &Y & - & 14281 \\ \hline
-%\end{tabular}
 
 
 
-So far the best power figure is found in %\cite{Ruhr_2009}. The implementation is scalable. Interestingly the power figure doesn't increase linearly with the number of AES engines used. Let us assume that the required data rate in 5G is 1 Gbps. So, the timing requirement is: 7.45 nano seconds per byte. 
 
+Researchers have focused on implementing these cryptosystems both in hardware and software to achieve the required throughput. Looking up in the existing literature, it has been found that there exists implementations of these two cryptosystems that can achieve the required throughput even for a 5G network, that is at least 1 Gbps. However, there is no concrete account available of the power consumption of these implementations that enables the readers to estimate the energy share of the task of encryption across the entire protocol stack.
 
-According to figure 9 in %\cite{Ruhr_2011}, it will take roughly $.02*5=.1 mW$ for 1Gbps throughput. Because SAME has throughput of 114Mbps. And it achieves $5.5Mbps/ \mu J$. Which means it spends $114/5.5 = 20.72\mu J = .02 mW$. Now, by scaling up by 10 times, it will spend $.02*10=.2mW$ to achieve 1.14Gbps throughput
+We have studied, collected and rendered the relevant information available in the literature into this single article in an easily comprehensible and comparable manner and make a case that the energy share of data encryption is too low to think of any alternative lightweight encryption for 5G enabled mobile phone.
 
+ In \cite{KTH_2014}, a study conducted on the UDP/IP layer, shows that (in Table II) an ASIC implementation consumes $14.62$ nano Joule of energy for a Kilobyte data in this layer. Which means it takes 1.88 micro joule of of energy 
+%$(14.62/8)*1000 = 1827$ 
+for 1 giga bit data while providing throughtput of 2.24 Gbps.
 
-Comparing the best figure from the above table with %\cite{KTH_2014}, we see that ciphering takes $186/1827=.1$ or 10 percent energy of data communication on a ASIC packet processor.
-
-
-In the study in %\cite{IIS_Ruhr_2010}, it was found that encryption was taking 5 or 6 percent of the power budget. However, as because other aspects of the protocol stack could be made more efficient, the power budget of encryption/decryption has increased.
-
-So, with the current best implementation of the encryptor/decryptor hardware engine, in near future the power budget will only increase. However, now we need to check if 10 percent of the power budget for encryption will be good enough for a 5G phone or not.
 
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
