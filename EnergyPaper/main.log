@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  22 NOV 2016 16:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  7 DEC 2016 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -319,11 +319,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--183
 
  []
 
-(./main.bbl
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 1314) in paragraph at lines 23--27
+ [3]
+(./main.bbl
+Underfull \hbox (badness 1314) in paragraph at lines 33--37
 []\OT1/cmr/m/n/10 Hessel S, Szczesny D, Lohmann N, Bil-gic A,
  []
 
@@ -334,47 +335,42 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
 
-Underfull \hbox (badness 4792) in paragraph at lines 54--57
+Underfull \hbox (badness 4792) in paragraph at lines 64--67
 \OT1/cmr/m/n/10 Asic im-ple-men-ta-tion of aesn. In: 2012 An-
  []
 
 
-Underfull \hbox (badness 4168) in paragraph at lines 60--64
+Underfull \hbox (badness 4168) in paragraph at lines 70--74
 []\OT1/cmr/m/n/10 Szczesny D, Showk A, Hes-sel S, Bil-gic A,
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 60--64
+Underfull \hbox (badness 1163) in paragraph at lines 70--74
 \OT1/cmr/m/n/10 Uwe Hilde-brand VF (2009) Per-for-mance anal-
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 60--64
+Underfull \hbox (badness 1460) in paragraph at lines 70--74
 \OT1/cmr/m/n/10 y-sis of LTE pro-to-col pro-cess-ing on an ARM
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3])
+)
 
 Package natbib Warning: There were undefined citations.
 
-[4
-
-] (./main.aux)
+[4] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2695 strings out of 493304
- 39592 string characters out of 6139871
- 111859 words of memory out of 5000000
- 6130 multiletter control sequences out of 15000+600000
+ 2701 strings out of 493304
+ 39709 string characters out of 6139871
+ 111934 words of memory out of 5000000
+ 6136 multiletter control sequences out of 15000+600000
  10001 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,33p,1451b,282s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,33p,1914b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
@@ -387,7 +383,7 @@ s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
 s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on main.pdf (4 pages, 194881 bytes).
+Output written on main.pdf (4 pages, 200662 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

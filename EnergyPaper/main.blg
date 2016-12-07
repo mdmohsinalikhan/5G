@@ -5,45 +5,45 @@ The style file: spbasic.bst
 Database file #1: sources.bib
 Warning--I didn't find a database entry for "EEA1_EEA2"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 10 entries,
+You've used 12 entries,
             3270 wiz_defined-function locations,
-            736 strings with 7384 characters,
-and the built_in function-call counts, 11120 in all, are:
-= -- 1023
-> -- 389
-< -- 6
-+ -- 151
-- -- 123
-* -- 894
-:= -- 1440
-add.period$ -- 10
-call.type$ -- 10
-change.case$ -- 111
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 1018
-empty$ -- 921
-format.name$ -- 157
-if$ -- 2311
+            745 strings with 7776 characters,
+and the built_in function-call counts, 12492 in all, are:
+= -- 1137
+> -- 429
+< -- 8
++ -- 169
+- -- 135
+* -- 996
+:= -- 1636
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 129
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 1142
+empty$ -- 1051
+format.name$ -- 179
+if$ -- 2595
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 107
-newline$ -- 40
-num.names$ -- 40
-pop$ -- 340
+missing$ -- 123
+newline$ -- 46
+num.names$ -- 48
+pop$ -- 388
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 93
 quote$ -- 0
-skip$ -- 333
+skip$ -- 371
 stack$ -- 0
-substring$ -- 896
-swap$ -- 402
+substring$ -- 990
+swap$ -- 434
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
+type$ -- 108
 warning$ -- 0
-while$ -- 79
+while$ -- 89
 width$ -- 0
-write$ -- 121
+write$ -- 141
 (There was 1 warning)

@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -17,6 +17,16 @@ Cao Q, Li S (2007) An area optimized reconfigurable encryptor for aes-rijndael.
 Cao Q, Li S (2009) A high-throughput cost-effective asic implementation of the
   aes algorithm. In: 2009 IEEE 8th International Conference on ASIC,
   \doi{10.1109/ASICON.2009.5351572}
+
+\bibitem[{Carroll and Heiser(2010)}]{Usenix_2010}
+Carroll A, Heiser G (2010) An analysis of power consumption in a smartphone.
+  In: USENIXATC'10 Proceedings of the 2010 USENIX conference on USENIX annual
+  technical conference
+
+\bibitem[{Carroll and Heiser(2012)}]{Mobisys_2012}
+Carroll A, Heiser G (2012) A close examination of performance and power
+  characteristics of {4G LTE} networks. In: Proceedings of the 10th
+  international conference on Mobile systems, applications, and services
 
 \bibitem[{Hessel et~al(2009)Hessel, Szczesny, Lohmann, Bilgic, and
   Hausner}]{Ruhr_2009}
