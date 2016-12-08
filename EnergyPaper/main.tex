@@ -51,6 +51,9 @@ grestore
 \usepackage{color}
 \usepackage[numbers]{natbib}
 \usepackage{calc}
+\usepackage{siunitx}
+\DeclareSIUnit\mt{\milli\tesla} %% A method for say short cut or new unit!
+\sisetup{inter-unit-product = {-}}
 
 
 
@@ -148,54 +151,56 @@ According to \cite{EEA1_EEA2}, there are two encryption schemes in the 4th gener
 \label{sec:throughput_and_energy_requirements_of_aes_snow3g}
 In \cite{IIS_Ruhr_2009}, the authors in their experiment showed that the computing power of a single embedded processor at reasonable clock frequencies is not enough to cope with the L2 requirements of LTE and next generation mobile devices. They illustrated that a conventional hardware acceleration approach for the encryption algorithms fail to offer the performance required by LTE and future mobile devices. The AES decryption was identified as the major time critical software algorithm, demanding half of the entire L2 DL execution time. So, more advanced hardware acceleration methods were required while keeping the energy and area requirement at a reasonable level for a mobile phone.
 
-In \cite{IIS_Ruhr_2010}, a study conducted on the L2 DL (MAC, PDCP, RLC) layer, the authors have shown that by a smart DMA (direct memory access) controller, the required throughput for LTE which is at most 100 Mbps can be achieved. However, to achive this required throughput, the implementation consumed 9.5 mW of power whereas AES and SNOW 3G each required .5 and .57 mW of power respectively. Which means the decryption consumes around 5 percent of the power budget of L2 DL. From energy point of view, it consumes 5.7 millijoule energy to decrypt one giga bit of information. The area effort is also only 15 percent of the total requirement of L2 DL. The figure 6 and 8 in \cite{IIS_Ruhr_2010} presents the detailed comparison. 
+In \cite{IIS_Ruhr_2010}, a study conducted on the L2 DL (MAC, PDCP, RLC) layer, the authors have shown that by a smart DMA (direct memory access) controller, the required throughput for LTE which is at most 100 Mbps can be achieved. However, to achive this required throughput, the implementation consumed 9.5 mW of power whereas AES and SNOW 3G each required .5 and .57 mW of power respectively. Which means the decryption consumes around 5 percent of the power budget of L2 DL. From energy point of view, it consumes 5.7 millijoule energy to decrypt one giga bit of information. The area effort is also only 15 percent of the total requirement of L2 DL. The figure 6 and 8 in \cite{IIS_Ruhr_2010} presents the detailed comparison. In section \ref{sec:overall_comparison}, we will see that this is indeed a very small amount of energy when compared with total amount of energy consumed by the phone while exchanging bulk amount of network data.
 
-In more recent studies, we have found that there have been even further improvement on the energy and area efficiency in the implementations of AES and SNOW 3G. Since the adoption of Rijndael as AES by NIST, there have been a number of hardware implementations of AES to achieve efficiency and high throughput. The below table gives a picture \newline
+
+Even though ciphering is not very expensive in LTE, it needs to be formally argued that it will not be very expensive in 5G. Because, 5G has unprecedented data rate of 1Gbps and the energy requirement of radio interface technology in LTE does not increase linearly with the data rate but energy requirement for encryption is almost linear to the size of the data being encrypted. In more recent studies, we have found that there have been even further improvement on the energy and area efficiency in the implementations of AES and SNOW 3G. In the following two subsections, we discuss about them.
+
+\subsection{AES} Since the adoption of Rijndael as AES by NIST, there have been a number of hardware implementations of AES. In the beginning, the focus was completely on achieving high throughput. Nevertheless, over the time the need for energy efficient implementations became more pressing and we found the following result available in the literature. \newline
 
 \begin{tiny}
 \noindent
-\begin{tabular}{|p{0.07\textwidth-2\tabcolsep}
-				|p{0.06\textwidth-2\tabcolsep}
+\begin{tabular}{|p{0.08\textwidth-2\tabcolsep}
 				|p{0.07\textwidth-2\tabcolsep}
-				|p{0.07\textwidth-2\tabcolsep}
-				|p{0.07\textwidth-2\tabcolsep}
-				|p{0.07\textwidth-2\tabcolsep}
+				|p{0.08\textwidth-2\tabcolsep}
+				|p{0.08\textwidth-2\tabcolsep}
+				|p{0.08\textwidth-2\tabcolsep}
 				|p{0.08\textwidth-2\tabcolsep}|
 				}
 %|p{1cm}|p{.7cm}|p{.5cm}|p{1.2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|}
 \hline
-\multicolumn{7}{|c|}{AES Implementations} \\
+\multicolumn{6}{|c|}{AES Implementations} \\
 \hline
-Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & TP/KG in Gpbs & $\mu$Joule/Gb \\
+Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & $mJ$/Gb \\
 \hline
-2001 & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & - & 0.122 & - \\ \hline
-2001 & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & - & 0.0576 & - \\ \hline
-2001 & \cite{IBM_India_IIT_2001} &$.24$ &$4$  & - & 0.06 & - \\ \hline
-2006 & \cite{Taiwan_2006} &$.570$ & - &20.34 & - & 35684 \\ \hline
-2006 & \cite{Taiwan_2006} &$.569$ & - &192.5 & - & 338312 \\ \hline
-2007 & \cite{IIT_Kharagpur_2007} &$.384$ &$21$ &- & 0.018 & - \\ \hline
-2009 & \cite{IME_China_Tsinghua_Univerisity_2009} &$1.16$ &$19.47$ & - & 0.056 & - \\ \hline
-2009 & \cite{Ruhr_2009} &$1.86$ &$15.25$ &.78 & 0.015 & 419 \\ \hline
-2011 & \cite{Ruhr_2011} &$.114$ &$ - $ &.02 & -  & 186.18 \\ \hline
-2012 & \cite{Pune_2012} &$1.6$ &$58.445$ &22.85 & - & 14281 \\ \hline
+2001 & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & $-$ & $-$ \\ \hline
+2001 & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & $-$ & $-$ \\ \hline
+2001 & \cite{IBM_India_IIT_2001} &$.24$ &$4$  & $-$ & $-$ \\ \hline
+2006 & \cite{Taiwan_2006} &$.570$ & - &20.34 & 35.68 \\ \hline
+2006 & \cite{Taiwan_2006} &$.569$ & - &192.5 & 33.83 \\ \hline
+2007 & \cite{IIT_Kharagpur_2007} &$.384$ &$21$ & $-$  & $-$ \\ \hline
+2009 & \cite{IME_China_Tsinghua_Univerisity_2009} &$1.16$ &$19.47$ & $-$ & $-$ \\ \hline
+2009 & \cite{Ruhr_2009} &$\geq 1.00$ &$38$ &1.18 & $\leq 1.18$ \\ \hline
+2011 & \cite{Ruhr_2011} &$.114$ &$ - $ &.02 & .24 \\ \hline
+2012 & \cite{Pune_2012} &$1.6$ &$58.445$ &22.85 & 14.28 \\ \hline
 \end{tabular}
 \end{tiny}
+\newline
 
-According to figure 9 in \cite{Ruhr_2011}, the SAME implementation achieves $5.5Mbps/ \mu J$. Which means it spends $114/5.5 = 20.72\mu J = .02 mW$ to encrypt/decrypt 114 Mbit. Now, by scaling up by 10 times, it will spend $.02*10=.2mW = .2mJ$ to achieve 1.14Gbps throughput. Which is sufficient for 5G and almost $20$ times more energy efficient than that of \cite{IIS_Ruhr_2010}. In \cite{Ruhr_2009}, the implementation takes .5 millijoule per gigabit of data. This is 10 times more energy efficient than that of in \cite{IIS_Ruhr_2010} and it provides enough throughput. Also another implementation that provides with the required throughput requires $14.21$ millijoule of energy to encrypt/decrypt one gigabit of data. This implementation is $3$ times more energy hungry than that of \cite{Ruhr_2009}. 
+From the above table, we find the implementations in \cite{Ruhr_2009}, \cite{Ruhr_2011}, \cite{Pune_2012} are potential candidates for using in 5G. Because they meet the required throughput of 5G and present their energy requirements which enable us to make a meaningful argument. In \cite{Ruhr_2009}, the authors doesn't provide the exact throughput but say that it achieves at least $1$ Gbps by using multi-AES architecture. In \cite{Ruhr_2011}, the authors present an implementation (SAME) that achieves $.114$ Gbps throughput using $2$ cores which they claim to be scalable with a speed up factor of $.84$. According to figure 9 in \cite{Ruhr_2011}, the SAME implementation achieves $5.5$ Mbps/$\mu$J. Which means it spends $114/5.5 = 20.72$ $\mu$J $=.02$ mW to encrypt/decrypt $114$ Mbit. Now, by scaling up by $12$ different $2$-cores, it will achieve the throughput of $114 \times 12 \times .83 = 1$ Gbps while it will spend $.02*12=.24$ mW $=.24$ mJ. In \cite{Pune_2012}, the implementation achieves the required throughput without any need of scaling up and it spends comparatively high energy than that of \cite{Ruhr_2009} and \cite{Ruhr_2011}. 
 
-Let us assume that the energy share required for encryption is $e$ unit, and the rest of the task of L2 layer requires $r$ unit. The energy share of encryption is then $\frac{e}{e+r}*100$ percent. So, if in the hardware acceleration of \cite{IIS_Ruhr_2010}, the AES engine is replaced by that of \cite{Ruhr_2011}, the energy share for encryption becomes $.26$ percent. Now if there is no further improvement in the energy efficiency of the AES engines but the rest of the L2 layer improves by a factor of $\alpha$, then the energy share of the AES engine would be $\frac{e}{e+\frac{r}{\alpha}}*100 \leq .26 \alpha$ percent. In the next section, we make an overall comparison to see how much these numbers matters in the context of the energy requirement for the whole mobile phone.
+To make an overall comparison, we choose the implementation in \cite{Ruhr_2009} because the it uses only $2$ cores unlike $12\times 2 = 24$ cores in \cite{Ruhr_2011}. And apparently the implementation in \cite{Pune_2012} is quite expensive from energy point of view. In the next section, we make an overall comparison to see how much these numbers matters in the context of the energy requirements for the whole mobile phone.
 
 \section{Overall comparison}
 The overall energy consumption of a phone depends on the usage type of the user of the phone. Radio activities of the cellular network, lighting up the screen, touch screen and CPU are the commonly known energy hungry aspects of a smart phone \cite{Usenix_2010}. 
 
-There are times when a smart phone remains idle and does nothing for a long duration of time. During this time it moves to a suspended state by transferring the state of the phone to the RAM. In suspended state the phone draws a minimal amount of energy from the battery to maintain the state in the memory and receive very limited control signals from the network to be able to receive the incoming traffic. In \cite{Usenix_2010}, the authors conducted an experiment on a $2.5$G phone and two cutting edge $3$G phones of the time. They showed that in suspended state the $2.5$G phone draws $103$ $mJ$ of energy per second whereas the 3G phones draws around $25$ $mJ$ per second. There is another state when the phone is awake but no application is running. This state is called the idle state. In \cite{Usenix_2010}, the authors showed on the same phones that during idle state the amount of energy drawn is less than $350$ $mJ$ per second. 
+There are times when a smart phone remains idle and does nothing for a long duration of time. During this time it moves to a suspended state by transferring the state of the phone to the RAM. In suspended state the phone draws a minimal amount of energy from the battery to maintain the state in the memory and receive very limited control signals from the network to be able to receive the incoming traffic. In \cite{Usenix_2010}, the authors conducted an experiment on a $2.5$G phone and two cutting edge $3$G phones of the time. They showed that in suspended state, the $2.5$G phone draws $103$ $mJ$ of energy per second whereas the 3G phones draw around $25$ $mJ$ per second. There is another state when the phone is awake but no application is running. This state is called the idle state. In \cite{Usenix_2010}, the authors showed on the same phones that during idle state the amount of energy drawn is less than $350$ $mJ$ per second. 
 
-Normally, the time duration of a smart phone when it remains suspended or idle than that of when it remains active is much longer. So, the energy consumption of the phone during idle or suspended state is very critical for the battery life. However, during these times, the phone hardly encrypts or decrypts any data except the control signals. Which would not be larger than hundreds of bytes a second \textcolor{red}{(cite)}. The energy requirement for AES for 100 bps is very insignificant to the total need 25 mJ during suspended state of 300 mJ during idle state.
+Normally, the time duration of a smart phone when it remains suspended or idle is much longer than that of when it remains active. So, the energy consumption of the phone during idle or suspended state is very critical for the battery life. However, during these times, the phone hardly encrypts or decrypts any data except the control signals. Which would not be larger than hundreds of bytes per second \textcolor{red}{(cite)}. The energy requirement for AES for even 1 Kbps is very insignificant to the total need $25$ $mJ$ during suspended state of 300 mJ during idle state.
 
-To understand the energy expense of encryption, we need to focus on the energy expense of other components of the phone during the active states of the phone when encryption is also being performed. Such active states are phone call, web browsing, email, network data exchange (upload/download) and so on. We choose the case of network data exchange to argue our case assuming that the phone would exhaust it's full download or upload capacity from the data volume point of view. We will investigate this case for 2.5G, 3G and 4G phones to see the evolution of the energy share.
+To understand the energy expense of encryption, we need to focus on the total energy expense of the phone during the active states of the phone when encryption is also being performed. Such active states are phone call, web browsing, email, network data exchange (upload/download) and so on. We choose the case of network data exchange to argue our case. We assume that the phone would exhaust it's full download or upload capacity from the data volume point of view during the exchange. We will investigate this case for 2.5G, 3G and 4G phones to see the evolution the energy requirements.
 
-
-In \cite{Usenix_2010}, the authors showed that the 2.5G phone consumed around 700 mJ of energy every second during the network data exchange. Around 640 mJ of this energy budget is spend for cellular network activities. We know in 2.5G the maximum data rate can be 115 Kbps. In that rate any moderate AES or SNOW 3G implementation would spend around .024 mJ of energy per second which is of course very insignificant. The authors of \cite{Usenix_2010} also showed that the 3G phones consumed similar amount of total energy during the data upload/download which is around 900 mJ. Considering that the connection exchanged the data at its full capacity (which is 7.2 Mbps), the energy share for encryption is around 1.58 mJ which is around .17 percent. 
+In \cite{Usenix_2010}, the authors showed that the $2.5$G phone consumed around $700$ $mJ$ of energy per second during the network data exchange. Around $640$ $mJ$ of this energy budget is spend for cellular network activities. We know in $2.5$G, the maximum data rate can be 115 Kbps. In that rate any moderate AES or SNOW 3G implementation would spend around .024 mJ of energy per second which is of course very insignificant. The authors of \cite{Usenix_2010} also showed that the 3G phones consumed similar amount of total energy during the data upload/download which is around 900 mJ. Considering that the connection exchanged the data at its full capacity (which is 7.2 Mbps), the energy share for encryption is around 1.58 mJ which is around .17 percent. 
 
 Both in the 2.5G and 3G phone the major energy share for network data exchange is attributed to the radio transmission. However, there has been a significant change in the LTE radio technology and has become even more expensive from energy consumption point of view. In LTE there are different radio states and the phone promotes and demotes to different states to save energy. As a result even though LTE become less energy efficient than 3G for small data transfer whereas it remains as efficient as 3G in large size data transfer. Also, there is significant difference in the energy consumption of LTE uplink and downlink. According to \cite{Mobisys_2012}, the LTE uplink consumes 3.2 J of energy per second while uploading at a rate of 1 Mbps whereas it consumes 2.1 J of energy per second while uploading at the rate of 20 Mbps. With screen off, the authors claimed that the energy was mostly consumed by the radio interfaces. There exists implementations of AES that consumes .78 mJ of energy per second providing throughput of 1.86 Gbps. So, the energy share of of encryption is less than .0004 percent of the total requirement. Very optimistically if we consider that the LTE transmission would consume the same amount of energy even when the data rate is at the theoretical peak which is 100 Mbps, the energy share of encryption is still bounded by .0004 percent. Nevertheless, the radio technology will be different in 5G than that of LTE. Let us consider that the LTE draws $E_{lte}$ mJ of energy per second while transferring data at 100 Mbps. Let's assume that in 5G will draw $E_{lte}/a$ of energy while providing throughput of 1 Gbps by using it's new efficient radio technology, if there is any. And we know implementation of AES that takes .78 mJ of energy per second to provide throughput of 1.86 Gbps. So, the energy share of encryption in 5G is $.78a/E_{lte} = .0004a$
 
@@ -251,6 +256,10 @@ Both in the 2.5G and 3G phone the major energy share for network data exchange i
 %\end{tabular}
 %\end{tiny}
 
+
+%In \cite{Ruhr_2009}, the implementation takes .5 millijoule per gigabit of data. This is 10 times more energy efficient than that of in \cite{IIS_Ruhr_2010} and it provides enough throughput. Also another implementation that provides with the required throughput requires $14.21$ millijoule of energy to encrypt/decrypt one gigabit of data. This implementation is $3$ times more energy hungry than that of \cite{Ruhr_2009}. 
+
+%Let us assume that the energy share required for encryption is $e$ unit, and the rest of the task of L2 layer requires $r$ unit. The energy share of encryption is then $\frac{e}{e+r}*100$ percent. So, if in the hardware acceleration of \cite{IIS_Ruhr_2010}, the AES engine is replaced by that of \cite{Ruhr_2011}, the energy share for encryption becomes $.26$ percent. Now if there is no further improvement in the energy efficiency of the AES engines but the rest of the L2 layer improves by a factor of $\alpha$, then the energy share of the AES engine would be $\frac{e}{e+\frac{r}{\alpha}}*100 \leq .26 \alpha$ percent.
 
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
