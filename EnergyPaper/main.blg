@@ -3,47 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: spbasic.bst
 Database file #1: sources.bib
-Warning--I didn't find a database entry for "EEA1_EEA2"
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 12 entries,
+Warning--empty booktitle in 3GPP_TS_33_401
+Warning--empty booktitle in 3GPP_TS_36_323
+Warning--empty booktitle in 3GPP_TS_36_331
+You've used 16 entries,
             3270 wiz_defined-function locations,
-            745 strings with 7776 characters,
-and the built_in function-call counts, 12492 in all, are:
-= -- 1137
-> -- 429
-< -- 8
-+ -- 169
-- -- 135
-* -- 996
-:= -- 1636
-add.period$ -- 12
-call.type$ -- 12
-change.case$ -- 129
-chr.to.int$ -- 12
-cite$ -- 12
-duplicate$ -- 1142
-empty$ -- 1051
-format.name$ -- 179
-if$ -- 2595
-int.to.chr$ -- 1
+            760 strings with 8007 characters,
+and the built_in function-call counts, 14396 in all, are:
+= -- 1279
+> -- 469
+< -- 12
++ -- 187
+- -- 147
+* -- 1106
+:= -- 1933
+add.period$ -- 13
+call.type$ -- 16
+change.case$ -- 155
+chr.to.int$ -- 14
+cite$ -- 19
+duplicate$ -- 1323
+empty$ -- 1252
+format.name$ -- 195
+if$ -- 2986
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 123
-newline$ -- 46
-num.names$ -- 48
-pop$ -- 388
+missing$ -- 151
+newline$ -- 58
+num.names$ -- 64
+pop$ -- 468
 preamble$ -- 1
-purify$ -- 93
+purify$ -- 113
 quote$ -- 0
-skip$ -- 371
+skip$ -- 435
 stack$ -- 0
-substring$ -- 990
-swap$ -- 434
+substring$ -- 1080
+swap$ -- 482
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 108
-warning$ -- 0
-while$ -- 89
+type$ -- 144
+warning$ -- 3
+while$ -- 105
 width$ -- 0
-write$ -- 141
-(There was 1 warning)
+write$ -- 178
+(There were 3 warnings)

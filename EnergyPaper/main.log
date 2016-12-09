@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  8 DEC 2016 18:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  9 DEC 2016 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -630,53 +630,101 @@ Underfull \vbox (badness 1038) has occurred while \output is active []
 <lte_architecture.jpg, id=12, 562.1pt x 335.2525pt>
 File: lte_architecture.jpg Graphic file (type jpg)
  <use lte_architecture.jpg>
-Package pdftex.def Info: lte_architecture.jpg used on input line 131.
+Package pdftex.def Info: lte_architecture.jpg used on input line 132.
 (pdftex.def)             Requested size: 222.74849pt x 132.85043pt.
 
 <protocl_stack.png, id=13, 700.86844pt x 319.94531pt>
 File: protocl_stack.png Graphic file (type png)
  <use protocl_stack.png>
-Package pdftex.def Info: protocl_stack.png used on input line 142.
+Package pdftex.def Info: protocl_stack.png used on input line 143.
 (pdftex.def)             Requested size: 247.5pt x 112.98334pt.
 
-Overfull \hbox (8.53583pt too wide) in paragraph at lines 142--144
+Overfull \hbox (8.53583pt too wide) in paragraph at lines 143--145
 [][] 
  []
 
 
-Package natbib Warning: Citation `EEA1_EEA2' on page 2 undefined on input line 
-148.
-
-
-Overfull \hbox (9.2584pt too wide) in paragraph at lines 154--155
+Overfull \hbox (9.2584pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/10 can be achieved. How-ever, to achive this re-quired through-
  []
 
 [2 <./lte_architecture.jpg> <./protocl_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
-[]|\OT1/cmr/m/n/5 TP
+Overfull \hbox (5.62051pt too wide) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/8.5 Ref| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
-[]|\OT1/cmr/m/n/5 Power
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/8.5 TP
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--189
-
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/8.5 Power
  []
 
-[3]
-Underfull \vbox (badness 2426) has occurred while \output is active []
 
- (./main.bbl
-Underfull \hbox (badness 1314) in paragraph at lines 33--37
+Overfull \hbox (2.73727pt too wide) in paragraph at lines 173--174
+[]|$\OML/cmm/m/it/8.5 mJ$\OT1/cmr/m/n/8.5 /Gb| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 175--175
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 176--176
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 177--177
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 178--178
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 179--179
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (1.73643pt too wide) in paragraph at lines 180--180
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (1.73643pt too wide) in paragraph at lines 181--181
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (1.73643pt too wide) in paragraph at lines 182--182
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 183--183
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+
+Overfull \hbox (6.25212pt too wide) in paragraph at lines 184--184
+[]|\OT1/cmr/m/n/8.5 [[]]| 
+ []
+
+[3] (./main.bbl [4]
+Underfull \hbox (badness 1314) in paragraph at lines 42--46
 []\OT1/cmr/m/n/10 Hessel S, Szczesny D, Lohmann N, Bil-gic A,
  []
 
@@ -687,44 +735,42 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
 
-Underfull \hbox (badness 4792) in paragraph at lines 64--67
+Underfull \hbox (badness 4792) in paragraph at lines 77--80
 \OT1/cmr/m/n/10 Asic im-ple-men-ta-tion of aesn. In: 2012 An-
  []
 
-[4]
-Underfull \hbox (badness 4168) in paragraph at lines 70--74
+
+Underfull \hbox (badness 4168) in paragraph at lines 83--87
 []\OT1/cmr/m/n/10 Szczesny D, Showk A, Hes-sel S, Bil-gic A,
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 70--74
+Underfull \hbox (badness 1163) in paragraph at lines 83--87
 \OT1/cmr/m/n/10 Uwe Hilde-brand VF (2009) Per-for-mance anal-
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 70--74
+Underfull \hbox (badness 1460) in paragraph at lines 83--87
 \OT1/cmr/m/n/10 y-sis of LTE pro-to-col pro-cess-ing on an ARM
  []
 
-)
 
-Package natbib Warning: There were undefined citations.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[5
-
-] (./main.aux)
+) [5]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 10720 strings out of 493304
- 230510 string characters out of 6139871
- 251085 words of memory out of 5000000
- 14041 multiletter control sequences out of 15000+600000
+ 10734 strings out of 493304
+ 230804 string characters out of 6139871
+ 250218 words of memory out of 5000000
+ 14055 multiletter control sequences out of 15000+600000
  12814 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,9n,35p,10470b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,35p,10470b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
@@ -732,15 +778,15 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
->
-Output written on main.pdf (5 pages, 192239 bytes).
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (5 pages, 196887 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

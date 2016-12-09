@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -8,14 +8,9 @@
   \urlstyle{rm}\Url}\fi
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{3GPP(2016{\natexlab{a}})}]{3GPP_TS_33_401}
-3GPP (2016{\natexlab{a}}) {3GPP TS 33.401}
-
-\bibitem[{3GPP(2016{\natexlab{b}})}]{3GPP_TS_36_323}
-3GPP (2016{\natexlab{b}}) {3GPP TS 36.323}
-
-\bibitem[{3GPP(2016{\natexlab{c}})}]{3GPP_TS_36_331}
-3GPP (2016{\natexlab{c}}) {3GPP TS 36.331}
+\bibitem[{3GPP(2016)}]{3GPP_TS_36_331}
+3GPP (2016) (3gpp ts 36.331. In:
+  http://www.3gpp.org/ftp/specs/archive/36_series/36.331/
 
 \bibitem[{Cao and Li(2007)}]{IIT_Kharagpur_2007}
 Cao Q, Li S (2007) An area optimized reconfigurable encryptor for aes-rijndael.
@@ -57,8 +52,8 @@ Huang YJ, Lin YS, Hung KY, Lin KC (2006) Efficient implementation of aes ip.
   \doi{10.1109/APCCAS.2006.342467}
 
 \bibitem[{Nowoswiat(2013)}]{Nokia_2013}
-Nowoswiat D (2013) Managing {LTE} {C}ore {N}etwork {S}ignaling {T}raffic. In:
-  insight.nokia.com
+Nowoswiat D (2013) Managing lte core network signaling traffic. In:
+  https://insight.nokia.com/managing-lte-core-network-signaling-traffic
 
 \bibitem[{Rudra et~al(2001)Rudra, Dubey, Jutla, Kumar, Rao, and
   Rohatgi}]{IBM_India_IIT_2001}
