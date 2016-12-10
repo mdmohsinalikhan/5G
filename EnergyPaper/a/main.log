@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 DEC 2016 20:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 DEC 2016 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,62 +810,302 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<lte_architecture.jpg, id=61, 562.1pt x 335.2525pt>
+<lte_architecture.jpg, id=60, 562.1pt x 335.2525pt>
 File: lte_architecture.jpg Graphic file (type jpg)
  <use lte_architecture.jpg>
 Package pdftex.def Info: lte_architecture.jpg used on input line 106.
-(pdftex.def)             Requested size: 329.7663pt x 196.68207pt.
+(pdftex.def)             Requested size: 156.20453pt x 93.16411pt.
 
-<protocl_stack.png, id=64, 700.86844pt x 319.94531pt>
+
+Package natbib Warning: Citation `3GPP_TS_36_323' on page 2 undefined on input 
+line 112.
+
+<protocl_stack.png, id=62, 700.86844pt x 319.94531pt>
 File: protocl_stack.png Graphic file (type png)
  <use protocl_stack.png>
 Package pdftex.def Info: protocl_stack.png used on input line 117.
-(pdftex.def)             Requested size: 347.12354pt x 158.46373pt.
+(pdftex.def)             Requested size: 173.56177pt x 79.22942pt.
 
-[2] [3 <./lte_architecture.jpg> <./protocl_stack.png>]
+[2]
+
+Package natbib Warning: Citation `3GPP_TS_33_401' on page 3 undefined on input 
+line 123.
+
+
+Package natbib Warning: Citation `IIS_Ruhr_2009' on page 3 undefined on input l
+ine 127.
+
+
+Package natbib Warning: Citation `IIS_Ruhr_2010' on page 3 undefined on input l
+ine 129.
+
+
+Package natbib Warning: Citation `IIS_Ruhr_2010' on page 3 undefined on input l
+ine 129.
+
+[3 <./lte_architecture.jpg> <./protocl_stack.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[4] [5] [6]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ” in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ” in font cmr10!
- [7]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ” in font cmr10!
- [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
- (./main.aux
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+Overfull \hbox (2.8666pt too wide) in paragraph at lines 146--146
+[]|\OT1/cmr/m/n/9 Ref| 
+ []
 
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\OT1/cmr/m/n/9 TP
+ []
+
+
+Overfull \hbox (3.60847pt too wide) in paragraph at lines 146--146
+\OT1/cmr/m/n/9 (Gbps)| 
+ []
+
+
+Overfull \hbox (5.91652pt too wide) in paragraph at lines 146--146
+[]|\OT1/cmr/m/n/9 Gates(K)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\OT1/cmr/m/n/9 Power
+ []
+
+
+Overfull \hbox (6.35501pt too wide) in paragraph at lines 146--147
+[]|$\OML/cmm/m/it/9 mJ$\OT1/cmr/m/n/9 /Gb| 
+ []
+
+
+Package natbib Warning: Citation `IBM_Japan_2001' on page 4 undefined on input 
+line 148.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `IBM_Japan_2001' on page 4 undefined on input 
+line 149.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `IBM_India_IIT_2001' on page 4 undefined on in
+put line 150.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `Taiwan_2006' on page 4 undefined on input lin
+e 151.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `Taiwan_2006' on page 4 undefined on input lin
+e 152.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--152
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `IIT_Kharagpur_2007' on page 4 undefined on in
+put line 153.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `IME_China_Tsinghua_Univerisity_2009' on page 
+4 undefined on input line 154.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `Ruhr_2009' on page 4 undefined on input line 
+155.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|$\OMS/cmsy/m/n/9 ^^U
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|$\OMS/cmsy/m/n/9 ^^T
+ []
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+156.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `Pune_2012' on page 4 undefined on input line 
+157.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
+[]|\OT1/cmr/m/n/9 [\OT1/cmr/bx/n/9 ?
+ []
+
+
+Package natbib Warning: Citation `Ruhr_2009' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Pune_2012' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2009' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Pune_2012' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2009' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+164.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+166.
+
+
+Package natbib Warning: Citation `Ruhr_2009' on page 4 undefined on input line 
+166.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+166.
+
+
+Package natbib Warning: Citation `Pune_2012' on page 4 undefined on input line 
+166.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 4 undefined on input line 
+166.
+
+[4]
+
+Package natbib Warning: Citation `Usenix_2010' on page 5 undefined on input lin
+e 174.
+
+
+Package natbib Warning: Citation `Usenix_2010' on page 5 undefined on input lin
+e 176.
+
+
+Package natbib Warning: Citation `Usenix_2010' on page 5 undefined on input lin
+e 176.
+
+[5]
+
+Package natbib Warning: Citation `Nokia_2013' on page 6 undefined on input line
+ 178.
+
+
+Package natbib Warning: Citation `3GPP_TS_36_331' on page 6 undefined on input 
+line 178.
+
+
+Package natbib Warning: Citation `Usenix_2010' on page 6 undefined on input lin
+e 182.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 6 undefined on input line 
+182.
+
+
+Package natbib Warning: Citation `Usenix_2010' on page 6 undefined on input lin
+e 182.
+
+
+Package natbib Warning: Citation `Mobisys_2012' on page 6 undefined on input li
+ne 184.
+
+
+Package natbib Warning: Citation `Ruhr_2011' on page 6 undefined on input line 
+184.
+
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+[]\OT1/cmr/m/n/10 National Cen-ter for Biotech-nol-ogy In-for-ma-tion,
+ []
+
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F4A5F3E53046E083CF3B4A9049EE7A9F;682.
+(rerunfilecheck)             Checksum: FF424EFCD9FD9D1D807E7F1DBA185602;694.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 14506 strings out of 493304
- 283317 string characters out of 6139871
- 334207 words of memory out of 5000000
- 17750 multiletter control sequences out of 15000+600000
+ 14471 strings out of 493304
+ 282424 string characters out of 6139871
+ 332954 words of memory out of 5000000
+ 17727 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,11n,35p,10470b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,35p,10470b,830s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -878,10 +1118,10 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (9 pages, 204148 bytes).
+Output written on main.pdf (8 pages, 201783 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -42,10 +42,10 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{AES and SNOW 3G are Feasible Choices for a 5G Phone from Energy Perspective}
+\title{AES and SNOW 3G are feasible choices for a 5G phone from energy perspective}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{AES and SNOW 3G are Feasible Choices}
+\titlerunning{Lecture Notes of ICST: Authors' Instructions}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -77,14 +77,14 @@ Finland\\
 % that is contained in the LNICST LaTeX support package.
 %
 
-\toctitle{AES and SNOW 3G are Feasible Choices}
+\toctitle{Lecture Notes in Business Information Processing}
 \tocauthor{Authors' Instructions}
 \maketitle
 
 
 \begin{abstract}
 The aspirations for a 5th generation (5G) mobile network are high. It has a vision of unprecedented data-rate and extremely pervasive connectivity. To cater such aspirations in a mobile phone, many existing efficiency aspects of a mobile phone need to be reviewed. We look into the matter of required energy to encrypt and decrypt the huge amount of traffic that will leave from and enter into a 5G enabled mobile phone. In this paper, we present an account of the power consumption details of the efficient hardware implementations of AES and SNOW 3G. We also present an account of the power consumption details of LTE protocol stack on some cutting edge hardware platforms. Based on the aforementioned two accounts, we argue that the energy requirement for the current encryption systems AES and SNOW 3G will not impact the battery-life of a 5G enabled mobile phone by any significant proportion.
-\keywords{5G $\cdot$ Cryptosystem $\cdot$ ASIC}
+\keywords{5G, Cryptosystem, ASIC}
 \end{abstract}
 
 
@@ -103,7 +103,7 @@ An LTE network is comprised of broadly three components. The user equipment (UE)
 \begin{figure}
 % Use the relevant command to insert your figure file.
 % For example, with the graphicx package use
-  \includegraphics[width=0.95\textwidth]{lte_architecture.jpg}
+  \includegraphics[width=0.45\textwidth]{lte_architecture.jpg}
 % figure caption is below the figure
 \caption{LTE Architecture, it is a dummy figure, I will draw my own figure}
 \label{fig:protocl_stack}       % Give a unique label
@@ -114,7 +114,7 @@ The UE is connected to the network via a radio link only with the radio network.
 \begin{figure}
 % Use the relevant command to insert your figure file.
 % For example, with the graphicx package use
-  \includegraphics[width=1\textwidth]{protocl_stack.png}
+  \includegraphics[width=0.50\textwidth]{protocl_stack.png}
 % figure caption is below the figure
 \caption{Protocol stack, it is a dummy figure, I will draw my own figure}
 \label{fig:protocl_stack}       % Give a unique label
@@ -135,15 +135,15 @@ We see ciphering is not very expensive in LTE. But it needs to be rigorously inv
 
 \begin{table}
 \begin{center}
-\begin{tabular}{|p{0.16\textwidth-2\tabcolsep}
+\begin{tabular}{|p{0.08\textwidth-2\tabcolsep}
+				|p{0.04\textwidth-2\tabcolsep}
 				|p{0.08\textwidth-2\tabcolsep}
-				|p{0.16\textwidth-2\tabcolsep}
-				|p{0.2\textwidth-2\tabcolsep}
-				|p{0.18\textwidth-2\tabcolsep}
-				|p{0.16\textwidth-2\tabcolsep}|
+				|p{0.1\textwidth-2\tabcolsep}
+				|p{0.09\textwidth-2\tabcolsep}
+				|p{0.08\textwidth-2\tabcolsep}|
 				}
 \hline
-Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & mJ/Gb \\
+Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & $mJ$/Gb \\
 \hline
 2001 & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & $-$ & $-$ \\ \hline
 2001 & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & $-$ & $-$ \\ \hline
@@ -175,7 +175,7 @@ The overall energy consumption of a phone depends on the usage type of the user 
 
 There are times when a smart phone remains idle and does nothing for a long duration of time. During this time it moves to a suspended state by transferring the state of the phone to the RAM. In suspended state the phone draws a minimal amount of energy from the battery to maintain the state in the memory and receive very limited control signals from the network to be able to receive the incoming traffic. In \cite{Usenix_2010}, the authors conducted an experiment on a $2.5$G phone and two cutting edge $3$G phones of the time. They showed that in suspended state, the $2.5$G phone draws $103$ mJ of energy per second whereas the 3G phones draw around $25$ mJ per second. There is another state when the phone is awake but no application is running. This state is called the idle state. In \cite{Usenix_2010}, the authors showed on the same phones that during idle state the amount of energy drawn is less than $350$ mJ per second. 
 
-Normally, the time duration of a smart phone when it remains suspended or idle is much longer than that of when it remains active. So, the energy consumption of the phone during idle or suspended state is very critical for the battery life. However, during these times, the phone hardly encrypts or decrypts any data except the control signals which are mostly paging messages. Because attach procedure takes place only when the user switches on the phone and tracking area update takes place frequently only when the user is travelling on a vehicle. However, even though paging itself is a burden for the phone from energy point of view, the cryptographic energy requirement for paging message is insignificant. According to \cite{Nokia_2013}, even with traditional paging mechanism, there are $1000$ paging messages for a phone in an hour, which is less than $1$ in a second. And according to \cite{3GPP_TS_36_331}, the paging message is no longer than hundreds of bytes. The energy requirements for AES for this tiny amount of data is very insignificant to the total need $25$ mJ per second during the suspended state and of 300 mJ during the idle state.
+Normally, the time duration of a smart phone when it remains suspended or idle is much longer than that of when it remains active. So, the energy consumption of the phone during idle or suspended state is very critical for the battery life. However, during these times, the phone hardly encrypts or decrypts any data except the control signals which are mostly paging messages. Because attach procedure takes place only when the user switches on the phone and tracking area update takes place frequently only when the user is travelling on a vehicle. However, even though paging itself is a burden for the phone from energy point of view, the cryptographic energy requirement for paging message is insignificant. According to \cite{Nokia_2013}, even with traditional paging mechanism, there are $1000$ paging messages for a phone in an hour, which is less than $1$ in a second. And according to \cite{3GPP_TS_36_331}, the paging message is no longer than hundreds of bytes. The energy requirements for AES for this tiny amount of data is very insignificant to the total need $25$ $mJ$ per second during the suspended state and of 300 mJ during the idle state.
 
 To understand the energy expense of encryption, we need to focus on the total energy expense of the phone during the active states of the phone when encryption is also being performed. Such active states are phone call, web browsing, email, network data exchange (upload/download) and so on. We choose the case of network data exchange to argue our case. We assume that the phone would exhaust it's full download or upload capacity from the data volume point of view during the exchange. We will investigate this case for 2.5G, 3G and 4G phones to see the evolution the energy requirements.
 
@@ -194,47 +194,27 @@ I will wrtie the conclusion later
 
 \begin{thebibliography}{4}
 
-\bibitem{3GPP_TS_36_323} 3GPP TS36.323, http://www.3gpp.org/ftp/specs/archive/36\_series/36.323/
-\bibitem{3GPP_TS_33_401} 3GPP TS33.401, http://www.3gpp.org/ftp/specs/archive/33\_series/33.401/
-\bibitem{3GPP_TS_36_331} 3GPP TS36.331, http://www.3gpp.org/ftp/specs/archive/36\_series/36.331/
+\bibitem{jour} Smith, T.F., Waterman, M.S.: Identification of Common Molecular
+Subsequences. J. Mol. Biol. 147, 195--197 (1981)
 
-\bibitem{IBM_Japan_2001} Akashi Satoh, Sumio Morioka, Kohji Takano, Seiji Munetoh: A Compact Rijndael Hardware Architecture with S-Box Optimization. In: LNCS, Advances in Cryptology — ASIACRYPT 2001, pp. 239--254. Springer (2001)
+\bibitem{lnicstchap} May, P., Ehrlich, H.C., Steinke, T.: ZIB Structure Prediction Pipeline:
+Composing a Complex Biological Workflow through Web Services. In: Nagel,
+W.E., Walter, W.V., Lehner, W. (eds.) Euro-Par 2006. LNCS, vol. 4128,
+pp. 1148--1158. Springer, Heidelberg (2006)
 
+\bibitem{book} Foster, I., Kesselman, C.: The Grid: Blueprint for a New Computing
+Infrastructure. Morgan Kaufmann, San Francisco (1999)
 
-\bibitem{IBM_India_IIT_2001} Atri Rudra, Pradeep K. Dubey, Charanjit S. Jutla, Vijay Kumar, Josyula R. Rao, Pankaj Rohatgi: Efficient Rijndael Encryption Implementation with Composite Field Arithmetic. In: LNCS, Cryptographic Hardware and Embedded Systems — CHES 2001, pp. 171--184. Springer (2001)
+\bibitem{proceeding1} Czajkowski, K., Fitzgerald, S., Foster, I., Kesselman, C.: Grid
+Information Services for Distributed Resource Sharing. In: 10th IEEE
+International Symposium on High Performance Distributed Computing, pp.
+181--184. IEEE Press, New York (2001)
 
+\bibitem{proceeding2} Foster, I., Kesselman, C., Nick, J., Tuecke, S.: The Physiology of the
+Grid: an Open Grid Services Architecture for Distributed Systems
+Integration. Technical report, Global Grid Forum (2002)
 
-\bibitem{IME_China_Tsinghua_Univerisity_2009} Qingfu Cao, Shuguo Li: A high-throughput cost-effective ASIC implementation of the AES Algorithm. 2009 IEEE 8th International Conference on ASIC (2009)
-
-
-\bibitem{IIT_Kharagpur_2007} Monjur Alam, Sonai Ray,	Debdeep Mukhopadhayay, Santosh Ghosh,  Dipanwita RoyChowdhury, Indranil Sengupta: Efficient Rijndael Encryption Implementation with Composite Field Arithmetic. In: Proceedings of the conference on Design, automation and test in Europe
- — DATE'07, pp. 1116--1121. Springer (2007)
-
-
-\bibitem{Taiwan_2006} Yu-Jung Huang, Yang-Shih Lin,  Kuang-Yu Hung, Kuo-Chen Lin: Efficient Implementation of AES IP. 2006 IEEE Asia Pacific Conference on Circuits and Systems (2006)
-
-\bibitem{Ruhr_2009} Sebastian Hessel, David Szczesny, Nils Lohmann, Attila Bilgic, Josef Hausner: Implementation and Benchmarking of Hardware Accelerators for Ciphering in LTE Terminals. Global Telecommunications Conference, 2009 (2009)
-
-\bibitem{Ruhr_2011} SShadi Traboulsi, Mohamad Sbeiti, David Szczesny, Anas Showk, Attila Bilgic: High-performance and energy-efficient sliced AES multi-block encryption for LTE mobile devices. 2011 IEEE 3rd International Conference on Communication Software and Networks (2001)
-
-
-\bibitem{Pune_2012} P. V. Sriniwas Shastry, Amruta Kulkarni, Mukul S. Sutaone: ASIC implementation of AES. 2012 Annual IEEE India Conference  (2012)
-
-\bibitem{IIS_Ruhr_2009} David Szczesny, Anas Showk, Sebastian Hessel, Attila Bilgic, Uwe Hildebrand, Valerio Frascolla: Performance analysis of LTE protocol processing on an ARM based mobile platform. International Symposium on System-on-Chip, 2009 (2009)
-
-
-\bibitem{KTH_2014} Mohammad Badawi, Ahmed Hemani, Zhonghai Lu: Customizable coarse-grained energy-efficient reconfigurable packet processing architecture. 2014 IEEE 25th International Conference on Application-Specific Systems, Architectures and Processors (2014)
-
-\bibitem{IIS_Ruhr_2010} Sebastian Hessel, David Szczesny, Felix Bruns, Attila Bilgic, Josef Hausner: Architectural Analysis of a Smart DMA Controller for Protocol Stack Acceleration in LTE Terminals. Vehicular Technology Conference Fall (VTC 2010-Fall), 2010 IEEE 72nd (2010)
-
-
-\bibitem{Usenix_2010} Aaron Carroll, Gernot Heiser: An analysis of power consumption in a smartphone. USENIXATC'10 Proceedings of the 2010 USENIX conference on USENIX annual technical conference (2010)
-
-
-\bibitem{Mobisys_2012} Junxian Huang, Feng Qian, Alexandre Gerber, Z. Morley Mao, Subhabrata Sen, Oliver Spatscheckr: A close examination of performance and power characteristics of 4G LTE networks. Proceedings of the 10th international conference on Mobile systems, applications, and services (2012)
-
-\bibitem{Nokia_2013} Managing LTE Core Network Signaling Traffic by David Nowoswiat, https://insight.nokia.com/managing-lte-core-network-signaling-traffic
+\bibitem{url} National Center for Biotechnology Information, http://www.ncbi.nlm.nih.gov
 
 \end{thebibliography}
-
 \end{document}
