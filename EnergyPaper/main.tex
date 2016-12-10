@@ -143,7 +143,7 @@ We see ciphering is not very expensive in LTE. But it needs to be rigorously inv
 				|p{0.16\textwidth-2\tabcolsep}|
 				}
 \hline
-Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & mJ/Gb \\
+Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & Energy (mJ/Gb) \\
 \hline
 2001 & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & $-$ & $-$ \\ \hline
 2001 & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & $-$ & $-$ \\ \hline
@@ -161,7 +161,7 @@ Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & mJ/Gb \\
 \label{table:aes_implementation}
 \end{table}
 
-From Table \ref{table:aes_implementation}, we find the implementations in \cite{Ruhr_2009}, \cite{Ruhr_2011}, \cite{Pune_2012} are potential candidates for using in 5G. Because they meet the required throughput of 5G and present their energy requirements which enable us to make a meaningful argument. In \cite{Ruhr_2009}, the authors doesn't provide the exact throughput but say that it achieves at least $1$ Gbps by using multi-AES architecture. In \cite{Ruhr_2011}, the authors present an implementation (SAME) that achieves $.114$ Gbps throughput using $2$ cores which they claim to be scalable with a speed up factor of $.84$. According to figure 9 in \cite{Ruhr_2011}, the SAME implementation achieves $5.5$ Mbps/$\mu$J. Which means it spends $114/5.5 = 20.72$ $\mu$J $=.02$ mW to encrypt/decrypt $114$ Mbit. Now, by scaling up by $12$ different $2$-cores, it will achieve the throughput of $.114 \times 12 \times .83 = 1$ Gbps while it will spend $.02*12=.24$ mJ $=.24$ mJ. In \cite{Pune_2012}, the implementation achieves the required throughput without any need of scaling up and it spends comparatively high energy than that of \cite{Ruhr_2009} and \cite{Ruhr_2011}. 
+From Table \ref{table:aes_implementation}, we find the implementations in \cite{Ruhr_2009}, \cite{Ruhr_2011}, \cite{Pune_2012} are potential candidates for using in 5G. Because they meet the required throughput of 5G and present their energy requirements which enable us to make a meaningful argument. In \cite{Ruhr_2009}, the authors doesn't provide the exact throughput but say that it achieves at least $1$ Gbps by using multi-AES architecture. In \cite{Ruhr_2011}, the authors present an implementation (SAME) that achieves $.114$ Gbps throughput using $2$ cores which they claim to be scalable with a speed up factor of $.84$. According to figure 9 in \cite{Ruhr_2011}, the SAME implementation achieves $5.5$ Mbps/$\mu$J. Which means it spends $114/5.5 = 20.72$ $\mu$J $=.02$ mJ to encrypt/decrypt $114$ Mbit. Now, by scaling up by $12$ different $2$-cores, it will achieve the throughput of $.114 \times 12 \times .83 = 1$ Gbps while it will spend $.02*12=.24$ mJ $=.24$ mJ. In \cite{Pune_2012}, the implementation achieves the required throughput without any need of scaling up and it spends comparatively high energy than that of \cite{Ruhr_2009} and \cite{Ruhr_2011}. 
 
 In the next section, we make an overall comparison to see how much these numerical values matter in the context of the energy requirements for the whole mobile phone. To make an overall comparison, we choose the implementation in \cite{Ruhr_2011} because it has the best energy figure. However, the comparison with the implementation in \cite{Ruhr_2009} can also be easily presented as it is simply $5$ times more energy-expensive than that of \cite{Ruhr_2011}. It appears that the implementation in \cite{Pune_2012} is $60$ times more expensive than that of \cite{Ruhr_2011}. So, we exclude it from our consideration. 
 

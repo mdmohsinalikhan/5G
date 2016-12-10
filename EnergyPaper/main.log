@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 DEC 2016 20:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 DEC 2016 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,6 +827,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+[]|\OT1/cmr/m/n/9 Energy
+ []
+
 [4] [5] [6]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -842,12 +847,7 @@ Missing character: There is no ” in font cmr10!
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
  [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
- (./main.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+ (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -859,10 +859,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 14506 strings out of 493304
- 283317 string characters out of 6139871
- 334207 words of memory out of 5000000
- 17750 multiletter control sequences out of 15000+600000
+ 14501 strings out of 493304
+ 283267 string characters out of 6139871
+ 334127 words of memory out of 5000000
+ 17745 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,11n,35p,10470b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -878,7 +878,7 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (9 pages, 204148 bytes).
+Output written on main.pdf (9 pages, 204153 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams
