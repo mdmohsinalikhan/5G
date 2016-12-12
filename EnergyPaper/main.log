@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 DEC 2016 20:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  12 DEC 2016 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -851,7 +851,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F4A5F3E53046E083CF3B4A9049EE7A9F;682.
+(rerunfilecheck)             Checksum: A00871C044B13A36E934A7A10BDC3F54;682.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -878,7 +878,7 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (9 pages, 204153 bytes).
+Output written on main.pdf (9 pages, 204180 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams

@@ -84,7 +84,7 @@ Finland\\
 
 \begin{abstract}
 The aspirations for a 5th generation (5G) mobile network are high. It has a vision of unprecedented data-rate and extremely pervasive connectivity. To cater such aspirations in a mobile phone, many existing efficiency aspects of a mobile phone need to be reviewed. We look into the matter of required energy to encrypt and decrypt the huge amount of traffic that will leave from and enter into a 5G enabled mobile phone. In this paper, we present an account of the power consumption details of the efficient hardware implementations of AES and SNOW 3G. We also present an account of the power consumption details of LTE protocol stack on some cutting edge hardware platforms. Based on the aforementioned two accounts, we argue that the energy requirement for the current encryption systems AES and SNOW 3G will not impact the battery-life of a 5G enabled mobile phone by any significant proportion.
-\keywords{5G $\cdot$ Cryptosystem $\cdot$ ASIC}
+\keywords{LTE $\cdot$ 5G $\cdot$ Cryptosystem $\cdot$ ASIC}
 \end{abstract}
 
 
@@ -96,7 +96,7 @@ For a 5G phone, we assume that the user data will remain as the major share of t
 
 The paper is organized by first giving a very short introduction to the architecture, the protocol stack and the cryptographic specifications of the LTE network in section \ref{sec:lte_specifications}. In section \ref{sec:throughput_and_energy_requirements_of_aes_snow3g}, we present the experimental results about the energy requirements of the two cryptosystems of interest, which are AES and SNOW 3G. In this section we also present the experimental result about the energy consumption across the whole protocol stack of the link layer. In section \ref{sec:overall_comparison} we present the energy consumption distribution of the whole phone among it's different functional modules and show that the energy needed for cryptographic computation is not a threat for the battery life of the phone. 
 
-\section{LTE specifications}
+\section{LTE Specifications}
 \label{sec:lte_specifications}
 An LTE network is comprised of broadly three components. The user equipment (UE), evolved radio network (E-UTRAN) known as radio network and evolved packet core (EPC) known as core network. The user equipment consists of a mobile equipment (ME) or a mobile phone for the context of this paper, and an universal integrated circuit card (UICC). The UICC hosts an application called subscriber identification module (SIM). In this paper when we refer to the user equipment, we mean it to be the mobile phone since the UICC does not have much functionality to consume a lot of energy.
 
@@ -122,7 +122,7 @@ The UE is connected to the network via a radio link only with the radio network.
 
 According to \cite{3GPP_TS_33_401}, there are two mandatory sets of security algorithms in the 4th generation cellular network (LTE) developed by 3GPP. One is EEA1 in which the stream cipher SNOW 3G is used. The other is EEA2 in which the block cipher AES is used. The aspiration about 5G networks is to obtain at least 1Gbps data-rate. The question arises, if there are implementations of these two encryption systems that can achieve the required throughput and still be enough energy efficient to use in a mobile phone.
 
-\section{Throughput and energy requirements of AES and SNOW 3G}
+\section{Throughput and Energy Requirements of AES and SNOW 3G}
 \label{sec:throughput_and_energy_requirements_of_aes_snow3g}
 In \cite{IIS_Ruhr_2009}, the authors in their experiment showed that the computing power of a single embedded processor at reasonable clock frequencies is not enough to cope with the L2 requirements of LTE and next generation mobile devices. They illustrated that a conventional hardware acceleration approach for the encryption algorithms fail to offer the performance required by LTE and future mobile devices. The AES decryption was identified as the major time critical software algorithm, demanding half of the entire L2 DL execution time. So, more advanced hardware acceleration methods were required while keeping the energy and area requirement at a reasonable level for a mobile phone.
 
@@ -148,8 +148,8 @@ Year & Ref & TP (Gbps) & Gates(K) & Power (mW) & Energy (mJ/Gb) \\
 2001 & \cite{IBM_Japan_2001} &$2.6$ &$21.3$  & $-$ & $-$ \\ \hline
 2001 & \cite{IBM_Japan_2001} &$.311$ &$5.4$  & $-$ & $-$ \\ \hline
 2001 & \cite{IBM_India_IIT_2001} &$.24$ &$4$  & $-$ & $-$ \\ \hline
-2006 & \cite{Taiwan_2006} &$.570$ & - &20.34 & 35.68 \\ \hline
-2006 & \cite{Taiwan_2006} &$.569$ & - &192.5 & 33.83 \\ \hline
+2006 & \cite{Taiwan_2006} &$.570$ & $-$ &20.34 & 35.68 \\ \hline
+2006 & \cite{Taiwan_2006} &$.569$ & $-$ &192.5 & 33.83 \\ \hline
 2007 & \cite{IIT_Kharagpur_2007} &$.384$ &$21$ & $-$  & $-$ \\ \hline
 2009 & \cite{IME_China_Tsinghua_Univerisity_2009} &$1.16$ &$19.47$ & $-$ & $-$ \\ \hline
 2009 & \cite{Ruhr_2009} &$\geq 1.00$ &$38$ &1.18 & $\leq 1.18$ \\ \hline
@@ -169,7 +169,7 @@ In the next section, we make an overall comparison to see how much these numeric
 \label{sub-sec:snow3gp}
 More text will come in
 
-\section{Overall comparison}
+\section{Overall Comparison}
 \label{sec:overall_comparison}
 The overall energy consumption of a phone depends on the usage type of the user of the phone. Radio activities of the cellular network, lighting up the screen, touch screen and CPU are the commonly known energy hungry aspects of a smart phone \cite{Usenix_2010}. 
 
