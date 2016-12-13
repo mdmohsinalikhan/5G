@@ -89,10 +89,22 @@ The aspirations for a 5th generation (5G) mobile network are high. It has a visi
 
 
 \section{Introduction}
-\label{intro} To facilitate our discussion, we need to know what are the data that will be encrypted and decrypted in a 5G phone. We also need to know where and how many times the encryption and decryption will take place across the protocol stack on the phone. But 5G is not yet a reality and we do not have exact answers to these questions. So, we assume things, that will be true for a 5G network and argue on the basis of those assumptions. We turn to the LTE network to make the assumptions. In an LTE phone, the data that leave and enter the phone can be broadly classified into three categories. The first one are the control signals in between the phone and the core network. The second one are the control signals in between the phone and the radio network. And t
-\label{sec:aes}he third one are the user data which the user sends and receives at the phone's application layer. Both of the first two categories are privacy and integrity protected. For the third category, only the privacy is protected. Also note that, from the volume point of view, the major share of data belong to the third category. Comparing to the the third category, the cryptographic computational need required for the data of first and second categories is negligible. The user data in an LTE phone is only once encrypted and decrypted across the protocol stack in PDCP layer. In an LTE phone this encryption is done by an application specific integrated circuit (ASIC).
+\label{intro} To facilitate our discussion, we need to know what are the data that will be encrypted and decrypted in a 5G phone. We also need to know where and how many times the encryption and decryption will take place across the protocol stack on the phone. But 5G is not yet a reality and we do not have exact answers to these questions. So, we assume things about a 5G network and argue on the basis of those assumptions. We turn to the LTE network to make the assumptions. In an LTE phone, the data that leave and enter the phone can be broadly classified into three categories. 
+\begin{enumerate}
+\item The control signals in between the phone and the core network
+\item The control signals in between the phone and the radio network
+\item The user data sent and received at the phone's application layer
+\end{enumerate}
+Both of the first two categories are privacy and integrity protected. For the third category, only the privacy is protected. Also note that, from the volume point of view, the major share of data belong to the third category. Comparing to the the third category, the cryptographic computation required for the data of first and second categories is negligible. The user data in an LTE phone is only once encrypted and decrypted across the protocol stack in PDCP layer. 
 
-For a 5G phone, we assume that the user data will remain as the major share of the total data leaving and entering the phone. The cryptographic computational need for the total volume of control signals will be negligible in comparison with that of the user data. The user data will only once be encrypted and decrypted somewhere across the protocol stack. From hardware point of view it will still be in an ASIC. In order to have a pessimistic estimation, we assume that integrity protection of user data will be introduced in 5G. Based on these assumptions, we will look into the cryptographic energy requirements and also the total energy requirements across the whole protocol stack of an LTE phone. Then we will scale up the data-rate from 100 Mbps to 1 Gbps and see how much extra pressure it puts on the battery of the phone in comparison with other energy hungry aspects of the phone like display and radio signalling.
+For a 5G phone, we assume the following
+\begin{enumerate}
+\item User data will remain as the major share of the total data leaving and entering the phone
+\item The cryptographic computational need for the total volume of control signals will be negligible in comparison with that of the user data.
+\item The user data will only once be encrypted and decrypted somewhere across the protocol stack
+\item In order to have a pessimistic energy estimation, we assume that integrity protection of user data will be introduced in 5G
+\end{enumerate}
+Based on these assumptions, we will look into the cryptographic energy requirements and also the total energy requirements across the protocol stack of an LTE phone. Then we will scale up the data-rate from $100$ Mbps to $1$ Gbps and see how much extra pressure it puts on the battery of the phone in comparison with other energy hungry aspects of the phone like display and radio signalling.
 
 The paper is organized by first giving a very short introduction to the architecture, the protocol stack and the cryptographic specifications of the LTE network in section \ref{sec:lte_specifications}. In section \ref{sec:throughput_and_energy_requirements_of_aes_snow3g}, we present the experimental results about the energy requirements of the two cryptosystems of interest, which are AES and SNOW 3G. In this section we also present the experimental result about the energy consumption across the whole protocol stack of the link layer. In section \ref{sec:overall_comparison} we present the energy consumption distribution of the whole phone among it's different functional modules and show that the energy needed for cryptographic computation is not a threat for the battery life of the phone. 
 
@@ -130,7 +142,9 @@ In \cite{IIS_Ruhr_2010}, a study conducted on the L2 DL (MAC, PDCP, RLC) layer, 
 
 We see ciphering is not very expensive in LTE. But it needs to be rigorously investigated to conclude that it will not be very expensive in 5G. Because, from our experience of LTE, we see that the energy requirements of radio interface technology in LTE does not increase linearly with the data rate but energy requirements for encryption is almost linear to the size of the data being encrypted. 5G has unprecedented data rate of 1Gbps and we need to show that even such a bulk volume of encryption doesn't incur much energy when compared with the total energy spent. In the following sub-sections we present some implementations of AES and SNOW 3G.
 
-\subsection{AES} Since the adoption of Rijndael as AES by NIST, there have been a number of hardware implementations of AES. In the beginning, the focus was completely on achieving high throughput. Nevertheless, over the time the need for energy efficient implementations became more pressing and we found the following result available in the literature. \newline
+\subsection{AES}
+\label{sec:aes}
+ Since the adoption of Rijndael as AES by NIST, there have been a number of hardware implementations of AES. In the beginning, the focus was completely on achieving high throughput. Nevertheless, over the time the need for energy efficient implementations became more pressing and we found the following result available in the literature. \newline
 
 
 \begin{table}
@@ -167,7 +181,28 @@ In the next section, we make an overall comparison to see how much these numeric
 
 \subsection{SNOW 3G}
 \label{sub-sec:snow3gp}
-More text will come in
+It appears that there have not been as many hardware implementations of SNOW 3G as there have beein of AES. It may be attributed to the reason that AES is much more widely used in different protocols. As mentioned in Section \ref{sec:throughput_and_energy_requirements_of_aes_snow3g}, the implementation in \cite{IIS_Ruhr_2010} focuses on the throughput and energy efficiency of the whole L2 layer of LTE and doesn't give any account of the scalability of the SNOW 3G ciphering unit that can be used for much higher data rates than LTE. In \cite{IEEE_ICCT_2010}, the authors present a parallel implementation of SNOW 3G by exploiting the multi-core processor of a smart phone that can provide the required throughput of LTE. The authors used voltage and frequency scaling (VFS) to reduce the energy consumption. It achieves $22$ Mbps/$\mu$J of energy while providing throughput of $100$ Mbps. So, it consumes $100/22 = 4.5$ $\mu$J per second to achieve the throughput. If it were scalable to achieve the required throughput of 5G with a reasonable speed up factor, it would be an energy efficient solution. But the implementation depends on the cores of the processor of the phone to achieve the parallelism, and it seems it would take at least $10$ times more cores than that of the phone used in the original implementation. As a result we do not find it as an appealing implementation for a 5G phone. There has been an ASIC implementation by Elliptic Semiconductor Inc. that achieves $2.5$ Gbps throughput at $100$ Mhz frequency and $15$K gates as cited in \cite{Greece_SNOW3G}. Nevertheless, in \cite{Greece_SNOW3G} the authors presented an ASIC implementation of SNOW 3G using $130$ nm CMOS library with $1.2$ V core voltage and $25$K gates. At $249$ MHz they have been able to harness a throughput of $7.9$ Gbps. Though both of the implementations provide much more than the throughput required in 5G, we can't argue anything with them as no concrete power figures are found. In \cite{IP_cores}, they IP Cores Inc. presents two implementations of SNOW 3G core called SNOW3G1 as follow
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|p{0.22\textwidth-2\tabcolsep}
+				|p{0.2\textwidth-2\tabcolsep}
+				|p{0.2\textwidth-2\tabcolsep}
+				|p{0.2\textwidth-2\tabcolsep}|				
+				}
+\hline
+Technology & Max Frequency & Area/Resources & Throughput \\
+\hline
+TSMC 65 nm G+ & 302 MHz & 7,475 gates & 2.4 Gbps \\ \hline
+TSMC 65 nm G+ & 943 MHz & 8,964 gates & 7.5 Gbps \\ \hline
+\end{tabular}
+\end{center}
+\caption{SNOW3G1 in \cite{IP_cores}}
+\label{table:aes_implementation}
+\end{table}
+
+Yet again they do not provide any power/energy figure. In \cite{kolkata}, the authors has used the SNOW3G implementation of IP Cores Inc and have estimated that using 4 parallel blocks of SNOW3G1 with hard macro storage, throughput of 30 Gbps is achievable at $1650$ MHz and consuming $14.41$ mJ of energy per second. This is way beyond the required throughput for 5G. So, we scale down the frequency by $30$ times and expect the the energy consumption per second will also be scaled down at the same proportion. According to that assumption, at $1650/30=55$ MHz, we should be able to harness the throughput of $1$ Gbps by spending $14.41/30 = .48$ mJ of energy. Which is just around 2 times than that of the most energy efficient AES implementation we have found. Even though theoretically it is expected that SNOW 3G would be more energy efficient than AES, this is the best figure could be found in the published literature.
 
 \section{Overall Comparison}
 \label{sec:overall_comparison}
@@ -181,7 +216,7 @@ To understand the energy expense of encryption, we need to focus on the total en
 
 In \cite{Usenix_2010}, the authors showed that the $2.5$G phone consumed around $700$ mJ of energy per second during the network data exchange. Around $640$ mJ of this energy budget is spend for cellular network activities. We know in $2.5$G, the maximum data rate can be 115 Kbps. In that rate AES implementation in \cite{Ruhr_2011} would spend around $.000024$ mJ of energy per second which is of course very insignificant. The authors of \cite{Usenix_2010} also showed that the 3G phones consumed similar amount of total energy during the data upload/download which is around $900$ mJ. We consider that the connection exchanged the data at its full capacity (which is 7.2 Mbps), the energy share for encryption is around $0.002$ mJ which is also very insignificant. 
 
-Both in the 2.5G and 3G phone the major energy share for network data exchange is attributed to the radio transmission. However, there has been a significant change in the LTE radio technology and has become even more expensive from energy consumption point of view. In LTE, there are different radio states and the phone promotes and demotes to different states to save energy. As a result even though LTE become less energy efficient than 3G for small data transfer, it remains as efficient as 3G in large size data transfer. Also, there is significant difference in the energy consumption of LTE uplink and downlink. According to \cite{Mobisys_2012}, the LTE uplink consumes $3.2$ J of energy per second whereas uploading at a rate of $1$ Mbps consumes $2.1$ J of energy per second. With screen off, the authors claimed that the energy was mostly consumed by the radio interfaces. The AES implementation in \cite{Ruhr_2011} consumes $.24$ mJ of energy per second providing throughput of $1$ Gbps. So, the energy share of of encryption is less than .0004 percent of the total requirement. Very optimistically if we consider that the LTE transmission would consume the same amount of energy even when the data rate is at the theoretical peak which is 100 Mbps, the energy share of encryption is still bounded by $.01$ percent. It should be noted here that the high energy requirements in LTE is mostly attributed to it's radio interface technology. Nevertheless, the radio technology will be different in 5G than that of LTE. Let us consider that the LTE draws $E_{lte}$ mJ of energy per second while transferring data at 100 Mbps. Let's assume that in 5G, the radio interface will draw $E_{lte}/a$ mJ of energy while providing throughput of $1$ Gbps by using it's new efficient radio technology, if there is any. And we know implementation of AES that takes $.24$ mJ of energy per second to provide throughput of $1$ Gbps. So, the energy share of encryption in 5G is $\frac{.24a}{E_{lte}}\times 100 = .01a$ percent
+Both in the 2.5G and 3G phone the major energy share for network data exchange is attributed to the radio transmission. However, there has been a significant change in the LTE radio technology and has become even more expensive from energy consumption point of view. In LTE, there are different radio states and the phone promotes and demotes to different states to save energy. As a result even though LTE become less energy efficient than 3G for small data transfer, it remains as efficient as 3G in large size data transfer. Also, there is significant difference in the energy consumption of LTE uplink and downlink. According to \cite{Mobisys_2012}, the LTE uplink consumes $3.2$ J of energy per second whereas uploading at a rate of $1$ Mbps consumes $2.1$ J of energy per second. With screen off, the authors claimed that the energy was mostly consumed by the radio interfaces. The AES implementation in \cite{Ruhr_2011} consumes $.24$ mJ of energy per second providing throughput of $1$ Gbps. So, the energy share of of encryption is less than .0004 percent of the total requirement. Very optimistically if we consider that the LTE transmission would consume the same amount of energy even when the data rate is at the theoretical peak which is 100 Mbps, the energy share of encryption is still bounded by $.01$ percent. It should be noted here that the high energy requirements in LTE is mostly attributed to it's radio interface technology. Nevertheless, the radio technology will be different in 5G than that of LTE. Let us consider that the LTE draws $E_{lte}$ mJ of energy per second while transferring data at 100 Mbps. Let's assume that in 5G, the radio interface will draw $E_{lte}/a$ mJ of energy while providing throughput of $1$ Gbps by using it's new efficient radio technology, if there is any. And we know implementations of AES and SNOW 3G that take $.24$ and $.48$ mJ of energy per second to provide throughput of $1$ Gbps. So, the energy share of encryption in 5G is $\frac{.24a}{E_{lte}}\times 100 = .01a$ percent for AES and $.02$ percent for SNOW 3G.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -234,6 +269,15 @@ I will wrtie the conclusion later
 \bibitem{Mobisys_2012} Junxian Huang, Feng Qian, Alexandre Gerber, Z. Morley Mao, Subhabrata Sen, Oliver Spatscheckr: A close examination of performance and power characteristics of 4G LTE networks. Proceedings of the 10th international conference on Mobile systems, applications, and services (2012)
 
 \bibitem{Nokia_2013} Managing LTE Core Network Signaling Traffic by David Nowoswiat, https://insight.nokia.com/managing-lte-core-network-signaling-traffic
+
+\bibitem{IEEE_ICCT_2010} Shadi Traboulsi, Mohamad Sbeiti, Felix Bruns: An optimized parallel and energy-efficient implementation of SNOW 3G for LTE mobile devices. 12th IEEE International Conference on Communication Technology (ICCT), 2010 
+
+\bibitem{Greece_SNOW3G} Paris Kitsos, Odysseas G. Koufopavlou: High Performance ASIC Implementation of the SNOW 3G Stream Cipher. IFIP/IEEE VLSI-SOC’08 - International Conference on Very Large Scale Integration, Greece, 2008.
+
+\bibitem{kolkata} Sourav Sen Gupta, Anupam Chattopadhyay, and Ayesha Khalid: Designing Integrated Accelerator for Stream Ciphers
+with Structural Similarities. 15th International Conference on Cryptology in India, 2014.
+
+\bibitem{IP_cores} SNOW 3G Encryption Core, Retrieved on 13th Dec, 2016. http://www.ipcores.com/Snow3G.htm
 
 \end{thebibliography}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  12 DEC 2016 12:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  13 DEC 2016 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,6 +712,9 @@ Package: translator 2010/06/12 ver 1.10
 
 LaTeX Warning: Label `fig:protocl_stack' multiply defined.
 
+
+LaTeX Warning: Label `table:aes_implementation' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -810,78 +813,121 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<lte_architecture.jpg, id=61, 562.1pt x 335.2525pt>
+<lte_architecture.jpg, id=64, 562.1pt x 335.2525pt>
 File: lte_architecture.jpg Graphic file (type jpg)
  <use lte_architecture.jpg>
-Package pdftex.def Info: lte_architecture.jpg used on input line 106.
+Package pdftex.def Info: lte_architecture.jpg used on input line 118.
 (pdftex.def)             Requested size: 329.7663pt x 196.68207pt.
 
-<protocl_stack.png, id=64, 700.86844pt x 319.94531pt>
+[2] <protocl_stack.png, id=76, 700.86844pt x 319.94531pt>
 File: protocl_stack.png Graphic file (type png)
- <use protocl_stack.png>
-Package pdftex.def Info: protocl_stack.png used on input line 117.
-(pdftex.def)             Requested size: 347.12354pt x 158.46373pt.
 
-[2] [3 <./lte_architecture.jpg> <./protocl_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+<use protocl_stack.png>
+Package pdftex.def Info: protocl_stack.png used on input line 129.
+(pdftex.def)             Requested size: 347.12354pt x 158.46373pt.
+ [3 <./lte_architecture.jpg> <./protocl_stack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 []|\OT1/cmr/m/n/9 Energy
  []
 
-[4] [5] [6]
+[4] [5] [6] [7] [8]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
- [7]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ” in font cmr10!
- [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A00871C044B13A36E934A7A10BDC3F54;682.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+[]\OT1/cmr/m/n/10 SNOW 3G En-cryp-tion Core, Re-trieved on 13th Dec, 2016.
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+[10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 2FC04EA35A502C272772C1AFD51C642F;684
+(rerunfilecheck)             After:  DA3D98C9DA5CCDF705B1FD23DC15BE4B;688.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 14501 strings out of 493304
- 283267 string characters out of 6139871
- 334127 words of memory out of 5000000
- 17745 multiletter control sequences out of 15000+600000
+ 14536 strings out of 493304
+ 283718 string characters out of 6139871
+ 336193 words of memory out of 5000000
+ 17757 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,11n,35p,10470b,877s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (9 pages, 204180 bytes).
+ 39i,11n,35p,10470b,875s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{table.13} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.8} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{section*.17} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.16} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.15} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.14} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
+replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (10 pages, 209376 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
