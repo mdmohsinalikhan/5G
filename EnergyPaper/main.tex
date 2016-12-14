@@ -113,21 +113,25 @@ An LTE network is comprised of broadly three components. The user equipment (UE)
 \begin{figure}
 % Use the relevant command to insert your figure file.
 % For example, with the graphicx package use
-  \includegraphics[width=0.95\textwidth]{lte_architecture.jpg}
+\begin{center}
+  \includegraphics[width=0.95\textwidth]{lte_architecture.eps}
 % figure caption is below the figure
 \caption{LTE Architecture}
 \label{fig:protocl_stack}       % Give a unique label
+\end{center}
 \end{figure}
 
 The UE is connected to the network via a radio link only with the radio network. The entity of the E-UTRAN that has the radio link with the UE is called eNodeB which is tradionally known as a base station. However, the UE also establishes a direct logical connection with an entity of the core network known as mobility management entity (MME). This logical connection is used only for the control signals for the core network and hence we do not focus on it in this paper. The user data as mentioned in the introduction travels from the UE to the eNodeB. Figure \ref{fig:protocl_stack} shows the protocol stack that the data travel across at the UE and at eNodeB. The L1 layer is the physical layer. We logically bundle the packet data convergence protocol (PDCP), radio link control (RLC), and medium access control (MAC) layers as layer 2 (L2). All the encryption and decryption takes place at the PDCP layer \cite{3GPP_TS_36_323}.
 
 \begin{figure}
+\begin{center}
 % Use the relevant command to insert your figure file.
 % For example, with the graphicx package use
-  \includegraphics[width=.85\textwidth]{protocol_stack.jpg}
+  \includegraphics[width=.98\textwidth]{protocol_stack.eps}
 % figure caption is below the figure
 \caption{Protocol stack in LTE Network}
 \label{fig:protocl_stack}       % Give a unique label
+\end{center}
 \end{figure}
 
 According to \cite{3GPP_TS_33_401}, there are two mandatory sets of security algorithms in the 4th generation cellular network (LTE) developed by 3GPP. One is EEA1 in which the stream cipher SNOW 3G is used. The other is EEA2 in which the block cipher AES is used. The aspiration about 5G networks is to obtain at least 1Gbps data-rate. The question arises, if there are implementations of these two encryption systems that can achieve the required throughput and still be enough energy efficient to be used in a mobile phone.
