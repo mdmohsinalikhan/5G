@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  15 DEC 2016 18:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  28 DEC 2016 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,7 +821,7 @@ rted-to.pdf lte_architecture.eps>
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<lte_architecture-eps-converted-to.pdf, id=64, 433.62pt x 159.59625pt>
+<lte_architecture-eps-converted-to.pdf, id=76, 433.62pt x 159.59625pt>
 File: lte_architecture-eps-converted-to.pdf Graphic file (type pdf)
 
 <use lte_architecture-eps-converted-to.pdf>
@@ -840,7 +840,7 @@ ed-to.pdf protocol_stack.eps>
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<protocol_stack-eps-converted-to.pdf, id=75, 514.92375pt x 243.91125pt>
+<protocol_stack-eps-converted-to.pdf, id=87, 514.92375pt x 243.91125pt>
 File: protocol_stack-eps-converted-to.pdf Graphic file (type pdf)
 
 <use protocol_stack-eps-converted-to.pdf>
@@ -894,25 +894,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[]\OT1/cmr/m/n/10 5G A Tech-nol-ogy Vi-sion. Avail-able at:
+ []
+
+
+Overfull \hbox (35.44548pt too wide) in paragraph at lines 287--289
+[]\OT1/cmr/m/n/10 5G ra-dio ac-cess. Avail-able at: https://www.ericsson.com/re
+s/docs/whitepapers/wp-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+[]\OT1/cmr/m/n/10 NGMN 5G White Pa-per. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+[]\OT1/cmr/m/n/10 5G Nework Ar-chi-tec-ture Whitepa-per. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+[]\OT1/cmr/m/n/10 5G Sce-nar-ios and Se-cu-rity De-sign. Avail-able at:
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
 [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DA3D98C9DA5CCDF705B1FD23DC15BE4B;688.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  ) 
 Here is how much of TeX's memory you used:
- 14535 strings out of 493304
- 284018 string characters out of 6139871
- 341235 words of memory out of 5000000
- 17764 multiletter control sequences out of 15000+600000
+ 14555 strings out of 493304
+ 284647 string characters out of 6139871
+ 342315 words of memory out of 5000000
+ 17779 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,12n,35p,10470b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -928,10 +954,10 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (11 pages, 250109 bytes).
+Output written on main.pdf (11 pages, 251521 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 
