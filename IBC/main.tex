@@ -1,0 +1,121 @@
+
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class SVMultln with class option 'lnicst'
+% for contributions to the Lecture Notes of the Institute for
+% Computer Sciences, Social-Informatics and
+% Telecommunications Engineering series.
+% www.springer.com/series/XXXX       Springer Heidelberg 2007/08/05
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis for
+% your article. It contains a few tweaked sections to demonstrate
+% features of the package, though.
+%
+% If you have not much experiences with Springer LaTeX support,
+% you should better use the special demonstration file "lnicst.tex"
+% included in the LaTeX package for LNICST as template.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[lnicst,sechang,a4paper]{svmultln}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\usepackage{url}
+\urldef{\mailsa}\path|{mohsin.khan, valtteri.niemi}@helsinki.fi|
+\usepackage[pdfpagelabels,hypertexnames=false,breaklinks=true,bookmarksopen=true,bookmarksopenlevel=2]{hyperref}
+
+
+%added by the author himself
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{calc}
+\usepackage{siunitx}
+\DeclareSIUnit\mt{\milli\tesla} %% A method for say short cut or new unit!
+\sisetup{inter-unit-product = {-}}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Protection Against the IMSI Catchers Using Identity Based Crypto in 5G}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Identity Based Crypto Against IMSI Catchers}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Mohsin Khan%
+%%\thanks{Please note that the LNICST Editorial assumes that all authors have used
+%%the western naming convention, with given names preceding surnames. This determines
+%%the structure of the names in the running heads and the author index.}%
+\and Valtteri Niemi}  %
+%\authorrunning{Lecture Notes of ICST: Authors' Instructions}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next
+\institute{University of Helsinki, Department of Computer Science,\\
+P.O. Box 68 (Gustaf H\"allstr\"amin katu 2b)\\
+FI-00014 University of Helsinki\\
+Finland\\
+\mailsa
+%\\
+%\url{http://www.springer.com/series/7911}
+}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "lnicst.dem",
+% that is contained in the LNICST LaTeX support package.
+%
+
+\toctitle{AES and SNOW 3G are Feasible Choices}
+\tocauthor{Authors' Instructions}
+\maketitle
+
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\section{Introduction}
+\label{intro}  
+
+\section{Public key cryptography against IMSI catchers}
+Here we use public key cryptography which may or may not be based on identity based crypto to secure the privacy of the long term identity of a mobile phone user called IMSI (International mobile subscriber identity). We discuss different techniques of using the public key cryptography:
+
+\begin{enumerate}
+\item Identity of the serving network serves as the public key. And the SN obtains corresponding private key from the HN using a secure channel
+\item Every serving network is given a public and private key pair by the HN
+\item The HN owns the public and private key pair.
+\end{enumerate}
+
+In the consequent subsections we describe the aforementioned techniques in further detail.
+
+\subsection{Based on Identity of Serving Network} In this technique the HN has a public and private key pair. Every phone knows the public key of the HN. Whenever a SN asks the phone to provide its IMSI, the phone computes the public key of the SN using the public key of the HN. Then the phone encrypts the IMSI with the computed public key of the SN and sends it to the SN along with the HN ID. The SN obtains (possibly already have obtained) its private key from the mentioned HN. Using this private key, the SN can decrypt IMSI.
+
+\subsection{Based on HN generated public private key pair for every SN}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\section{Acknowledgement}
+\label{sec:acknowledgement}
+
+
+
+\begin{thebibliography}{4}
+
+
+\end{thebibliography}
+
+\end{document}
