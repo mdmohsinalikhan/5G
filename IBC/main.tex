@@ -94,14 +94,20 @@ Finland\\
 Here we use public key cryptography which may or may not be based on identity based crypto to secure the privacy of the long term identity of a mobile phone user called IMSI (International mobile subscriber identity). We discuss different techniques of using the public key cryptography:
 
 \begin{enumerate}
-\item Identity of the serving network serves as the public key. And the SN obtains corresponding private key from the HN using a secure channel
-\item Every serving network is given a public and private key pair by the HN
-\item The HN owns the public and private key pair.
+\item Identity based crypto based on the identity of SN where the HN is the key generator
+\item HN assigned public private key pair for each SN
+\item HN owned public private key pair
 \end{enumerate}
 
-In the consequent subsections we describe the aforementioned techniques in further detail.
+In the consequent sections we describe the aforementioned techniques in further detail.
 
-\subsection{Based on Identity of Serving Network} In this technique the HN has a public and private key pair. Every phone knows the public key of the HN. Whenever a SN asks the phone to provide its IMSI, the phone computes the public key of the SN using the public key of the HN. Then the phone encrypts the IMSI with the computed public key of the SN and sends it to the SN along with the HN ID. The SN obtains (possibly already have obtained) its private key from the mentioned HN. Using this private key, the SN can decrypt IMSI.
+\section{Based on Identity of Serving Network} In this technique the HN has a public and private key pair. Every phone knows the public key of the HN. Whenever a SN asks the phone to provide its IMSI, the phone computes the public key of the SN using the public key of the HN. Then the phone encrypts the IMSI with the computed public key of the SN and sends it to the SN along with the HN identity. The SN obtains (possibly already have obtained) its private key from the mentioned HN. Using this private key, the SN can decrypt IMSI. Figure \ref{fig:IBC} represents the high level protocol.
+
+\subsection{Concerns and Solutions}
+\begin{enumerate}
+\item How to provision, revoke and re-provision the public key of HN in the phone?
+\item How to black list a SN?
+\end{enumerate}
 
 \subsection{Based on HN generated public private key pair for every SN}
 
