@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  23 JAN 2017 15:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  23 JAN 2017 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,7 +824,7 @@ Underfull \hbox (badness 7631) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 136--137
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
@@ -835,7 +835,6 @@ Overfull \hbox (117.90536pt too wide) in paragraph at lines 136--137
 tionDetails.aspx?specificationId=3045 
  []
 
-[3]
 
 Package natbib Warning: There were undefined citations.
 
@@ -850,6 +849,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
  ) 
@@ -867,7 +869,7 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (4 pages, 101071 bytes).
+Output written on main.pdf (4 pages, 101185 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  89 compressed objects within 1 object stream
