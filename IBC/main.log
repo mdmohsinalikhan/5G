@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  20 JAN 2017 17:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  23 JAN 2017 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -801,14 +801,6 @@ Package hyperref Warning: bookmark level for unknown title defaults to 0.
 Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 
-Package natbib Warning: Citation `NGMN_white_paper' on page 1 undefined on inpu
-t line 91.
-
-
-Package natbib Warning: Citation `TR33899' on page 1 undefined on input line 91
-.
-
-
 Package natbib Warning: Citation `TR21905' on page 1 undefined on input line 91
 .
 
@@ -820,64 +812,65 @@ Package natbib Warning: Citation `TR21905' on page 1 undefined on input line 91
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `fig:IBC' on page 2 undefined on input line 106.
+LaTeX Warning: Reference `fig:security_architecture_abstraction' on page 2 unde
+fined on input line 96.
+
+[2]
+
+LaTeX Warning: Reference `fig:IBC' on page 3 undefined on input line 113.
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 126--127
+Underfull \hbox (badness 7631) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (117.90536pt too wide) in paragraph at lines 129--130
+Overfull \hbox (117.90536pt too wide) in paragraph at lines 136--137
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx?specificationId=3045 
  []
 
+[3]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
-[2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
- (./main.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 139.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 139.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 6C256158A583491111B532DB71C6B675;699.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
  ) 
 Here is how much of TeX's memory you used:
- 14414 strings out of 493304
- 281533 string characters out of 6139871
- 324471 words of memory out of 5000000
- 17683 multiletter control sequences out of 15000+600000
+ 14417 strings out of 493304
+ 281584 string characters out of 6139871
+ 325501 words of memory out of 5000000
+ 17684 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,6n,35p,10470b,721s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,35p,10470b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (2 pages, 96029 bytes).
+Output written on main.pdf (4 pages, 101071 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
