@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  24 JAN 2017 20:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  26 JAN 2017 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,18 +808,18 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package epstopdf Info: Source file: <security_architecture_abstraction.eps>
-(epstopdf)                    date: 2017-01-24 20:28:38
-(epstopdf)                    size: 157668 bytes
+(epstopdf)                    date: 2017-01-25 13:30:38
+(epstopdf)                    size: 157813 bytes
 (epstopdf)             Output file: <security_architecture_abstraction-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2017-01-24 20:29:44
-(epstopdf)                    size: 81154 bytes
+(epstopdf)                    date: 2017-01-25 13:30:53
+(epstopdf)                    size: 81223 bytes
 (epstopdf)             Command: <repstopdf --outfile=security_architecture_abst
 raction-eps-converted-to.pdf security_architecture_abstraction.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<security_architecture_abstraction-eps-converted-to.pdf, id=62, 643.40375pt x 3
+<security_architecture_abstraction-eps-converted-to.pdf, id=70, 643.40375pt x 3
 03.1325pt>
 File: security_architecture_abstraction-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -829,71 +829,110 @@ Package pdftex.def Info: security_architecture_abstraction-eps-converted-to.pdf
 (pdftex.def)             Requested size: 340.17958pt x 160.27554pt.
 
 [2] [3 <./security_architecture_abstraction-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ibc_in_jargon_of_crypto.eps>
+(epstopdf)                    date: 2017-01-26 17:55:12
+(epstopdf)                    size: 1082139 bytes
+(epstopdf)             Output file: <ibc_in_jargon_of_crypto-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-01-26 17:55:15
+(epstopdf)                    size: 392435 bytes
+(epstopdf)             Command: <repstopdf --outfile=ibc_in_jargon_of_crypto-ep
+s-converted-to.pdf ibc_in_jargon_of_crypto.eps>
+(epstopdf)             \includegraphics on input line 130.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: Reference `fig:IBC' on page 4 undefined on input line 132.
+<ibc_in_jargon_of_crypto-eps-converted-to.pdf, id=96, 739.76375pt x 565.11125pt
+>
+File: ibc_in_jargon_of_crypto-eps-converted-to.pdf Graphic file (type pdf)
+ <use ibc_in_jargon_of_crypto-eps-converted-to.pdf>
+Package pdftex.def Info: ibc_in_jargon_of_crypto-eps-converted-to.pdf used on i
+nput line 130.
+(pdftex.def)             Requested size: 340.17958pt x 259.86809pt.
+ [4 <./ibc_in_jargon_of_crypto-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <how_ibc_works.eps>
+(epstopdf)                    date: 2017-01-26 18:23:14
+(epstopdf)                    size: 341064 bytes
+(epstopdf)             Output file: <how_ibc_works-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-01-26 18:23:18
+(epstopdf)                    size: 85489 bytes
+(epstopdf)             Command: <repstopdf --outfile=how_ibc_works-eps-converte
+d-to.pdf how_ibc_works.eps>
+(epstopdf)             \includegraphics on input line 149.
+Package epstopdf Info: Output file is already uptodate.
+
+<how_ibc_works-eps-converted-to.pdf, id=106, 684.5575pt x 400.49625pt>
+File: how_ibc_works-eps-converted-to.pdf Graphic file (type pdf)
+
+<use how_ibc_works-eps-converted-to.pdf>
+Package pdftex.def Info: how_ibc_works-eps-converted-to.pdf used on input line 
+149.
+(pdftex.def)             Requested size: 340.17958pt x 199.0254pt.
+ [5 <./how_ibc_works-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:IBC' on page 6 undefined on input line 171.
 
 
-Underfull \hbox (badness 7631) in paragraph at lines 152--153
+Underfull \hbox (badness 7631) in paragraph at lines 191--192
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 154--155
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 193--194
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 156--157
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 195--196
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¤ in font cmr10!
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 208.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 208.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EE99894A2378F1BD6C8CA4BB5865E0C1;704.
+(rerunfilecheck)             Checksum: 91229CEB844CA6A36FF374F483B997DB;803.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
  ) 
 Here is how much of TeX's memory you used:
- 14445 strings out of 493304
- 282222 string characters out of 6139871
- 327600 words of memory out of 5000000
- 17698 multiletter control sequences out of 15000+600000
+ 14471 strings out of 493304
+ 282821 string characters out of 6139871
+ 327816 words of memory out of 5000000
+ 17713 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,6n,35p,10470b,833s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,35p,10470b,831s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (5 pages, 183391 bytes).
+Output written on main.pdf (7 pages, 662011 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
