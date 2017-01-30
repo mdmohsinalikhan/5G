@@ -3,10 +3,8 @@
 \BOOKMARK [1][]{section.2}{Introduction}{section*.1}% 3
 \BOOKMARK [1][]{section.11}{IBC in the Jargon of Cryptography}{section*.1}% 4
 \BOOKMARK [1][]{section.17}{Solutions}{section*.1}% 5
-\BOOKMARK [1][]{section.18}{Evaluation}{section*.1}% 6
-\BOOKMARK [1][]{section.22}{Based on Identity of Serving Network}{section*.1}% 7
-\BOOKMARK [2][-]{subsection.23}{Concerns and Solutions}{section.22}% 8
-\BOOKMARK [2][-]{subsection.26}{Based on HN generated public private key pair for every SN}{section.22}% 9
-\BOOKMARK [1][]{section.27}{Conclusion}{section*.1}% 10
-\BOOKMARK [1][]{section.28}{Acknowledgement}{section*.1}% 11
-\BOOKMARK [1][]{section*.29}{References}{section*.1}% 12
+\BOOKMARK [2][-]{subsection.24}{Certificate Based Public-key Cryptography}{section.17}% 6
+\BOOKMARK [2][-]{subsection.26}{Solution based on IBC}{section.17}% 7
+\BOOKMARK [1][]{section.28}{Conclusion}{section*.1}% 8
+\BOOKMARK [1][]{section.29}{Acknowledgement}{section*.1}% 9
+\BOOKMARK [1][]{section*.30}{References}{section*.1}% 10

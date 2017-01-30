@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % This is the LaTeX source for the instructions to authors using
@@ -42,7 +41,8 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Concealing IMSI in 5G Network Using Identity Based Cryptography}
+\title{Privacy Protected Subscriber Identification in 5G Network}
+%Concealing IMSI in 5G Network Using Identity Based Cryptography
 
 % a short form should be given in case it is too long for the running head
 \titlerunning{Concealing IMSI in 5G Network Using Identity Based Cryptography}
@@ -88,7 +88,7 @@ The aspirations for the next generation mobile network (5G) are high. It has a v
 
 
 \section{Introduction}
-\label{intro} NGMN Alliance has pointed out the privacy of a user as a requirement of the 5G network under the requirement category of enhanced services \cite{NGMN_white_paper}. In 3GPP TR 33.899 \cite{TR33899}, subscribers' privacy is captured as one of the high level security requirements of the 5G network. However, in the context of diversified devices and the complex business and service model of 5G, it is important to define who is a subscriber and what subscriber-privacy means. According to 3GPP TR 21.905 \cite{TR21905} a subscriber is an entity (associated with one or more users) that is engaged in a subscription with a service provider. A subscription describes the commercial relationship between the subscriber and the service provider, cf. 3GPP TR 21.905 \cite{TR21905}. A subscription identifier is the identifier that uniquely identifies a subscription in the 3GPP system. The identifier is used to access networks based on 3GPP specifications. Subscription Privacy refers to the right to the protection to any information that (a) can be used to identify a subscription to whom such information relates, or (b) is or might be directly or indirectly linked to a subscription. This definition of privacy suggests to protect any personally identifiable information (PII) from an active or passive attacker. While it is important to classify the identifiers into PII and non-PII, the long-term identifier is surely a PII. In this report we will keep our discussion limited only to the case of long-term identifier of a subscriber. In the case of 2G (GSM), 3G (UMTS) and 4G (LTE) networks, this long-term identifier is known as international mobile subscriber identity (IMSI). Nevertheless, the same principles used in the solutions proposed in this report can be extended to conceal any PII.
+\label{intro} NGMN Alliance has pointed out the privacy of a user as a requirement of the 5G network under the requirement category of enhanced services \cite{NGMN_white_paper}. In 3GPP TR 33.899 \cite{TR33899}, subscribers' privacy is captured as one of the high level security requirements of the 5G network. However, in the context of diversified devices and the complex business and service model of 5G, it is important to define who is a subscriber and what subscriber-privacy means. According to 3GPP TR 21.905 \cite{TR21905} a subscriber is an entity (associated with one or more users) that is engaged in a subscription with a service provider. A subscription describes the commercial relationship between the subscriber and the service provider, cf. 3GPP TR 21.905 \cite{TR21905}. A subscription identifier is the identifier that uniquely identifies a subscription in the 3GPP system. The identifier is used to access networks based on 3GPP specifications. Subscription Privacy refers to the right to the protection to any information that (a) can be used to identify a subscription to whom such information relates, or (b) is or might be directly or indirectly linked to a subscription. This definition of privacy suggests to protect any personally identifiable information (PII) from an active or passive attacker. While it is important to classify the identifiers into PII and non-PII, the long-term identifier is surely a PII. In this report we will keep our discussion limited only to the case of identification of an UE using long-term identifier of the relevant subscriber. In the case of 2G (GSM), 3G (UMTS) and 4G (LTE) networks, this long-term identifier is known as international mobile subscriber identity (IMSI). Nevertheless, the same principles used in the solutions proposed in this report can be extended to conceal any PII.
 
 
 One approach of protecting IMSI privacy is to use a temporary IMSI instead of the original IMSI and keep changing the temporary IMSI at a feasible frequency. Note that the temporary IMSI has to be assigned over a confidentiality protected channel and different entities of the network may assign different temporary IMSIs to the user equipment (UE). In the LTE network, the temporary IMSI assigned by serving network (SN) is called globally unique temporary identity (GUTI) and the home network (HN) does not assign any temporary IMSI to the UE. However, during the initial attachment of a UE to the SN, the UE has neither a GUTI nor a security context with the SN that can assign it with a GUTI. Besides, GUTI can be lost by either one or both of the UE and the SN. This forces the UE to reveal its IMSI to the SN to keep itself from permanently locked out of the network. This problem gives an opportunity to an active IMSI catcher (AICa) who impersonates a legitimate SN and forces the UE to run the initial attachment protocol. This also gives an opportunity to a passive IMSI catcher (PICa) to eavesdrop the IMSI sent in clear text. Solutions \cite{pseudonym_valtteri_philip, pseudonym_ericsson} have been proposed by using temporary IMSI known as pseudonym assigned by the HN. While these solutions solve the cases of lost and unsynchronised GUTI, they still have the problem of lost or unsynchronised pseudonyms and also initial attachment. In this report we present how a security context can be set up in between the network (either with SN or HN) and the UE even before the identification of the UE so that the UE can use the security context to send its IMSI with confidentiality protection. Such a security context will mitigate the attack mounted by a PICa. Nevertheless, we show that an AICa would not be able to agree on a legitimate security context with the UE and consequently will not be able to reveal the IMSI.
@@ -104,11 +104,11 @@ One approach of protecting IMSI privacy is to use a temporary IMSI instead of th
 \end{center}
 \end{figure}
 
-In order to present a formal discussion we need to know what are the entities involved in this identification process, what are the communication interfaces among those entities and how much the entities can be trusted with the IMSI.  As the architecture of 5G security is yet to be finalized, we present an abstraction of the involved entities and assume that whatever the security architecture of 5G eventually be, it will contain these entities and interfaces. This abstraction is directly extracted from LTE security architecture and we use some LTE acronyms to present the entities for better understanding. Figure \ref{fig:security_architecture_abstraction} shows the entities. It involves the UE, serving radio network (eNB), serving core network (MME), HN. We have two more entities: PICa and AICa. The interface  UE-NB in between UE and eNB is initially unprotected. Nevertheless, eNB-MME and MME-HSS are always protected and the security of these interfaces is out of the scope of this report. The PICas eavesdrop on the UE-eNB interface when it is unprotected to extract an IMSI. The AICas impersonate a legitimate SN and run a legitimate protocol with the UE in order to reveal the IMSI. HN and UE both own the IMSI and they are trusted with it. Both of PICa and AICa are untrusted while it is technically possible to not trust eNB and MME. However, by some other specification in 3GPP TS \textcolor{red}{xx.xxx} it is required to reveal IMSI to the MME to enable lawful interception (LI) without involving HN. 
+In order to present a formal discussion we need to know what are the entities involved in this identification process, what are the communication interfaces among those entities and how much the entities can be trusted with the IMSI.  As the architecture of 5G security is yet to be finalized, we present an abstraction of the involved entities and assume that whatever the security architecture of 5G eventually be, it will contain these entities and interfaces. This abstraction is directly extracted from LTE security architecture. Figure \ref{fig:security_architecture_abstraction} shows the entities. It involves the UE, serving radio network (SRN), serving core network (SCN), HN. We have two more entities: PICa and AICa. The interface  UE-NB in between UE and SRN is initially unprotected. Nevertheless, SRN-SCN and SCN-HN are always protected and the security of these interfaces is out of the scope of this report. The PICas eavesdrop on the UE-SRN interface when it is unprotected to extract an IMSI. The AICas impersonate a legitimate SN and run a legitimate protocol with the UE in order to reveal the IMSI. HN and UE both own the IMSI and they are trusted with it. Both of PICa and AICa are untrusted while it is technically possible to not trust SRN and SCN. However, by some other specification in 3GPP TS \textcolor{red}{xx.xxx} it is required to reveal IMSI to the SCN to enable lawful interception (LI) without involving HN. 
 
-We propose different solutions based on public-key cryptography which make the UE-eNB interface protected even during the initial attachment to fight against the PICa. Our solutions also stop the AICa from running a legitimate protocol successfully that could reveal the IMSI. However, there are other 5G requirements which our solutions should also meet. Such requirements are: reduced signalling overhead, improved control plane latency, concealing all the parts of IMSI (MCC, MNC and MSIN). To avoid the downgrade attack, the solutions need to be backward compatible with the legacy networks. Also, in the case of public-key, the complexity involved in setting a PKI and revocation of a publick-key need to be considered with high importance. Considering all these requirements, we evaluate our solutions based on the following criteria:
+We propose different solutions based on public-key cryptography which make the UE-SRN interface protected even during the initial attachment to fight against the PICa. Our solutions also stop the AICa from running a legitimate protocol successfully that could reveal the IMSI. However, there are other 5G requirements which our solutions should also meet. Such requirements are: reduced signalling overhead, improved control plane latency, concealing all the parts of IMSI (MCC, MNC and MSIN). To avoid the downgrade attack, the solutions need to be backward compatible with the legacy networks. Also, in the case of public-key, the complexity involved in setting a PKI and revocation of a publick-key need to be considered with high importance. Considering all these requirements, we evaluate our solutions based on the following criteria:
 \begin{enumerate}
-\item Concealed from PICa, AICa, eNB, MME
+\item Concealed from PICa, AICa, SRN, SCN
 \item Parts of the IMSI concealed
 \item Signalling overhead
 \item Latency
@@ -153,30 +153,79 @@ Based on the authentication mechanism, public-key cryptography can be categorize
 \end{center}
 \end{figure}
 
-\section{Solutions}\label{sec:solutions}
-
-\section{Evaluation} \label{sec:evaluation}
-
-
-Here we use public key cryptography which may or may not be based on identity based crypto to secure the privacy of the long term identity of a mobile phone user called IMSI (International mobile subscriber identity). We discuss different techniques of using the public key cryptography:
-
+\section{Solutions}\label{sec:solutions} 
+\label{sec:solutions}
+It would be beneficial to mention some notation here before delving into the solutions. 
 \begin{enumerate}
-\item Identity based crypto based on the identity of SN where the HN is the key generator
-\item HN assigned public private key pair for each SN
-\item HN owned public private key pair
+\item $hnid=MCC||MNC$ identifies the HN
+\item $scnid=MCC||MNC$ identifies the SCN
+\item $e_A$ is the public key of entity $A$
+\item $d_A$ is the private key of entity $A$ 
+\item $\mathcal{X}_{A,B}$ is the certificate of the public key of $A$ issued and signed by $B$
+\item $E,D$ are the encryption and decryption functions respectively
 \end{enumerate}
 
-In the consequent sections we describe the aforementioned techniques in further detail.
 
-\section{Based on Identity of Serving Network} In this technique the HN has a public and private key pair. Every phone knows the public key of the HN. Whenever a SN asks the phone to provide its IMSI, the phone computes the public key of the SN using the public key of the HN. Then the phone encrypts the IMSI with the computed public key of the SN and sends it to the SN along with the HN identity. The SN obtains (possibly already have obtained) its private key from the mentioned HN. Using this private key, the SN can decrypt IMSI. Figure \ref{fig:IBC} represents the high level protocol.
+\subsection{Certificate Based Public-key Cryptography} 
+\label{sub_sec:solution_certificate}
+In certificate based public-key cryptography, certificates digitally signed by a trusted third party is used to authenticate the ownership of a public key. The trusted third party who can sign the certificate is called a certicate authority (CA). It is possible to build a chain of trust in certificate based public-key cryptography by allowing an entity to become a CA who owns a public key signed by a CA. A certificate is valid if it is signed by a CA and the CA has a valid certificate. There has to exist at least one entity who has a self signed certificate. The entity having a self signed certificate is considered as the root CA. To use certificate based public-key cryptography to secure IMSI privacy, we need to figure out few things first: who is the root CA and who else can be a CA, who are the entities that own a public key,  how a certificate can be revoked and how the root CA can change its public key.
 
-\subsection{Concerns and Solutions}
-\begin{enumerate}
-\item How to provision, revoke and re-provision the public key of HN in the phone?
-\item How to black list a SN?
-\end{enumerate}
+We choose the HN of a subscriber is the root CA for the subscriber. And every UE is provisioned by the public key of its HN. A SCN owns  public keys signed signed by HNs. The SRN broadcasts its identity. The UEs interested to attach with the network sends its $hnid$ to the SRN and SRN relays it to SCN. SCN sends its public key certificate along with the signature signed by the corresponding HN to SRN. SRN relays it to the UE. The UE validate the certifiate and the signature. If it is a valid signature, the UE concatenates some random bits called $salt$ at the end of the IMSI, encrypts the result with the public key and sends the ciphertext to the SRN. The SRN relays this to the SCN. SCN decrypts the ciphertext, discard the salt from the tail and extracts the IMSI. This completes the identification of a UE to SCN. Figure \label{fig:protocol_public_key_variation1} shows the protocol in detail. Note that, in the roaming agreement phase, the SCN does not need to get the certificate exactly from the HN but can get it from any CA who is trusted in by the HN in the chain of trust.
 
-\subsection{Based on HN generated public private key pair for every SN}
+
+\begin{figure}
+\begin{center}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[width=.98\textwidth]{public_key_variation1.eps}
+% figure caption is below the figure
+\caption{Privacy protected UE identification using certificate based public-key cryptography}
+\label{fig:solution_certificate}       % Give a unique label
+\end{center}
+\end{figure}
+
+This approach can not conceal MCC and MNC at all. It coneals MSIN from AICa, PICa and SRN. The IMSI is revealed entirely at SNC. It requires a full round trip signalling in betwenn UE and SCN. It carries $hnid$ from UE to SCN and in return carries the public-key certificate back from SCN to UE. Public keys are quite large and consequently it adds signficant signalling overhead. Also, public-key cryptography is compuntationally heavier than that of symmetric-key cryptography. Surely latency will increase significantly in this identification protocol. Nevertheless, once an UE is identified by the network, the network assings a GUTI to the UE. It is a question for further research to evaluate the effect of this extra signalling overhead. This solution is not backward compatible with LTE, UMTS and GSM. It doesn't require to esbalish any new trusted authority, so PKI complexity is very little. However, revocation of the public-key of an SCN and HN is not trivial and need to be investigated closely.
+
+Every CA in the system maintains a list of revoked public keys which were certified and signed (at the first place) by it or by any other CA trusted by it. If there is a revocation, the CA who signed the certificate at the first place updates its list and the CA updates its CA with the information. The UE periodcally run a protocol with HN to download the latest revoked public keys. If a dishonest SCN presents a UE with the certificate which is already revoked but the UE has not yet been able to downloaded it, then the MSIN will be revealed to the SCN. However, such a dishonest SCN will fail to run a successful authentication protocol. As soon as the UE come in touch with a legitimate SCN, it identifies itself sucessfully, runs a successful authentication protocol, and download the latest revocation list from the HN. Thereafter the dishonest HN will not be able to reveal the MSIN anymore. This implies that an AICa can mount an attack if it was once trusted by the HN as a legitimate SCN but is no more trusted by the HN and the UE is not yet updated with the withdrawal of the trust. The existence of such an AICa is apparently extremely rare. The time window this attack allows to track a subscriber is also very small. Which altogether make this attack very expensive. However, if the private key of an SCN is stolen, both PICa and AICa can mount attacks untill the public key is revoked. 
+
+When the private key of an HN is compromised, the HN update itself with a new public-private key pair. All the relevant certificates in the system get updated with the required change according to standard PKI procedure. However, The new public key certificate of the HN needs to be re-provisioned to all the UE that has a subscription with the HN. Because, if an SCN is updated with a new certificate, but the UE does not have the new root certificate, then the UE will never be able to validate the certificate presented by a legitimate SCN. One way to circumvent this problem is to store certificates concerned with all the root certificate used by the HN in every SCN . If an UE can not validate a certificate, the SCN sends the immediate older certificate. However, the UE will not validate a certificate associated with a root certificate which is older than the current one it has. Consequently, an SCN which is not updated with the latest root certificate of an HN will not be able to identify a UE that belongs to the HN. Once the UE is identified by the SCN and authentication becomes successful, the HN knows the location of the UE. At this point the HN can send the new certificate and signature, integrity protected by the master symmetric key shared by the HN and the USIM. Another way is to publish the new root certificate in the public media with integirity protection so that anyone can download the root certificate using some other internet connection. The need for reprovisioning the root certificate is an extremely rare event. In case the root private key is stolen by an attacker, it allows the attacker can act as both AICa or PICa. Once the need for existing root certificate revoking and provisioning of a new one is identified, it does not allow the attacker a long time window to track the UEs. Protecting the privacy of a private key and detecting the compromisation of a private key is a whole different security question and we do not delve into that in this report.
+
+
+\subsection{Solution based on IBC} 
+\label{sub_sec:solution_ibc}
+
+
+\begin{figure}
+\begin{center}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[width=.98\textwidth]{solution_based_on_ibc1.eps}
+% figure caption is below the figure
+\caption{Privacy protected UE identification using IBC}
+\label{fig:solution_ibc}       % Give a unique label
+\end{center}
+\end{figure}
+
+
+%Here we use public key cryptography which may or may not be based on identity based crypto to secure the privacy of the long term identity of a mobile phone user called IMSI (International mobile subscriber identity). We discuss different techniques of using the public key cryptography:
+
+%\begin{enumerate}
+%\item Identity based crypto based on the identity of SN where the HN is the key generator
+%\item HN assigned public private key pair for each SN
+%\item HN owned public private key pair
+%\end{enumerate}
+
+%In the consequent sections we describe the aforementioned techniques in further detail.
+
+%\section{Based on Identity of Serving Network} In this technique the HN has a public and private key pair. Every phone knows the public key of the HN. Whenever a SN asks the phone to provide its IMSI, the phone computes the public key of the SN using the public key of the HN. Then the phone encrypts the IMSI with the computed public key of the SN and sends it to the SN along with the HN identity. The SN obtains (possibly already have obtained) its private key from the mentioned HN. Using this private key, the SN can decrypt IMSI. Figure \ref{fig:IBC} represents the high level protocol.
+
+%\subsection{Concerns and Solutions}
+%\begin{enumerate}
+%\item How to provision, revoke and re-provision the public key of HN in the phone?
+%\item How to black list a SN?
+%\end{enumerate}
+
+%\subsection{Based on HN generated public private key pair for every SN}
 
 \section{Conclusion}
 \label{sec:conclusion}
