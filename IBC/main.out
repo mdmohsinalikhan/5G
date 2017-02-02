@@ -4,8 +4,9 @@
 \BOOKMARK [1][]{section.11}{IBC in the Jargon of Cryptography}{section*.1}% 4
 \BOOKMARK [1][]{section.17}{Solutions}{section*.1}% 5
 \BOOKMARK [2][-]{subsection.24}{Certificate Based Public-key Cryptography}{section.17}% 6
-\BOOKMARK [2][-]{subsection.26}{Solution based on a Single Root-key}{section.17}% 7
-\BOOKMARK [2][-]{subsection.28}{Solution based on IBC}{section.17}% 8
-\BOOKMARK [1][]{section.30}{Conclusion}{section*.1}% 9
-\BOOKMARK [1][]{section.31}{Acknowledgement}{section*.1}% 10
-\BOOKMARK [1][]{section*.32}{References}{section*.1}% 11
+\BOOKMARK [2][-]{subsection.26}{Certificate Based Public-key Cryptography with a very short trust chain}{section.17}% 7
+\BOOKMARK [2][-]{subsection.29}{Solution based on a Single Root-key}{section.17}% 8
+\BOOKMARK [2][-]{subsection.31}{Solution based on IBC}{section.17}% 9
+\BOOKMARK [1][]{section.33}{Conclusion}{section*.1}% 10
+\BOOKMARK [1][]{section.34}{Acknowledgement}{section*.1}% 11
+\BOOKMARK [1][]{section*.35}{References}{section*.1}% 12
