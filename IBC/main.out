@@ -1,12 +1,13 @@
 \BOOKMARK [0][]{section*.1}{AES and SNOW 3G are Feasible Choices}{}% 1
 \BOOKMARK [0][]{section*.1}{Authors' Instructions}{}% 2
 \BOOKMARK [1][]{section.2}{Introduction}{section*.1}% 3
-\BOOKMARK [1][]{section.11}{IBC in the Jargon of Cryptography}{section*.1}% 4
-\BOOKMARK [1][]{section.17}{Solutions}{section*.1}% 5
-\BOOKMARK [2][-]{subsection.24}{Certificate Based Public-key Cryptography}{section.17}% 6
-\BOOKMARK [2][-]{subsection.26}{Certificate Based Public-key Cryptography with a very short trust chain}{section.17}% 7
-\BOOKMARK [2][-]{subsection.29}{Solution based on a Single Root-key}{section.17}% 8
-\BOOKMARK [2][-]{subsection.31}{Solution based on IBC}{section.17}% 9
-\BOOKMARK [1][]{section.33}{Conclusion}{section*.1}% 10
-\BOOKMARK [1][]{section.34}{Acknowledgement}{section*.1}% 11
-\BOOKMARK [1][]{section*.35}{References}{section*.1}% 12
+\BOOKMARK [1][]{section.10}{Identity Based Encryption \(IBE\) in the Jargon of Encryption}{section*.1}% 4
+\BOOKMARK [1][]{section.15}{Solutions}{section*.1}% 5
+\BOOKMARK [2][-]{subsection.22}{Certificate Based Public-key Encryption}{section.15}% 6
+\BOOKMARK [2][-]{subsection.24}{Certificate Based Public-key Cryptography with a very short trust chain}{section.15}% 7
+\BOOKMARK [2][-]{subsection.27}{Solution based on a Single Root-key}{section.15}% 8
+\BOOKMARK [2][-]{subsection.29}{Solution based on IBC}{section.15}% 9
+\BOOKMARK [1][]{section.32}{Evaluation}{section*.1}% 10
+\BOOKMARK [1][]{section.33}{Conclusion}{section*.1}% 11
+\BOOKMARK [1][]{section.34}{Acknowledgement}{section*.1}% 12
+\BOOKMARK [1][]{section*.35}{References}{section*.1}% 13
