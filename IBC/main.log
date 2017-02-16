@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  15 FEB 2017 20:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  16 FEB 2017 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,12 +952,12 @@ Package pdftex.def Info: how_ibc_works-eps-converted-to.pdf used on input line
 261.
 (pdftex.def)             Requested size: 340.17958pt x 199.0254pt.
 Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
-(epstopdf)                    date: 2017-02-15 20:10:06
-(epstopdf)                    size: 689545 bytes
+(epstopdf)                    date: 2017-02-16 11:41:20
+(epstopdf)                    size: 696764 bytes
 (epstopdf)             Output file: <solution_based_on_ibc-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2017-02-15 20:10:39
-(epstopdf)                    size: 201986 bytes
+(epstopdf)                    date: 2017-02-16 11:41:28
+(epstopdf)                    size: 205283 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution_based_on_ibc-eps-
 converted-to.pdf solution_based_on_ibc.eps>
 (epstopdf)             \includegraphics on input line 272.
@@ -970,66 +970,67 @@ File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
 ut line 272.
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
- [13 <./how_ibc_works-eps-converted-to.pdf>]
-Underfull \hbox (badness 7631) in paragraph at lines 300--301
+ [13 <./how_ibc_works-eps-converted-to.pdf>] [14 <./solution_based_on_ibc-eps-c
+onverted-to.pdf>] [15]
+Underfull \hbox (badness 7631) in paragraph at lines 314--315
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
-[14 <./solution_based_on_ibc-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 302--303
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 316--317
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 304--305
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 318--319
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 306--307
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 320--321
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
+[16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 333.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 319.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 319.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 77E489BD5C5DD66E069EF674B44493D7;941.
+(rerunfilecheck)             Checksum: 99EB0399D361F6555158CE94BE74CFB2;941.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 319.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
  ) 
 Here is how much of TeX's memory you used:
- 14522 strings out of 493304
- 284109 string characters out of 6139871
+ 14526 strings out of 493304
+ 284137 string characters out of 6139871
  327682 words of memory out of 5000000
  17744 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,7n,35p,10470b,823s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,7n,35p,10470b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1039,10 +1040,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt9.pfb>
-Output written on main.pdf (15 pages, 1481571 bytes).
+Output written on main.pdf (16 pages, 1489654 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
  145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
