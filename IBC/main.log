@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  16 FEB 2017 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  17 FEB 2017 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,7 +861,7 @@ Package epstopdf Info: Source file: <public_key_variation1.eps>
 (epstopdf)                    size: 107312 bytes
 (epstopdf)             Command: <repstopdf --outfile=public_key_variation1-eps-
 converted-to.pdf public_key_variation1.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
 
 <public_key_variation1-eps-converted-to.pdf, id=133, 796.9775pt x 597.23125pt>
@@ -869,7 +869,7 @@ File: public_key_variation1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use public_key_variation1-eps-converted-to.pdf>
 Package pdftex.def Info: public_key_variation1-eps-converted-to.pdf used on inp
-ut line 182.
+ut line 183.
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
  [7] [8 <./public_key_variation1-eps-converted-to.pdf>] [9]
 Package epstopdf Info: Source file: <root-key2.eps>
@@ -880,16 +880,17 @@ Package epstopdf Info: Source file: <root-key2.eps>
 (epstopdf)                    size: 203327 bytes
 (epstopdf)             Command: <repstopdf --outfile=root-key2-eps-converted-to
 .pdf root-key2.eps>
-(epstopdf)             \includegraphics on input line 216.
+(epstopdf)             \includegraphics on input line 219.
 Package epstopdf Info: Output file is already uptodate.
 
 <root-key2-eps-converted-to.pdf, id=157, 796.9775pt x 597.23125pt>
 File: root-key2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use root-key2-eps-converted-to.pdf>
-Package pdftex.def Info: root-key2-eps-converted-to.pdf used on input line 216.
+Package pdftex.def Info: root-key2-eps-converted-to.pdf used on input line 219.
 
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
+ [10 <./root-key2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <root-key3.eps>
 (epstopdf)                    date: 2017-02-14 21:40:07
 (epstopdf)                    size: 738959 bytes
@@ -898,17 +899,17 @@ Package epstopdf Info: Source file: <root-key3.eps>
 (epstopdf)                    size: 221855 bytes
 (epstopdf)             Command: <repstopdf --outfile=root-key3-eps-converted-to
 .pdf root-key3.eps>
-(epstopdf)             \includegraphics on input line 230.
+(epstopdf)             \includegraphics on input line 233.
 Package epstopdf Info: Output file is already uptodate.
 
-<root-key3-eps-converted-to.pdf, id=159, 796.9775pt x 597.23125pt>
+<root-key3-eps-converted-to.pdf, id=166, 796.9775pt x 597.23125pt>
 File: root-key3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use root-key3-eps-converted-to.pdf>
-Package pdftex.def Info: root-key3-eps-converted-to.pdf used on input line 230.
+Package pdftex.def Info: root-key3-eps-converted-to.pdf used on input line 233.
 
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
- [10 <./root-key2-eps-converted-to.pdf>]
+ [11 <./root-key3-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <root-key1.eps>
 (epstopdf)                    date: 2017-02-14 21:36:25
 (epstopdf)                    size: 305822 bytes
@@ -917,18 +918,17 @@ Package epstopdf Info: Source file: <root-key1.eps>
 (epstopdf)                    size: 79533 bytes
 (epstopdf)             Command: <repstopdf --outfile=root-key1-eps-converted-to
 .pdf root-key1.eps>
-(epstopdf)             \includegraphics on input line 248.
+(epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
 
-<root-key1-eps-converted-to.pdf, id=168, 689.57625pt x 388.45125pt>
+<root-key1-eps-converted-to.pdf, id=175, 689.57625pt x 388.45125pt>
 File: root-key1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use root-key1-eps-converted-to.pdf>
-Package pdftex.def Info: root-key1-eps-converted-to.pdf used on input line 248.
+Package pdftex.def Info: root-key1-eps-converted-to.pdf used on input line 251.
 
 (pdftex.def)             Requested size: 340.17958pt x 191.62898pt.
- [11 <./root-key3-eps-converted-to.pdf>]
-[12 <./root-key1-eps-converted-to.pdf>]
+ [12 <./root-key1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <how_ibc_works.eps>
 (epstopdf)                    date: 2017-01-30 10:54:29
 (epstopdf)                    size: 341064 bytes
@@ -937,7 +937,7 @@ Package epstopdf Info: Source file: <how_ibc_works.eps>
 (epstopdf)                    size: 85489 bytes
 (epstopdf)             Command: <repstopdf --outfile=how_ibc_works-eps-converte
 d-to.pdf how_ibc_works.eps>
-(epstopdf)             \includegraphics on input line 271.
+(epstopdf)             \includegraphics on input line 274.
 Package epstopdf Info: Output file is already uptodate.
 
 <how_ibc_works-eps-converted-to.pdf, id=185, 684.5575pt x 400.49625pt>
@@ -945,7 +945,7 @@ File: how_ibc_works-eps-converted-to.pdf Graphic file (type pdf)
 
 <use how_ibc_works-eps-converted-to.pdf>
 Package pdftex.def Info: how_ibc_works-eps-converted-to.pdf used on input line 
-271.
+274.
 (pdftex.def)             Requested size: 340.17958pt x 199.0254pt.
 Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
 (epstopdf)                    date: 2017-02-16 11:41:20
@@ -956,7 +956,7 @@ Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
 (epstopdf)                    size: 205283 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution_based_on_ibc-eps-
 converted-to.pdf solution_based_on_ibc.eps>
-(epstopdf)             \includegraphics on input line 282.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
 
 <solution_based_on_ibc-eps-converted-to.pdf, id=186, 796.9775pt x 597.23125pt>
@@ -964,65 +964,65 @@ File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use solution_based_on_ibc-eps-converted-to.pdf>
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
-ut line 282.
+ut line 285.
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
- [13 <./how_ibc_works-eps-converted-to.pdf>] [14 <./solution_based_on_ibc-eps-c
+ [13] [14 <./how_ibc_works-eps-converted-to.pdf> <./solution_based_on_ibc-eps-c
 onverted-to.pdf>] [15]
-Underfull \hbox (badness 7631) in paragraph at lines 324--325
+Underfull \hbox (badness 7631) in paragraph at lines 327--328
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 326--327
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 329--330
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 328--329
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 331--332
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Overfull \hbox (27.29404pt too wide) in paragraph at lines 330--331
+Overfull \hbox (27.29404pt too wide) in paragraph at lines 333--334
 \OT1/cmr/m/n/10 https://portal.3gpp.org/desktopmodules/Specifications/Specifica
 tionDetails.aspx? 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 346.
 [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 346.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 346.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 346.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C00CC78B530EE2B1206528862CFDAD72;941.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 346.
  ) 
 Here is how much of TeX's memory you used:
  14531 strings out of 493304
  284207 string characters out of 6139871
- 327750 words of memory out of 5000000
+ 328751 words of memory out of 5000000
  17745 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1036,7 +1036,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt9.pfb>
-Output written on main.pdf (17 pages, 1484947 bytes).
+Output written on main.pdf (17 pages, 1484890 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  227 compressed objects within 3 object streams
