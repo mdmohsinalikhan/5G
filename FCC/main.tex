@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class SVMultln with class option 'lnicst'
+% for contributions to the Lecture Notes of the Institute for
+% Computer Sciences, Social-Informatics and
+% Telecommunications Engineering series.
+% www.springer.com/series/XXXX       Springer Heidelberg 2007/08/05
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis for
+% your article. It contains a few tweaked sections to demonstrate
+% features of the package, though.
+%
+% If you have not much experiences with Springer LaTeX support,
+% you should better use the special demonstration file "lnicst.tex"
+% included in the LaTeX package for LNICST as template.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[lnicst,sechang,a4paper]{svmultln}
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+
+\usepackage{url}
+\urldef{\mailsa}\path|{mohsin.khan, valtteri.niemi}@helsinki.fi|
+\usepackage[pdfpagelabels,hypertexnames=false,breaklinks=true,bookmarksopen=true,bookmarksopenlevel=2]{hyperref}
+
+
+%added by the author himself
+\usepackage{color}
+\usepackage[numbers]{natbib}
+\usepackage{calc}
+\usepackage{siunitx}
+\DeclareSIUnit\mt{\milli\tesla} %% A method for say short cut or new unit!
+\sisetup{inter-unit-product = {-}}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{Privacy Protected Subscriber Identification in 5G Network}
+%Concealing IMSI in 5G Network Using Identity Based Cryptography
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Concealing IMSI in 5G Network Using Identity Based Encryption}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Mohsin Khan%
+%%\thanks{Please note that the LNICST Editorial assumes that all authors have used
+%%the western naming convention, with given names preceding surnames. This determines
+%%the structure of the names in the running heads and the author index.}%
+\and Valtteri Niemi}  %
+%\authorrunning{Lecture Notes of ICST: Authors' Instructions}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next
+\institute{University of Helsinki, Department of Computer Science,\\
+P.O. Box 68 (Gustaf H\"allstr\"omin katu 2b)\\
+FI-00014 University of Helsinki\\
+Finland\\
+\mailsa
+%\\
+%\url{http://www.springer.com/series/7911}
+}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "lnicst.dem",
+% that is contained in the LNICST LaTeX support package.
+%
+
+\toctitle{AES and SNOW 3G are Feasible Choices}
+\tocauthor{Authors' Instructions}
+\maketitle
+
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\section{Introduction}
+\label{intro} 
+
+
+\section{Authentication}
+\label{sec:authentication}
+
+\subsubsection{Applicability of Existing Authentication Practices in 5G:}
+TR 33.899 discusses that existing authentication practices wouldn't readily be applicable in 5G. Because of the complex business model and diversified end-user devices, the authentication requirements become wide and complex. Unlike the legacy networks, the user equipment identifiers are required to authenticated in 5G. There will be UEs which would not have 3GPP subscription credentials. So, 5G needs authentication mechanism that can authenticate non-3GPP credentials. UEs will connect with 3rd parties different from the UE's HN. There will be large number of IoT devices activated almost simultaneously. These bulk activations would create a huge pressure on a central authentication server if such a server's involvement is required in every authentication run. And like the other legacy networks, the user subscription authentication is also required in 5G. All these concerns are under discussion in 3GPP TR 33.899. In this document, contributors are discussing about developing authentication frameworks that would support all the different scenario. Potential solutions have also been proposed based on EPS-AKA, EAP-AKA, EAP-AKA' etc.
+\subsubsection{Effective use of mutual authentication to protect 5G Networks Against Unauthorized Access:}
+\subsubsection{Effective use of mutual authentication to protect End-user Device against attaching to malicious network components:}
+\subsubsection{Perceived Limitations and Drawbacks of mutual authentication:}
+\subsubsection{What are the specific considerations applicable to 5G:}
+\subsubsection{Circumstances when mutual authentication is essential:}
+\subsubsection{Circumstances when Mututal Authentication would not be benefical:}
+\subsubsection{Other Authentication Methodologies:}
+\subsubsection{Authentication Challenges in IoT Networks:}
+\subsubsection{Authentication in IoT:}
+\subsubsection{Identity Credentialing and Access Management:}
+
+\begin{thebibliography}{4}
+
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
