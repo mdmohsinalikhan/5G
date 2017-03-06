@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  28 DEC 2016 17:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  6 MAR 2017 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,10 +811,10 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package epstopdf Info: Source file: <lte_architecture.eps>
-(epstopdf)                    date: 2016-12-15 13:59:46
+(epstopdf)                    date: 2017-01-30 10:54:29
 (epstopdf)                    size: 37240 bytes
 (epstopdf)             Output file: <lte_architecture-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-12-15 13:59:51
+(epstopdf)                    date: 2017-01-30 10:54:29
 (epstopdf)                    size: 21384 bytes
 (epstopdf)             Command: <repstopdf --outfile=lte_architecture-eps-conve
 rted-to.pdf lte_architecture.eps>
@@ -830,10 +830,10 @@ ne 117.
 (pdftex.def)             Requested size: 329.7663pt x 121.37718pt.
  [2]
 Package epstopdf Info: Source file: <protocol_stack.eps>
-(epstopdf)                    date: 2016-12-15 14:00:33
+(epstopdf)                    date: 2017-01-30 10:54:29
 (epstopdf)                    size: 92079 bytes
 (epstopdf)             Output file: <protocol_stack-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-12-15 14:00:38
+(epstopdf)                    date: 2017-01-30 10:54:29
 (epstopdf)                    size: 50494 bytes
 (epstopdf)             Command: <repstopdf --outfile=protocol_stack-eps-convert
 ed-to.pdf protocol_stack.eps>
@@ -935,10 +935,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  ) 
 Here is how much of TeX's memory you used:
- 14555 strings out of 493304
- 284647 string characters out of 6139871
- 342315 words of memory out of 5000000
- 17779 multiletter control sequences out of 15000+600000
+ 14556 strings out of 493304
+ 284655 string characters out of 6139871
+ 342314 words of memory out of 5000000
+ 17780 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,12n,35p,10470b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -954,7 +954,7 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (11 pages, 251521 bytes).
+Output written on main.pdf (11 pages, 251522 bytes).
 PDF statistics:
  272 PDF objects out of 1000 (max. 8388607)
  241 compressed objects within 3 object streams
