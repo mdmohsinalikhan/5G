@@ -57,6 +57,7 @@
 %%\thanks{Please note that the LNICST Editorial assumes that all authors have used
 %%the western naming convention, with given names preceding surnames. This determines
 %%the structure of the names in the running heads and the author index.}%
+\and Kimmo J\"arvinen
 \and Valtteri Niemi}  %
 %\authorrunning{Lecture Notes of ICST: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
@@ -95,7 +96,26 @@ Finland\\
 \label{sec:authentication}
 
 \subsubsection{Applicability of Existing Authentication Practices in 5G:}
-TR 33.899 discusses that existing authentication practices wouldn't readily be applicable in 5G. Because of the complex business model and diversified end-user devices, the authentication requirements become wide and complex. Unlike the legacy networks, the user equipment identifiers are required to authenticated in 5G. There will be UEs which would not have 3GPP subscription credentials. So, 5G needs authentication mechanism that can authenticate non-3GPP credentials. UEs will connect with 3rd parties different from the UE's HN. There will be large number of IoT devices activated almost simultaneously. These bulk activations would create a huge pressure on a central authentication server if such a server's involvement is required in every authentication run. And like the other legacy networks, the user subscription authentication is also required in 5G. All these concerns are under discussion in 3GPP TR 33.899. In this document, contributors are discussing about developing authentication frameworks that would support all the different scenario. Potential solutions have also been proposed based on EPS-AKA, EAP-AKA, EAP-AKA' etc.
+TR 33.899 discusses that existing authentication practices wouldn't readily be applicable in 5G. Because of the complex business model and diversified end-user devices, the authentication requirements become wide and complex. Unlike the legacy networks, the user equipment identifiers are required to be authenticated in 5G. There will be UEs which would not have 3GPP subscription credentials. So, 5G needs authentication mechanism that can authenticate non-3GPP credentials. UEs will connect with 3rd parties different from the UE's HN. Authentication is required in between these 3rd parties and UE. There will be large number of IoT devices activated almost simultaneously. These bulk activations would create a huge pressure on a central authentication server if such a server's involvement is required in every authentication run. So, requirement of authentication at the edge of the network seems necessary. And like the other legacy networks, the user subscription authentication is also required in 5G. All these concerns are under discussion in 3GPP TR 33.899, where the contributors are discussing about developing authentication frameworks that would support all the different scenario. Potential solutions have also been proposed based on EPS-AKA, EAP-AKA, EAP-AKA' etc.
+\subsubsection{Mutual Authentication}
+\begin{enumerate}
+\item In 3GPP TR 33.899, in Solution 1.11, it discusses about the high level security architecture. Here it proposes that the UE and the network (AUSF) should perform mutual authentication
+\item in 3GPP TR 33.899, in Solution 2.6, it discusses the solution to key issue 2.2 and 3.1. Key issue 2.1 is the impact of the secret key leakage. And key issue 3.1 is the interception of radio interface keys sent between operator entities. To solve these issues, in solution 2.6, it proposes to bind a serving network public key into the derivation of the radio interface session keys. In the detail of the solution it requires mutual authentication in between UE and the network (CP-AU)
+\item In Solution 2.9, it discusses the authentication framework based on EAP. It proposes two alternatives in both of the alternatives it uses mutual authentication in between the UE and the network.
+\item In Solution 2.12, it discusses to solve the following key issues:
+\begin{enumerate}
+\item Authentication framework
+\item AS security during RRC idle mode
+\item Concealing permanent or long-term subscription identifier
+\item Concealing permanent or long-term equipment identifier
+\end{enumerate}
+This solution uses mutual authentication 
+\item Solution 2.14 solving key issue 2.5 of Non-AKA based authentication is using mutual authentication
+\item Solution #2.16: Mutual Authentication between Remote UE and Network over A Relay based on ID-based Credentials
+
+\end{enumerate}
+
+
 \subsubsection{Effective use of mutual authentication to protect 5G Networks Against Unauthorized Access:}
 \subsubsection{Effective use of mutual authentication to protect End-user Device against attaching to malicious network components:}
 \subsubsection{Perceived Limitations and Drawbacks of mutual authentication:}

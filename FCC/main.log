@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  6 MAR 2017 17:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  7 MAR 2017 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,7 +802,7 @@ Package hyperref Warning: bookmark level for unknown author defaults to 0.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 98.
+(hyperref)                than one, level fixed on input line 99.
 
 [1
 
@@ -812,36 +812,43 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package natbib Warning: Empty `thebibliography' environment on input line 117.
+Package natbib Warning: Empty `thebibliography' environment on input line 134.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5ED258DE592093309BC6FA125047F362;1455.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  C688C456D1D80D1E88545F95A4C66A36;1528.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 14410 strings out of 493304
- 281441 string characters out of 6139871
- 324439 words of memory out of 5000000
- 17680 multiletter control sequences out of 15000+600000
+ 14403 strings out of 493304
+ 281322 string characters out of 6139871
+ 323423 words of memory out of 5000000
+ 17664 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,6n,35p,10470b,723s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,35p,10470b,793s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (2 pages, 90631 bytes).
+Output written on main.pdf (2 pages, 92774 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 70 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
