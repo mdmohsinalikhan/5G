@@ -97,12 +97,15 @@ Finland\\
 
 \subsubsection{Applicability of Existing Authentication Practices in 5G:}
 TR 33.899 discusses that existing authentication practices wouldn't readily be applicable in 5G. Because of the complex business model and diversified end-user devices, the authentication requirements become wide and complex. Unlike the legacy networks, the user equipment identifiers are required to be authenticated in 5G. There will be UEs which would not have 3GPP subscription credentials. So, 5G needs authentication mechanism that can authenticate non-3GPP credentials. UEs will connect with 3rd parties different from the UE's HN. Authentication is required in between these 3rd parties and UE. There will be large number of IoT devices activated almost simultaneously. These bulk activations would create a huge pressure on a central authentication server if such a server's involvement is required in every authentication run. So, requirement of authentication at the edge of the network seems necessary. And like the other legacy networks, the user subscription authentication is also required in 5G. All these concerns are under discussion in 3GPP TR 33.899, where the contributors are discussing about developing authentication frameworks that would support all the different scenario. Potential solutions have also been proposed based on EPS-AKA, EAP-AKA, EAP-AKA' etc.
+
+Note: UEs will be connecting to 3GPP core via trusted/untrusted non-3GPP access networks (e.g. WiFi). The authentication framework needs to support it.
+
 \subsubsection{Mutual Authentication}
 \begin{enumerate}
 \item In 3GPP TR 33.899, in Solution 1.11, it discusses about the high level security architecture. Here it proposes that the UE and the network (AUSF) should perform mutual authentication
 \item in 3GPP TR 33.899, in Solution 2.6, it discusses the solution to key issue 2.2 and 3.1. Key issue 2.1 is the impact of the secret key leakage. And key issue 3.1 is the interception of radio interface keys sent between operator entities. To solve these issues, in solution 2.6, it proposes to bind a serving network public key into the derivation of the radio interface session keys. In the detail of the solution it requires mutual authentication in between UE and the network (CP-AU)
 \item In Solution 2.9, it discusses the authentication framework based on EAP. It proposes two alternatives in both of the alternatives it uses mutual authentication in between the UE and the network.
-\item In Solution 2.12, it discusses to solve the following key issues:
+\item Solution \#2.12, it discusses to solve the following key issues:
 \begin{enumerate}
 \item Authentication framework
 \item AS security during RRC idle mode
@@ -110,8 +113,24 @@ TR 33.899 discusses that existing authentication practices wouldn't readily be a
 \item Concealing permanent or long-term equipment identifier
 \end{enumerate}
 This solution uses mutual authentication 
-\item Solution 2.14 solving key issue 2.5 of Non-AKA based authentication is using mutual authentication
-\item Solution #2.16: Mutual Authentication between Remote UE and Network over A Relay based on ID-based Credentials
+\item Solution \#1.11, it discusses about the high level security architecture.
+\item Solution \#2.9, it discusses the authentication framework based on EAP.
+\item Solution \#2.14 solving key issue 2.5 of Non-AKA based authentication is using mutual authentication
+\item Solution \#2.16: Mutual Authentication between Remote UE and Network over A Relay based on ID-based Credentials
+\item Solution \#2.17: Equipment identifier Authentication using the (IMEI, Device Certificate) binding
+\item Key issue \#3.10: Trusted non-3GPP access
+\item Solution \#3.1: Including a key exchange protocol into the derivation of the radio interface session keys
+\item Solution \#3.3: Security Context Management for UE with Multiple Access Technologies
+\item Solution \#3.7: Algorithms Negotiation Procedure
+\item Solution \#4.1: Network signs selected signalling messages
+\item Solution \#8.2: UE Authentication only by AUSF
+\item Solution \#8.4: UE Authentication by NSI
+\item Solution \#8.7: Security architecture for network slice
+\item Solution \#8.9: Security mechanism differentiation for network slices
+\item Key Issue \#9.1: Mutual authentication of remote UE and network over a relay
+\item Solution \#12.1: Remote credential provisioning – Add Headless IoT device to existing user’s MNO subscription
+\item Solution \#12.3: Secure Mechanism to Achieve Remote Credential Provisioning for IoT devices
+\item Solution \#12.4 Authentication Procedure for credential provisioning
 
 \end{enumerate}
 
