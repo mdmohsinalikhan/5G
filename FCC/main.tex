@@ -23,6 +23,11 @@
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
+
+\newcommand*{\clogo}{\includegraphics[width=0.25\textwidth]{HUAWEI.png}} % Generic publisher logo
+\newcommand*{\ulogo}{\includegraphics[width=0.25\textwidth]{UHEL.jpg}} % Generic publisher logo
+
+
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{url}
@@ -47,16 +52,51 @@
 \fancyfoot[C]{\thepage\ / \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 
+
+
 \begin{document}
+
 
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Comments on 5G Security based on the FCC Notice of Inquiry}
+%\title{Privacy Protected Subscriber Identification in 5G Network}
 %Concealing IMSI in 5G Network Using Identity Based Cryptography
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{Comments on 5G Security based on the FCC Notice of Inquiry}
+%\titlerunning{Concealing IMSI in 5G Network Using Identity Based Encryption}
+
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+
+{\LARGE Comments on \\[0.3\baselineskip]  5G Security based on the FCC Notice of Inquiry}\\[0.2\baselineskip] % Title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+
+\scshape % Small caps
+%With minor modifications, this article is also submitted in The 1st EAI International Conference on 5G for Future Wireless Networks  \\[\baselineskip] \par % Location and year
+
+%\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+{\small Mohsin Khan \\ Kimmo J\"arvinen \\ Valtteri Niemi\par} % Editor list
+\ulogo \\[0.3\baselineskip] % Publisher logo
+{University of Helsinki \\ Finland\par} 
+
+\vfill % Whitespace between editor names and publisher logo
+
+Published by \\[\baselineskip]
+{\small Shield Lab\par} % Editor list
+\clogo \\[0.3\baselineskip] % Publisher logo
+%{\scshape 2016} \\[0.3\baselineskip] % Year published
+{\large Huawei Technologies Co. Ltd.}\par % Publisher
+
+\endgroup}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -68,7 +108,6 @@
 %%\thanks{Please note that the LNICST Editorial assumes that all authors have used
 %%the western naming convention, with given names preceding surnames. This determines
 %%the structure of the names in the running heads and the author index.}%
-\and Kimmo J\"arvinen
 \and Valtteri Niemi}  %
 %\authorrunning{Lecture Notes of ICST: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
@@ -89,27 +128,22 @@ Finland\\
 % that is contained in the LNICST LaTeX support package.
 %
 
-%\toctitle{Comments on 5G Security based on the FCC Notice of Inquiry}
-%\tocauthor{Authors' Instructions}
-\maketitle
+\toctitle{}
+\tocauthor{}
+%\maketitle
+\titleGP
 
-\thispagestyle{fancy}
-
-
-%\begin{abstract}
-
-%\end{abstract}
-
+\thispagestyle{empty}
 
 
 \section{Introduction}
 \label{intro} 
 
-Public Safety and Homeland Security Bureau (PSHSB) in United States of America (USA) issued a notice of inquiry (NOI) on December 16, 2016. The NOI seeks comment about the security of the future 5G wireless network. In this report we discuss about certain security aspects on which the NOI seeks comment.
+The Federal Communications Commission (FCC), more specifically Public Safety and Homeland Security Bureau (PSHSB) in United States of America (USA) issued a notice of inquiry (NOI) on December 16, 2016. The NOI seeks comments about the security of the future 5G wireless network. In this report we discuss about certain security aspects on which the NOI seeks comments.
 
-The NOI forecasts that 5G is going to be the next evolutionary step in wireless communication and has the potential to be an enormous driver of economic activity. According to the NOI, it is a national priority of USA to foster an environment in which 5G can be developed and deployed across the country. PSHSB considers that they have an opportunity at this stage to ensure that 5G becomes secure by design. Therefore while the Federal Communications Commission (FCC) is moving quickly to make the spectrum needed for 5G available in the near term, it is also seeking to accelerate the dialogue around the critical importance of the early incorporation of cybersecurity protections in 5G networks, services, and devices.
+The NOI forecasts that 5G is going to be the next evolutionary step in wireless communication and has the potential to be an enormous driver of economic activity. According to the NOI, it is a national priority of USA to foster an environment in which 5G can be developed and deployed across the country. PSHSB considers that they have an opportunity at this stage to ensure that 5G becomes secure by design. Therefore, while FCC is moving quickly to make the spectrum needed for 5G available in the near term, it is also seeking to accelerate the dialogue around the critical importance of the early incorporation of cybersecurity protections in 5G networks, services, and devices.
 
-FCC thinks it is the communication service providers who can best evaluate and address security risks to network operations. Therefore, FCC adopted a rule requiring licensees to submit general statements of their network security plans. This rule is adopted to encourage licensees to consider security in their new 5G networks. PSHSB issued a NOI to seek input on the new issues raised by 5G security to foster dialogue between relevant standards bodies and prospective 5G providers. PSHSB considers that the NOI would complement the important work on cybersecurity that is already taking place within the government and private sector.
+FCC thinks it is the communication service providers who can best evaluate and address security risks to network operations. Therefore, FCC adopted a rule requiring radio spectrum licensees to submit general statements of their network security plans. This rule is adopted to encourage licensees to consider security in their new 5G networks. PSHSB issued a NOI to seek input on the new issues raised by 5G security to foster dialogue between relevant standards bodies and prospective 5G providers. PSHSB considers that the NOI would complement the important work on cybersecurity that is already taking place within the government and private sector.
 
 The NOI looks holistically at the security implications in the future 5G network. It seeks comments on confidentiality, integrity and availability (CIA) issues. It asks questions about technological primitives used to achieve CIA. These questions span in the area of authentication, encryption, physical security, device security, DoS, DDoS attacks, patch management, and risk segmentation. It also asks fundamental questions about the roles and responsibilities of service providers and device manufacturers. The NOI also seeks comment on the benefit and cost of the security features.
 
@@ -122,11 +156,11 @@ This report focuses particularly on two topics of the FCC inquiry: authenticatio
 \subsection{Applicability of Existing Authentication Practices in 5G}
 Preserving the confidentiality and integrity of network depends on limiting access to authorized users. Authentication is a pre-requisite of authorization. The NOI seeks comment on the applicability of the existing authentication practices in 5G. It seeks comment \ques{on the use of authentication in networks today and whether existing authentication practices will be applicable to the 5G environment.}
 
-In the existing networks (e.g., UMTS, LTE), authentication scenario is simpler compared to the authentication scenarios in 5G. In the existing networks, a UE trying to connect with the 3GPP network has a subscription of a 3GPP network and has 3GPP credentials. The UE connects to the 3GPP core network (CN) either through a 3GPP defined access network (AN), or through a non-3GPP defined AN (e.g., WiFi, WiMax). UMTS-AKA is used in UMTS to authenticate a UE connecting through a 3GPP defined AN. EAP-AKA is used in UMTS to authenticate a UE connecting through a non-3GPP defined SN. In LTE, EPS-AKA is used. All these protocols authenticates a UE using the 3GPP credentials and creates a security context in between a UE and the CN. However, authentication scenarios become diverse and complex in 5G.
+In the existing networks (e.g., UMTS, LTE), authentication scenario is simpler compared to the authentication scenarios in 5G. In the existing networks, a UE trying to connect with the 3GPP network has a subscription of a 3GPP network and has 3GPP credentials. The UE connects to the 3GPP core network (CN) either through a 3GPP defined access network (AN), or through a non-3GPP defined AN (e.g., WiFi, WiMax). UMTS-AKA is used in UMTS to authenticate a UE connecting through a 3GPP defined AN. EAP-AKA is used in UMTS to authenticate a UE connecting through a non-3GPP defined SN. In LTE, EPS-AKA is used. All these protocols authenticate a UE using the 3GPP credentials and create a security context in between a UE and the CN. However, authentication scenarios become more diverse and complex in 5G.
 
 TR 33.899 discusses that existing authentication practices would not readily be applicable in 5G. Because of the complex business model and diversified end-user devices, the authentication requirements become wide and complex. Unlike the legacy networks, the user equipment identifiers are required to be authenticated in 5G. There will be UEs which would not have 3GPP subscription credentials. So, 5G needs authentication mechanism that can authenticate non-3GPP credentials. 
 
-Based on different functionalities, the network will be split into different slices. A network slice can be operated by a 3rd party different from its HN. Authentication is required in between these 3rd parties and UE. UEs will connect through multiple access networks simultaneously. These access networks might be trusted or untrusted non-3GPP access networks, e.g. WiFi, Bluetooth. An authentication framework requires that will consider these scenarios and create a collection of coherent and secure security-contexts.
+Based on different functionalities, the network will be split into different slices. A network slice can be operated by a 3rd party different from its HN. Authentication is required in between these 3rd parties and UE. UEs will connect through multiple access networks simultaneously. These access networks might be trusted or untrusted non-3GPP access networks, e.g. WiFi, Bluetooth. An authentication framework is required that will consider these scenarios and create a collection of coherent and secure security-contexts.
 
 There will be large number of IoT devices activated almost simultaneously. These bulk activations would create a huge pressure on a central authentication server if such a server's involvement is required in every authentication run. According to 3GPP TR 22.862, the 3GPP system shall support industrial factory deployment where network access security is provided and managed by the factory owner with its ID management, authentication, confidentiality and integrity. The 3GPP system shall support industrial factory deployment where network access security is provided and managed
 by the factory owner with its ID management, authentication, confidentiality and integrity. So, requirement of authentication at the edge of the network seems necessary. Like the other legacy networks, the user subscription authentication is also required in 5G. All these concerns are under discussion in TR 33.899, where the contributors are discussing about developing authentication frameworks that would support all the different scenarios. 
@@ -134,34 +168,17 @@ by the factory owner with its ID management, authentication, confidentiality and
 It appears that the existing authentication practices will not be sufficient to cater all the new requirements arising in the future 5G network. Existing authentication practices needs to be extended to cater the new requirements and completely new authentication protocol might be needed to solve certain scenarios e.g., authentication at the edge of the network. Potential solutions of authentication framework to cater this diverse need have been proposed based on EPS-AKA, EAP-AKA, EAP-AKA' etc. Non-AKA based solution has also been proposed to authenticate credentials different to existing credentials. The non-AKA based solution uses public-key encryption. Public-key encryption is not used in the legacy networks at all.  
 
 \subsection{Mutual Authentication}
-<<<<<<< HEAD
-In the NOI published by PSHSB, it seeks comment on \ques{effective use of mutual authentication, in particular, for protecting 5G networks against unauthorized access and end-user devices against attaching to malicious network components, as well as the perceived limitations and drawbacks of those uses}. Mutual authentication is a desirable property in an authentication protocol. In 3GPP networks mutual authentication in between UE and the SN has been incorporated since UMTS and has been strengthened in LTE. As authentication scenarios become diverse and involve many different kinds of entities, 3GPP community needs to be careful about discarding mutual authentication from an authentication protocol. 
+In the NOI published by PSHSB, it seeks comment on \ques{effective use of mutual authentication, in particular, for protecting 5G networks against unauthorized access and end-user devices against attaching to malicious network components, as well as the perceived limitations and drawbacks of those uses}. Mutual authentication is a desirable property in an authentication protocol. In 3GPP networks mutual authentication in between UE and the SN has been incorporated since UMTS and has been strengthened in LTE. As authentication scenarios become diverse and involve many different kinds of entities, 3GPP community needs to be careful about relaxing the requirements of including mutual authentication in an authentication protocol. 
 
-=======
-In the NOI published by PSHSB, it seeks comment on \ques{effective use of mutual authentication, in particular, for protecting 5G networks against unauthorized access and end-user devices against attaching to malicious network components, as well as the perceived limitations and drawbacks of those uses.} The NOI also inquires \ques{under what circumstances would mutual authentication be considered essential to ensure or
-bolster security?} Mutual authentication is a desirable property in an authentication protocol. In 3GPP networks mutual authentication in between UE and the SN has been incorporated since UMTS and has been strengthened in LTE. As authentication scenarios become diverse and involve many different kinds of entities, 3GPP community needs to be careful about discarding mutual authentication from an authentication protocol. 
-\paragraph{}
->>>>>>> 72d9a46ae2fa6dbbbf509ef8ea1fcfeaee190d31
 In TR 33.899 different possible solutions are being discussed about the authentication in between the UE and the network. In all the possible solutions mutual authentication has been incorporated. 
 
-In the proposed authentication frameworks in TR 23.799 and TR 33.899 mutual authentication in between UE and network has been incorporated. Binding a serving network public key into the derivation of the radio interface session keys has been proposed to reduce the impact of secret key leakage. Security of RRC idle mode has not been very strong in the legacy networks. It appears that mutual authentication is required to further strengthen the RRC idle mode security.
-<<<<<<< HEAD
+In the proposed authentication frameworks in TR 23.799 and TR 33.899 mutual authentication in between UE and network has been incorporated. Binding a serving network public key into the derivation of the radio interface session keys has been proposed to reduce the impact of secret key leakage. Security of RRC idle mode has not been very strong in the legacy networks. In the RRC idle state, UE acquires the system information from the camped cell and uses them to receive paging and obtain other services such as MBMS, D2D, etc. in RRC idle state. When the UE select a cell in RRC idle mode, it does not validate whether the eNB is authentic or fake. As a result, UE may camp to a rogue cell leading to denial of services (such as public safety warnings, incoming emergency calls, real-time application server push services, proximity services, etc.).  It appears that mutual authentication is required to further strengthen the RRC idle mode security.
 
-Subscription privacy is also an important security requirement in 5G. Concealing any long-term  identifier is very central in securing subscription privacy. As found in the discussion in TR 33.899, mutual authentication is instrumental in concealing a long-term identifier. Besides, solutions using mutual authentication have been proposed for relay security, UE's secure access to different network slices and remote credential provisioning.
+Subscriber identity privacy is also an important security requirement in 5G. Concealing any long-term  identifier is very central in securing subscription privacy. As found in the discussion in TR 33.899, mutual authentication is instrumental in concealing a long-term identifier. Besides, solutions using mutual authentication have been proposed for relay security, UE's secure access to different network slices and remote credential provisioning.
 
 There has not been any particular discussion in TR 33.899 about any circumstances where mutual authentication would not be beneficial. In some cases, the solution of mutual authentication has been proposed using public key encryption. Apparently the only drawback of mutual authentication would be  increased computational and signalling overhead mostly due to public-key cryptography.
 
 It has been identified that remote credential provisioning of IoT devices is a challenge. Many IoT devices will be resource constrained devices. Embedding enough cryptographic functionality in these devices to enable mutual authentication is challenging. Besides, many IoT devices will try to connect at the same time, which might create a signalling storm.
-=======
-\paragraph{}
-Subscription privacy is also an important security requirement in 5G. Concealing any long-term  identifier is very central in securing subscription privacy. As found in the discussion in TR 33.899, mutual authentication is instrumental and perhaps essential in concealing a long-term identifier. Besides, solutions using mutual authentication have been proposed for relay security, UE's secure access to different network slices and remote credential provisioning.
-\paragraph{}
-In the NOI it is asked \ques{Are there specific considerations that would apply to 5G devices}? The answer to the question is yes. There would be 5G devices from a wide range of hardware capabilities. There would be 5G devices as small as a censor with very little computational, power and energy capability. There would also be large devices with very high computational power with steady supply of high power. Choice of protocols that require high computational power along with high energy per second need to be carefully chosen for the resource constrained devices. Besides there would be devices which would not have 3GPP credentials and would need to be authenticated locally in a factory like environment. Authentication framework needs to be chosen that can support such local authentication.
-\paragraph{} The NOI inquires \ques{are there any circumstances where mutual authentication would not be beneficial}? As we have discussed, mutual authentication is a desired property of an authentication protocol. There has not been any particular discussion in TR 33.899 about any circumstances where mutual authentication would not be beneficial. In some cases, the solution of mutual authentication has been proposed using public key encryption. Apparently the only drawback of mutual authentication would be increased computational and signalling overhead mostly due to public-key cryptography.
-\paragraph{}
-The NOI asks about the authentication of the IoT devices. It asks \ques{would the mass deployment of high-volume, low-cost 5G devices in IoT networks present particular authentication challenges? How can providers effectively authenticate the communications of highvolume, low-cost 5G devices – device to device, device to network, and network to device? How can providers effectively address these challenges}?
-It has been identified that remote credential provisioning of IoT devices is a challenge. Many IoT devices will be resource constrained devices. Embedding enough cryptographic functionality in these devices to enable mutual authentication is challenging. Besides, many IoT devices will try to connect at the same time, which might create a signalling storm. Authentication of IoT devices is therefore need to be performed locally where the devices physically exist. The AN that serves the IoT devices need to be delegated by the HN of the devices to authenticate the IoT devices without the assistance of the HN. Similarly IoT devices need to be able to authenticate the AN. Public-key encryption is a potential choice for this scenario. One solution has been proposed in 3GPP TR 33.899 based on the identity based public-key encryption. However for small devices public-key encryption is expensive, so elliptic curve based public-key encryption would be compratively a better choice. Besides latency is perhaps not a very criticial requirement for low cost resource constrained IoT devices and hence public-key encryption might be possible to incorporate in these devices by using cicruits that require very low power but high latency.
->>>>>>> 72d9a46ae2fa6dbbbf509ef8ea1fcfeaee190d31
 
 %\begin{enumerate}
 %\item In 3GPP TR 33.899, in Solution 1.11, it discusses about the high level security architecture. Here it proposes that the UE and the network (AUSF) should perform mutual authentication
@@ -260,7 +277,7 @@ TR 33.899 discusses public-key cryptography in many places in its Security Area 
 
 % Solution~\#7.16 shows a mechanism for assigning temporary identifiers so that the network generates them but the UE checks that it is truly new.
 
-To address the FCC documents request for comments, we conclude that \ques{the planned deployment and use of encryption} (see Para.~12), and public-key encryption in particular, significantly strengthens the cryptographic toolkit available for improving security features of 5G compared to previous generations. Public-key cryptography allows more flexible and scalable ways to \ques{address encryption key management and distribution mechanisms} (in Para.~13). We assess that securing the envisioned 5G network of heterogeneous devices would be difficult without public-key cryptography so the decision to include public-key cryptography is justifiable. However, this does not come for free because all forms of public-key cryptography are significantly more costly than the symmetric encryption schemes. This can be a problem for \ques{a 5G environment in which innumerable, low-cost devices are expected to operate} (in Para.~13) because the implementation resources for some of such devices can be expected to be very limited. This holds particularly for the IoT scenario included in 5G.
+To address the FCC documents request for comments, we conclude that \ques{the planned deployment and use of encryption} (see Para.~12), and public-key encryption in particular, significantly strengthens the cryptographic toolkit available for improving security features of 5G compared to previous generations. Public-key cryptography allows more flexible and scalable ways to \ques{address encryption key management and distribution mechanisms} (in Para.~13). We assess that securing the envisioned 5G network of heterogeneous devices would be difficult without public-key cryptography so the decision to include public-key cryptography is justifiable. However, this does not come for free because all forms of public-key cryptography are significantly more costly than the symmetric encryption schemes. This can be a problem for \ques{a 5G environment in which innumerable, low-cost devices are expected to operate} (in Para.~13) because the hardware-related resources for some of such devices can be expected to be very limited. This holds particularly for the IoT scenario included in 5G.
 
 The above discussion is relevant also for the question in Para.~13, where the FCC document asks: \ques{whether currently available encryption protocols are effective in securing devices and are like to be effective in a 5G environment}. We can conclude that the answer  is `no' because many of the additional security features require public-key cryptography and, hence, support for it needs to be added to 5G. However, it is noteworthy that Security Area~\#17 about cryptographic algorithms does not mention any specific public-key cryptography algorithms to be used in 5G. It only discusses the quantum safe algorithms (see Sect.~\ref{sec:qsc}), but without a doubt also traditional public-key algorithms need to be included. Because of performance, key lengths and ciphertext sizes, elliptic curve cryptosystems would be the most appropriate candidates.
 
@@ -276,16 +293,17 @@ The above discussion about reducing the role of the home network is relevant for
 TR 33.899 discusses the effects of the requirement for low latency in several places and, especially, in Security Area~\#1. We summarize the discussion next. 
 Key Issue~\#1.13 discusses the challenges created by low latency requirements, which  may prevent using strong security mechanisms and lead to severe vulnerabilities. It concludes that at least the control plane should be fully secured even if this leads to longer latency. 
 Solution~\#1.12 claims a solution to the latency problem by using Forward Error Correction (FEC) codes, but it provides very little details and we estimate that it does not provide sufficient cryptographic security if more attention would be given to it. 
-Solution~\#1.15 suggest to use AES as a fast stream cipher, namely use it in CTR (counter) mode, for low latency. We think this can be a viable solution as hardware support for AES(-CTR) is often available and can be very efficient for encrypting several blocks because the CTR mode can process blocks in a pipelined manner. %However, pipelining does not give latency improvements for small amounts of data. 
+Solution~\#1.15 suggest to use AES as a fast stream cipher, namely use it in CTR (counter) mode, for low latency. Actually this solution is already in use in LTE.
+%We think this can be a viable solution as hardware support for AES(-CTR) is often available and can be very efficient for encrypting several blocks because the CTR mode can process blocks in a pipelined manner. %However, pipelining does not give latency improvements for small amounts of data. 
 It would also be possible to extend AES-CTR to AES-GCM (Galois/Counter mode) which would provide confidentiality, integrity and authenticity with little extra overhead compared to AES(-CTR) (see Sect.~\ref{sec:ae}).
-Solution~\#1.18 proposes that the control plane is allowed to have longer latency than the user plane. This seems reasonable as it would allow more elaborated security measures to be used for control plane including public-key cryptography. The security of the user plane could be ensured on higher hierarchical levels (transport and application layers). % , which are not affected by the latency requirements. 
+Solution~\#1.18 proposes that the control plane is allowed to have longer latency than the user plane. This seems reasonable as it would allow more elaborated security measures to be used for control plane including public-key cryptography. The security of the user plane could be ensured on higher communication layers (transport and application layers). % , which are not affected by the latency requirements. 
 %However, even this solution may lower security to some extent because it requires storing old security associations in the roaming network as pointed out by Solution~\#1.18.
 The message of TR 33.899 seems to be that the requirements for low latency should affect only the user plane. Despite this, reducing the latency of the control plane is still important and discussed in TR 33.899 (e.g., Solutions \#1.16 and \#1.17).
 %The latency of the control plane could be reduced by using an intermediate key in the roaming network (that is still negotiated when first connecting to the network and refreshed every once and while) as suggested in Solution~\#1.16 ``data efficient re-keying''. Another solution Solution~\#1-17 proposes to delegate some of the functionalities of the home network to the serving network via a delegated subscriber server (DSS) so that the long-term subscriber secret key is not given to the DSS. However, these techniques have certain security shortcomings and may enable frauds from the visiting network as pointed out in the solutions.
 
 Recent advances in cryptography may help in reducing the latency. E.g., using authenticated encryption instead of a cipher and a MAC leads to shorter latency (see Sect.~\ref{sec:ae}). Also some ciphers that are designed to minimize latency have been proposed during the recent years (e.g., PRINCE\footnote{Published in the article: Julia Borghoff, Anne Canteaut, Tim Güneysu, Elif Bilge Kavun, Miroslav Knezevic, Lars R. Knudsen, Gregor Leander, Ventzislav Nikov, Christof Paar, Christian Rechberger, Peter Rombouts, Søren S. Thomsen, Tolga Yalçın: ``PRINCE --- A Low-Latency Block Cipher for Pervasive Computing Applications'', ASIACRYPT 2012, LNCS 7658, pp. 208-225, 2012.}) and they could later improve the situation. The downside is that, to the best of the authors' knowledge, low latency ciphers have not been standardized so far and still lack the level of public scrutiny expected from secure cryptography.
 
-The above discussion is relevant in the light of the FCC document's question (in Para. 14): \ques{whether encryption is necessary for all 5G communication}. Including encryption to all 5G communication would benefit security, but the requirements for low latency seem to be contradicting with this. Hence, the most reasonable answer to the question appears to be that although using encryption for all communication would be good from the security point of view, it is maybe not possible to achieve all requirements if everything is encrypted. At least the control plane must be fully encrypted, but the use of encryption on the user plane can be possible to leave for higher abstraction layers. In addition to the above question, this answers also to the following questions (in Para. 15): \ques{whether 5G service providers should distinguish between the application of encryption to products that would operate on the 5G control plane and those that would be part of the user plane?} and \ques{how should such a distinction be made?}.
+The above discussion is relevant in the light of the FCC document's question (in Para. 14): \ques{whether encryption is necessary for all 5G communication}. Including encryption to all 5G communication would benefit security, but the requirements for low latency seem to be contradicting with this. Hence, the most reasonable answer to the question appears to be that although using encryption for all communication would be good from the security point of view, it is maybe not possible to achieve all requirements if everything is encrypted. At least the control plane must be fully encrypted, but the use of encryption on the user plane can possibly be left for higher abstraction layers. In addition to the above question, this answers also to the following questions (in Para. 15): \ques{whether 5G service providers should distinguish between the application of encryption to products that would operate on the 5G control plane and those that would be part of the user plane?} and \ques{how should such a distinction be made?}.
 
 \subsection{Quantum Safe Cryptography}
 \label{sec:qsc}
@@ -293,9 +311,9 @@ The above discussion is relevant in the light of the FCC document's question (in
 The FCC document seeks comments (in Para.~12) on \ques{the planned deployment and use of encryption to promote 5G security, as well as on the perceived challenges, costs, and benefits of encryption at both the network and device levels}. As already discussed in Sect.~\ref{sec:pkc}, 5G is expected to include public-key cryptography (see Sect.~\ref{sec:pkc}). The current public-key cryptosystems (e.g., RSA, ECDH and ECDSA) are not enough to secure devices if the attackers would be able to utilize large-scale quantum computers in their attacks because they are vulnerable to Shor's algorithm. %The emerge of large-scale quantum computers would make current public-key cryptosystems (e.g., RSA, ECDH and ECDSA) obsolete. 
 Secret-key cryptography is believed to be less affected and security level can be retained to the original level by doubling the key size (e.g., use AES-256 instead of AES-128). Although the FCC inquiry does not directly mention quantum safe cryptography, we think it is relevant in the light of the questions asked in Section II.A.2 and, especially, the above request of comments.
 
-TR 33.899 acknowledges the need for quantum safe cryptography in 5G (in Key Issue~\#17.2). We agree that it is important to address the quantum threat in the 5G specifications because the 5G network can be expected to be used for a long time (several decades). Hence, it is possible that large-scale quantum computers will be built in that time frame making the current public-key cryptography vulnerable. The problem is that the field of quantum safe cryptography is not matured yet and there are no clear alternatives for the current public-key cryptosystems. Instead, there are multiple proposals which have not been fully analyzed in terms of security (both classical and quantum) or efficiency. TR 33.899 provides five possible solutions to the quantum threat and the problem of not having a clear replacement algorithm.
+TR 33.899 acknowledges the need for quantum safe cryptography in 5G (in Key Issue~\#17.2). We agree that it is important to address the quantum threat in the 5G specifications because the 5G network can be expected to be used for a long time (several decades). Hence, it is possible that large-scale quantum computers will be built in that time frame making the current public-key cryptography vulnerable. The problem is that the field of quantum safe cryptography is not matured yet and there are no clear alternative for the current public-key cryptosystems. Instead, there are multiple proposals which have not been fully analyzed in terms of security (both classical and quantum) or efficiency. TR 33.899 provides five possible solutions to the quantum threat and the problem of not having a clear replacement algorithm.
 
-Solution~\#17.1 suggests to incorporate a quantum safe algorithm ``from day one''. It is very unlikely that a well established and standardized algorithm exists when 5G specifications are fixed. Solution~\#17.1 acknowledges this problem and suggest to delay the selection as late as possible. However, selecting a quantum safe algorithm even at that point can be very problematic because 5G specifications will be fixed in the near future. NIST of the USA has initiated a process for selecting a portfolio of quantum safe algorithms followed later by standard(s), but this process is not expected to finish before 2020s. There are many alternatives for quantum safe cryptography available, but none of them has received the public scrutiny that is expected from secure cryptosystems. Hence, fixing an algorithm in the near future is risky. There is a risk of wasting a lot of resources in implementing cryptosystems that are never being used because (a) progress in quantum computing research does not advance, (b) the selected algorithm is not secure (if broken in the coming years), (c) other more secure or efficient alternatives are developed, and/or (d) the parameters of a standardized version of the algorithm may be different from the selected one even if the same cryptographic technique is selected for the future standards and 5G specification. Especially (b) is critical because having insecure cryptosystems in the 5G portfolio could lead to severe security issues. Based on all this, we feel that it may not be possible to select a quantum safe algorithm for 5G ``from day one''.
+Solution~\#17.1 suggests to incorporate a quantum safe algorithm ``from day one''. It is very unlikely that a well established and standardized algorithm exists when 5G specifications are fixed. Solution~\#17.1 acknowledges this problem and suggest to delay the selection as late as possible. However, selecting a quantum safe algorithm even at that point can be very problematic because 5G specifications will be fixed in the near future. NIST of the USA has initiated a process for selecting a portfolio of quantum safe algorithms followed later by standard(s), but this process is not expected to finish before 2020s. There are many alternative solutions for quantum safe cryptography available, but none of them has received the public scrutiny that is expected from secure cryptosystems. Hence, fixing an algorithm in the near future is risky. There is a risk of wasting a lot of resources in implementing cryptosystems that are never being used because (a) progress in quantum computing research does not advance, (b) the selected algorithm is not secure (if broken in the coming years), (c) other more secure or efficient alternatives are developed, and/or (d) the parameters of a standardized version of the algorithm may be different from the selected one even if the same cryptographic technique is selected for the future standards and 5G specification. Especially (b) is critical because having insecure cryptosystems in the 5G portfolio could lead to severe security issues. Based on all this, we feel that it may not be possible to select a quantum safe algorithm for 5G ``from day one''.
 
 TR 33.899 proposes two solutions that do not require fixing the algorithm in the 5G specifications: Solution~\#17.3 allows the home network to update algorithms in the UE and Solution~\#17.4 allows secure negotiation of algorithms when support for an algorithm is already available in the UE and the home network\footnote{ßSolution~\#17.5 is similar to Solution~\#17.4, but allows the UE and the serving network to securely negotiate an algorithm.}. The former allows the home network to update the public-key algorithms to quantum safe algorithms when such algorithms become standardized and/or when the quantum threat becomes a more urgent matter. The downside is that this would be a software update which may lead to inefficient and insecure (against side-channel attacks) cryptographic implementations. The latter allows the use of quantum safe algorithms when both the UE and the home network have support for them. This does not have the drawback of the former solution because vendor optimized implementations (including hardware support) is permitted, but this solution does not permit rapid updates of the algorithms or updating old devices. We feel that either of these solutions or, preferably, a combination of them are more feasible options for mitigating the quantum threat in 5G.
 
