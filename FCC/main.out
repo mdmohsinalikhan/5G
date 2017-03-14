@@ -1,5 +1,6 @@
 \BOOKMARK [0][]{chapter.1}{Comments on 5G Security based on the FCC Notice of Inquiry}{}% 1
 \BOOKMARK [1][]{section.2}{Introduction}{chapter.1}% 2
+<<<<<<< HEAD
 \BOOKMARK [1][]{section.3}{Authentication}{chapter.1}% 3
 \BOOKMARK [2][-]{subsection.4}{Applicability of Existing Authentication Practices in 5G}{section.3}% 4
 \BOOKMARK [2][-]{subsection.5}{Mutual Authentication}{section.3}% 5
@@ -9,3 +10,14 @@
 \BOOKMARK [2][-]{subsection.10}{Quantum Safe Cryptography}{section.6}% 9
 \BOOKMARK [2][-]{subsection.12}{Authenticated Encryption}{section.6}% 10
 \BOOKMARK [1][]{section.14}{Conclusion}{chapter.1}% 11
+=======
+\BOOKMARK [1][]{section.8}{Authentication}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.9}{Applicability of Existing Authentication Practices in 5G}{section.8}% 4
+\BOOKMARK [2][-]{subsection.15}{Mutual Authentication}{section.8}% 5
+\BOOKMARK [1][]{section.22}{Encryption}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.23}{Public-Key Cryptography}{section.22}% 7
+\BOOKMARK [2][-]{subsection.24}{Low Latency Encryption}{section.22}% 8
+\BOOKMARK [2][-]{subsection.26}{Quantum Safe Cryptography}{section.22}% 9
+\BOOKMARK [2][-]{subsection.28}{Authenticated Encryption}{section.22}% 10
+\BOOKMARK [1][]{section.30}{Conclusion}{chapter.1}% 11
+>>>>>>> 72d9a46ae2fa6dbbbf509ef8ea1fcfeaee190d31
