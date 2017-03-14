@@ -1,11 +1,11 @@
 \BOOKMARK [0][]{chapter.1}{Comments on 5G Security based on the FCC Notice of Inquiry}{}% 1
 \BOOKMARK [1][]{section.2}{Introduction}{chapter.1}% 2
-\BOOKMARK [1][]{section.8}{Authentication}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.9}{Applicability of Existing Authentication Practices in 5G}{section.8}% 4
-\BOOKMARK [2][-]{subsection.15}{Mutual Authentication}{section.8}% 5
-\BOOKMARK [1][]{section.20}{Encryption}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.21}{Public-Key Cryptography}{section.20}% 7
-\BOOKMARK [2][-]{subsection.22}{Low Latency Encryption}{section.20}% 8
-\BOOKMARK [2][-]{subsection.24}{Quantum Safe Cryptography}{section.20}% 9
-\BOOKMARK [2][-]{subsection.26}{Authenticated Encryption}{section.20}% 10
-\BOOKMARK [1][]{section.28}{Conclusion}{chapter.1}% 11
+\BOOKMARK [1][]{section.3}{Authentication}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.4}{Applicability of Existing Authentication Practices in 5G}{section.3}% 4
+\BOOKMARK [2][-]{subsection.5}{Mutual Authentication}{section.3}% 5
+\BOOKMARK [1][]{section.6}{Encryption}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.7}{Public-Key Cryptography}{section.6}% 7
+\BOOKMARK [2][-]{subsection.8}{Low Latency Encryption}{section.6}% 8
+\BOOKMARK [2][-]{subsection.10}{Quantum Safe Cryptography}{section.6}% 9
+\BOOKMARK [2][-]{subsection.12}{Authenticated Encryption}{section.6}% 10
+\BOOKMARK [1][]{section.14}{Conclusion}{chapter.1}% 11
