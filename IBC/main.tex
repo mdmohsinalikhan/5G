@@ -19,20 +19,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\documentclass[lnicst,sechang,a4paper]{svmultln}
-\documentclass[12pt]{llncs}
+%\documentclass[12pt]{llncs}
+\documentclass[runningheads,a4paper]{llncs} %this is for NSS
+
+
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
 
 
-\newcommand*{\clogo}{\includegraphics[width=0.25\textwidth]{HUAWEI.png}} % Generic publisher logo
-\newcommand*{\ulogo}{\includegraphics[width=0.25\textwidth]{UHEL.jpg}} % Generic publisher logo
+%\usepackage{amssymb}
+%\setcounter{tocdepth}{3}
+%\usepackage{graphicx}
+%\usepackage{fancyhdr}
+%\usepackage{lastpage}
 
 \usepackage{url}
-\urldef{\mailsa}\path|{mohsinnnn.khan, valtteri.niemi}@helsinki.fi|
-\usepackage[pdfpagelabels,hypertexnames=false,breaklinks=true,bookmarksopen=true,bookmarksopenlevel=2]{hyperref}
+\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
+\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
 
 
 %added by the author himself
@@ -43,56 +50,25 @@
 \DeclareSIUnit\mt{\milli\tesla} %% A method for say short cut or new unit!
 \sisetup{inter-unit-product = {-}}
 
-
-\setlength\parskip{12pt}
-\setlength\parindent{0pt}
-\pagestyle{fancy}
-\fancyhf{} 
-\fancyfoot[C]{\thepage\ / \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0pt}
+%added by kimmo
+%\setlength\parskip{12pt}
+%\setlength\parindent{0pt}
+%\pagestyle{fancy}
+%\fancyhf{} 
+%\fancyfoot[C]{\thepage\ / \pageref{LastPage}}
+%\renewcommand{\headrulewidth}{0pt}
 
 \begin{document}
 
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-%\title{Privacy Protected Subscriber Identification in 5G Network}
+\title{Privacy Protected Subscriber Identification in 5G Network}
 %Concealing IMSI in 5G Network Using Identity Based Cryptography
 
 % a short form should be given in case it is too long for the running head
-%\titlerunning{Concealing IMSI in 5G Network Using Identity Based Encryption}
+\titlerunning{Concealing IMSI in 5G Network Using Identity Based Encryption}
 
-
-\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
-\centering % Center all text
-\vspace*{\baselineskip} % White space at the top of the page
-
-\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
-\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
-
-{\LARGE A Report on \\[0.3\baselineskip] Privacy Protected Subscriber Identification in 5G Network}\\[0.2\baselineskip] % Title
-
-\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
-\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
-
-\scshape % Small caps
-%With minor modifications, this article is also submitted in The 1st EAI International Conference on 5G for Future Wireless Networks  \\[\baselineskip] \par % Location and year
-
-%\vspace*{2\baselineskip} % Whitespace between location/year and editors
-
-{\small Mohsin Khan \\ Valtteri Niemi\par} % Editor list
-\ulogo \\[0.3\baselineskip] % Publisher logo
-{University of Helsinki \\ Finland\par} 
-
-\vfill % Whitespace between editor names and publisher logo
-
-Published by \\[\baselineskip]
-{\small Shield Lab\par} % Editor list
-\clogo \\[0.3\baselineskip] % Publisher logo
-%{\scshape 2016} \\[0.3\baselineskip] % Year published
-{\large Huawei Technologies Co. Ltd.}\par % Publisher
-
-\endgroup}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -105,7 +81,7 @@ Published by \\[\baselineskip]
 %%the western naming convention, with given names preceding surnames. This determines
 %%the structure of the names in the running heads and the author index.}%
 \and Valtteri Niemi}  %
-%\authorrunning{Lecture Notes of ICST: Authors' Instructions}
+\authorrunning{Lecture Notes of ICST: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next
@@ -113,9 +89,10 @@ Published by \\[\baselineskip]
 P.O. Box 68 (Gustaf H\"allstr\"omin katu 2b)\\
 FI-00014 University of Helsinki\\
 Finland\\
-\mailsa
-%\\
-%\url{http://www.springer.com/series/7911}
+\mailsa\\
+\mailsb\\
+\mailsc\\
+\url{https://www.cs.helsinki.fi/en}
 }
 
 %
@@ -124,16 +101,14 @@ Finland\\
 % that is contained in the LNICST LaTeX support package.
 %
 
-\toctitle{}
-\tocauthor{}
-%\maketitle
-\titleGP
+\toctitle{Lecture Notes in Computer Science}
+\tocauthor{Authors' Instructions}
+\maketitle
 
-\thispagestyle{empty}
 
-%\begin{abstract}
-%The aspirations for the next generation mobile network (5G) are high. It has a vision of improved security and privacy over the existing LTE network. Subscription privacy of a user has been a historical concern with all the previous generation mobile networks, namely, GSM, UMTS, and LTE. While a little improvement have been achieved in securing the privacy of long-term identity of a subscriber, the so called IMSI catchers are still in existence even in the LTE and advanced LTE networks. This report looks into this problem of concealing long-term identity of a subscriber and presents different techniques of using public-key encryption to tackle it. One special case of public-key encryption is identity based encryption. A rigorous comparison with the pros and cons among the different techniques show that identity based encryption is a potential solution for securing the long-term identity privacy of a user in the 5G network.
-%\end{abstract}
+\begin{abstract}
+The aspirations for the next generation mobile network (5G) are high. It has a vision of improved security and privacy over the existing LTE network. Subscription privacy of a user has been a historical concern with all the previous generation mobile networks, namely, GSM, UMTS, and LTE. While a little improvement have been achieved in securing the privacy of long-term identity of a subscriber, the so called IMSI catchers are still in existence even in the LTE and advanced LTE networks. This report looks into this problem of concealing long-term identity of a subscriber and presents different techniques of using public-key encryption to tackle it. One special case of public-key encryption is identity based encryption. A rigorous comparison with the pros and cons among the different techniques show that identity based encryption is a potential solution for securing the long-term identity privacy of a user in the 5G network.
+\end{abstract}
 
 
 \section{Introduction}
