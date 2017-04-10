@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  7 APR 2017 17:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 APR 2017 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -666,61 +666,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 2158) has occurred while \output is active []
-
- [2]
 Package epstopdf Info: Source file: <security_architecture_abstraction.eps>
-(epstopdf)                    date: 2017-02-27 10:50:34
+(epstopdf)                    date: 2017-04-10 14:36:57
 (epstopdf)                    size: 216944 bytes
 (epstopdf)             Output file: <security_architecture_abstraction-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2017-02-27 10:50:40
+(epstopdf)                    date: 2017-04-10 14:37:14
 (epstopdf)                    size: 67867 bytes
 (epstopdf)             Command: <repstopdf --outfile=security_architecture_abst
 raction-eps-converted-to.pdf security_architecture_abstraction.eps>
-(epstopdf)             \includegraphics on input line 132.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<security_architecture_abstraction-eps-converted-to.pdf, id=15, 498.86375pt x 3
+<security_architecture_abstraction-eps-converted-to.pdf, id=12, 498.86375pt x 3
 11.1625pt>
 File: security_architecture_abstraction-eps-converted-to.pdf Graphic file (type
  pdf)
  <use security_architecture_abstraction-eps-converted-to.pdf>
 Package pdftex.def Info: security_architecture_abstraction-eps-converted-to.pdf
- used on input line 132.
-(pdftex.def)             Requested size: 340.17958pt x 212.19069pt.
+ used on input line 130.
+(pdftex.def)             Requested size: 166.95482pt x 104.1381pt.
 
-[3 <./security_architecture_abstraction-eps-converted-to.pdf>]
+Underfull \vbox (badness 2158) has occurred while \output is active []
 
-LaTeX Warning: Reference `sec:solutions' on page 4 undefined on input line 159.
+ [2]
+[3 <./security_architecture_abstraction-eps-converted-to.pdf>] [4]
 
+LaTeX Warning: Reference `fig:solution_certificate_root_key_hybrid' on page 5 u
+ndefined on input line 235.
 
-
-LaTeX Warning: Reference `sec:solutions_based_on_IBE' on page 4 undefined on in
-put line 159.
-
-
-LaTeX Warning: Reference `sec:id_based_crypto' on page 4 undefined on input lin
-e 354.
-
-[4]
-Package epstopdf Info: Source file: <how_ibc_works.eps>
-(epstopdf)                    date: 2017-01-30 10:54:29
-(epstopdf)                    size: 341064 bytes
-(epstopdf)             Output file: <how_ibc_works-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-01-30 10:54:29
-(epstopdf)                    size: 85489 bytes
-(epstopdf)             Command: <repstopdf --outfile=how_ibc_works-eps-converte
-d-to.pdf how_ibc_works.eps>
-(epstopdf)             \includegraphics on input line 361.
-Package epstopdf Info: Output file is already uptodate.
- <how_ibc_works-eps-converted-to.pdf, id=25, 684.5575pt x 400.49625pt>
-File: how_ibc_works-eps-converted-to.pdf Graphic file (type pdf)
-
-<use how_ibc_works-eps-converted-to.pdf>
-Package pdftex.def Info: how_ibc_works-eps-converted-to.pdf used on input line 
-361.
-(pdftex.def)             Requested size: 340.17958pt x 199.0254pt.
+[5]
 Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
 (epstopdf)                    date: 2017-02-16 11:41:20
 (epstopdf)                    size: 696764 bytes
@@ -730,47 +705,38 @@ Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
 (epstopdf)                    size: 205283 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution_based_on_ibc-eps-
 converted-to.pdf solution_based_on_ibc.eps>
-(epstopdf)             \includegraphics on input line 372.
+(epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
 
-<solution_based_on_ibc-eps-converted-to.pdf, id=26, 796.9775pt x 597.23125pt>
+<solution_based_on_ibc-eps-converted-to.pdf, id=31, 796.9775pt x 597.23125pt>
 File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use solution_based_on_ibc-eps-converted-to.pdf>
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
-ut line 372.
+ut line 288.
 (pdftex.def)             Requested size: 340.17958pt x 254.91803pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./how_ibc_works-eps-converted-to.pdf>] [6 <./solution_based_on_ibc-eps-con
-verted-to.pdf>] [7] [8]
-
-LaTeX Warning: Reference `sec:solutions' on page 9 undefined on input line 405.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
+ [6] [7 <./solution_based_on_ibc-eps-converted-to.pdf>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
 []|\OT1/cmr/bx/n/9 Signalling
  []
 
 [9] [10] [11]
-Underfull \hbox (badness 7631) in paragraph at lines 450--451
+Underfull \hbox (badness 7631) in paragraph at lines 370--371
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
@@ -782,10 +748,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 10726 strings out of 493304
- 226889 string characters out of 6139871
- 249608 words of memory out of 5000000
- 14034 multiletter control sequences out of 15000+600000
+ 10724 strings out of 493304
+ 226857 string characters out of 6139871
+ 249656 words of memory out of 5000000
+ 14033 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,12n,35p,10470b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -799,10 +765,10 @@ type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmtt9.pfb>
-Output written on main.pdf (12 pages, 509486 bytes).
+Output written on main.pdf (12 pages, 432851 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
