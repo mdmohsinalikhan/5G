@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  10 APR 2017 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  11 APR 2017 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,94 +690,109 @@ Package pdftex.def Info: security_architecture_abstraction-eps-converted-to.pdf
 Underfull \vbox (badness 2158) has occurred while \output is active []
 
  [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./security_architecture_abstraction-eps-converted-to.pdf>] [4] [5]
+[3 <./security_architecture_abstraction-eps-converted-to.pdf>] [4] [5] [6]
 Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
-(epstopdf)                    date: 2017-02-16 11:41:20
-(epstopdf)                    size: 696764 bytes
+(epstopdf)                    date: 2017-04-11 19:12:25
+(epstopdf)                    size: 569594 bytes
 (epstopdf)             Output file: <solution_based_on_ibc-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2017-02-16 11:41:28
-(epstopdf)                    size: 205283 bytes
+(epstopdf)                    date: 2017-04-11 19:12:29
+(epstopdf)                    size: 158698 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution_based_on_ibc-eps-
 converted-to.pdf solution_based_on_ibc.eps>
-(epstopdf)             \includegraphics on input line 285.
+(epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
 
-<solution_based_on_ibc-eps-converted-to.pdf, id=31, 796.9775pt x 597.23125pt>
+<solution_based_on_ibc-eps-converted-to.pdf, id=34, 796.9775pt x 597.23125pt>
 File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use solution_based_on_ibc-eps-converted-to.pdf>
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
-ut line 285.
-(pdftex.def)             Requested size: 265.77606pt x 199.16928pt.
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./solution_based_on_ibc-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
+ut line 203.
+(pdftex.def)             Requested size: 341.72076pt x 256.0748pt.
+ [7 <./solution_based_on_ibc-eps-converted-to.pdf>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 228--228
 []|\OT1/cmr/bx/n/9 Signalling
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
+Underfull \hbox (badness 10000) in paragraph at lines 231--231
 []|\OT1/cmr/m/n/9 possible and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []|\OT1/cmr/m/n/9 Based on pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 \OT1/cmr/m/n/9 provisioned pub-lic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 []|\OT1/cmr/m/n/9 possible and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []|\OT1/cmr/m/n/9 possible and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--333
+Underfull \hbox (badness 10000) in paragraph at lines 234--234
 []|\OT1/cmr/m/n/9 possible and
  []
 
-[8] [9] [10]
-Underfull \hbox (badness 7631) in paragraph at lines 366--367
+[9] [10]
+Underfull \hbox (badness 7631) in paragraph at lines 267--268
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+[]\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+[]\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[]\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+[]\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 [11
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 10723 strings out of 493304
- 226815 string characters out of 6139871
- 247654 words of memory out of 5000000
- 14032 multiletter control sequences out of 15000+600000
+ 10735 strings out of 493304
+ 226995 string characters out of 6139871
+ 246717 words of memory out of 5000000
+ 14044 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,11n,35p,10470b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -791,7 +806,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (11 pages, 431747 bytes).
+Output written on main.pdf (11 pages, 388715 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
