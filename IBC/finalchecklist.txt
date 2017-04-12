@@ -6,4 +6,5 @@
 3. check if there is any "an u**"
 4. change the TR reference to the latest version in the bibliography
 5. Fix all the references
+6. Tell about the static diffie-hellman for key exchange
 

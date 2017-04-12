@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  11 APR 2017 20:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  12 APR 2017 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,88 +710,64 @@ File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
 ut line 203.
 (pdftex.def)             Requested size: 341.72076pt x 256.0748pt.
- [7 <./solution_based_on_ibc-eps-converted-to.pdf>] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]|\OT1/cmr/bx/n/9 Signalling
+ [7] [8 <./solution_based_on_ibc-eps-converted-to.pdf>] [9]
+Overfull \hbox (3.93259pt too wide) in paragraph at lines 225--226
+\OT1/cmr/m/n/10 In this pa-per we have dis-cussed four dif-fer-ent so-lu-tion a
+p-proaches. The pseudonym
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--231
-[]|\OT1/cmr/m/n/9 possible and
+Overfull \hbox (1.69553pt too wide) in paragraph at lines 240--240
+[]|\OT1/cmr/bx/n/9 PPPK| 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
-[]|\OT1/cmr/m/n/9 Based on pre-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
-\OT1/cmr/m/n/9 provisioned pub-lic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
-[]|\OT1/cmr/m/n/9 possible and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--233
-[]|\OT1/cmr/m/n/9 possible and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--234
-[]|\OT1/cmr/m/n/9 possible and
- []
-
-[9] [10]
-Underfull \hbox (badness 7631) in paragraph at lines 267--268
+[10] [11]
+Underfull \hbox (badness 7631) in paragraph at lines 282--283
 []\OT1/cmr/m/n/10 NGMN 5G White Pa-per V1.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 []\OT1/cmr/m/n/10 3GPP TR 33.899 V0.6.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 []\OT1/cmr/m/n/10 3GPP TR 21.905 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 []\OT1/cmr/m/n/10 3GPP TS 23.003 V14.2.0 [cited Jan, 2017]. Avail-able at:
  []
 
-[11
+[12
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  10735 strings out of 493304
  226995 string characters out of 6139871
- 246717 words of memory out of 5000000
+ 249718 words of memory out of 5000000
  14044 multiletter control sequences out of 15000+600000
  12617 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -806,10 +782,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (11 pages, 388715 bytes).
+Output written on main.pdf (12 pages, 390968 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
