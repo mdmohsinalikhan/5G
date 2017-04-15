@@ -320,7 +320,7 @@ Mutual Authentication between UE and SN & - & + & + & + & - & + \\ \hline
 \end{center}
 \end{table}
 
-Apparently pseudonym based solution is very good in most of the criteria. One downside of pseudonym based approach is, if the pseudonym is unsynchronized between UE and HN, the user has to visit the HN physically and get back to synchronized state by giving the IMSI in a trusted environment. The need of visiting the HN physically makes the pseudonym based solution a little clumsy. Variant 1 of certificate based approach is good in preventing AIC and also conceals $hnid$. But this is bad in many other important criteria because of exhanging and verifying certificates. Considering the concealment of $hnid$ with a bit less priority, the variant1 of certificate based solution is outperformed by both root-key based and IBE based solution. CertV2 and CertV3 can not even conceal $hnid$. So, the extra overhead of using Certv2 and CertV3 is not worth comparing to root-key and IBE. When comparing IBE and root-key, both of them are almost similar except that IBE based solution is extendable to a mutual authentication protocol between UE and HN. However, Cert1V can also be extended to a mutual authentication protocol. 
+Apparently pseudonym based solution is very good in most of the criteria. One downside of pseudonym based approach is, if the pseudonym is unsynchronized between UE and HN, the user has to visit the HN physically and get back to synchronized state by giving the IMSI in a trusted environment. The need of visiting the HN physically might make the pseudonym based solution a little clumsy. Variant 1 of certificate based approach is good in preventing AIC and also conceals $hnid$. But this is bad in many other important criteria because of exhanging and verifying certificates. Considering the concealment of $hnid$ with a bit less priority, the variant1 of certificate based solution is outperformed by both root-key based and IBE based solution. CertV2 and CertV3 can not even conceal $hnid$. So, the extra overhead of using Certv2 and CertV3 is not worth comparing to root-key and IBE. When comparing IBE and root-key, both of them are almost similar except that IBE based solution is extendable to a mutual authentication protocol between UE and HN. However, Cert1V can also be extended to a mutual authentication protocol. 
 
 The above discussion leads to the conclusion that, if concealing $hnid$ is essential, then the only applicable solution is Certv1, the certficate based solution with global root of trust. If conclealmeant of $hnid$ can be compromised, then the choice  of the solution depends on the requirement of mututal authentication. If mutual authentication of UE and SN without involving HN is considered important and useful then IBE based solution is the winner. Otherwise, root-key based solution is just enough.
 
@@ -331,7 +331,7 @@ We have explained the requirement of subscription privacy and found that conceal
 
 \section{Acknowledgement}
 \label{sec:acknowledgement}
-I would like to thank Kimmo Järvinen for the useful discussions and comments.
+We would like to thank Kimmo J\"arvinen for the useful discussions and comments.
 
 
 \begin{thebibliography}{4}
