@@ -329,6 +329,10 @@ The above discussion leads to the conclusion that, if concealing $hnid$ is essen
 \label{sec:conclusion}
 We have explained the requirement of subscription privacy and found that concealment of IMSI is needed to meet this requirement. In this paper we have discussed different known approaches to conceal the IMSI. The solutions  are based on pseudonyms and public-key encryption. We have proposed a novel solution based on identity based encryption that serves the purposes of both identification and mutual authentication. We have used expiry time as part of the identity of the entities in the system. We have presented a rigorous comparison between different discussed and proposed solutions. We argue that identity based encryption is a competitive solution when concealing the home network identity is not necessary and mutual authentication in between a user equipment and a serving network is useful without connecting with the home network. Note that our comparison between different solutions is not quantified with experimental results. The comparison is based on qualitative analysis based on known facts of public-key cryptography. 
 
+\section{Acknowledgement}
+\label{sec:acknowledgement}
+I would like to thank Kimmo Järvinen for the useful discussions and comments.
+
 
 \begin{thebibliography}{4}
 
