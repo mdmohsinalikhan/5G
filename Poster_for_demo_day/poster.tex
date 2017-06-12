@@ -1,0 +1,228 @@
+\documentclass[portrait,a0]{a0poster}
+\usepackage{color,multicol}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[round]{natbib}
+\usepackage[font=small]{caption}
+\usepackage{lmodern}
+\usepackage[overload]{textcase}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{lipsum} % Lorem ipsum generator
+\usepackage{caption}
+
+\columnsep = 50pt % change this for separation of the columns
+
+\definecolor{facultyColor}{cmyk}{0,.37,.88,.02} % faculty of science
+\definecolor{gray}{cmyk}{.13,.05,0,.25}
+
+\titleformat{\section}[hang]
+{\LARGE\usefont{T1}{phv}{bx}{n}\color{facultyColor}} % format
+{} % label
+{0pt} % sep
+{\MakeUppercase} % before-code
+
+\begin{document}
+
+%\vspace*{\fill} %some more marginal up
+
+%\begin{minipage}[t]{0.98\linewidth} % The first minipage for the logo & title
+%\vspace{0pt} % A trick to align the parallel minipages on top
+
+%\vspace{0.008\linewidth} % Increase the top margin
+%\begin{multicols}{2} 
+\begin{minipage}[t]{.4\linewidth} % logo
+\vspace{0pt} % Alingns the parallel minipages on top
+\includegraphics[height=0.65\linewidth]{HYlogo_fac_text-en}
+\hspace{50pt}
+%\includegraphics[width=0.35\linewidth]{division}
+\end{minipage} % no empty line before the next begin
+
+\vspace{-17cm}
+\begin{minipage}[t]{.98\linewidth} % logo
+\vspace{0pt} % Alingns the parallel minipages on top
+\begin{flushright}
+\begin{spacing}{5}
+%{\usefont{T1}{phv}{bx}{n}\textcolor{facultycolor}{\MakeUppercase{Faculty of Science}} \MakeUppercase{}} 
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{Helsingin Yliopisto}} \MakeUppercase{}}\\
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{Helsingfors Universitet}} \MakeUppercase{}}\\
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{University of Helsinki}} \MakeUppercase{}}\\
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Matemattis-Luonnontieteellinen tiedekunta}} \MakeUppercase{}}\\
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Matematisk-Naturvetenskapliga fakulteten}} \MakeUppercase{}}\\
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Faculty of Science}} \MakeUppercase{}}\\
+\end{spacing}
+\end{flushright}
+\hspace{50pt}
+
+\end{minipage} % no empty line before the next begin
+
+%\end{minipage}
+
+%\end{multicols}
+
+
+\begin{multicols}{2} 
+\begin{minipage}[t]{1.4\linewidth}
+\vspace{70pt}
+\begin{flushleft}
+\begin{spacing}{5}
+%\begin{center}
+% Highlight two first words of the title with the faculty color
+{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{gray}{\MakeUppercase{How a Pseudonym Based Solution to Defeat IMSI-catchers Opens a Vulnerability to} DoS} \MakeUppercase{}} \\
+
+%\end{center}
+\end{spacing}
+\end{flushleft}
+\end{minipage}
+
+\begin{minipage}[t]{.95\linewidth} % title
+\vspace{35pt} % Alingns the parallel minipages on top
+\begin{flushright}
+\textsf{\bfseries
+Mohsin Khan \\
+Kimmo Järvinen\\
+Philip Ginzboorg\\
+Valtteri Niemi\\
+} % Text size for a1 posters
+\textcolor{gray}{\textsf{\bfseries{Department of Computer Science,University of Helsinki}}}
+\end{flushright}
+\end{minipage}
+\end{multicols}
+
+%\end{minipage}
+
+%\vfill % some more marginal between header and text
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{3pt}}
+
+\begin{multicols}{2} % change this for different number of columns
+
+
+\section{IMSI-Catchers}
+\begin{enumerate}
+\item A user equipment (UE) has to identify itself before attaching to a serving network (SN). 
+\item Before identification, there is no agreed security context in between a UE and the SN. 
+\item As a result, whenever an SN inquires a UE's IMSI, the UE responds to the inquiry by providing the IMSI in cleartext.
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}[t]{0.9\linewidth} % logo
+\vspace{.5cm} % Alingns the parallel minipages on top
+\includegraphics[width=.8\linewidth]{IMSI-catcher.eps}
+\hspace{0pt}
+\vspace{.5cm} % Alingns the parallel minipages on top
+\end{minipage} 
+\end{center}
+
+An IMSI-catcher is a fake SN that impersonates a legitimate SN. IMSI-catcher sends an IMSI inquiry to a UE. According to above mentioned protocol, the UE responds with the IMSI in cleartext.
+
+\begin{center}
+\begin{minipage}[t]{0.9\linewidth} % logo
+\vspace{.5cm} % Alingns the parallel minipages on top
+\includegraphics[width=1\linewidth]{IMSI-catcher1.eps}
+\hspace{0pt}
+\vspace{.25cm} % Alingns the parallel minipages on top
+\end{minipage} 
+\end{center}
+
+
+\begin{itemize}
+\item IMSI-catchers violate identity privacy and UEs needs to be protected from them.
+\item IMSI-looking temporary identifiers known as pseudonyms are proposed \citep{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,CCS15,SSR15} to defeat IMSI-catchers
+\item All these proposed solutions defeat the IMSI-catchers but open vulnerability to a DoS attack
+\item We choose \citep{CCS15} paper to demonstrate our attack. The same attack can be mounted on others.
+\end{itemize}
+
+
+\section{Pseudonym Based Solution}
+In \citep{CCS15}, the pseudonym based solution works as follows. Every user equipment (UE) is given IMSI-looking temporary identifiers we call pseudonyms. When a network inquires for IMSI, the UE responds with a pseudonym instead of IMSI.
+
+\begin{center}
+\begin{minipage}[t]{0.9\linewidth} % logo
+\vspace{.5cm} % Alingns the parallel minipages on top
+\includegraphics[width=1\linewidth]{ccs_solution.eps}
+\hspace{0pt}
+\vspace{.5cm}
+\end{minipage} 
+\end{center}
+
+\begin{enumerate}
+\item A pair $P,P^{'}$ of pseudonyms are involved with every UE
+\item Whenever a network inquires for IMSI, the UE responds either with $P$ or $P^{'}$
+\item If UE responds with $P$, the pseudonym states do not change
+\item If UE responds with $P^{'}$, the pseudonym states change from $P,P^{'}$ to $P^{'},P^{''}$. It is a weakness.
+\item $P^{''}$ is generated at home network (HN), encrypted and piggybacked with $AV$ to the SN and finally to the UE
+\item No body except the UE can know $P^{''}$ untill the UE uses $P^{''}$ as a response of an IMSI inquiry.
+\end{enumerate}
+
+\section{A D\MakeLowercase{o}S Attack}
+The DoS attack forces the pseudonym state of a user in HN to go to a state which is completely different from the pseudonym state of the user in its UE. Consequently the UE will not be able to identify itself sucessfully anymore to the network. The attack is as follows:
+\begin{enumerate}
+\item \label{send_fake_pseudonym} A fake UE (FUE) sends a pseudonym $q_1$ to a legitimate SN and SN forwards $q_1$ to respective HN
+\item \label{q_equal_pseudonym} Let $P_x,P_x^{'}$ be the pseudonym state for a subscriber whose IMSI is $x$. Let us assume that $q_1=P_x^{'}$. The pseudonym state at HN will be updated to $P_x^{'},P_x^{''}$.
+\item The FUE then sends $q_2$ to the legitimate SN and the SN forwards $q_2$ to respective HN
+\item Let us assume that $q_2=P_x^{''}$. The pseudonym state at HN will be updated to $P_x^{''},P_x^{'''}$.
+\item Pseudonym state for the user $x$ is still $P,P^{'}$ in UE, completely different from the pseudonym state at HN
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}[t]{0.9\linewidth} % logo
+\vspace{.5cm} % Alingns the parallel minipages on top
+\includegraphics[width=1\linewidth]{attack.eps}
+\hspace{0pt}
+\vspace{.5cm} % Alingns the parallel minipages on top
+\end{minipage} 
+\end{center}
+
+\begin{itemize}
+\item Now if $k$ is a large number, we can expect that there would be many users $x$ for which $\exists i,j$ such that $1 \leq i < j \leq k$ such that $q_i=P_x^{'}$ and $q_j=P_x^{''}$.
+\item  All such users $x$ would then have different pseudonym states in their UE than in the HN.
+\item If an attacker mounts such an attack in a distrubted fashion by employing hundreds of FUE, the whole IMSI space ($10^{10}$) can be exhusted within few hours and consequently the whole network will go out of service
+\item This attack can be used in cyberwarfare, terrorizing mass people or even blackmailing the network operator
+\end{itemize}
+
+\section{Solution}
+\begin{enumerate}
+\item Use integrity protection of the message that carries pseudonym from the UE to the SN using MAC 
+\begin{enumerate}
+\item The HN knows if the pseudonym is sent by the user associated with the pseudonym.
+\item This solution works in 5G but doesn't work in 3G or 4G  
+\end{enumerate}
+\item Use existing messages to confirm HN that UE has received the new pseudonym.
+\begin{enumerate}
+\item Location update message sent by an SN to the HN can be used 
+\item This solution introduces a new DoS attack by introducing a man in the middle (MITM) of UE and SN
+\item There is a possiblity to defeat the MITM attack by confirming the UE that the pseudonym sent by an SN is not a man in the middle
+\item Security mode command (SMC) might possibly be used to detect a man in the middle 
+\end{enumerate}
+\end{enumerate}
+
+\begin{center}
+\begin{minipage}[t]{0.9\linewidth} % logo
+\vspace{.5cm} % Alingns the parallel minipages on top
+\includegraphics[width=1\linewidth]{solution.eps}
+\hspace{0pt}
+\vspace{.5cm} % Alingns the parallel minipages on top
+\end{minipage} 
+\end{center}
+
+A distributed DoS attack might exist to exhust the pseudonym space of the HN. We are still working on it.
+
+\bibliographystyle{abbrvnat}
+\bibliography{ref}
+
+\end{multicols}
+
+\vfill % some more marginal in the end
+
+\begin{minipage}[t]{0.9\linewidth} % footer
+\footnotesize
+\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
+\end{minipage}
+
+
+\end{document}
