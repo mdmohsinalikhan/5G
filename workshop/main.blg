@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: mybib.bib
+Warning--to sort, need author or key in RFC6508
+Warning--to sort, need author or key in RFC6507
+Warning--empty author in RFC6507
+Warning--empty author in RFC6508
+Warning--empty year in TR21905
+Warning--empty year in TS23003
+Warning--empty year in TS33106
+Warning--empty year in TS33107
+Warning--empty year in NGMN_white_paper
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            588 strings with 6739 characters,
+and the built_in function-call counts, 5369 in all, are:
+= -- 557
+> -- 140
+< -- 7
++ -- 59
+- -- 42
+* -- 283
+:= -- 791
+add.period$ -- 60
+call.type$ -- 16
+change.case$ -- 69
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 285
+empty$ -- 537
+format.name$ -- 42
+if$ -- 1254
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 81
+num.names$ -- 28
+pop$ -- 118
+preamble$ -- 1
+purify$ -- 53
+quote$ -- 0
+skip$ -- 185
+stack$ -- 0
+substring$ -- 289
+swap$ -- 92
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 9
+while$ -- 47
+width$ -- 18
+write$ -- 178
+(There were 9 warnings)
