@@ -5,25 +5,25 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Fabian van~den Broek(2015)]{CCS15}
+\bibitem[Fabian van~den Broek(CCS'15)]{CCS15}
 J.~d.~R. Fabian van~den Broek, Roel~Verdult.
 \newblock \emph{Defeating IMSI Catchers}.
-\newblock CCS, 2015.
+\newblock CCS'15.
 
-\bibitem[Ginzboorg and Niemi(2016)]{Ginzboorg_Niemi_2016}
+\bibitem[Ginzboorg and Niemi(MOBIMEDIA'16)]{Ginzboorg_Niemi_2016}
 Ginzboorg and Niemi.
 \newblock \emph{Privacy of the Long-Term Identities in Cellular Networks}.
-\newblock MOBIMEDIA, 2016.
+\newblock MOBIMEDIA'16.
 
-\bibitem[Khan~M.S.A.(2015)]{SSR15}
+\bibitem[Khan~M.S.A.(SSR'15)]{SSR15}
 M.~C. Khan~M.S.A.
 \newblock \emph{Improving Air Interface User Privacy in Mobile Telephony}.
-\newblock SSR, 2015.
+\newblock SSR'15.
 
-\bibitem[Norrman et~al.(2016)Norrman, Näslund, and
+\bibitem[Norrman et~al.(MOBIMEDIA'16)Norrman, Näslund, and
   Elena]{Norrman_Naslund_Dubrova_2016}
 Norrman, Näslund, and Elena.
 \newblock \emph{Protecting IMSI and User Privacy in 5G Networks}.
-\newblock MOBIMEDIA, 2016.
+\newblock MOBIMEDIA'16.
 
 \end{thebibliography}
