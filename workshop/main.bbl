@@ -1,110 +1,105 @@
 \begin{thebibliography}{10}
 
-\bibitem{RFC6507}
-{RFC} 6507 {C}ategory: {I}nformational.
-\newblock In {\em https://tools.ietf.org/html/rfc6507}, 2012.
-
-\bibitem{RFC6508}
-{RFC} 6508 {C}ategory: {I}nformational.
-\newblock In {\em https://tools.ietf.org/html/rfc6508}, 2012.
-
-\bibitem{TR21905}
-3GPP.
-\newblock {3GPP TR} 21.905.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=558}.
-  3GPP.
-
-\bibitem{TS23003}
-3GPP.
-\newblock {3GPP TS} 23.003, 14.2.0.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=729}.
-  3GPP.
-
-\bibitem{TS33106}
-3GPP.
-\newblock {3GPP TS} 33.106.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=2265}.
-  3GPP.
-
-\bibitem{TS33107}
-3GPP.
-\newblock {3GPP TS} 33.107.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=2266}.
-  3GPP.
-
-\bibitem{TR33821}
-3GPP.
-\newblock {3GPP TR} 33.821, 9.0.0.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=2311}.
-  3GPP, 2009.
+\bibitem{NGMN_white_paper}
+NGMN:
+\newblock {NGMN 5G} {W}hite {P}aper.
+\newblock In:
+  https://www.ngmn.org/uploads/\\media/NGMN\_5G\_White\_Paper\_V1\_0.pdf, NGMN
 
 \bibitem{TR33899}
-3GPP.
+3GPP:
 \newblock {3GPP TR} 33.899, 1.1.0.
-\newblock In {\em
-  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=3045}.
-  3GPP, 2016.
+\newblock In:
+  https://portal.3gpp.org/\\desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=3045,
+  3GPP (2016)
 
-\bibitem{IBE_boneh_franklin}
-Dan Boneh and Matthew Franklin.
-\newblock Identity-based encryption from the weil pairing.
-\newblock In {\em Advances in Cryptology — CRYPTO 2001: 21st Annual
-  International Cryptology Conference, Santa Barbara, California, USA, August
-  19–23, 2001 Proceedings}, pages 213--219. Springer Berlin Heidelberg, 2001.
+\bibitem{TR21905}
+3GPP:
+\newblock {3GPP TR} 21.905.
+\newblock In:
+  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=558,
+  3GPP
 
-\bibitem{IBE_clifford}
-Clifford Cocks.
-\newblock An identity based encryption scheme based on quadratic residues.
-\newblock In {\em Proceedings of the 8th IMA International Conference on
-  Cryptography and Coding}, pages 360--363, London, UK, UK, 2001.
-  Springer-Verlag.
+\bibitem{TS23003}
+3GPP:
+\newblock {3GPP TS} 23.003, 14.2.0.
+\newblock In:
+  https://portal.3gpp.org/\\desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729,
+  3GPP
+
+\bibitem{TS33106}
+3GPP:
+\newblock {3GPP TS} 33.106.
+\newblock In:
+  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=2265,
+  3GPP
+
+\bibitem{TS33107}
+3GPP:
+\newblock {3GPP TS} 33.107.
+\newblock In:
+  https://portal.3gpp.org/desktopmodules/\\Specifications/SpecificationDetails.aspx?specificationId=2266,
+  3GPP
 
 \bibitem{pseudonym_valtteri_philip}
-Philip Ginzboorg and Valtteri Niemi.
+Ginzboorg, P., Niemi, V.:
 \newblock Privacy of the long-term identities in cellular networks.
-\newblock In {\em Proceedings of the 9th EAI International Conference on Mobile
-  Multimedia Communications}, MobiMedia '16, pages 167--175. ICST (Institute
-  for Computer Sciences, Social-Informatics and Telecommunications
-  Engineering), 2016.
-
-\bibitem{SSR15}
-Mohammed Shafiul~Alam Khan and Chris~J. Mitchell.
-\newblock {I}mproving {A}ir {I}nterface {U}ser {P}rivacy in {M}obile
-  {T}elephony.
-\newblock In {\em Security Standardisation Research: Second International
-  Conference, SSR 2015, Tokyo, Japan, December 15-16, 2015, Proceedings}, pages
-  165--184. Springer International Publishing, 2015.
-
-\bibitem{NGMN_white_paper}
-NGMN.
-\newblock {NGMN 5G} {W}hite {P}aper.
-\newblock In {\em
-  https://www.ngmn.org/uploads/\\media/NGMN\_5G\_White\_Paper\_V1\_0.pdf}.
-  NGMN.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia '16, ICST (2016)  167--175
 
 \bibitem{pseudonym_ericsson}
-Karl Norrman, Mats N\"{a}slund, and Elena Dubrova.
+Norrman, K., N\"{a}slund, M., Dubrova, E.:
 \newblock {P}rotecting {IMSI} and {U}ser {P}rivacy in {5G} {N}etworks.
-\newblock In {\em Proceedings of the 9th EAI International Conference on Mobile
-  Multimedia Communications}, MobiMedia '16, pages 159--166. ICST (Institute
-  for Computer Sciences, Social-Informatics and Telecommunications
-  Engineering), 2016.
-
-\bibitem{IBE_shamir}
-Adi Shamir.
-\newblock Identity-based cryptosystems and signature schemes.
-\newblock In {\em Advances in Cryptology: Proceedings of CRYPTO 84}, pages
-  47--53. Springer Berlin Heidelberg, 1985.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia '16, ICST (2016)  159--166
 
 \bibitem{CCS15}
-Fabian van~den Broek, Roel Verdult, and Joeri de~Ruiter.
+van~den Broek, F., Verdult, R., de~Ruiter, J.:
 \newblock {D}efeating {IMSI} {C}atchers.
-\newblock In {\em Proceedings of the 22Nd ACM SIGSAC Conference on Computer and
-  Communications Security}, CCS '15, pages 340--351. ACM, 2015.
+\newblock In: Proceedings of the 22Nd ACM SIGSAC Conference on Computer and
+  Communications Security. CCS '15, ACM (2015)  340--351
+
+\bibitem{SSR15}
+Khan, M.S.A., Mitchell, C.J.:
+\newblock {I}mproving {A}ir {I}nterface {U}ser {P}rivacy in {M}obile
+  {T}elephony.
+\newblock In: Second International Conference, SSR 2015, Proceedings, Springer
+  International Publishing (2015)  165--184
+
+\bibitem{TR33821}
+3GPP:
+\newblock {3GPP TR} 33.821, 9.0.0.
+\newblock In:
+  https://portal.3gpp.org/\\desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2311,
+  3GPP (2009)
+
+\bibitem{IBE_shamir}
+Shamir, A.:
+\newblock Identity-based cryptosystems and signature schemes.
+\newblock In: Advances in Cryptology: Proceedings of CRYPTO 84, Springer Berlin
+  Heidelberg (1985)  47--53
+
+\bibitem{IBE_boneh_franklin}
+Boneh, D., Franklin, M.:
+\newblock Identity-based encryption from the weil pairing.
+\newblock In: Advances in Cryptology CRYPTO 2001: 21st Annual International
+  Cryptology Conference, 2001 Proceedings, Springer Berlin Heidelberg (2001)
+  213--219
+
+\bibitem{IBE_clifford}
+Cocks, C.:
+\newblock An identity based encryption scheme based on quadratic residues.
+\newblock In: Proceedings of the 8th IMA International Conference on
+  Cryptography and Coding, London, UK, UK, Springer-Verlag (2001)  360--363
+
+\bibitem{RFC6508}
+:
+\newblock {RFC} 6508 {C}ategory: {I}nformational.
+\newblock In: https://tools.ietf.org/html/rfc6508
+
+\bibitem{RFC6507}
+:
+\newblock {RFC} 6507 {C}ategory: {I}nformational.
+\newblock In: https://tools.ietf.org/html/rfc6507
 
 \end{thebibliography}
