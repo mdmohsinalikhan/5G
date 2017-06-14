@@ -166,7 +166,7 @@ In \cite{CCS15}, the pseudonym based solution works as follows. Every user UE is
 \subsection*{Weakness}This solution has a weakness in item \ref{item:weakness}. The HN does not authenticate the origin of the message that carries a pseudonym from UE.  The HN and generates a new pseudonym $P^{''}$ whenever it observes the pseudonym $P^{'}$. This fact can be exploited to mount a DoS attack.
 
 \section{A D\MakeLowercase{o}S Attack}
-The DoS attack forces the pseudonym state of a user in HN to go to a state which is completely different from the pseudonym state of the user in its UE. Consequently the UE will not be able to identify itself sucessfully anymore to the network. The attack is as follows:
+The DoS attack forces the pseudonym state of a user in HN to go to a state which is completely different from the pseudonym state of the user in its UE. Consequently the UE will not be able to identify itself successfully any more to the network. The attack is as follows:
 \begin{enumerate}
 \item \label{send_fake_pseudonym} A fake UE (FUE) sends a pseudonym $q_1$ to a legitimate SN and SN forwards $q_1$ to the HN
 \item \label{q_equal_pseudonym} Let $P_x,P_x^{'}$ be the pseudonym state of a user $x$. Let us assume that $q_1=P_x^{'}$. The pseudonym state at HN will be updated to $P_x^{'},P_x^{''}$
@@ -187,8 +187,8 @@ The DoS attack forces the pseudonym state of a user in HN to go to a state which
 \begin{itemize}
 \item Now if $k$ is a large number, we can expect that there would be many users $x$ for which $\exists i,j$ such that $1 \leq i < j \leq k$, $q_i=P_x^{'}$ and $q_j=P_x^{''}$
 \item  All such users $x$ would then have different pseudonym states in their UE than in the HN
-\item If an attacker mounts such an attack in a distriubted fashion by employing hundreds of FUEs, the whole IMSI space ($10^{10}$) can be exhausted twice within few hours and consequently the whole network will go out of service
-\item This attack can be used in cyberwarfare, terrorism or blackmailing the network operator
+\item If an attacker mounts such an attack in a distributed fashion by employing hundreds of FUEs, the whole IMSI space ($10^{10}$) can be exhausted twice within few hours and consequently the whole network will go out of service
+\item This attack can be used in cyber warfare, terrorism or blackmailing the network operator
 \end{itemize}
 
 \section{Solution}
