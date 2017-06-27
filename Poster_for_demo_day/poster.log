@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.7)  14 JUN 2017 21:38
+=======
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  13 JUN 2017 11:45
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -760,6 +764,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count152
 \@thisrulewidth=\dimen174
 )
+<<<<<<< HEAD
+=======
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip57
@@ -767,10 +773,24 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count153
 )
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+<<<<<<< HEAD
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen176
+\captionmargin@=\dimen177
+\captionwidth=\dimen178
+\caption@tempdima=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
+)
+\c@ContinuedFloat=\count151
+=======
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen175
@@ -782,6 +802,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@hangindent=\dimen181
 )
 \c@ContinuedFloat=\count154
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -826,7 +847,11 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
+<<<<<<< HEAD
+\c@float@type=\count152
+=======
 \c@float@type=\count155
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 \float@exts=\toks19
 \float@box=\box74
 \@float@everytoks=\toks20
@@ -835,18 +860,30 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box76
+<<<<<<< HEAD
+\beforetitleunit=\skip57
+\aftertitleunit=\skip58
+\ttl@plus=\dimen183
+\ttl@minus=\dimen184
+=======
 \beforetitleunit=\skip59
 \aftertitleunit=\skip60
 \ttl@plus=\dimen182
 \ttl@minus=\dimen183
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 \ttl@toksa=\toks21
 \titlewidth=\dimen184
 \titlewidthlast=\dimen185
 \titlewidthfirst=\dimen186
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+<<<<<<< HEAD
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count153
+=======
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count156
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 ) (./poster.aux)
 \openout1 = `poster.aux'.
 
@@ -869,6 +906,18 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
+<<<<<<< HEAD
+\scratchcounter=\count154
+\scratchdimen=\dimen188
+\scratchbox=\box77
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen189
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+=======
 \scratchcounter=\count157
 \scratchdimen=\dimen187
 \scratchbox=\box77
@@ -879,6 +928,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \MPscratchDim=\dimen188
 \MPnumerator=\count161
 \makeMPintoPDFobject=\count162
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 \everyMPtoPDFconversion=\toks23
 )
 Now handling font encoding TS1 ...
@@ -1009,7 +1059,11 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
+<<<<<<< HEAD
+\c__siunitx_mathsf_int=\count160
+=======
 \c__siunitx_mathsf_int=\count163
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 30.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -1044,7 +1098,11 @@ LaTeX Font Info:    Try loading font information for OT1+lmss on input line 30.
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+<<<<<<< HEAD
+\c__siunitx_mathtt_int=\count161
+=======
 \c__siunitx_mathtt_int=\count164
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 30.
 
 
@@ -1064,8 +1122,10 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <61.92> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <51.6> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 78.
 
-Overfull \hbox (460.0097pt too wide) in paragraph at lines 72--84
+Overfull \hbox (571.27063pt too wide) in paragraph at lines 72--84
 [][] 
  []
 
@@ -1073,8 +1133,10 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 93.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <29.86> on input line 93.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <43> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 107.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 108.
 Package epstopdf Info: Source file: <IMSI-catcher.eps>
 (epstopdf)                    date: 2017-06-13 11:42:46
 (epstopdf)                    size: 196857 bytes
@@ -1083,7 +1145,7 @@ Package epstopdf Info: Source file: <IMSI-catcher.eps>
 (epstopdf)                    size: 31637 bytes
 (epstopdf)             Command: <repstopdf --outfile=IMSI-catcher-eps-converted
 -to.pdf IMSI-catcher.eps>
-(epstopdf)             \includegraphics on input line 117.
+(epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
 <IMSI-catcher-eps-converted-to.pdf, id=2, 308.15125pt x 173.64874pt>
@@ -1091,7 +1153,7 @@ File: IMSI-catcher-eps-converted-to.pdf Graphic file (type pdf)
 
 <use IMSI-catcher-eps-converted-to.pdf>
 Package pdftex.def Info: IMSI-catcher-eps-converted-to.pdf used on input line 1
-17.
+18.
 (pdftex.def)             Requested size: 801.02733pt x 451.42838pt.
 Package epstopdf Info: Source file: <IMSI-catcher1.eps>
 (epstopdf)                    date: 2017-06-13 11:42:46
@@ -1101,7 +1163,7 @@ Package epstopdf Info: Source file: <IMSI-catcher1.eps>
 (epstopdf)                    size: 40269 bytes
 (epstopdf)             Command: <repstopdf --outfile=IMSI-catcher1-eps-converte
 d-to.pdf IMSI-catcher1.eps>
-(epstopdf)             \includegraphics on input line 129.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
 <IMSI-catcher1-eps-converted-to.pdf, id=3, 581.17125pt x 175.65625pt>
@@ -1109,16 +1171,16 @@ File: IMSI-catcher1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use IMSI-catcher1-eps-converted-to.pdf>
 Package pdftex.def Info: IMSI-catcher1-eps-converted-to.pdf used on input line 
-129.
+130.
 (pdftex.def)             Requested size: 1001.28035pt x 302.65353pt.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 137.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 138.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <29.86> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 137.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 138.
 Package epstopdf Info: Source file: <ccs_solution.eps>
 (epstopdf)                    date: 2017-06-13 11:42:46
 (epstopdf)                    size: 72839 bytes
@@ -1127,7 +1189,7 @@ Package epstopdf Info: Source file: <ccs_solution.eps>
 (epstopdf)                    size: 32838 bytes
 (epstopdf)             Command: <repstopdf --outfile=ccs_solution-eps-converted
 -to.pdf ccs_solution.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
 
 <ccs_solution-eps-converted-to.pdf, id=4, 692.5875pt x 174.6525pt>
@@ -1135,10 +1197,8 @@ File: ccs_solution-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ccs_solution-eps-converted-to.pdf>
 Package pdftex.def Info: ccs_solution-eps-converted-to.pdf used on input line 1
-50.
+51.
 (pdftex.def)             Requested size: 1001.28035pt x 252.50409pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <29.86> on input line 157.
 Package epstopdf Info: Source file: <attack.eps>
 (epstopdf)                    date: 2017-06-13 11:42:46
 (epstopdf)                    size: 84563 bytes
@@ -1189,6 +1249,15 @@ HYlogo_fac_text-en.jpg> <./IMSI-catcher-eps-converted-to.pdf> <./IMSI-catcher1-
 eps-converted-to.pdf> <./ccs_solution-eps-converted-to.pdf> <./attack-eps-conve
 rted-to.pdf> <./solution-eps-converted-to.pdf>] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+ 14108 strings out of 494910
+ 282997 string characters out of 6179837
+ 421873 words of memory out of 5000000
+ 17217 multiletter control sequences out of 15000+600000
+ 107501 words of font info for 74 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 38i,7n,42p,10378b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
  12915 strings out of 493304
  264195 string characters out of 6139871
  402568 words of memory out of 5000000
@@ -1196,6 +1265,7 @@ Here is how much of TeX's memory you used:
  96220 words of font info for 69 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,7n,38p,10419b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 {/usr/share/tex
 mf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
@@ -1205,7 +1275,11 @@ ype1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+<<<<<<< HEAD
+Output written on poster.pdf (1 page, 465240 bytes).
+=======
 Output written on poster.pdf (1 page, 464713 bytes).
+>>>>>>> a636f06b96d1992ae11bb325ce8b035083cfa924
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

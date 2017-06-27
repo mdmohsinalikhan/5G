@@ -6,7 +6,7 @@
 \usepackage{siunitx}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage[round]{natbib}
+%\usepackage[round]{natbib}
 \usepackage[font=small]{caption}
 \usepackage{lmodern}
 \usepackage[overload]{textcase}
@@ -69,13 +69,13 @@
 
 
 \begin{multicols}{2} 
-\begin{minipage}[t]{1.4\linewidth}
+\begin{minipage}[t]{1.5\linewidth}
 \vspace{10pt}
 \begin{flushleft}
 \begin{spacing}{5}
 %\begin{center}
 % Highlight two first words of the title with the faculty color
-{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{gray}{\MakeUppercase{How a Pseudonym Based Solution to Defeat IMSI-catchers Opens a Vulnerability to} DoS} \MakeUppercase{}} \\
+{\huge\usefont{T1}{phv}{bx}{n}\textcolor{gray}{\MakeUppercase{How a Pseudonym Based Solution to Defeat IMSI-catchers Opens a Vulnerability to} DoS} \MakeUppercase{}} \\
 
 %\end{center}
 \end{spacing}
@@ -83,15 +83,16 @@
 \end{minipage}
 
 \begin{minipage}[t]{.95\linewidth} % title
-\vspace{-90pt} % Alingns the parallel minipages on top
+\vspace{-110pt} % Alingns the parallel minipages on top
 \begin{flushright}
 \textsf{\bfseries
-Mohsin Khan \\
-Kimmo Järvinen\\
-Philip Ginzboorg\\
-Valtteri Niemi\\
+Mohsin Khan$^\textbf{1}$ \\
+Kimmo Järvinen$^\textbf{1}$\\
+Philip Ginzboorg$^\textbf{2}$\\
+Valtteri Niemi$^\textbf{1}$\\
 } % Text size for a1 posters
-\textcolor{gray}{\textsf{\bfseries{Department of Computer Science\\University of Helsinki}}}
+\textcolor{gray}{\textsf{\bfseries{$^\textbf{1}$Department of Computer Science, University of Helsinki}}}\\
+\textcolor{gray}{\textsf{\bfseries{$^\textbf{2}$Huawei Technologies}}}
 \end{flushright}
 \end{minipage}
 \end{multicols}
@@ -113,10 +114,10 @@ Valtteri Niemi\\
 
 \begin{center}
 \begin{minipage}[t]{0.9\linewidth} % logo
-\vspace{.25cm} % Alingns the parallel minipages on top
+\vspace{-.75cm} % Alingns the parallel minipages on top
 \includegraphics[width=.8\linewidth]{IMSI-catcher.eps}
 \hspace{0pt}
-\vspace{.25cm} % Alingns the parallel minipages on top
+\vspace{.15cm} % Alingns the parallel minipages on top
 \end{minipage} 
 \end{center}
 
@@ -125,36 +126,35 @@ An IMSI-catcher is a fake SN that impersonates a legitimate SN. An IMSI-catcher 
 
 \begin{center}
 \begin{minipage}[t]{0.9\linewidth} % logo
-\vspace{.25cm} % Alingns the parallel minipages on top
+\vspace{-1.5cm} % Alingns the parallel minipages on top
 \includegraphics[width=1\linewidth]{IMSI-catcher1.eps}
 \hspace{0pt}
-\vspace{.25cm} % Alingns the parallel minipages on top
+\vspace{-.75cm} % Alingns the parallel minipages on top
 \end{minipage} 
 \end{center}
 
 
 \begin{itemize}
 \item IMSI-catchers violate identity privacy and UEs need to be protected from them
-\item IMSI-looking temporary identifiers known as pseudonyms are proposed \citep{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,CCS15,SSR15} to defeat IMSI-catchers
+\item IMSI-looking temporary identifiers (pseudonyms) are proposed \cite{Ginzboorg_Niemi_2016,SSR15,Norrman_Naslund_Dubrova_2016,CCS15} to defeat IMSI-catchers
 \item We show that all of them defeat the IMSI-catchers but open a vulnerability to a DoS attack
-\item We choose \citep{CCS15} paper to demonstrate our attack. Similar attack can be mounted on others
+\item Here we attack the solution in \cite{CCS15}. Similar attack can be mounted on others
 \end{itemize}
 
 
 \section{Pseudonym Based Solution}
-In \citep{CCS15}, the pseudonym based solution works as follows. Every user UE is given IMSI-looking temporary identifiers we call pseudonyms. When a network inquires for IMSI, the UE responds with a pseudonym instead of IMSI.
+In \cite{CCS15}, the pseudonym based solution works as follows. Every user UE is given IMSI-looking temporary identifiers we call pseudonyms. When a network inquires for IMSI, the UE responds with a pseudonym instead of IMSI. A pair $P,P^{'}$ of pseudonyms is involved with every UE.
 
 \begin{center}
 \begin{minipage}[t]{0.9\linewidth} % logo
-\vspace{.25cm} % Alingns the parallel minipages on top
+\vspace{.1cm} % Alingns the parallel minipages on top
 \includegraphics[width=1\linewidth]{ccs_solution.eps}
 \hspace{0pt}
-\vspace{.25cm}
+\vspace{.1cm}
 \end{minipage}
 \end{center}
 
 \begin{enumerate}
-\item A pair $P,P^{'}$ of pseudonyms is involved with every UE
 \item Whenever a network inquires for IMSI, the UE responds either with $P$ or $P^{'}$
 \item If UE responds with $P$, the pseudonym states do not change
 \item \label{item:weakness} If UE responds with $P^{'}$, the pseudonym states change from $P,P^{'}$ to $P^{'},P^{''}$
@@ -163,7 +163,7 @@ In \citep{CCS15}, the pseudonym based solution works as follows. Every user UE i
 \item Nobody except the UE can know $P^{''}$ until the UE uses $P^{''}$ as a response of an IMSI inquiry
 \end{enumerate}
 
-\subsection*{Weakness}This solution has a weakness in item \ref{item:weakness}. The HN does not authenticate the origin of the message that carries a pseudonym from UE to HN and generates a new pseudonym $P^{''}$ whenever it observes the pseudonym $P^{'}$. This fact can be exploited to mount a DoS attack.
+\subsection*{Weakness}This solution has a weakness in item \ref{item:weakness}. The HN does not authenticate the origin of the message that carries a pseudonym from UE.  The HN and generates a new pseudonym $P^{''}$ whenever it observes the pseudonym $P^{'}$. This fact can be exploited to mount a DoS attack.
 
 \section{A D\MakeLowercase{o}S Attack}
 The DoS attack forces the pseudonym state of a user in HN to go to a state which is completely different from the pseudonym state of the user in its UE. Consequently the UE will not be able to identify itself successfully any more to the network. The attack is as follows:
@@ -218,9 +218,9 @@ The DoS attack forces the pseudonym state of a user in HN to go to a state which
 \noindent
 If no location update is received for pseudonym $P^{'}$ but $P^{''}$ is observed at the HN, the new pseudonym generated by the HN is still $P^{''}$. It is trusted that if an SN is capable of sending a valid SMC to the UE after an AKA, the SN will send the location update to the HN.
 
-\normalsize
+%\normalsize
 
-\bibliographystyle{abbrvnat}
+\bibliographystyle{plain}
 \bibliography{ref}
 
 \end{multicols}
