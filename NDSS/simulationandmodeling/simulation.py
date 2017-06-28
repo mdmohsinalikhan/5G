@@ -7,7 +7,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-IMSI_length = 7
+IMSI_length = 9
 IMSI_space = 10**IMSI_length
 
 attacklength = 6*10**IMSI_length
@@ -24,7 +24,7 @@ no_of_rounds_without_replacement = 3
 plotlist_x = list()
 plotlist_y = list()
 
-no_of_subscribers = 10**4
+no_of_subscribers = 10**6
 used_IMSIs = set()
 pseudonymsp1 = dict()
 pseudonymsp2 = dict()
@@ -73,7 +73,7 @@ def record_result_of_without_replacement(i):
 
 
 def attack_with_replacement():
-	for i in xrange(0,attacklength):
+	for i in range(0,attacklength):
 		guessed_pseudonym = random_IMSI()
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -84,7 +84,7 @@ def attack_with_replacement():
 
 
 def attack_without_replacement():
-	for i in xrange(0,10**IMSI_length): 
+	for i in range(0,10**IMSI_length): 
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -92,7 +92,7 @@ def attack_without_replacement():
 		if (i+1)%readinginterval_without_replacement == 0:
 			record_result_of_without_replacement(i+1)
 
-	for i in xrange(0,10**IMSI_length): 
+	for i in range(0,10**IMSI_length): 
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -121,7 +121,7 @@ def random_IMSI():
 
 def create_users():
 	print(str(datetime.datetime.utcnow()) + ": Creating Users")
-	for i in xrange(0,no_of_subscribers):
+	for i in range(0,no_of_subscribers):
 		#generate a new IMSI from unused pool
 		IMSI = random_unused_IMSI()
 		attacktracker[IMSI] = 0
@@ -143,7 +143,7 @@ def initializeattack():
 	create_users()
 
 def plot_everything():
-	for i in xrange(0,no_of_rounds_with_replacement):
+	for i in range(0,no_of_rounds_with_replacement):
 		plotlist_x[:] = []
 		plotlist_y[:] = []
 		for j in sorted(result_of_with_replacement):
@@ -151,7 +151,7 @@ def plot_everything():
 			plotlist_x.append(j)
 		plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle=":", c="red", alpha = .7)
 
-	for i in xrange(0,no_of_rounds_without_replacement):
+	for i in range(0,no_of_rounds_without_replacement):
 		plotlist_x[:] = []
 		plotlist_y[:] = []
 		for j in sorted(result_of_without_replacement):
@@ -162,6 +162,13 @@ def plot_everything():
 
 	x = np.linspace(0, attacklength, attacklength)
 	plt.plot(x, no_of_subscribers*(1.0-(1.0-1.0/IMSI_space)**x - x*(1.0/IMSI_space)*(1.0-1.0/IMSI_space)**(x-1.0)), linewidth=1, linestyle="-", c="black", alpha = 1);
+
+
+	x = np.linspace(0, attacklength_without_replacement/2, attacklength_without_replacement/2)
+	plt.plot(x, (no_of_subscribers/10.0**IMSI_length)*((x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 1);
+
+	x = np.linspace(attacklength_without_replacement/2, attacklength_without_replacement, attacklength_without_replacement/2)
+	plt.plot(x, (no_of_subscribers/10.0**IMSI_length)*(2*x - 10**IMSI_length - (x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 1);
 
 
 	#Formatting the plot
@@ -175,13 +182,13 @@ def plot_everything():
 #the main function starts from here
 
 #attack with replacement
-for i in xrange(0,no_of_rounds_with_replacement):
+for i in range(0,no_of_rounds_with_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": With-replacement attack, round: " + str(i+1) + " has started")
 	attack_with_replacement()
 
 #attack without replacement
-for i in xrange(0,no_of_rounds_without_replacement):
+for i in range(0,no_of_rounds_without_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": Without-replacement attack, round: " + str(i+1) + " has started")
 	attack_without_replacement()
@@ -193,10 +200,14 @@ f = open(filename, 'w')
 
 
 f.write("IMSI length:"+str(IMSI_length)+"\n")  # python will convert \n to os.linesep
+f.write("Attack length with replacement:"+str(attacklength)+"\n")
 f.write("No of subscribers:"+str(no_of_subscribers)+"\n")
-f.write("No of readings:"+str(readings_with_replacement)+"\n")
+f.write("No of readings with replacement:"+str(readings_with_replacement)+"\n")
+f.write("No of rounds with replacement:"+str(no_of_rounds_with_replacement)+"\n")
 
-
+f.write("Attack length without replacement:"+str(attacklength_without_replacement)+"\n")
+f.write("No of readings without replacement:"+str(readings_without_replacement)+"\n")
+f.write("No of rounds without replacement:"+str(no_of_rounds_without_replacement)+"\n")
 
 f.write("Result of with replacement attack:\n")
 for key in sorted(result_of_with_replacement):
@@ -208,7 +219,7 @@ for key in sorted(result_of_without_replacement):
 
 f.close()
 
-plot_everything()
+#plot_everything()
 
 
 
