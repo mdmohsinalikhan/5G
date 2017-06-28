@@ -7,29 +7,27 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-IMSI_length = 9
+IMSI_length = 7
 IMSI_space = 10**IMSI_length
 
-attacklength = 2*10**IMSI_length
-readings_with_replacement = 50
+attacklength = 6*10**IMSI_length
+readings_with_replacement = 1000
 readinginterval = attacklength/readings_with_replacement
-no_of_rounds_with_replacement = 2
+no_of_rounds_with_replacement = 3
 
 
 attacklength_without_replacement = 2*10**IMSI_length
-readings_without_replacement = 50
+readings_without_replacement = 1000
 readinginterval_without_replacement = attacklength_without_replacement/readings_without_replacement
-no_of_rounds_without_replacement = 2
+no_of_rounds_without_replacement = 3
 
 plotlist_x = list()
 plotlist_y = list()
 
-no_of_subscribers = 10**6
+no_of_subscribers = 10**4
 used_IMSIs = set()
 pseudonymsp1 = dict()
 pseudonymsp2 = dict()
-initialconfig = dict()
-currentconfig = dict()
 attacktracker = dict()
 result_of_with_replacement = dict()
 result_of_without_replacement = dict()
@@ -48,10 +46,9 @@ def HN_functionality(guessed_pseudonym):
 		#generate a new pseudonym from unused pool and set it as p2
 			pseudonym = random_unused_IMSI()
 			pseudonymsp2[pseudonym] = IMSI
-		#update current config
-			#currentconfig[IMSI] = guessed_pseudonym + " " + pseudonym
 		#update attacktracker
 			attacktracker[IMSI] = attacktracker[IMSI] + 1
+			#print("length of attacktracker is:" + str(len(attacktracker)))
 
 def record_result_of_with_replacement(i):
 			count = 0
@@ -76,7 +73,7 @@ def record_result_of_without_replacement(i):
 
 
 def attack_with_replacement():
-	for i in range(0,attacklength):
+	for i in xrange(0,attacklength):
 		guessed_pseudonym = random_IMSI()
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -87,7 +84,7 @@ def attack_with_replacement():
 
 
 def attack_without_replacement():
-	for i in range(0,10**IMSI_length): 
+	for i in xrange(0,10**IMSI_length): 
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -95,7 +92,7 @@ def attack_without_replacement():
 		if (i+1)%readinginterval_without_replacement == 0:
 			record_result_of_without_replacement(i+1)
 
-	for i in range(0,10**IMSI_length): 
+	for i in xrange(0,10**IMSI_length): 
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
@@ -124,7 +121,7 @@ def random_IMSI():
 
 def create_users():
 	print(str(datetime.datetime.utcnow()) + ": Creating Users")
-	for i in range(0,no_of_subscribers):
+	for i in xrange(0,no_of_subscribers):
 		#generate a new IMSI from unused pool
 		IMSI = random_unused_IMSI()
 		attacktracker[IMSI] = 0
@@ -137,21 +134,16 @@ def create_users():
 		pseudonym2 = random_unused_IMSI()
 		pseudonymsp2[pseudonym2] = IMSI 
 
-		#record the inital config and current config
-		#initialconfig[IMSI] = pseudonym1 + " " + pseudonym2
-		#currentconfig[IMSI] = pseudonym1 + " " + pseudonym2
 
 def initializeattack():
 	used_IMSIs.clear()
 	pseudonymsp1.clear()
 	pseudonymsp2.clear()
-	initialconfig.clear()
-	currentconfig.clear()
 	attacktracker.clear()
 	create_users()
 
 def plot_everything():
-	for i in range(0,no_of_rounds_with_replacement):
+	for i in xrange(0,no_of_rounds_with_replacement):
 		plotlist_x[:] = []
 		plotlist_y[:] = []
 		for j in sorted(result_of_with_replacement):
@@ -159,7 +151,7 @@ def plot_everything():
 			plotlist_x.append(j)
 		plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle=":", c="red", alpha = .7)
 
-	for i in range(0,no_of_rounds_without_replacement):
+	for i in xrange(0,no_of_rounds_without_replacement):
 		plotlist_x[:] = []
 		plotlist_y[:] = []
 		for j in sorted(result_of_without_replacement):
@@ -175,7 +167,7 @@ def plot_everything():
 	#Formatting the plot
 	plt.xlabel('Number of guessed pseudonyms')
 	plt.ylabel('No of affected users')
-	plt.title('Success rate of the DoS attack \n' + "IMSI Lenght: " + str(IMSI_length) + " digits, " + "Number of Subscribers: " + str(no_of_subscribers))
+	plt.title('Success rate of the DoS attack \n' + "IMSI Length: " + str(IMSI_length) + " digits, " + "Number of Subscribers: " + str(no_of_subscribers))
 	
 	plt.show()
 
@@ -183,25 +175,38 @@ def plot_everything():
 #the main function starts from here
 
 #attack with replacement
-for i in range(0,no_of_rounds_with_replacement):
+for i in xrange(0,no_of_rounds_with_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": With-replacement attack, round: " + str(i+1) + " has started")
 	attack_with_replacement()
 
 #attack without replacement
-for i in range(0,no_of_rounds_without_replacement):
+for i in xrange(0,no_of_rounds_without_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": Without-replacement attack, round: " + str(i+1) + " has started")
 	attack_without_replacement()
 
 
-#print("Result of with replacement attack:")
-#for key in sorted(result_of_with_replacement):
-#    print("No of pseudonyms sent: " + str(key) +  " and affected users: " + str(result_of_with_replacement[key]))
+filename = str(IMSI_length) + "_" + str(no_of_subscribers) + ".txt"
 
-#print("Result of without replacement attack:")
-#for key in sorted(result_of_without_replacement):
-#    print("No of pseudonyms sent: " + str(key) +  " and affected users: " + str(result_of_without_replacement[key]))
+f = open(filename, 'w')
+
+
+f.write("IMSI length:"+str(IMSI_length)+"\n")  # python will convert \n to os.linesep
+f.write("No of subscribers:"+str(no_of_subscribers)+"\n")
+f.write("No of readings:"+str(readings_with_replacement)+"\n")
+
+
+
+f.write("Result of with replacement attack:\n")
+for key in sorted(result_of_with_replacement):
+    f.write(str(key) +  ":" + str(result_of_with_replacement[key])+"\n")
+
+f.write("Result of without replacement attack:\n")
+for key in sorted(result_of_without_replacement):
+    f.write(str(key) +  ":" + str(result_of_without_replacement[key])+"\n")
+
+f.close()
 
 plot_everything()
 
