@@ -1,0 +1,2 @@
+1. check how to best represent .eps file using latex, because it seems \includegraphics[]{} command is not good enough
+2. 

@@ -127,22 +127,22 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
   % driver is specified.
-  % \usepackage[dvips]{graphicx}
+  \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../eps/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
+   \DeclareGraphicsExtensions{.eps}
 \fi
 % graphicx was written by David Carlisle and Sebastian Rahtz. It is
 % required if you want graphics, photos, etc. graphicx.sty is already
@@ -164,7 +164,8 @@
 % You can find documentation about the pdfTeX application at:
 % http://www.tug.org/applications/pdftex
 
-
+%%%%%%%added by the author
+\usepackage{epsf}
 
 
 
@@ -455,6 +456,16 @@ The abstract goes here.
 
 
 \section{Introduction}
+
+\begin{figure*}
+\begin{center}
+\caption{State Diagram of HN}
+ \includegraphics[height=17cm]{HN_diagram.eps}
+\label{fig:solution_ibc} 
+\end{center}
+\end{figure*}
+
+
 % no \IEEEPARstart
 This demo file is intended to serve as a ``starter file''
 for IEEE conference papers produced under \LaTeX\ using

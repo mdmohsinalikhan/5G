@@ -7,7 +7,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-IMSI_length = 9
+IMSI_length = 10
 IMSI_space = 10**IMSI_length
 
 attacklength = 6*10**IMSI_length
@@ -72,23 +72,23 @@ def record_result_of_without_replacement(i):
 	
 
 
-def attack_with_replacement():
+def attack_with_replacement(rounds):
 	for i in range(0,attacklength):
 		guessed_pseudonym = random_IMSI()
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
-			print(str(datetime.datetime.utcnow()) + ": Already guessed: " + str((i+1)/1000000) + " million")
+			print(str(datetime.datetime.utcnow()) + ": With replacement, round: " + str(rounds) + ", Already guessed: " + str((i+1)/1000000) + " million")
 		if (i+1)%readinginterval == 0:
 			record_result_of_with_replacement(i+1)			
 			
 
 
-def attack_without_replacement():
+def attack_without_replacement(rounds):
 	for i in range(0,10**IMSI_length): 
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
-			print(str(datetime.datetime.utcnow()) + ": Already guessed: " + str((i+1)/1000000) + " million")
+			print(str(datetime.datetime.utcnow()) + ": Without replacement, round: " + str(rounds) + ", Already guessed: " + str((i+1)/1000000) + " million")
 		if (i+1)%readinginterval_without_replacement == 0:
 			record_result_of_without_replacement(i+1)
 
@@ -96,7 +96,7 @@ def attack_without_replacement():
 		guessed_pseudonym = str(i).zfill(IMSI_length)
 		HN_functionality(guessed_pseudonym)
 		if (i+1)%1000000 == 0:
-			print(str(datetime.datetime.utcnow()) + ": Already guessed: " + str((10**IMSI_length+i+1)/1000000) + " million")
+			print(str(datetime.datetime.utcnow()) +": Without replacement, round: " + str(rounds) + ", Already guessed: " + str((10**IMSI_length+i+1)/1000000) + " million")
 		if (10**IMSI_length+i+1)%readinginterval_without_replacement == 0:
 			record_result_of_without_replacement(10**IMSI_length+i+1)
 
@@ -185,13 +185,13 @@ def plot_everything():
 for i in range(0,no_of_rounds_with_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": With-replacement attack, round: " + str(i+1) + " has started")
-	attack_with_replacement()
+	attack_with_replacement(i+1)
 
 #attack without replacement
 for i in range(0,no_of_rounds_without_replacement):
 	initializeattack()
 	print(str(datetime.datetime.utcnow()) + ": Without-replacement attack, round: " + str(i+1) + " has started")
-	attack_without_replacement()
+	attack_without_replacement(i+1)
 
 
 filename = str(IMSI_length) + "_" + str(no_of_subscribers) + ".txt"

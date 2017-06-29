@@ -1,0 +1,57 @@
+digraph HN_states {
+size = "9,6"
+1 [shape = oval, label = "1: i, , ,0, , "]
+2 [shape = oval, label = "2: i,p, ,0,0, "]
+3 [shape = oval, label = "3: i,p, ,1,0, "]
+4 [shape = oval, label = "4: i,p, ,1,1, "]
+5 [shape = oval, label = "5: i,p,p',1,0,0"]
+6 [shape = oval, label = "6: i,p,p',1,1,0"]
+7 [shape = oval, label = "7: i,p,p',1,1,1"]
+
+1 -> 2 [label = " ID: i / 1"]
+1 -> 1 [label = " LU: i / 0"]
+
+
+2 -> 3 [label = " LU: i / 0"]
+2 -> 4 [label = " LU: p / 0"]
+2 -> 2 [label = " ID: i,p / 1"]
+
+3 -> 3 [label = " LU: i / 0, ID: i / 1"]
+3 -> 4 [label = " LU: p / 0"]
+3 -> 5 [label = " ID: p / 2"]
+
+4 -> 4 [label = " LU: i,p / 0, ID: i / 0"]
+4 -> 6 [label = " ID: p / 2"]
+
+
+5 -> 5 [label = " LU: i / 0, ID: i / 0, ID: p,p' / 3"]
+5 -> 6 [label = " LU: p / 0"]
+5 -> 7 [label = " LU: p' / 0"]
+
+
+6 -> 6 [label = " LU: i,p / 0,LU: i,p / 3"]
+6 -> 7 [label = " LU: p' / 0"]
+6 -> 5 [label = " LU: p' / 4"]
+
+
+7 -> 7 [label = " LU: i,p,p' / 0,ID: i / 0, ID: p / 3"]
+7 -> 6 [label = " ID: p' / 2"]
+}
+
+/*
+
+action codes:
+0: do nothing
+1: generate a new pseudonym p_new, set p = p_new. embed p_new in an AV and send to the respective SN
+2: generate a new pseudonym p_new, set p' = p_new, embed p_new in an AV and send to the respective SN
+3: Do not generate any new pseudonym. embed the existing p' in an AV and send to the respective SN
+4: gnerate a new pseudonym p_new. Set p = p' and P' = p_new. embed p_new in an AV and send to the respective SN
+
+a -> b -> c;
+b -> d;
+a [shape=polygon,sides=5,peripheries=3,color=lightblue,style=filled];
+c [shape=polygon,sides=4,skew=.4,label="hello world"]
+d [shape=invtriangle];
+e [shape=polygon,sides=4,distortion=.7];
+
+*/
