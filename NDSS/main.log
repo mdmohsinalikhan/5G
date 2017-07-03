@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  29 JUN 2017 19:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  3 JUL 2017 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -135,22 +135,30 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsfxsize=\dimen124
 \epsfysize=\dimen125
 \pspoints=\dimen126
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 352.
-LaTeX Font Info:    ... okay on input line 352.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 353.
+LaTeX Font Info:    ... okay on input line 353.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
 \scratchdimen=\dimen127
@@ -203,60 +211,77 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.jpeg,.png,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-** ATTENTION: Overriding command lockouts (line 408).
+** ATTENTION: Overriding command lockouts (line 410).
+Package epstopdf Info: Source file: <UE_diagram.eps>
+(epstopdf)                    date: 2017-07-03 21:12:08
+(epstopdf)                    size: 9171 bytes
+(epstopdf)             Output file: <UE_diagram-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-03 21:12:24
+(epstopdf)                    size: 7335 bytes
+(epstopdf)             Command: <repstopdf --outfile=UE_diagram-eps-converted-t
+o.pdf UE_diagram.eps>
+(epstopdf)             \includegraphics on input line 587.
+Package epstopdf Info: Output file is already uptodate.
+<UE_diagram-eps-converted-to.pdf, id=1, 85.31876pt x 144.54pt>
+File: UE_diagram-eps-converted-to.pdf Graphic file (type pdf)
+
+<use UE_diagram-eps-converted-to.pdf>
+Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 587
+.
+(pdftex.def)             Requested size: 117.57074pt x 199.16928pt.
 Package epstopdf Info: Source file: <HN_diagram.eps>
-(epstopdf)                    date: 2017-06-29 19:49:32
-(epstopdf)                    size: 13864 bytes
+(epstopdf)                    date: 2017-07-03 21:07:03
+(epstopdf)                    size: 16042 bytes
 (epstopdf)             Output file: <HN_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-06-29 19:50:18
-(epstopdf)                    size: 7674 bytes
+(epstopdf)                    date: 2017-07-03 21:08:20
+(epstopdf)                    size: 8218 bytes
 (epstopdf)             Command: <repstopdf --outfile=HN_diagram-eps-converted-t
 o.pdf HN_diagram.eps>
-(epstopdf)             \includegraphics on input line 463.
+(epstopdf)             \includegraphics on input line 595.
 Package epstopdf Info: Output file is already uptodate.
-<HN_diagram-eps-converted-to.pdf, id=1, 452.69125pt x 433.62pt>
+
+<HN_diagram-eps-converted-to.pdf, id=2, 616.3025pt x 750.805pt>
 File: HN_diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HN_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 463
+Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 595
 .
-(pdftex.def)             Requested size: 504.99374pt x 483.69684pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 471.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 471.
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
+(pdftex.def)             Requested size: 467.14403pt x 569.05511pt.
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 643.
+(Font)              <8> on input line 636.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 643.
+(Font)              <6> on input line 636.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 636.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]
+ <./UE_diagram-eps-converted-to.pdf>] [2 <./HN_diagram-eps-converted-to.pdf>]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
- [2 <./HN_diagram-eps-converted-to.pdf>]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -268,26 +293,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
-
-] (./main.aux) ) 
+[3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2250 strings out of 493304
- 35627 string characters out of 6139871
- 100574 words of memory out of 5000000
- 5701 multiletter control sequences out of 15000+600000
- 38728 words of font info for 72 fonts, out of 8000000 for 9000
+ 2299 strings out of 493304
+ 36479 string characters out of 6139871
+ 100598 words of memory out of 5000000
+ 5745 multiletter control sequences out of 15000+600000
+ 37650 words of font info for 71 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 37i,6n,23p,262b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on main.pdf (3 pages, 56882 bytes).
+ 38i,7n,23p,1370b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on main.pdf (3 pages, 67438 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -127,7 +127,7 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-   \usepackage[pdftex]{graphicx}
+  % \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -165,9 +165,7 @@
 % http://www.tug.org/applications/pdftex
 
 
-%%%%%%%added by the author
-\usepackage{epsf}
-\usepackage{color}
+
 
 
 % *** MATH PACKAGES ***
@@ -354,28 +352,23 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{A DoS Attack by Exploiting a Weakness of Solutions to Defeat IMSI-Catchers}
+\title{Bare Demo of IEEEtran.cls for Conferences}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Mohsin Khan}
-\IEEEauthorblockA{University of Helsinki\\
-mohsin.khan@helsinki.fi}
+\author{\IEEEauthorblockN{Michael Shell}
+\IEEEauthorblockA{Georgia Institute of Technology\\
+someemail@somedomain.com}
 \and
-\IEEEauthorblockN{Kimmo J\"arvinen}
-\IEEEauthorblockA{University of Helsinki\\
-kimmo.u.jarvinen@helsinki.fi}
+\IEEEauthorblockN{Homer Simpson}
+\IEEEauthorblockA{Twentieth Century Fox\\
+homer@thesimpsons.com}
 \and
-\IEEEauthorblockN{Philip Ginzboorg}
-\IEEEauthorblockA{Huawei Technologies\\
-philip.ginzboorg@huawei.com}
-\and
-\IEEEauthorblockN{Valtteri Niemi}
-\IEEEauthorblockA{University of Helsinki\\
-valtteri.niemi@helsinki.fi}}
-
+\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+\IEEEauthorblockA{Starfleet Academy\\
+someemail@somedomain.com}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -431,7 +424,7 @@ valtteri.niemi@helsinki.fi}}
 
 \begin{abstract}
 %\boldmath
-Pseudonym based solutions to defeat IMSI-catchers have recently been published. The idea of these solutions have been on the  table of the 3GPP community for a couple of years as a potential candidate solution to defeat IMSI-catchers. However, for some technical reasons, none of the pseudonym based solutions has yet been accepted as a 3GPP standard, even though there has not been any known fatal weakness in these solutions. We have found a vulnerability of the pseudonym based solutions. This vulnerability has also been reported in another publication \textcolor{red}{(cite?)} in the last month, July, 2017. Using this vulnerability, we show that a novel DDoS attack can be mounted against an entire mobile network. We analytically estimate the expected success rate of the DDoS attack. According to our analysis, we can send 50 percent of the subscribers of the mobile network out of service using a reasonably large \textcolor{red}{(maybe mention the size?)} botnet. We run a simple simulation of the attack and show that our analytical estimation is fairly accurate. We present a solution to remove the vulnerability that led to the DDoS attack. \textcolor{red}{We present a detail analysis and show that, in our solution, there does not remain any vulnerability that could lead to a DoS attack of the kind we have presented in this paper.}
+The abstract goes here.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -458,35 +451,24 @@ Pseudonym based solutions to defeat IMSI-catchers have recently been published. 
 
 
 \section{Introduction}
-
-Kimmo will write it
-
-
-
-
-
 % no \IEEEPARstart
-%%%This demo file is intended to serve as a ``starter file''
-%%%for IEEE conference papers produced under \LaTeX\ using
-%%%EEEtran.cls version 1.7 and later.
+This demo file is intended to serve as a ``starter file''
+for IEEE conference papers produced under \LaTeX\ using
+IEEEtran.cls version 1.7 and later.
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
-%%%I wish you the best of success.
+I wish you the best of success.
 
-%%%\hfill mds
+\hfill mds
  
-%%%\hfill January 11, 2007
+\hfill January 11, 2007
+
+\subsection{Subsection Heading Here}
+Subsection text here.
 
 
-
-
-
-%%%\subsection{Subsection Heading Here}
-%%%Subsection text here.
-
-
-%%%\subsubsection{Subsubsection Heading Here}
-%%%Subsubsection text here.
+\subsubsection{Subsubsection Heading Here}
+Subsubsection text here.
 
 
 % An example of a floating figure using the graphicx package.
@@ -571,33 +553,8 @@ Kimmo will write it
 % footnotes above bottom floats. This can be corrected via the \fnbelowfloat
 % command of the stfloats package.
 
-\section{Pseudonym Based Solutions}
-Mohsin will write the summary of all the proposed pseudonym based solutions
-
-\section{Vulnerability of the Solutions}
-All the solutions mentioned in the previous section have the same vulnerability
-
 
 \section{The History of the National Hockey League}
-
-
-\begin{figure}
-\begin{center}
-\caption{State Diagram of UE}
- \includegraphics[height=7cm]{UE_diagram.eps}
-\label{fig:ue_states} 
-\end{center}
-\end{figure}
-
-\begin{figure*}
-\begin{center}
-\caption{State Diagram of HN}
- \includegraphics[height=20cm]{HN_diagram.eps}
-\label{fig:hn_states} 
-\end{center}
-\end{figure*}
-
-
 From
 http://en.wikipedia.org/.
 
