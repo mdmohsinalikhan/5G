@@ -6,16 +6,16 @@ size = "7,2"
 4 [shape = rectangle, label = "4: i, p', p''"]
 
 
-1 -> 1 [label = " II / i \n IAV / REJ \n VAV_i/REJ"]
+1 -> 1 [label = " II / i \n IAV / REJ \n VAV_i / REJ"]
 1 -> 2 [label = " VAV_p / RES"]
 
-2 -> 2 [label = " II / p \n IAV / REJ \n VAV_i/REJ \n VAV_p / RES "]
+2 -> 2 [label = " II / p \n IAV / REJ \n VAV_i / REJ \n VAV_p / RES "]
 2 -> 3 [label = " VAV_p' / RES "]
 
-3 -> 3 [label = " II/p \n II/p' \n IAV / REJ  \n VAV(p)/REJ \n VAV_p'/RES"]
+3 -> 3 [label = " II / p \n II / p' \n IAV / REJ  \n VAV_p / REJ \n VAV_p' / RES"]
 3 -> 4 [label = " VAV_p'' / RES"]
 
-4 -> 3 [label = " null/set p = p', p' = p''"]
+4 -> 3 [label = " null / set p = p', p' = p''"]
 
 }
 

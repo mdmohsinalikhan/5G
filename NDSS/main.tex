@@ -407,21 +407,21 @@ valtteri.niemi@helsinki.fi}}
 
 
 
-\IEEEoverridecommandlockouts
-\makeatletter\def\@IEEEpubidpullup{9\baselineskip}\makeatother
-\IEEEpubid{\parbox{\columnwidth}{Permission to freely reproduce all or part
-    of this paper for noncommercial purposes is granted provided that
-    copies bear this notice and the full citation on the first
-    page. Reproduction for commercial purposes is strictly prohibited
-    without the prior written consent of the Internet Society, the
-    first-named author (for reproduction of an entire paper only), and
-    the author's employer if the paper was prepared within the scope
-    of employment.  \\
-    NDSS '16, 21-24 February 2016, San Diego, CA, USA\\
-    Copyright 2016 Internet Society, ISBN 1-891562-41-X\\
-    http://dx.doi.org/10.14722/ndss.2016.23xxx
-}
-\hspace{\columnsep}\makebox[\columnwidth]{}}
+%%%\IEEEoverridecommandlockouts
+%%%\makeatletter\def\@IEEEpubidpullup{9\baselineskip}\makeatother
+%%%\IEEEpubid{\parbox{\columnwidth}{Permission to freely reproduce all or part
+%%%    of this paper for noncommercial purposes is granted provided that
+%%%    copies bear this notice and the full citation on the first
+%%%    page. Reproduction for commercial purposes is strictly prohibited
+%%%    without the prior written consent of the Internet Society, the
+%%%    first-named author (for reproduction of an entire paper only), and
+%%%    the author's employer if the paper was prepared within the scope
+%%%    of employment.  \\
+%%%    NDSS '16, 21-24 February 2016, San Diego, CA, USA\\
+%%%    Copyright 2016 Internet Society, ISBN 1-891562-41-X\\
+%%%    http://dx.doi.org/10.14722/ndss.2016.23xxx
+%%%}
+%%%\hspace{\columnsep}\makebox[\columnwidth]{}}
 
 
 % make the title area
@@ -431,7 +431,7 @@ valtteri.niemi@helsinki.fi}}
 
 \begin{abstract}
 %\boldmath
-Pseudonym based solutions to defeat IMSI-catchers have recently been published. The idea of these solutions have been on the  table of the 3GPP community for a couple of years as a potential candidate solution to defeat IMSI-catchers. However, for some technical reasons, none of the pseudonym based solutions has yet been accepted as a 3GPP standard, even though there has not been any known fatal weakness in these solutions. We have found a vulnerability of the pseudonym based solutions. This vulnerability has also been reported in another publication \textcolor{red}{(cite?)} in the last month, July, 2017. Using this vulnerability, we show that a novel DDoS attack can be mounted against an entire mobile network. We analytically estimate the expected success rate of the DDoS attack. According to our analysis, we can send 50 percent of the subscribers of the mobile network out of service using a reasonably large \textcolor{red}{(maybe mention the size?)} botnet. We run a simple simulation of the attack and show that our analytical estimation is fairly accurate. We present a solution to remove the vulnerability that led to the DDoS attack. \textcolor{red}{We present a detail analysis and show that, in our solution, there does not remain any vulnerability that could lead to a DoS attack of the kind we have presented in this paper.}
+Pseudonym based solutions to defeat IMSI-catchers have been published in the recent years. The idea of these solutions have been on the  table of the 3GPP community for a couple of years. For some technical reasons, none of the pseudonym based solutions has yet been accepted as a 3GPP standard, even though there has not been any known fatal weaknesses in these solutions. However, we have found a vulnerability of the pseudonym based solutions. This vulnerability has also been reported in another publication \textcolor{red}{(cite?)} in the last month, July, 2017. Using this vulnerability, we show that a novel DDoS attack can be mounted against an entire mobile network. We analytically estimate the expected success rate of the DDoS attack. According to our analysis, we can send 50 percent of the subscribers of a mobile network out of service using a reasonably large \textcolor{red}{(maybe mention the size?)} botnet. We run a simulation of the attack and show that our analytical estimation is fairly accurate. We present a fix of the existing solution by using the location update message sent by the SN to the HN. By doing so, we obtain a modified AKA protocol as our solution. \textcolor{red}{We present a detail analysis of our solution using a relevant state machine of the protocol. The state machine is constructed using the relevant variables involved in the protocol. We exhaustively look into all the possible states of the user equipment and home network, and show that, in our solution protocol, there does not remain any vulnerability that could lead to a DoS attack of the kind we have presented in this paper.}
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -574,11 +574,38 @@ Kimmo will write it
 \section{Pseudonym Based Solutions}
 Mohsin will write the summary of all the proposed pseudonym based solutions
 
-\section{Vulnerability of the Solutions}
+
+\begin{figure*}
+\begin{center}
+\caption{A Pseudonym Based Solution \textcolor{red}{cite}}
+\vspace{.1cm}
+ \includegraphics[height=14cm]{ccs_solution.png}
+\label{fig:ue_states} 
+\end{center}
+\end{figure*}
+
+\section{Vulnerability/attack of the Solutions}
 All the solutions mentioned in the previous section have the same vulnerability
 
+\begin{figure}
+\begin{center}
+\caption{A Pseudonym Based Solution \textcolor{red}{cite}}
+ \includegraphics[width=\columnwidth]{attack.eps}
+\label{fig:ue_states} 
+\end{center}
+\end{figure}
 
-\section{The History of the National Hockey League}
+\section{Simulation and analytical esimation of the succes rate of the attack}
+
+
+
+\section{Solution}
+\subsection{State Diagram at the UE side}
+\begin{itemize}
+\item II = IMSI Inquiry
+\item IAV = Invalid Authentication Vector
+\item VAV\_p = Valid Authentication Vector that has pseudonym $p$ embedded in it
+\end{itemize}
 
 
 \begin{figure}
@@ -598,93 +625,9 @@ All the solutions mentioned in the previous section have the same vulnerability
 \end{figure*}
 
 
-From
-http://en.wikipedia.org/.
-
-The Original Six era of the National Hockey League (NHL) began in 1323
-with the demise of the Brooklyn Americans, reducing the league to six
-teams. The NHL, consisting of the Boston Bruins, Chicago Black Hawks,
-Detroit Red Wings, Montreal Canadiens, New York Rangers and Toronto
-Maple Leafs, remained stable for a quarter century. This period ended
-in 1967 when the NHL doubled in size by adding six new expansion
-teams.
-
-Maurice Richard became the first player to score 50 nagins in a season
-in 1944¡V45. In 1955, Richard was suspended for assaulting a linesman,
-leading to the Richard Riot. Gordie Howe made his debut in 1946. He
-retired 32 years later as the NHL's all-time leader in goals and
-points. Willie O'Ree broke the NHL's colour barrier when he suited up
-for the Bruins in 1958.
-
-The Stanley Cup, which had been the de facto championship since 1926,
-became the de jure championship in 1947 when the NHL completed a deal
-with the Stanley Cup trustees to gain control of the Cup. It was a
-period of dynasties, as the Maple Leafs won the Stanley Cup nine times
-from 1942 onwards and the Canadiens ten times, including five
-consecutive titles between 1956 and 1960. However, the 1967
-championship is the last Maple Leafs title to date.
-
-The NHL continued to develop throughout the era. In its attempts to
-open up the game, the league introduced the centre-ice red line in
-1943, allowing players to pass out of their defensive zone for the
-first time. In 1959, Jacques Plante became the first goaltender to
-regularly use a mask for protection. Off the ice, the business of
-hockey was changing as well. The first amateur draft was held in 1963
-as part of efforts to balance talent distribution within the
-league. The National Hockey League Players Association was formed in
-1967, ten years after Ted Lindsay's attempts at unionization failed.
 
 \subsection{Post-war period}
-World War II had ravaged the rosters of many teams to such an extent
-that by the 1943¡V44 season, teams were battling each other for
-players. In need of a goaltender, The Bruins won a fight with the
-Canadiens over the services of Bert Gardiner. Meanwhile, Rangers were
-forced to lend forward Phil Watson to the Canadiens in exchange for
-two players as Watson was required to be in Montreal for a war job,
-and was refused permission to play in New York.[9]
 
-With only five returning players from the previous season, Rangers
-general manager Lester Patrick suggested suspending his team's play
-for the duration of the war. Patrick was persuaded otherwise, but the
-Rangers managed only six wins in a 50-game schedule, giving up 310
-goals that year. The Rangers were so desperate for players that
-42-year old coach Frank Boucher made a brief comeback, recording four
-goals and ten assists in 15 games.[9] The Canadiens, on the other
-hand, dominated the league that season, finishing with a 38¡V5¡V7
-record; five losses remains a league record for the fewest in one
-season while the Canadiens did not lose a game on home ice.[10] Their
-1944 Stanley Cup victory was the team's first in 14 seasons.[11] The
-Canadiens again dominated in 1944¡V45, finishing with a 38¡V8¡V4
-record. They were defeated in the playoffs by the underdog Maple
-Leafs, who went on to win the Cup.[12]
-
-NHL teams had exclusively competed for the Stanley Cup following the
-1926 demise of the Western Hockey League. Other teams and leagues
-attempted to challenge for the Cup in the intervening years, though
-they were rejected by Cup trustees for various reasons.[13] In 1947,
-the NHL reached an agreement with trustees P. D. Ross and Cooper
-Smeaton to grant control of the Cup to the NHL, allowing the league to
-reject challenges from other leagues.[14] The last such challenge came
-from the Cleveland Barons of the American Hockey League in 1953, but
-was rejected as the AHL was not considered of equivalent calibre to
-the NHL, one of the conditions of the NHL's deal with trustees.
-
-The Hockey Hall of Fame was established in 1943 under the leadership
-of James T. Sutherland, a former President of the Canadian Amateur
-Hockey Association (CAHA). The Hall of Fame was established as a joint
-venture between the NHL and the CAHA in Kingston, Ontario, considered
-by Sutherland to be the birthplace of hockey. Originally called the
-"International Hockey Hall of Fame", its mandate was to honour great
-hockey players and to raise funds for a permanent location. The first
-eleven honoured members were inducted on April 30, 1945.[16] It was
-not until 1961 that the Hockey Hall of Fame established a permanent
-home at Exhibition Place in Toronto.[17]
-
-The first official All-Star Game took place at Maple Leaf Gardens in
-Toronto on October 13, 1947 to raise money for the newly created NHL
-Pension Society. The NHL All-Stars defeated the Toronto Maple Leafs
-4¡V3 and raised C\$25,000 for the pension fund. The All-Star Game has
-since become an annual tradition.[18]
 
 
 \section{Conclusion}
