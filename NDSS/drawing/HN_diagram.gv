@@ -1,45 +1,28 @@
 digraph HN_states {
 size = "9,7"
-1 [shape = rectangle, label = "1: i, null, null, 0, null, null"]
-2 [shape = rectangle, label = "2: i, p, null, 0, 0, null"]
-3 [shape = rectangle, label = "3: i, p, null, 1, 0, null"]
-4 [shape = rectangle, label = "4: i, p, null, 1, 1, null"]
-5 [shape = rectangle, label = "5: i, p, p', 1, 0, 0"]
-temp1 [shape = rectangle, label = "temp1: i, p', p'', 1, 0, 0"]
-6 [shape = rectangle, label = "6: i, p, p', 1, 1, 0"]
-temp2 [shape = rectangle, label = "temp2: i, p', p'', 1, 1, 0"]
-7 [shape = rectangle, label = "7: i, p, p', 1, 1, 1"]
 
-1 -> 2 [label = " AV-req: i / AV_p"]
-1 -> 1 [label = " LU: i / no-AV"]
+1 [shape = rectangle, label = "1: i, p, p', 1, 1, 1"]
+2[shape = rectangle, label = "2: i, p, p', 1, 1, 0"]
+3 [shape = rectangle, label = "3: i, p, p', 1, 0, 0"]
+/*temp1 [shape = rectangle, label = "temp1: i, p', p'', 1, 0, 0"]
+  temp0 [shape = rectangle, label = "temp0: i, p', p'', 1, 1, 0"] */
 
 
-2 -> 3 [label = " LU: i/ no-AV"]
-2 -> 4 [label = " LU: p / no-AV"]
-2 -> 2 [label = " AV-req: i,p / AV_p"]
 
-3 -> 3 [label = " LU: i / no-AV"]
-3 -> 4 [label = " LU: p / no-AV"]
-3 -> 5 [label = " AV-req: i,p / AV_p'"]
-
-4 -> 4 [label = " LU: i,p / no-AV"]
-4 -> 6 [label = " AV-req: i, p / AV_p'"]
+3 -> 3 [label = " LU: i / no-AV \n AV-req: i,p,p' / AV_p'"]
+3 -> 2 [label = " LU: p / no-AV"]
+3 -> 1 [label = " LU: p' / no-AV"]
 
 
-5 -> 5 [label = " LU: i / no-AV \n AV-req: i,p,p' / AV_p'"]
-5 -> 6 [label = " LU: p / no-AV"]
-5 -> 7 [label = " LU: p' / no-AV"]
+2 -> 2 [label = " LU: i,p / no-AV \n AV-req: i,p / AV_p'"]
+2 -> 1 [label = " LU: p' / no-AV"]
+2 -> 3 [label = " AV-req: p' / AV_p'',p=p',p'=p''"]
+/* temp1 -> 3 [label = " null/p=p',p'=p''"] */
 
 
-6 -> 6 [label = " LU: i,p / no-AV \n AV-req: i,p / AV_p'"]
-6 -> 7 [label = " LU: p' / no-AV"]
-6 -> temp1 [label = " AV-req: p' / AV_p''"]
-temp1 -> 5 [label = " null/p=p',p'=p''"]
-
-
-7 -> 7 [label = " LU: i,p,p' / 0 \n AV-req: i,p / 4"]
-7 -> temp2 [label = " AV-req: p' / AV_p''"]
-temp2 -> 6 [label = " null/p=p',p'=p''"]
+1 -> 1 [label = " LU: i,p,p' / 0 \n AV-req: i,p / AV_p'"]
+1 -> 2 [label = " AV-req: p' / AV_p'',p=p',p'=p''"]
+/* temp0 -> 2 [label = " null/p=p',p'=p''"] */
 
 
 

@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.7)  4 JUL 2017 02:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.16)  4 JUL 2017 09:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2012/11/21 V1.8c by Harald Hanche-Olsen and Anders Chr
 istensen
@@ -93,22 +93,22 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -136,12 +136,12 @@ This is `epsf.tex' v2.7.4 <14 February 2011>
 \epsfysize=\dimen125
 \pspoints=\dimen126
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 143.
+Package color Info: Driver file: pdftex.def on input line 130.
 ) (./main.aux
 
 LaTeX Warning: Label `fig:ue_states' multiply defined.
@@ -231,10 +231,10 @@ File: ccs_solution.png Graphic file (type png)
 Package pdftex.def Info: ccs_solution.png used on input line 582.
 (pdftex.def)             Requested size: 453.72957pt x 398.33858pt.
 Package epstopdf Info: Source file: <attack.eps>
-(epstopdf)                    date: 2017-07-04 01:24:48
+(epstopdf)                    date: 2017-07-04 08:32:44
 (epstopdf)                    size: 110108 bytes
 (epstopdf)             Output file: <attack-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-04 01:25:48
+(epstopdf)                    date: 2017-07-04 08:32:44
 (epstopdf)                    size: 44884 bytes
 (epstopdf)             Command: <repstopdf --outfile=attack-eps-converted-to.pd
 f attack.eps>
@@ -247,59 +247,66 @@ File: attack-eps-converted-to.pdf Graphic file (type pdf)
 <use attack-eps-converted-to.pdf>
 Package pdftex.def Info: attack-eps-converted-to.pdf used on input line 593.
 (pdftex.def)             Requested size: 253.04987pt x 189.62337pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 605.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 605.
+ <10_6_7.pdf, id=3, 2312.64pt x 1189.74492pt>
+File: 10_6_7.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 3189) in paragraph at lines 607--608
+<use 10_6_7.pdf>
+Package pdftex.def Info: 10_6_7.pdf used on input line 603.
+(pdftex.def)             Requested size: 442.44093pt x 227.62204pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 612.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 612.
+
+Underfull \hbox (badness 3189) in paragraph at lines 614--615
 []\OT1/ptm/m/n/10 VAV[]p = Valid Au-then-ti-ca-tion Vec-tor that has
  []
 
 Package epstopdf Info: Source file: <UE_diagram.eps>
-(epstopdf)                    date: 2017-07-04 02:44:03
+(epstopdf)                    date: 2017-07-04 08:32:44
 (epstopdf)                    size: 9191 bytes
 (epstopdf)             Output file: <UE_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-04 02:37:34
-(epstopdf)                    size: 7192 bytes
+(epstopdf)                    date: 2017-07-04 08:32:44
+(epstopdf)                    size: 7021 bytes
 (epstopdf)             Command: <repstopdf --outfile=UE_diagram-eps-converted-t
 o.pdf UE_diagram.eps>
-(epstopdf)             \includegraphics on input line 614.
-runsystem(repstopdf --outfile=UE_diagram-eps-converted-to.pdf UE_diagram.eps)..
-.executed safely (allowed).
-
-Package epstopdf Info: Result file: <UE_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-04 02:44:39
-(epstopdf)                    size: 7021 bytes.
-<UE_diagram-eps-converted-to.pdf, id=3, 88.33pt x 144.54pt>
+(epstopdf)             \includegraphics on input line 621.
+Package epstopdf Info: Output file is already uptodate.
+<UE_diagram-eps-converted-to.pdf, id=4, 88.33pt x 144.54pt>
 File: UE_diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use UE_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 614
+Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 621
 .
 (pdftex.def)             Requested size: 121.72029pt x 199.16928pt.
 Package epstopdf Info: Source file: <HN_diagram.eps>
-(epstopdf)                    date: 2017-07-04 00:08:35
+(epstopdf)                    date: 2017-07-03 21:07:03
 (epstopdf)                    size: 16042 bytes
 (epstopdf)             Output file: <HN_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-04 00:08:35
+(epstopdf)                    date: 2017-07-03 21:08:20
 (epstopdf)                    size: 8218 bytes
 (epstopdf)             Command: <repstopdf --outfile=HN_diagram-eps-converted-t
 o.pdf HN_diagram.eps>
-(epstopdf)             \includegraphics on input line 622.
+(epstopdf)             \includegraphics on input line 629.
 Package epstopdf Info: Output file is already uptodate.
 
-<HN_diagram-eps-converted-to.pdf, id=4, 616.3025pt x 750.805pt>
+<HN_diagram-eps-converted-to.pdf, id=5, 616.3025pt x 750.805pt>
 File: HN_diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HN_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 622
+Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 629
 .
 (pdftex.def)             Requested size: 467.14403pt x 569.05511pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./attack-eps-converted-to.pdf> <./UE_diagram-eps-converted-to.pdf>] [2 <./ccs
+_solution.png (PNG copy)> <./10_6_7.pdf>] [3 <./HN_diagram-eps-converted-to.pdf
+>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 677.
+(Font)              <8> on input line 684.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 677.
+(Font)              <6> on input line 684.
 
 
 ** Conference Paper **
@@ -312,23 +319,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[4
 
-
-] [2 <./ccs_solution.png (PNG copy)> <./attack-eps-converted-to.pdf> <./UE_diag
-ram-eps-converted-to.pdf>] [3 <./HN_diagram-eps-converted-to.pdf>] (./main.aux)
-
+] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2313 strings out of 494910
- 36761 string characters out of 6179837
- 99069 words of memory out of 5000000
- 5589 multiletter control sequences out of 15000+600000
+ 2318 strings out of 493304
+ 36843 string characters out of 6139871
+ 100645 words of memory out of 5000000
+ 5760 multiletter control sequences out of 15000+600000
  37650 words of font info for 71 fonts, out of 8000000 for 9000
- 39 hyphenation exceptions out of 8191
+ 960 hyphenation exceptions out of 8191
  38i,7n,23p,1657b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
@@ -336,10 +340,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 188385 bytes).
+Output written on main.pdf (4 pages, 214409 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
