@@ -1,0 +1,48 @@
+digraph HN_states {
+size = "9,7"
+
+1 [shape = rectangle, label = "1: i, p, p', 1, 1, 1"]
+2[shape = rectangle, label = "2: i, p, p', 1, 1, 0"]
+3 [shape = rectangle, label = "3: i, p, p', 1, 0, 0"]
+/*temp1 [shape = rectangle, label = "temp1: i, p', p'', 1, 0, 0"]
+  temp0 [shape = rectangle, label = "temp0: i, p', p'', 1, 1, 0"] */
+
+
+
+3 -> 3 [label = " LU: i / no-AV \n AV-req: i,p,p' / AV_p'"]
+3 -> 2 [label = " LU: p / no-AV"]
+3 -> 1 [label = " LU: p' / no-AV"]
+
+
+2 -> 2 [label = " LU: i,p / no-AV \n AV-req: i,p / AV_p'"]
+2 -> 1 [label = " LU: p' / no-AV"]
+2 -> 3 [label = " AV-req: p' / AV_p'',p=p',p'=p''"]
+/* temp1 -> 3 [label = " null/p=p',p'=p''"] */
+
+
+1 -> 1 [label = " LU: i,p,p' / 0 \n AV-req: i,p / AV_p'"]
+1 -> 2 [label = " AV-req: p' / AV_p'',p=p',p'=p''"]
+/* temp0 -> 2 [label = " null/p=p',p'=p''"] */
+
+
+
+}
+
+/*
+
+action codes:
+0: do nothing
+1* : do not generate a new pseudonym, embed existing p in and AV and send to the respective SN
+1: generate a new pseudonym p_new, set p = p_new. embed p_new in an AV and send to the respective SN
+2: generate a new pseudonym p_new, set p' = p_new, embed p_new in an AV and send to the respective SN
+3: Do not generate any new pseudonym. embed the existing p' in an AV and send to the respective SN
+4: gnerate a new pseudonym p_new. Set p = p' and P' = p_new. embed p_new in an AV and send to the respective SN
+
+a -> b -> c;
+b -> d; 
+a [shape=polygon,sides=5,peripheries=3,color=lightblue,style=filled];
+c [shape=polygon,sides=4,skew=.4,label="hello world"]
+d [shape=invtriangle];
+e [shape=polygon,sides=4,distortion=.7];
+
+*/

@@ -1,0 +1,2 @@
+dot -Gratio=auto -Tpng -o graph.png graph.dot
+xdg-open graph.png

@@ -1,0 +1,38 @@
+digraph UE_states {
+size = "7,5"
+1 [shape = rectangle, label = "1: i, null , null"] /* state description = state number:imsi,p,p', what is received from network, what is sent to the network*/
+2 [shape = rectangle, label = "2: i, p, null"]
+3 [shape = rectangle, label = "3: i, p, p'"]
+4 [shape = rectangle, label = "4: i, p', p''"]
+
+
+1 -> 1 [label = " II / i \n IAV / REJ \n VAV_i/REJ"]
+1 -> 2 [label = " VAV_p / RES"]
+
+2 -> 2 [label = " II / p \n IAV / REJ \n VAV_i/REJ \n VAV_p / RES "]
+2 -> 3 [label = " VAV_p' / RES "]
+
+3 -> 3 [label = " II/p \n II/p' \n IAV / REJ  \n VAV(p)/REJ \n VAV_p'/RES"]
+3 -> 4 [label = " VAV_p'' / RES"]
+
+4 -> 3 [label = " null/set p = p', p' = p''"]
+
+}
+
+/*
+
+action codes:
+0: do nothing
+1: generate a new pseudonym p_new, set p = p_new. embed p_new in an AV and send to the respective SN
+2: generate a new pseudonym p_new, set p' = p_new, embed p_new in an AV and send to the respective SN
+3: Do not generate any new pseudonym. embed the existing p' in an AV and send to the respective SN
+4: gnerate a new pseudonym p_new. release p from the used pool. Set p = p' and P' = p_new. embed p_new in an AV and send to the respective SN
+
+a -> b -> c;
+b -> d; 
+a [shape=polygon,sides=5,peripheries=3,color=lightblue,style=filled];
+c [shape=polygon,sides=4,skew=.4,label="hello world"]
+d [shape=invtriangle];
+e [shape=polygon,sides=4,distortion=.7];
+
+*/
