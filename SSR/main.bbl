@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{CCS15}
+Van~den Broek, F., Verdult, R., de~Ruiter, J.:
+\newblock {D}efeating {IMSI} {C}atchers.
+\newblock In: Proceedings of the 22nd ACM SIGSAC Conference on Computer and
+  Communications Security. CCS '15, ACM (2015)
+
+\bibitem{SSR15}
+Khan, M.S.A., Mitchell, C.J.:
+\newblock {I}mproving {A}ir {I}nterface {U}ser {P}rivacy in {M}obile
+  {T}elephony.
+\newblock In: Second International Conference, SSR 2015, Proceedings, Springer
+  International Publishing (2015)
+
+\bibitem{Ginzboorg_Niemi_2016}
+Ginzboorg, P., Niemi, V.:
+\newblock Privacy of the long-term identities in cellular networks.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia '16, ICST (2016)
+
+\bibitem{Norrman_Naslund_Dubrova_2016}
+Norrman, K., N\"{a}slund, M., Dubrova, E.:
+\newblock {P}rotecting {IMSI} and {U}ser {P}rivacy in {5G} {N}etworks.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia'16, ICST (2016)
+
+\end{thebibliography}

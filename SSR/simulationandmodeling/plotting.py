@@ -101,7 +101,7 @@ def initialize_plotting_data_structures():
 
 
 #the main function starts from here
-for i in range(1,3):
+for i in range(1,2):
 	
 	initialize_plotting_data_structures()
 
@@ -151,6 +151,6 @@ for i in range(1,3):
 #Formatting the plot
 plt.xlabel('Number of guessed pseudonyms')
 plt.ylabel('No of affected users (percentage)')
-plt.title('Success rate of the DoS attack \n' + "IMSI Length: " + str(IMSI_length) + " digits")
+#plt.title('Success rate of the DoS attack \n' + "IMSI Length: " + str(IMSI_length) + " digits")
 plt.show()
 
