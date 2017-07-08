@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.7)  8 JUL 2017 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.7)  8 JUL 2017 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,7 +1132,7 @@ erted-to.pdf>
 (epstopdf)                    size: 55231 bytes
 (epstopdf)             Command: <repstopdf --outfile=security_architecture_abst
 raction-eps-converted-to.pdf security_architecture_abstraction.eps>
-(epstopdf)             \includegraphics on input line 170.
+(epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
 <security_architecture_abstraction-eps-converted-to.pdf, id=22, 284.06125pt x 9
@@ -1141,7 +1141,7 @@ File: security_architecture_abstraction-eps-converted-to.pdf Graphic file (type
  pdf)
  <use security_architecture_abstraction-eps-converted-to.pdf>
 Package pdftex.def Info: security_architecture_abstraction-eps-converted-to.pdf
- used on input line 170.
+ used on input line 164.
 (pdftex.def)             Requested size: 214.15067pt x 71.13188pt.
  [3 <./security_architecture_abstraction-eps-converted-to.pdf>] [4] [5]
 Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
@@ -1153,7 +1153,7 @@ Package epstopdf Info: Source file: <solution_based_on_ibc.eps>
 (epstopdf)                    size: 158698 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution_based_on_ibc-eps-
 converted-to.pdf solution_based_on_ibc.eps>
-(epstopdf)             \includegraphics on input line 242.
+(epstopdf)             \includegraphics on input line 235.
 Package epstopdf Info: Output file is already uptodate.
 
 <solution_based_on_ibc-eps-converted-to.pdf, id=37, 796.9775pt x 597.23125pt>
@@ -1161,32 +1161,27 @@ File: solution_based_on_ibc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use solution_based_on_ibc-eps-converted-to.pdf>
 Package pdftex.def Info: solution_based_on_ibc-eps-converted-to.pdf used on inp
-ut line 242.
+ut line 235.
 (pdftex.def)             Requested size: 265.77606pt x 199.16928pt.
- [6] [7 <./solution_based_on_ibc-eps-converted-to.pdf>] [8]
-Underfull \hbox (badness 6927) in paragraph at lines 317--317
-[]|\T1/cmr/m/n/9 Mutual Au-then-ti-ca-tion
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 347--352
+ [6 <./solution_based_on_ibc-eps-converted-to.pdf>] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 335--340
 \T1/cmr/m/n/9 desktopmodules/Specifications/SpecificationDetails.aspx?specifica
 tionId=3045,
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--354
 \T1/cmr/m/n/9 desktopmodules/Specifications/SpecificationDetails.aspx?specifica
 tionId=729,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--412
+Underfull \hbox (badness 10000) in paragraph at lines 395--400
 \T1/cmr/m/n/9 desktopmodules/Specifications/SpecificationDetails.aspx?specifica
 tionId=2311,
  []
 
-[11] (./main.aux)
+[10] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1194,7 +1189,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  27879 strings out of 494910
  595940 string characters out of 6179837
- 624973 words of memory out of 5000000
+ 622971 words of memory out of 5000000
  30731 multiletter control sequences out of 15000+600000
  18801 words of font info for 55 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1213,10 +1208,10 @@ msfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 
-Output written on main.pdf (11 pages, 383571 bytes).
+Output written on main.pdf (10 pages, 381259 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 414 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

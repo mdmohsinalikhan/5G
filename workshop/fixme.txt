@@ -1,8 +1,3 @@
-
-1. break url
-2. add the ccs and ssr paper in the bibliography
-3. remove page number
-4. no running head
 5. get the consent form
 6. do I need to add keyword?
 
