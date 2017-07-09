@@ -39,7 +39,7 @@ def plot(k):
 				plotlist_y.append(100*(float(temporary_container_with_replacement[j].split(":",no_of_rounds_with_replacement)[i+1]))/no_of_subscribers)
 				plotlist_x.append(temporary_container_with_replacement[j].split(":",no_of_rounds_with_replacement)[0])
 		
-			plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle="-.", c="red", alpha = 1)
+			plt.plot(plotlist_x, plotlist_y, ':', linewidth=5, c="red", alpha = .5)
 			#print(plotlist_x)
 
 
@@ -50,49 +50,17 @@ def plot(k):
 				plotlist_y.append((100*float(temporary_container_without_replacement[j].split(":",no_of_rounds_without_replacement)[i+1]))/no_of_subscribers)
 				plotlist_x.append(temporary_container_without_replacement[j].split(":",no_of_rounds_without_replacement)[0])
 		
-			plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle="-.", c="green", alpha = 1)
+			plt.plot(plotlist_x, plotlist_y, ':', linewidth=5, c="green", alpha = .5)
 	
 
 		x = np.linspace(0, attack_length_with_replacement, 1000)
 		plt.plot(x, 100*(1.0-(1.0-1.0/IMSI_space)**x - x*(1.0/IMSI_space)*(1.0-1.0/IMSI_space)**(x-1.0)), linewidth=1, linestyle="-", c="black", alpha = 1);
 
 		x = np.linspace(0, attacklength_without_replacement/2, 500)
-		plt.plot(x, 100*(1/10.0**IMSI_length)*((x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 1);
+		plt.plot(x, 100*(1/10.0**IMSI_length)*((x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 2);
 
 		x = np.linspace(attacklength_without_replacement/2, attacklength_without_replacement, 500)
-		plt.plot(x, 100*(1/10.0**IMSI_length)*(2*x - 10**IMSI_length - (x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 1);
-	
-	elif k == 2:
-
-		for i in range(0,no_of_rounds_with_replacement):
-			plotlist_x[:] = []
-			plotlist_y[:] = []
-			for j in range(0,no_of_readings_with_replacement):
-				plotlist_y.append(100*(float(temporary_container_with_replacement[j].split(":",no_of_rounds_with_replacement)[i+1]))/no_of_subscribers)
-				plotlist_x.append(temporary_container_with_replacement[j].split(":",no_of_rounds_with_replacement)[0])
-		
-			plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle="--.", c="red", alpha = 1)
-			#print(plotlist_x)
-
-
-		for i in range(0,no_of_rounds_without_replacement):
-			plotlist_x[:] = []
-			plotlist_y[:] = []
-			for j in range(0,no_of_readings_without_replacement):
-				plotlist_y.append((100*float(temporary_container_without_replacement[j].split(":",no_of_rounds_without_replacement)[i+1]))/no_of_subscribers)
-				plotlist_x.append(temporary_container_without_replacement[j].split(":",no_of_rounds_without_replacement)[0])
-		
-			plt.plot(plotlist_x, plotlist_y, linewidth=1, linestyle="--", c="green", alpha = 1)
-	
-
-		x = np.linspace(0, attack_length_with_replacement, 1000)
-		plt.plot(x, 100*(1.0-(1.0-1.0/IMSI_space)**x - x*(1.0/IMSI_space)*(1.0-1.0/IMSI_space)**(x-1.0)), linewidth=1, linestyle="-", c="black", alpha = 1);
-
-		x = np.linspace(0, attacklength_without_replacement/2, 500)
-		plt.plot(x, 100*(1/10.0**IMSI_length)*((x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle=":", c="blue", alpha = 1);
-
-		x = np.linspace(attacklength_without_replacement/2, attacklength_without_replacement, 500)
-		plt.plot(x, 100*(1/10.0**IMSI_length)*(2*x - 10**IMSI_length - (x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle=":", c="blue", alpha = 1);
+		plt.plot(x, 100*(1/10.0**IMSI_length)*(2*x - 10**IMSI_length - (x**2.0)/(2.0*10**IMSI_length)), linewidth=1, linestyle="-", c="blue", alpha = 2);
 
 
 def initialize_plotting_data_structures():
@@ -152,5 +120,8 @@ for i in range(1,2):
 plt.xlabel('Number of guessed pseudonyms')
 plt.ylabel('No of affected users (percentage)')
 #plt.title('Success rate of the DoS attack \n' + "IMSI Length: " + str(IMSI_length) + " digits")
+plt.yticks(np.arange(0, 100, 5))
+plt.xticks(np.arange(0, 6*10**10+1, 5*10**9))
+plt.grid()
 plt.show()
 
