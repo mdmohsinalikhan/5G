@@ -9,7 +9,7 @@ size = "9,7"
 
 4 [shape = rectangle, label = "4: i, p, p', p'', 1"]
 
-
+A [shape = rectangle, label = "LU: i = location update for i arrived \n AV-req: i = AV request for i has arrived \n forget_p = set p <- p', p' <- p'' and p'' <- null \n AV_p,AV_p',AV_p'' = send AV to SN by embedding p,p',p''. \n In case p'' is null, generate a random and unused p''"]
 
 1 -> 1 [label = " LU: i, p / 0 \n AV-req: i / AV_p \n AV-req: p / AV_p' \n AV-req: p', p'' / AV_p''"]
 1 -> 2 [label = " LU: p' / forget_p"]

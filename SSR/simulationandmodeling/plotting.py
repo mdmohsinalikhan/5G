@@ -117,7 +117,7 @@ for i in range(1,2):
 
 
 #Formatting the plot
-plt.xlabel('Number of guessed pseudonyms')
+plt.xlabel('Number Of Pseudonyms Sent To The Network')
 plt.ylabel('No of affected users (percentage)')
 #plt.title('Success rate of the DoS attack \n' + "IMSI Length: " + str(IMSI_length) + " digits")
 plt.yticks(np.arange(0, 100, 5))

@@ -1,3 +1,4 @@
 1. check how to best represent .eps file using latex, because it seems \includegraphics[]{} command is not good enough
 2. take care of the lines that I commented myeself in the tex file. I used "%%%" (triple percentage sign to comment the lines)
 3. Must have keywords
+4. check all the question marks before submitting

@@ -20,34 +20,69 @@
 \@writefile{toc}{\contentsline {subsubsection}{Current state of art in defeating IMSI-catchers}{2}}
 \@writefile{toc}{\contentsline {subsubsection}{Our Contribution}{2}}
 \@writefile{toc}{\contentsline {subsubsection}{Overview}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}}
-\@writefile{toc}{\contentsline {subsubsection}{Identification in the existing networks}{2}}
-\citation{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{Identification in the existing networks}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{Authentication in the existing networks}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{How pseudonym based solution works}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Vulnerability of Pseudonym Based Solutions}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The DOS Attack Against the BVR Scheme}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A DoS Attack against the BVR scheme\relax }}{4}}
-\newlabel{fig:dos_attack}{{2}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The DDOS Attack}{4}}
-\@writefile{toc}{\contentsline {subsubsection}{With replacement}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Success Rate of the DDoS Attack. IMSI space $10^{10}$. Number of subscribers in HN is $10^7$. The black and blue line presents the expected number of affected users in case of the with and without replacement attacks respectively. Under the black line, there are three red lines which represent the results of three simulations of with-replacement attack. Under the blue line, there are three green lines which represent the results of three simulations of without-replacement attack.\relax }}{5}}
-\newlabel{fig:simulation_and_modeling}{{3}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}BVR Scheme}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces BVR Solution\relax }}{4}}
+\newlabel{fig:bvr_solution}{{2}{4}}
+\citation{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016}
+\@writefile{toc}{\contentsline {section}{\numberline {4}A Vulnerability of Pseudonym Based Solutions}{5}}
+\newlabel{sec:vulnerability}{{4}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{Exploiting the Vulnerability in BVR Scheme}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A DoS Attack against the BVR scheme\relax }}{6}}
+\newlabel{fig:dos_attack}{{3}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}The DDoS Attack Against the BVR Scheme}{7}}
+\newlabel{sec:ddos_attack}{{5}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{With replacement}{7}}
+\newlabel{eqn:avg_with_replacement}{{1}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{Without replacement}{7}}
+\newlabel{eqn:without_replacement}{{2}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Success Rate of the DDoS Attack. IMSI space is $10^{10}$. Number of subscribers in HN is $10^7$. The black and blue line presents the expected number of affected users in case of the with and without replacement attacks respectively. Under the black line, there are three red lines which represent the results of three simulations of with-replacement attack. Under the blue line, there are three green lines which represent the results of three simulations of without-replacement attack.\relax }}{8}}
+\newlabel{fig:simulation_and_modeling}{{4}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Success Rate of the DDoS Attack in the case of with-replacement attack as $botnet_{size}$ grows. The black, blue and red lines represent the cases where the parameter $bot_{life}$ has the value of $2, 4$ and $6$. In all the cases $AV_{latency} = 500$ milliseconds. The plot is drawn according to Equation \ref  {eqn:avg_with_replacement}.\relax }}{8}}
+\newlabel{fig:botplot}{{5}{8}}
+\citation{thesislund}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}How Fatal The DDoS Attack Can be In Practice}{9}}
+\newlabel{sec:how_fatal_ddos}{{5.1}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}A Solution To The DDoS Attack}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Solution}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Analysis of the Solution}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Function $g$\relax }}{11}}
+\newlabel{func:g}{{6}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Function $h$\relax }}{11}}
+\newlabel{func:h}{{7}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Solution\relax }}{12}}
+\newlabel{fig:solution}{{8}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{13}}
+\newlabel{fig:ue_diagram}{{9}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{13}}
+\newlabel{fig:ue_diagram}{{10}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}SN is not a Potential Adversary Anymore}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}How a Malicious SN Could Attack}{14}}
+\newlabel{sec:attack_by_sn}{{7.1}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Values of $PMSI$ and $P_{new}$ in the absence of a malicious or buggy SN\relax }}{14}}
+\newlabel{fig:ue_cases}{{11}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{Phase 1}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{Phase 2}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Probality of Success of the Attack}{15}}
+\newlabel{eqn:without_replacement}{{3}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to the subscribers who are visiting the SN\relax }}{16}}
+\newlabel{fig:expected_success_rate_attack_by_sn_insider}{{12}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to all subscribers of the HN\relax }}{17}}
+\newlabel{fig:expected_success_rate_attack_all_by_sn}{{13}{17}}
 \bibstyle{splncs}
 \bibdata{ref}
 \bibcite{CCS15}{1}
 \bibcite{SSR15}{2}
 \bibcite{Ginzboorg_Niemi_2016}{3}
-\@writefile{toc}{\contentsline {subsubsection}{Without replacement}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Why SN is not a Potential Adversary}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{Modeling and Simulation}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Solution}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Analysis}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Related work}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Usability of pseudonyms}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{6}}
-\newlabel{sec:conclusion}{{8}{6}}
-\newlabel{sec:acknowledgement}{{8}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{Acknowledgement.}{6}}
 \bibcite{Norrman_Naslund_Dubrova_2016}{4}
+\bibcite{thesislund}{5}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Usability of pseudonyms}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{18}}
+\newlabel{sec:conclusion}{{9}{18}}
+\newlabel{sec:acknowledgement}{{9}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{Acknowledgement.}{18}}
