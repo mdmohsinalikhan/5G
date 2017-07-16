@@ -151,33 +151,20 @@ IMSI catchers are still in existence in all the 3GPP defined networks. Pseudonym
 IMSI catchers are threats to the identity privacy of mobile users. Passive IMSI catchers are devices that observe the wireless traffic and store all the international mobile subscriber identity (IMSI) observed. Active IMSI catchers are malicious devices that can trick a user equipment (UE) to reveal its IMSI. Protection against passive IMSI catchers have been in the cellular networks since the second generation (GSM). However, active IMSI catchers have persisted in all the cellular networks, namely, GSM, UMTS and LTE \cite{mobicom95,imsi_catcher_report_bochum,Ginzboorg_Niemi_2016,washingtonpost2014,pets2017,pki_umts_imsi_catcher}. 
 
 \subsubsection{IMSI Catching}
-In an ideal situation, a UE has to identify and authenticate itself to a serving network (SN) before it can receive any services the SN. In cellular networks the encryption key in a UE is generated using the pre-shared symmetric key during authentication \cite{TS33401}. So, before authentication, neither a UE nor the SN knows the key to use for encryption or decryption.  Consequently, the identity of the UE has to be sent in plaintext to the SN. This enables an active IMSI catcher to play its trick.
+The network a UE has a subscription with is called the home network (HN). The network a UE visits and gets service from is called serving network (SN). In an ideal situation, a UE has to identify and authenticate itself to an SN before it can receive any services from the SN. In cellular networks the encryption key in a UE is generated using the pre-shared symmetric key during authentication \cite{TS33401}. So, before authentication, neither a UE nor the SN knows the key to use for encryption or decryption.  Consequently, the identity of the UE has to be sent in plaintext to the SN. This enables an active IMSI catcher to play its trick.
 
-The trick an IMSI catcher play against the UEs is that, it impersonates a legitimate SN and ask for the identity of all the UEs in the range of the IMSI catcher. The UEs has no way to differentiate an attacker from a legitimate network, hence reveal their IMSIs as if they were revealing to a legitimate SN. 
+The trick an IMSI catcher play against the UEs is that, it impersonates a legitimate SN and ask for the identity of all the UEs in the range of the IMSI catcher. The UEs has no way to differentiate an IMSI catcher from a legitimate SN, hence reveal their IMSIs as if they were revealing to a legitimate SN. 
 
 An IMSI catcher can exploit the knowledge of caught IMSIs to monitor and track the physical location of a mobile user \cite{tracking_bins,goldman2007mobile}. Please note that the term "IMSI catcher" is also used in a wider meaning, referring to extended attacks, including man-in-the-middle type of attacks or just spamming \cite{catch_me_if_you_can,chinese_spam}. In this paper we limit our discussion only to prevent the IMSI catchers from catching the IMSIs (identities) of the users.
 
 Different kind of solutions to defeat IMSI catchers have been proposed over the years. In addition to protect privacy, a desirable property of the solution is backward compatibility, i.e., it should protect the identity privacy even in the presence of a legacy SN. This is because, if the solution to defeat IMSI catchers works only in the latest generation of cellular network (e.g., 5G), then an attacker can mount a downgrade attack. 
 
 \subsubsection{Pseudonym Based Solutions}
-A potentially simple and backward compatible approach is to use frequently-changing temporary identities for mobile users \cite{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}. The idea is, even if an IMSI catcher play its trick, only the temporary identity of a UE would be revealed. So, the attacker would not be able to associate the temporary identity with any user who is previously known or will be known in the future. The temporary identities are called pseudonyms, hence the solutions use this approach are called pseudonym based solutions. 
+A potentially simple and backward compatible approach is to use frequently-changing temporary identities for mobile users \cite{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}. The idea is, even if an IMSI catcher play its trick, only the temporary identity of a UE would be revealed. So, the IMSI catcher would not be able to associate the temporary identity with any user who is previously known or will be known in the future. The temporary identities are called pseudonyms, hence the solutions use this approach are called pseudonym based solutions. 
 
-The pseudonym based solutions proposed in \cite{CCS15,SSR15}, use pseudonyms that have the same format as IMSIs. The next pseudonym is encrypted and sent to a UE by the home network (HN).  It is sent as a part of the random challenge RAND. The RAND is used in the legacy networks too, hence the changes in the existing protocols remain transparent to the SNs. However, these solutions are sensitive to the loss of synchronization between the pseudonyms in the UE and the HN. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. As pointed out in \cite{wisec17}, there is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious SN.
+The pseudonym based solutions proposed in \cite{CCS15,SSR15}, use pseudonyms that have the same format as IMSIs. The next pseudonym is encrypted and sent to a UE by the HN.  It is sent as a part of the random challenge RAND. These solutions are sensitive to the loss of synchronization between the pseudonyms in the UE and the HN. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. As pointed out in \cite{wisec17}, there is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious serving network (SN).
 
-In order to address the loss of synchronization problem caused by a UE, the authors in \cite{wisec17}, propose a solution. Careful investigation into this solution shows that the UEs have to use one pseudonym at least twice before it can get a new pseudonym from the HN. The authors also argue that their solution is not immune to a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of pseudonyms per user increases from two to six. Moreover, as we explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
-
-\subsubsection{Our Contribution}
-We also propose a pseudonym based solution. Our solution builds on top of those in \cite{CCS15,SSR15,wisec17}. The following contributions are made:
-\begin{enumerate}
-\item We show that a DoS attack can be mounted against an entire HN using the vulnerability identified in WiSec 2017. We observe that the attack can be launched by a group (botnet) of UEs. We calculate the expected success rate of the attack and argue that the attack can be fatal in practice. 
-\item We show how the pseudonyms synchronization can be handled in a simple manner (also when there are DoS attacks), with three pseudonyms per user instead of six.
-\item Using probabilistic analysis, we show that a malicious SN can not mount any meaningful attack against our solution as long as synchronization of pseudonyms is the concern.
-\item We discuss some practical concerns of using pseudonyms instead of IMSIs from billing and lawful interception point of view and suggest solutions.
-\end{enumerate}
-
-%\subsubsection{How IMSI-catchers catch IMSI?} A subscriber's user equipment (UE) has to identify itself to the network before connecting. The identification message has to be sent in plain-text because the security of the network is based on symmetric key cryptography \textcolor{red}{cite}. In symmetric key cryptography, a secret key has to be shared before starting any encryption. The home network (HN) stores a secret key for every subscriber in the subscriber database. The secret keys are also securely stored in the respective subscriber identity module (SIM). However, the HN needs to know the identity of the subscriber to choose the right secret key to start encrypting or decrypting any message. So, when an unknown UE appears, the network makes an IMSI inquiry to the UE . Consequently, the UE has to sent the IMSI in plain-text \textcolor{red}{cite}. 
-
-%A passive IMSI-catcher who is just listening to the radio channel can read the identification message. An active IMSI-catcher who sets up a fake base station and impersonates a legitimate serving network (SN), do an IMSI inquiry to all the UEs that try to connect. The UEs respond with their respective IMSIs in plain-text \textcolor{red}{cite}. See Figure \ref{fig:IMSI-catching}. 
+In order to address the loss of synchronization problem caused by a UE, the authors in \cite{wisec17}, propose a solution. Careful investigation into this solution shows that the UEs have to use one pseudonym at least twice before it can get a new pseudonym from the network. The authors also argue that their solution is not immune to a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of pseudonyms per user increases from two to six. Moreover, as we explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
 
 %\begin{figure}[!tbp]
 %  \centering
@@ -194,8 +181,34 @@ We also propose a pseudonym based solution. Our solution builds on top of those 
 %  \label{fig:IMSI-catching}
 %\end{figure}
 
+\subsubsection{Our Contribution}
+We also propose a pseudonym based solution. Our solution builds on top of those in \cite{CCS15,SSR15,wisec17}. The following contributions are made:
+\begin{enumerate}
+\item We show that a DoS attack can be mounted against an entire HN using the vulnerability identified in \cite{wisec17}. We calculate the expected success rate of the attack and argue that the attack can be fatal in practice. 
+\item We show how the pseudonyms synchronization can be handled in a simple manner (also when there are DoS attacks), with three pseudonyms per user instead of six. In our solution, a UE can get a new pseudonym after using an old pseudonym only once instead of twice.
+\item Using probabilistic analysis, we show that a malicious SN can not mount any meaningful attack against our solution as long as synchronization of pseudonyms is the concern.
+\item We discuss some practical concerns of using pseudonyms instead of IMSIs from billing and lawful interception point of view and suggest solutions.
+\end{enumerate}
+
+
+
 
 \section{Preliminaries}
+
+\section{Related Work}
+\subsection{BVR}
+\subsection{KM15}
+\subsection{KM17}
+
+\section{Attack on Existing Solutions}
+
+\section{Our Solution}
+
+\section{Analysis}
+\subsection{Propoerties of Our Solution}
+\subsection{Protects Identity Privacy}
+\subsection{Protects against a mobile botnet}
+\subsection{Protects against a malicious SN}
 
 \subsubsection{Identification in the existing networks}
 \subsubsection{Authentication in the existing networks} we need to discuss the authentication mechanism because the pseudonym based approach uses the messages in the authentication protocol to piggyback the messages required to be sent across.
