@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.8)  15 JUL 2017 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.8)  17 JUL 2017 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,85 +1211,87 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
+LaTeX Warning: Reference `fig:umts_AKA' on page 4 undefined on input line 216.
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 220.
+               Default added (so using `htbp') on input line 219.
 
 Package epstopdf Info: Source file: <BVR.eps>
-(epstopdf)                    date: 2017-07-10 19:43:02
-(epstopdf)                    size: 530126 bytes
+(epstopdf)                    date: 2017-07-16 22:13:07
+(epstopdf)                    size: 795220 bytes
 (epstopdf)             Output file: <BVR-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-10 19:43:07
-(epstopdf)                    size: 216549 bytes
+(epstopdf)                    date: 2017-07-16 22:13:15
+(epstopdf)                    size: 316664 bytes
 (epstopdf)             Command: <repstopdf --outfile=BVR-eps-converted-to.pdf B
 VR.eps>
-(epstopdf)             \includegraphics on input line 222.
+(epstopdf)             \includegraphics on input line 221.
 Package epstopdf Info: Output file is already uptodate.
 <BVR-eps-converted-to.pdf, id=26, 773.89125pt x 1121.18875pt>
 File: BVR-eps-converted-to.pdf Graphic file (type pdf)
 
 <use BVR-eps-converted-to.pdf>
-Package pdftex.def Info: BVR-eps-converted-to.pdf used on input line 222.
+Package pdftex.def Info: BVR-eps-converted-to.pdf used on input line 221.
 (pdftex.def)             Requested size: 347.12354pt x 502.90503pt.
- [4] [5 <./BVR-eps-converted-to.pdf>]
-Overfull \hbox (14.73946pt too wide) in paragraph at lines 237--238
-\T1/cmr/m/n/10 scriber $\OML/cmm/m/it/10 s$ \T1/cmr/m/n/10 has two pseudonyms $
-[]$ in the HN and two pseudonyms $[]$
- []
-
+ [4] [5 <./BVR-eps-converted-to.pdf>] [6]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 243.
+               Default added (so using `htbp') on input line 249.
 
 Package epstopdf Info: Source file: <DDoS.eps>
-(epstopdf)                    date: 2017-07-09 11:32:45
-(epstopdf)                    size: 475175 bytes
+(epstopdf)                    date: 2017-07-17 00:00:27
+(epstopdf)                    size: 237058 bytes
 (epstopdf)             Output file: <DDoS-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-09 11:32:45
-(epstopdf)                    size: 123569 bytes
+(epstopdf)                    date: 2017-07-17 00:00:40
+(epstopdf)                    size: 95709 bytes
 (epstopdf)             Command: <repstopdf --outfile=DDoS-eps-converted-to.pdf 
 DDoS.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
-<DDoS-eps-converted-to.pdf, id=35, 796.9775pt x 597.23125pt>
+<DDoS-eps-converted-to.pdf, id=43, 775.89874pt x 602.25pt>
 File: DDoS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use DDoS-eps-converted-to.pdf>
-Package pdftex.def Info: DDoS-eps-converted-to.pdf used on input line 245.
-(pdftex.def)             Requested size: 347.12354pt x 260.12155pt.
- [6] [7 <./DDoS-eps-converted-to.pdf>]
+Package pdftex.def Info: DDoS-eps-converted-to.pdf used on input line 251.
+(pdftex.def)             Requested size: 329.7663pt x 255.96664pt.
+ [7 <./DDoS-eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 265.
+LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 271.
 
-<sim_and_mod.pdf, id=54, 578.16pt x 433.62pt>
+<sim_and_mod.pdf, id=52, 578.16pt x 433.62pt>
 File: sim_and_mod.pdf Graphic file (type pdf)
  <use sim_and_mod.pdf>
-Package pdftex.def Info: sim_and_mod.pdf used on input line 271.
+Package pdftex.def Info: sim_and_mod.pdf used on input line 277.
 (pdftex.def)             Requested size: 277.69987pt x 208.27419pt.
 
-<botplot.pdf, id=55, 578.16pt x 433.62pt>
+<botplot.pdf, id=53, 578.16pt x 433.62pt>
 File: botplot.pdf Graphic file (type pdf)
  <use botplot.pdf>
-Package pdftex.def Info: botplot.pdf used on input line 277.
+Package pdftex.def Info: botplot.pdf used on input line 283.
 (pdftex.def)             Requested size: 277.69987pt x 208.27419pt.
 
 
-LaTeX Warning: Float too large for page by 44.4101pt on input line 281.
+LaTeX Warning: Float too large for page by 44.4101pt on input line 287.
 
 
-LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 291.
+LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 297.
 
 [8] [9 <./sim_and_mod.pdf> <./botplot.pdf
 
 pdfTeX warning: pdflatex (file ./botplot.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
->] [10]
+>]
+Underfull \vbox (badness 4181) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:hn_diagram' on page 11 undefined on input line 31
-6.
+ [10]
 
+LaTeX Warning: Reference `fig:hn_diagram' on page 11 undefined on input line 32
+9.
+
+[11]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 366.
+               Default added (so using `htbp') on input line 379.
 
 Package epstopdf Info: Source file: <solution.eps>
 (epstopdf)                    date: 2017-07-11 02:45:26
@@ -1299,13 +1301,13 @@ Package epstopdf Info: Source file: <solution.eps>
 (epstopdf)                    size: 214031 bytes
 (epstopdf)             Command: <repstopdf --outfile=solution-eps-converted-to.
 pdf solution.eps>
-(epstopdf)             \includegraphics on input line 368.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
-<solution-eps-converted-to.pdf, id=132, 782.925pt x 1121.18875pt>
+<solution-eps-converted-to.pdf, id=135, 782.925pt x 1121.18875pt>
 File: solution-eps-converted-to.pdf Graphic file (type pdf)
 
 <use solution-eps-converted-to.pdf>
-Package pdftex.def Info: solution-eps-converted-to.pdf used on input line 368.
+Package pdftex.def Info: solution-eps-converted-to.pdf used on input line 381.
 (pdftex.def)             Requested size: 347.12354pt x 497.10544pt.
 Package epstopdf Info: Source file: <UE_diagram.eps>
 (epstopdf)                    date: 2017-07-11 11:57:18
@@ -1315,14 +1317,14 @@ Package epstopdf Info: Source file: <UE_diagram.eps>
 (epstopdf)                    size: 56348 bytes
 (epstopdf)             Command: <repstopdf --outfile=UE_diagram-eps-converted-t
 o.pdf UE_diagram.eps>
-(epstopdf)             \includegraphics on input line 377.
+(epstopdf)             \includegraphics on input line 390.
 Package epstopdf Info: Output file is already uptodate.
 
-<UE_diagram-eps-converted-to.pdf, id=133, 573.14125pt x 195.73125pt>
+<UE_diagram-eps-converted-to.pdf, id=136, 573.14125pt x 195.73125pt>
 File: UE_diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use UE_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 377
+Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 390
 .
 (pdftex.def)             Requested size: 347.12354pt x 118.54768pt.
 Package epstopdf Info: Source file: <HN_diagram.eps>
@@ -1333,21 +1335,21 @@ Package epstopdf Info: Source file: <HN_diagram.eps>
 (epstopdf)                    size: 111648 bytes
 (epstopdf)             Command: <repstopdf --outfile=HN_diagram-eps-converted-t
 o.pdf HN_diagram.eps>
-(epstopdf)             \includegraphics on input line 383.
+(epstopdf)             \includegraphics on input line 396.
 Package epstopdf Info: Output file is already uptodate.
 
-<HN_diagram-eps-converted-to.pdf, id=134, 760.8425pt x 590.205pt>
+<HN_diagram-eps-converted-to.pdf, id=137, 760.8425pt x 590.205pt>
 File: HN_diagram-eps-converted-to.pdf Graphic file (type pdf)
 
 <use HN_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 383
+Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 396
 .
 (pdftex.def)             Requested size: 347.12354pt x 269.28217pt.
- [11] [12] [13 <./solution-eps-converted-to.pdf>] [14 <./UE_diagram-eps-convert
-ed-to.pdf> <./HN_diagram-eps-converted-to.pdf>]
+ [12] [13 <./solution-eps-converted-to.pdf>] [14 <./UE_diagram-eps-converted-to
+.pdf> <./HN_diagram-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 401.
+               Default added (so using `htbp') on input line 414.
 
 Package epstopdf Info: Source file: <UE_cases.eps>
 (epstopdf)                    date: 2017-07-11 14:26:22
@@ -1357,37 +1359,35 @@ Package epstopdf Info: Source file: <UE_cases.eps>
 (epstopdf)                    size: 16195 bytes
 (epstopdf)             Command: <repstopdf --outfile=UE_cases-eps-converted-to.
 pdf UE_cases.eps>
-(epstopdf)             \includegraphics on input line 403.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
 <UE_cases-eps-converted-to.pdf, id=158, 597.23125pt x 79.29625pt>
 File: UE_cases-eps-converted-to.pdf Graphic file (type pdf)
 
 <use UE_cases-eps-converted-to.pdf>
-Package pdftex.def Info: UE_cases-eps-converted-to.pdf used on input line 403.
+Package pdftex.def Info: UE_cases-eps-converted-to.pdf used on input line 416.
 (pdftex.def)             Requested size: 347.12354pt x 46.08864pt.
- [15
-
- <./UE_cases-eps-converted-to.pdf>]
+ [15 <./UE_cases-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 420.
+               Default added (so using `htbp') on input line 433.
 
 <expected_success_rate_attack_by_sn_insider.pdf, id=164, 578.16pt x 433.62pt>
 File: expected_success_rate_attack_by_sn_insider.pdf Graphic file (type pdf)
 
 <use expected_success_rate_attack_by_sn_insider.pdf>
 Package pdftex.def Info: expected_success_rate_attack_by_sn_insider.pdf used on
- input line 422.
+ input line 435.
 (pdftex.def)             Requested size: 347.12354pt x 260.33942pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 438.
+               Default added (so using `htbp') on input line 451.
 
 <sn_attack_all.pdf, id=165, 578.16pt x 433.62pt>
 File: sn_attack_all.pdf Graphic file (type pdf)
  <use sn_attack_all.pdf>
-Package pdftex.def Info: sn_attack_all.pdf used on input line 440.
+Package pdftex.def Info: sn_attack_all.pdf used on input line 453.
 (pdftex.def)             Requested size: 347.12354pt x 260.33942pt.
 
 [16] [17 <./expected_success_rate_attack_by_sn_insider.pdf>] [18 <./sn_attack_a
@@ -1423,7 +1423,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
 [19])
 
-LaTeX Warning: Empty `thebibliography' environment on input line 465.
+LaTeX Warning: Empty `thebibliography' environment on input line 478.
 
 [20] (./main.aux)
 
@@ -1434,10 +1434,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29753 strings out of 493029
- 627571 string characters out of 6136235
- 654014 words of memory out of 5000000
- 32807 multiletter control sequences out of 15000+600000
+ 29756 strings out of 493029
+ 627622 string characters out of 6136235
+ 652029 words of memory out of 5000000
+ 32810 multiletter control sequences out of 15000+600000
  20731 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,13n,93p,10429b,750s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1463,7 +1463,7 @@ r/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/t
 ype1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
 /sftt0900.pfb>
-Output written on main.pdf (20 pages, 1135067 bytes).
+Output written on main.pdf (20 pages, 1211648 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  158 compressed objects within 2 object streams
