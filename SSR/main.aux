@@ -3,7 +3,6 @@
 \citation{mobicom95,imsi_catcher_report_bochum,Ginzboorg_Niemi_2016,washingtonpost2014,pets2017,pki_umts_imsi_catcher}
 \citation{TS33401}
 \providecommand \oddpage@label [2]{}
-\providecommand\tcolorbox@label[2]{}
 \select@language{english}
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
@@ -26,10 +25,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Preliminaries}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{Identification in the existing networks}{3}}
 \@writefile{toc}{\contentsline {subsubsection}{Authentication in the existing networks}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{3}}
 \citation{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}
 \citation{wisec17}
 \citation{wisec17}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}BVR Scheme}{4}}
 \@writefile{toc}{\contentsline {subsubsection}{Vulnerability in BVR Scheme}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The BVR Scheme\relax }}{5}}
@@ -44,37 +43,46 @@
 \@writefile{toc}{\contentsline {subsubsection}{Phase 1}{7}}
 \newlabel{sec:attac_fue_phase2}{{4}{7}}
 \@writefile{toc}{\contentsline {subsubsection}{Phase 2}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A DoS Attack against the BVR scheme\relax }}{7}}
-\newlabel{fig:dos_attack}{{2}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}The DDoS Attack Against the BVR Scheme}{8}}
-\newlabel{sec:ddos_attack}{{4.1}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{With replacement}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}The DDoS Attack Against the BVR Scheme}{7}}
+\newlabel{sec:ddos_attack}{{4.1}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A DoS Attack against the BVR scheme\relax }}{8}}
+\newlabel{fig:dos_attack}{{2}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{With Replacement}{8}}
 \newlabel{eqn:avg_with_replacement}{{1}{8}}
-\@writefile{toc}{\contentsline {subsubsection}{Without replacement}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{Without Replacement}{8}}
 \newlabel{eqn:without_replacement}{{2}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Success Rate of the DDoS Attack. IMSI space is $10^{10}$. Number of subscribers in HN is $10^7$. The black and blue line presents the expected number of affected users in case of the with and without replacement attacks respectively. Under the black line, there are three red lines which represent the results of three simulations of with-replacement attack. Under the blue line, there are three green lines which represent the results of three simulations of without-replacement attack.\relax }}{9}}
-\newlabel{fig:simulation_and_modeling}{{3}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Success Rate of the DDoS Attack in the case of with-replacement attack as $botnet_{size}$ grows. The black, blue and red lines represent the cases where the parameter $bot_{life}$ has the value of $2, 4$ and $6$. In all the cases $AV_{latency} = 500$ milliseconds. The plot is drawn according to Equation \ref  {eqn:avg_with_replacement}.\relax }}{9}}
-\newlabel{fig:botplot}{{4}{9}}
 \citation{thesislund}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}How Fatal The DDoS Attack Can be In Practice}{10}}
-\newlabel{sec:how_fatal_ddos}{{4.2}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}A Solution To The DDoS Attack}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Our Solution}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Analysis}{11}}
+\citation{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}
+\citation{botnet_geinimi10}
+\citation{botnet_zeus11}
+\citation{botnet_anserverbot}
+\citation{botnet_dreamdroid11}
+\citation{botnet_threat15}
+\citation{botnet_dreamdroid11}
+\citation{chinese_spam}
+\citation{wisec17}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces DDoS Attack. $ \mathcal  {M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model.\relax }}{9}}
+\newlabel{fig:simulation_and_modeling}{{3}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces DDoS Attack (with replacement), $\texttt  {botnet}_{\texttt  {size}} = 10^6$. Different lines represent the success rate as $\texttt  {bot}_{\texttt  {load}}$ varies.\relax }}{9}}
+\newlabel{fig:botplot}{{4}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}How Fatal The DDoS Attack Can be In Practice}{9}}
+\newlabel{sec:how_fatal_ddos}{{4.2}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Our Solution}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}A Solution To The DDoS Attack}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Analysis}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Propoerties of Our Solution}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Protects Identity Privacy}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Protects against a mobile botnet}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Protects against a malicious SN}{11}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Solution}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Function $g$\relax }}{12}}
-\newlabel{func:g}{{5}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Function $h$\relax }}{12}}
-\newlabel{func:h}{{6}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Analysis of the Solution}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Solution\relax }}{13}}
-\newlabel{fig:solution}{{7}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Analysis of the Solution}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Solution\relax }}{12}}
+\newlabel{fig:solution}{{5}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Function $g$\relax }}{13}}
+\newlabel{func:g}{{6}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Function $h$\relax }}{13}}
+\newlabel{func:h}{{7}{13}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{14}}
 \newlabel{fig:ue_diagram}{{8}{14}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{14}}
@@ -116,3 +124,11 @@
 \bibcite{yemen2017}{15}
 \bibcite{wisec17}{16}
 \bibcite{thesislund}{17}
+\bibcite{botnet_ccs09_symbian}{18}
+\bibcite{botnet_usenix11}{19}
+\bibcite{botnet_australia_2016}{20}
+\bibcite{botnet_geinimi10}{21}
+\bibcite{botnet_zeus11}{22}
+\bibcite{botnet_anserverbot}{23}
+\bibcite{botnet_dreamdroid11}{24}
+\bibcite{botnet_threat15}{25}

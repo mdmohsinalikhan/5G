@@ -199,6 +199,8 @@ We propose a pseudonym based solution that builds on top of those in BVR, KM15 a
 \begin{enumerate}
  \item AUTS
  \item IMSI space, MSIN space
+ \item let $\mathcal{M}$ be the MSIN space. $\mathcal{M}$ can be $10^10$ or $10^9$
+ \item $n$ is the number of subscribers
 \end{enumerate}
 
 
@@ -229,7 +231,7 @@ Note that, whenever an AV request arrives for $p'$, the HN forgets $p$. Forgetti
 
 
 \subsection{KM17 Scheme}
-In KM17, the authors have used the location update message sent by an SN to an HN after successful and positive completion of AKA as the confirmation that the UE has received $p'$. The scheme uses three pseudonyms in the HN instead of two. 
+In KM17, the authors have used the location update message sent by an SN to an HN after successful and positive completion of AKA as the confirmation that the UE has received $p'$. The scheme uses three pseudonyms in the HN instead of two. It also uses three recovery identities (RID), that we will discuss in the following section.
 
 
 \subsubsection{Weaknesses in KM17 Scheme}
@@ -248,7 +250,7 @@ The attack is mounted by an FUE. The attack has two phases.
 
 \begin{figure}[]
   \centering
-    \includegraphics[width=.95\textwidth]{DDoS.eps}
+    \includegraphics[width=.9\textwidth]{DDoS.eps}
   \caption{A DoS Attack against the BVR scheme}
   \label{fig:dos_attack}	
 \end{figure}
@@ -262,49 +264,51 @@ In the DDoS attack, the mobile bots send many attach requests using different ps
 
 We have considered two different ways to mount this attack. In one way, the pseudonyms used in the attach requests are chosen randomly with replacement, which means the attack might sent one pseudonym more than once to the HN. In the other way, the pseudonyms are chosen without replacement, which means the attack send one pseudonym only once.
 
-\subsubsection{With replacement}
-In this case, after sending $m$ number of pseudonyms to the HN, the expected pecentage of affected users $E[u_a]$ is
+\subsubsection{With Replacement}
+In this case, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
 \begin{eqnarray}
-E\big[ u_a \big] &=& \left(1- \left(1 - \frac{1}{10^{10}}\right)^m - m\left(\frac{1}{10^{10}}\right)\left(1 - \frac{1}{10^{10}}\right)^{\left(m-1 \right)} \right) \times 100 \label{eqn:avg_with_replacement}
+E\big[ u_a \big] &=& \left(1- \left(1 - \frac{1}{\mathcal{M}}\right)^m - m\left(\frac{1}{\mathcal{M}}\right)\left(1 - \frac{1}{\mathcal{M}}\right)^{\left(m-1 \right)} \right) \label{eqn:avg_with_replacement}
 \end{eqnarray} 
 
 See Appendix \ref{appendix: A} for the derivation. We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}.
 
 
-\begin{figure}[!tbp]
+\begin{figure}[]
   \centering
-  \begin{minipage}[b]{0.8\textwidth}
+  \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{sim_and_mod.pdf}
-   \caption{Success Rate of the DDoS Attack. IMSI space is $10^{10}$. Number of subscribers in HN is $10^7$. The black and blue line presents the expected number of affected users in case of the with and without replacement attacks respectively. Under the black line, there are three red lines which represent the results of three simulations of with-replacement attack. Under the blue line, there are three green lines which represent the results of three simulations of without-replacement attack.}
+   \caption{DDoS Attack. $ \mathcal{M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model.}
 \label{fig:simulation_and_modeling}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.8\textwidth}
+  \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{botplot.pdf}
-  \caption{Success Rate of the DDoS Attack in the case of with-replacement attack as $botnet_{size}$ grows. The black, blue and red lines represent the cases where the parameter $bot_{life}$ has the value of $2, 4$ and $6$. In all the cases $AV_{latency} = 500$ milliseconds. The plot is drawn according to Equation \ref{eqn:avg_with_replacement}.}
+    \caption{DDoS Attack (with replacement), $\texttt{botnet}_{\texttt{size}} = 10^6$. Different lines represent the success rate as $\texttt{bot}_{\texttt{load}}$ varies.}
   \label{fig:botplot}
   \end{minipage}
 \end{figure}
 
-\subsubsection{Without replacement}
-In this case the attacker runs two rounds of the attack. In the first round the attacker sends all the pseudonyms in the IMSI space without replacement, means each pseudonym is sent exactly once. Once the first round is completed, the attacker runs the attack for one more round. However, after sending $m$ number of pseudonyms to the HN, the expected pecentage of affected users $E[u_a]$ is
+\subsubsection{Without Replacement}
+In this case the attacker runs two rounds of the attack. In the first round the attacker sends all the pseudonyms in the IMSI space without replacement, means each pseudonym is sent exactly once. Once the first round is completed, the attacker runs the attack for one more round. However, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
 \begin{eqnarray}
-E\big[ u_a \big] = \begin{cases} \frac{1}{10^{10}}\frac{m^2}{2\cdot 10^{10}} \times 100, & \mbox{if } 0 < m \leq 10^{10} \\ 
-\frac{1}{10^{10}}(2m - 10^{10} - \frac{m^2}{2\cdot 10^{10}}) \times 100, & \mbox{if } 10^{10} < m \leq 2\cdot 10^{10} \end{cases}
+E\big[ u_a \big] = \begin{cases} \frac{1}{\mathcal{M}}\frac{m^2}{2\cdot \mathcal{M}} & \mbox{if } 0 < m \leq \mathcal{M} \\ 
+\frac{1}{\mathcal{M}}(2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}}) & \mbox{if } \mathcal{M} < m \leq 2\mathcal{M} \end{cases}
 \label{eqn:without_replacement}
 \end{eqnarray} 
 
-See Appendix \ref{appendix: A} for the derivation. We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}. Note that, this is an estimation where the without-replacement attack is not a distributed attack. Rather the attack is mounted by only a single FUE. In the case of distributed and without replacement attack, the expected perecentage of affected users will be less than what is shown in the plot. However, we believe that, the distributed and without replacement attack will have higher number of affected users than that of distributed with-replacement attack.
+See Appendix \ref{appendix: A} for the derivation. We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}. Note that, this is an estimation where the without-replacement attack is not a distributed attack. Rather the attack is mounted by only a single FUE. In the case of distributed and without replacement attack, the expected perecentage of affected users will be less than what is shown in the plot. However, we believe that, the distributed and without replacement attack will have higher number of affected users than that of distributed with-replacement attack. However, it can be a strategic decision of the attacker to choose the value of $\texttt{bot}_{\texttt{load}}$.
 
 
 \subsection{How Fatal The DDoS Attack Can be In Practice} \label{sec:how_fatal_ddos}
-The intensity of the attack in practice will heavily depend on three parameters. The first parameter is the time a mobile bot needs to wait starting from sending a pseudonym to an HN (via SN) to when the RAND and AUTN is received from the HN (via SN). The second parameter is the size of a mobile botnet available to an attacker. The third parameter is the average time duration a mobile bot can be used in the attack before the power of the bot drains out. Let us denote this parameters as $AV_{latency}$,$botnet_{size}$, and $bot_{life}$. 
+The intensity of the attack in practice will heavily depend on two parameters. The first one is the size of the botnet, we name as $\texttt{botnet}_{\texttt{size}}$. The second one is the number of pseudonyms a bot sends per unit time in the attach requests, we name as $\texttt{bot}_{\texttt{load}}$. According to a thesis conducted in Lund University in 2016 \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds even when the MME is far away (10,000 km) from the HN. So, the peak value of $\texttt{bot}_{\texttt{load}}$ can safely be considered as $1$ pseudonyms/second, i.e., 3600 pseudonyms/hour.
 
-According to a thesis conducted in Lund University in 2016 \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds even when the MME is far away (10,000 km) from the HN. The latency in this study is measured as the time from that the UE sends the Attach Request message to when the MME sends the Security Mode Command message. In our attack we do not need the MME and the bot to participate in the challenge and response based AKA protocol. It is sufficient for the bot to make the HN to respond to an AV request message. The bot ignores the RAND and AUTN sent by the SN. So, we can safely assume that it would take at most 500 milliseconds to send a pseudonym to the HN (via SN) and get the RAND and AUTN in response from the HN (via SN). Consequently we set the parameter $AV_{latency} = 500$ milliseconds.
+Mobile botnets are on the rise \cite{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}. Many mobile botnets have already been observed, e.g., Geinimi \cite{botnet_geinimi10}, Zeus \cite{botnet_zeus11}, AnserverBot \cite{botnet_anserverbot}, DreamDroid \cite{botnet_dreamdroid11}. A detailed survey of the state of mobile botnets can be found in \cite{botnet_threat15}. In 2011, it was estimated that Dreamdroid was installed on 120,000 mobile devices \cite{botnet_dreamdroid11}. In 2014, a mobile botnet of 650,000 mobile phones made an attack to a server \cite{chinese_spam}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near futrue. However, for the discussion of this paper, we conservatively set the variable $\texttt{botnet}_{\texttt{size}} = 1$ million ($10^6$). See Figure \ref{fig:botplot}, it shows how efficient a botnet of size $10^6$ can be for varied values of $\texttt{bot}_{\texttt{load}}$.
 
-Mobile botnets are on the rise \textcolor{red}{cite}. There have already been observed many mobile botnets \textcolor{red}{cite}. In 2015, it was reported in \textcolor{red}{cite}, that a mobile botnet of 650,000 mobile phones made an attack to a server. Researches \textcolor{red}{cite} suggest that these are only the early days of mobile botnets. The number of smartphones by \textcolor{red}{cite year}, is estimated to reach \textcolor{red}{cite number}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near futrue. However, for the discussion of this paper, we conservatively set the variable $bot_{size} = 1$ million. Also, let us assume that the mobile bots used in our attack can be used for at least $2$ hours on an average before the power of the bot drains out. 
 
-Under the above assumptions, our botnet can deploy $2$ million bot-hours in the attack. This is equivalent to sending $1.44 \times 10^{10}$ pseudonyms to the network. In the with-replacement attack, by sending $1.44 \times 10^{10}$ pseudonyms, the attacker can kick around 40 percent of the users of the HN out of service. We believe, in the distrbuted without-replacement attack, the affected percentage of users would be between 40 and 80 percent. See Figure \ref{fig:botplot}, it shows the percentage of affected users in the case of with-replacement attack as the size of the botnet grows.
+\section{Our Solution}
+As in \cite{wisec17}, our solution also uses the location update message sent by an SN to the HN after the successful and positive completion of an AKA. In the legacy networks, the location update message is sent for an IMSI. As the pseudonyms and IMSIs are not distinguishable by an SN, the location update messages will be sent by an SN for the pseudonyms too. Let us assume that for a subscriber $s \in S$ an AV request has arrived using the pseudonym $s_{p}$ and the HN responds with an AV by embedding $s_{p'}$ in the RAND. When a location updated for pseudonym $s_p$ arrives, the HN considers it as the guarantee that pseudonym $s_{p'}$ has arrived in the UE of user $s$.
+
+In the HN, for a user $s \in S$, our solution stores three pseudonyms $s_p,s_p',s_p''$ and a binary flag $s_{f_{p'}}$. In the UE of the user $s$, two pseudonyms $PSMI,P_{new}$ are stored. In an ideal situation $PMSI = s_{p}, P_{new} = s_{p'}$. We build our solution on top of the BVR scheme. Figure \ref{fig:solution} presents our solution. The stricken out texts present the parts that we have discarded from the BVR scheme. The bold and underlined texts present the parts that we have added. 
 
 
 \section{A Solution To The DDoS Attack}
@@ -312,10 +316,29 @@ The vulnerability of the pseudonym based solutions is that, the HN forgets an ol
 
 There is a location update message that is sent by an SN to the HN after an AKA is successfully and positively run in between the SN and a UE \textcolor{red}{cite}. \textcolor{red}{discuss that the location update message goes to a different entity in HN than the HSS, but it is okay}. We design our solution by piggybacking this location update message as the desired acknowledgement. In an ideal case, if the location update message is sent by the SN to the HN, it is confirmed that the AKA has run positively and successfully. A successful and positive AKA run implies that the  UE has received the new pseudonym. Using this location update message, we present a modified version of the BVR scheme as our solution.
 
-\section{Our Solution}
+
+
 
 \section{Analysis}
 discuss the case where the SN gets multiple AVs
+
+$i,\mathcal{K},SQN, \pmb{\kappa,p,p',\underline{p'',f_{p'}} \leftarrow s \in S}$ \textbf{where} \pmb{$s_p = q \vee s_{p'} = q \vee \underline{s_{p''} = q}$}
+
+
+
+\pmb{$RAND \leftarrow  E_{\kappa}\left( u = \left(\underline{p\_in\_RAND}, SQN\right)\right)$}
+
+
+\underline{\pmb{$i, \mathcal{K},SQN, \kappa,p,p' , p'', f_{p'} \leftarrow s \in S$} \textbf{where} \pmb{$s_p =  q \vee s_{p'} = q \vee s_{p''} = q$}}
+
+
+\underline{\pmb{$forget\_p, flag\_toggle = h(q,s_i,s_p,s_{p'},s_{p''},f_{p'})$}}
+
+$\texttt{forgetp$\left(s_{i},s_{p},s_{p'},s_{p''}\right)$}$
+
+$\pmb{ \underline{p\_in\_RAND} \leftarrow E_{\kappa}^{-1}(RAND)}$
+
+Comparing the changes with the BVR scheme and the UMTS AKA, one can see that changes are made only in HN and UE. Moreover, no changes are made in the existing message format, hence the solution is still
 \subsection{Propoerties of Our Solution}
 \subsection{Protects Identity Privacy}
 \subsection{Protects against a mobile botnet}
@@ -327,6 +350,13 @@ In our solution, each subscriber $s$ keeps record of the IMSI $i$ and two pseudo
 \textcolor{red}{HN has to accept whenever the IMSI is sent. because all the SIMs will not be updated}
 
 The fundamental idea of the solution is: when a location update message arrives for $s_{p'}$, the HN sets $s_p \leftarrow s_{p'}, s_{p'} = s_{p''}$ and $s_{p''} = null$. But complexity arises in this solution when location update message is delayed,  lost, or sent multiple times. Also in practice location update message for pseudonyms $s_{p},s_{p'},s_{p''}$ might arrive in different order because of the inherent characteristics of IP networks. To address this issue, we study the different states of  the HN and decide what should be the action at a certain state when the HN receives a certain message. Figure \ref{fig:hn_diagram} reresents the study. Taking a closer look at the state diagram, you can notice that state $3$ is reached when the location update message arrives in an unexpected order. According to this study, we propose the solution as described in the  Figure \ref{fig:solution}.
+
+\begin{figure}[]
+  \centering
+    \includegraphics[width=\textwidth]{solution.eps}
+  \caption{Solution}
+  \label{fig:solution}	
+\end{figure}
 
 
 \begin{figure}[!tbp]
@@ -376,12 +406,7 @@ The fundamental idea of the solution is: when a location update message arrives 
   \end{minipage}
 \end{figure}
 
-\begin{figure}[]
-  \centering
-    \includegraphics[width=\textwidth]{solution.eps}
-  \caption{Solution}
-  \label{fig:solution}	
-\end{figure}
+
 
 
 \begin{figure}[!tbp]

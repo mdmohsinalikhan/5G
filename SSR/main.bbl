@@ -113,4 +113,61 @@ Ahlstr\"om, M., Holmberg, S.:
   \url{http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8895975&fileOId=8895979}
   (2016)
 
+\bibitem{botnet_ccs09_symbian}
+Traynor, P., Lin, M., Ongtang, M., Rao, V., Jaeger, T., McDaniel, P., La~Porta,
+  T.:
+\newblock On cellular botnets: Measuring the impact of malicious devices on a
+  cellular network core.
+\newblock In: Proceedings of the 16th ACM Conference on Computer and
+  Communications Security. CCS '09, New York, NY, USA, ACM (2009)  223--234
+
+\bibitem{botnet_usenix11}
+Xiang, C., Binxing, F., Lihua, Y., Xiaoyi, L., Tianning, Z.:
+\newblock Andbot: Towards advanced mobile botnets.
+\newblock In: Proceedings of the 4th USENIX Conference on Large-scale Exploits
+  and Emergent Threats. LEET'11, Berkeley, CA, USA, USENIX Association (2011)
+  11--11
+
+\bibitem{botnet_australia_2016}
+Chen, W., Luo, X., Yin, C., Xiao, B., Au, M.H., Tang, Y.:
+\newblock Muse: Towards robust and stealthy mobile botnets via multiple message
+  push services.
+\newblock In: Proceedings, Part I, of the 21st Australasian Conference on
+  Information Security and Privacy - Volume 9722, New York, NY, USA,
+  Springer-Verlag New York, Inc. (2016)  20--39
+
+\bibitem{botnet_geinimi10}
+Linuxbsdos:
+\newblock Geinimi a {S}ophisticated {N}ew {A}ndroid {T}rojan {F}ound in {W}ild.
+\newblock
+  \url{http://linuxbsdos.com/2010/12/29/geinimi-sophisticated-new-android-trojan-found-in-wild/}
+  (2010)
+
+\bibitem{botnet_zeus11}
+KrebsonSecurity:
+\newblock Zeu{S} {T}rojan for {G}oogle {A}ndroid {S}potted.
+\newblock
+  \url{https://krebsonsecurity.com/2011/07/zeus-trojan-for-google-android-spotted/}
+  (2011)
+
+\bibitem{botnet_anserverbot}
+Jiang, X.:
+\newblock Security {A}lert: {A}nserver{B}ot, {N}ew {S}ophisticated {A}ndroid
+  {B}ot {F}ound in {A}lternative {A}ndroid {M}arkets.
+\newblock \url{https://www.csc2.ncsu.edu/faculty/xjiang4/AnserverBot/} (2011)
+
+\bibitem{botnet_dreamdroid11}
+Tung, L.:
+\newblock Android {D}reamdroid two: rise of laced apps.
+\newblock
+  \url{https://www.itnews.com.au/news/android-dreamdroid-two-rise-of-lacedapps-259147}
+  (2011)
+
+\bibitem{botnet_threat15}
+Karim, A., Shah, S.A.A., Salleh, R.B., Arif, M., Noor, R.M., Shamshirband, S.:
+\newblock Mobile botnet attacks - an {E}merging {T}hreat: {C}lassification,
+  {R}eview and {O}pen {I}ssues.
+\newblock In: KSII Transactions on Internet and Information Systems - Vol. 9,
+  no. 4. (2015)  1471--1492
+
 \end{thebibliography}
