@@ -250,7 +250,7 @@ The attack is mounted by an FUE. The attack has two phases.
 
 \begin{figure}[]
   \centering
-    \includegraphics[width=.95\textwidth]{DDoS.eps}
+    \includegraphics[width=.9\textwidth]{DDoS.eps}
   \caption{A DoS Attack against the BVR scheme}
   \label{fig:dos_attack}	
 \end{figure}
@@ -277,13 +277,13 @@ See Appendix \ref{appendix: A} for the derivation. We have run a simulation of t
   \centering
   \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{sim_and_mod.pdf}
-   \caption{DDoS Attack. $ \mathcal{M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model}
+   \caption{DDoS Attack. $ \mathcal{M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model.}
 \label{fig:simulation_and_modeling}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{botplot.pdf}
-    \caption{DDoS Attack (with replacement), $\texttt{botnet}_{\texttt{size}} = 10^6$. Different lines represent the success rate as $\texttt{bot}_{\texttt{load}}$ varies}
+    \caption{DDoS Attack (with replacement), $\texttt{botnet}_{\texttt{size}} = 10^6$. Different lines represent the success rate as $\texttt{bot}_{\texttt{load}}$ varies.}
   \label{fig:botplot}
   \end{minipage}
 \end{figure}
@@ -302,28 +302,146 @@ See Appendix \ref{appendix: A} for the derivation. We have run a simulation of t
 \subsection{How Fatal The DDoS Attack Can be In Practice} \label{sec:how_fatal_ddos}
 The intensity of the attack in practice will heavily depend on two parameters. The first one is the size of the botnet, we name as $\texttt{botnet}_{\texttt{size}}$. The second one is the number of pseudonyms a bot sends per unit time in the attach requests, we name as $\texttt{bot}_{\texttt{load}}$. According to a thesis conducted in Lund University in 2016 \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds even when the MME is far away (10,000 km) from the HN. So, the peak value of $\texttt{bot}_{\texttt{load}}$ can safely be considered as $1$ pseudonyms/second, i.e., 3600 pseudonyms/hour.
 
-
-%The intensity of the attack in practice will heavily depend on three parameters. The first parameter is the time a mobile bot needs to wait starting from sending a pseudonym to an HN (via SN) to when the RAND and AUTN is received from the HN (via SN). The second parameter is the size of a mobile botnet available to an attacker. The third parameter is the average time duration a mobile bot can be used in the attack before the power of the bot drains out. Let us denote this parameters as $AV_{latency}$,$botnet_{size}$, and $bot_{life}$. 
-
-%According to a thesis conducted in Lund University in 2016 \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds even when the MME is far away (10,000 km) from the HN. The latency in this study is measured as the time from that the UE sends the Attach Request message to when the MME sends the Security Mode Command message. In our attack we do not need the MME and the bot to participate in the challenge and response based AKA protocol. It is sufficient for the bot to make the HN to respond to an AV request message. The bot ignores the RAND and AUTN sent by the SN. So, we can safely assume that it would take at most 500 milliseconds to send a pseudonym to the HN (via SN) and get the RAND and AUTN in response from the HN (via SN). Consequently we set the parameter $AV_{latency} = 500$ milliseconds.
-
-Mobile botnets are on the rise \cite{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}. There have already been observed many mobile botnets e.g., Geinimi \cite{botnet_geinimi10}, Zeus, AnserverBot. In 2015, it was reported in \cite{chinese_spam}, that a mobile botnet of 650,000 mobile phones made an attack to a server. Researches \textcolor{red}{cite} suggest that these are only the early days of mobile botnets. The number of smartphones by \textcolor{red}{cite year}, is estimated to reach \textcolor{red}{cite number}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near futrue. However, for the discussion of this paper, we conservatively set the variable $\texttt{botnet}_{\texttt{size}} = 1$ million. See Figure \ref{fig:botplot}, it shows the percentage of affected users in the case of with-replacement attack as the size of the botnet grows.
+Mobile botnets are on the rise \cite{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}. Many mobile botnets have already been observed, e.g., Geinimi \cite{botnet_geinimi10}, Zeus \cite{botnet_zeus11}, AnserverBot \cite{botnet_anserverbot}, DreamDroid \cite{botnet_dreamdroid11}. A detailed survey of the state of mobile botnets can be found in \cite{botnet_threat15}. In 2011, it was estimated that Dreamdroid was installed on 120,000 mobile devices \cite{botnet_dreamdroid11}. In 2014, a mobile botnet of 650,000 mobile phones made an attack to a server \cite{chinese_spam}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near futrue. However, for the discussion of this paper, we conservatively set the variable $\texttt{botnet}_{\texttt{size}} = 1$ million ($10^6$). See Figure \ref{fig:botplot}, it shows how efficient a botnet of size $10^6$ can be for varied values of $\texttt{bot}_{\texttt{load}}$.
 
 
-%Also, let us assume that the mobile bots used in our attack can be used for at least $2$ hours on an average before the power of the bot drains out. 
 
-%Under the above assumptions, our botnet can deploy $2$ million bot-hours in the attack. This is equivalent to sending $1.44 \times 10^{10}$ pseudonyms to the network. In the with-replacement attack, by sending $1.44 \times 10^{10}$ pseudonyms, the attacker can kick around 40 percent of the users of the HN out of service. We believe, in the distrbuted without-replacement attack, the affected percentage of users would be between 40 and 80 percent. 
-
-
-\section{A Solution To The DDoS Attack}
-The vulnerability of the pseudonym based solutions is that, the HN forgets an old pseudonym of a legitimate UE before being confirmed that the new pseudonym has been received by the legitimate UE. To mitigate the vulnerability, we look for a solution in which the HN will be acknowledged if the UE has received the new pseudonym. Untill the acknowledgement arrives, the HN will not forget the old pseudonym. But the question is, how the acknowledgement can be generated. We can not introduce a new message becasue we want our solution to be backward compatible with legacy SNs. We need to rely on the existing messages of 3G/4G networks. 
-
-There is a location update message that is sent by an SN to the HN after an AKA is successfully and positively run in between the SN and a UE \textcolor{red}{cite}. \textcolor{red}{discuss that the location update message goes to a different entity in HN than the HSS, but it is okay}. We design our solution by piggybacking this location update message as the desired acknowledgement. In an ideal case, if the location update message is sent by the SN to the HN, it is confirmed that the AKA has run positively and successfully. A successful and positive AKA run implies that the  UE has received the new pseudonym. Using this location update message, we present a modified version of the BVR scheme as our solution.
+\begin{figure}[]
+  \centering
+    \includegraphics[width=\textwidth]{solution.eps}
+  \caption{Solution}
+  \label{fig:solution}	
+\end{figure}
 
 \section{Our Solution}
+As in \cite{wisec17}, our solution also uses the location update message sent by an SN to the HN after the successful and positive completion of an AKA. In the legacy networks, the location update message is sent for an IMSI. As the pseudonyms and IMSIs are not distinguishable by an SN, the location update messages will be sent by an SN for the pseudonyms too. Let us assume that for a subscriber $s \in S$ an AV request has arrived using the pseudonym $p$ and the HN has responded with an AV by embedding $p'$ in the RAND. When a location updated for pseudonym $p$ arrives, the HN considers it as the guarantee that pseudonym $p'$ has arrived in the UE of user $s$.
 
-\section{Analysis}
-discuss the case where the SN gets multiple AVs
+In the HN, for a user $s \in S$, our solution stores the IMSI $i$ and three pseudonyms $p,p',p''$ and a binary flag $f$. In the UE of the user $s$, two pseudonyms $PSMI,P_{new}$ are stored. In an ideal situation $PMSI = p, P_{new} = p'$. We build our solution on top of the BVR scheme. Figure \ref{fig:solution} presents our solution. The bold texts present the changes over UMTS. The bold stricken out texts present the parts that we have discarded from the BVR scheme. The bold and underlined texts present the parts that we have added. 
+
+
+\subsubsection{At HN side}
+Whenever an AV request is received for a subscriber $s$, using any of its identity, i.e., $i,p,p'$ or $p''$, the HN responds with an AV that contains a pseudonym $p''$ in the RAND. If $p''$ is $null$ then an unused pseudonym is chosen and set as $p''$. When a location update message arrives using any of the identities $i,p,p',p''$ of a legitimate user $s$, two decisions are made: forgetting the oldest pseudonym and/or toggle the flag $f$. The decisions are made by the function $\texttt{LOCUPDATE}$. See Figure \ref{func:locupdate}. Forgetting the oldest pseudonym and toggling the flag $f$ is performed by the functions $\texttt{FORGETP}$ and $\texttt{TOGGLEFP}$ respectively. See Figures \ref{func:forgetp} and \ref{func:togglefp}. 
+
+
+%\begin{minipage}[b]{\textwidth}
+%\vspace{.5cm}
+%  \centering
+%	\begin{algorithmic}
+%		\Function{$\texttt{locupdate}$}{$q, s_i, s_p, s_{p'}, s_{p''}, s_f$}
+%			\State \textbf{if} $q = s_{i}$ \textbf{then} return $\texttt{forgetFlag} = false, \texttt{toggleFlag} = false$ 
+%			\State \textbf{if} $q = s_{p}$ \textbf{then} return $\texttt{forgetFlag} = false, \texttt{toggleFlag} = false$ 
+%
+%			\If {$s_{p''} != null$} 
+ %   			\State \textbf{if} $q = s_{p'}$ \textbf{then} return $\texttt{forgetFlag} = true, \texttt{toggleFlag} = false$ 
+ %   			\State \textbf{if} {$q = s_{p''}$} \textbf{then} return $\texttt{forgetFlag} = true, \texttt{toggleFlag} = true$
+%			\EndIf
+%
+%			\If {$s_{p''} = null \land s_{f} = 0$} 
+%    			\State \textbf{if} $q = s_{p'}$ \textbf{then} return $\texttt{forgetFlag} = false, \texttt{toggleFlag} = true$
+%			\EndIf
+%	
+%			\If {$s_{p''} = null \land s_{f} = 1$} 
+%    			\State \textbf{if} $q = s_{p'}$ \textbf{then} return $\texttt{forgetFlag} = false, \texttt{toggleFlag} = false$ 
+%			\EndIf
+%		
+%		\EndFunction
+%	%\caption{$\texttt{LOCUPDATE($s_i,s_p,s_{p'},s_{p''},s_{f_{p'}}$)}$}
+%	\label{func:locupdate}
+%	\end{algorithmic}
+%\end{minipage}
+
+%\begin{minipage}[b]{\textwidth}
+%    \begin{algorithmic}
+%		\Function{$\texttt{choosep}$}{$q,s_i, s_p,s_{p'},s_{p''}$}
+%
+%			\If {$ q = s_{p'} \land s_{p''} = null $} 
+ %   			\State \textbf{update} $ s_{p''} \leftarrow \left\lbrace 0,1\right\rbrace^{34} \notin  \left\lbrace t_p,t_{p'}\vert \forall t \in S \right\rbrace$    	
+%			\EndIf
+%%%%			
+%			\State return $s_{p''}$
+%	
+%%		\State \textbf{if} {$q = s_{i}$} \textbf{then} return $s_{p}$
+% %   	\State \textbf{if} {$q = s_{p}$} \textbf{then} return $s_{p'}$ 
+%  	  	\State \textbf{if} {$q = s_{p'}$} \textbf{then} return $s_{p''}$ 
+%    	\State \textbf{if} {$q = s_{p''}$} \textbf{then} return $s_{p''}$ 
+%		\EndFunction
+%	% \caption{$\texttt{CHOOSEP($s_i,s_p,s_{p'}, s_{p''}$)}$}
+%	 \label{func:choosep}
+%	\end{algorithmic}
+%\end{minipage}
+
+
+\begin{minipage}[b]{\textwidth}
+  \centering
+    \vspace{.75cm}
+    \begin{minipage}[b]{0.4\textwidth}
+    \begin{algorithmic}
+		\Function{$\texttt{forgetp}$}{$s_i$}
+		\State update $ s_{p} \leftarrow s_{p'}$
+		\State update $ s_{p'} \leftarrow s_{p''}$
+		\State update $ s_{p''} \leftarrow null$ 
+		\EndFunction
+	 %\caption{$\texttt{FORGETP($s_i$)}$}
+	 \label{func:forgetp}
+	\end{algorithmic}
+  \end{minipage}
+  \hfill
+  %\hspace{-2cm}
+  \begin{minipage}[b]{0.49\textwidth}
+    \begin{algorithmic}
+		\Function{$\texttt{togglefp}$}{$s_i$}
+		\State \textbf{if} $s_{f_{p'}} != 0$ \textbf{then } $s_{f_{p'}} \leftarrow 1$ 
+		\State \textbf{else} $s_{f_{p'}} \leftarrow 1$ 		
+		\EndFunction
+	%\caption{$\texttt{TOGGLEFP($s_i$)}$}
+	\label{func:togglefp}
+	\end{algorithmic}
+  \end{minipage}
+\end{minipage}
+
+\subsubsection{At UE side}
+If $MAC$ and $SEQN$ verification is successful then the UE verifies if $u_{SEQN}$ is the same as the $XSEQN$. If this verifications is also successful, then the UE sends the SRES to the SN, and sets $PMSI \leftarrow P_{new}$ and $P_{new} \leftarrow u_{p''}$
+
+
+\section{Analysis of Our Solution}
+In order to analyze our solution, we categorize all the possible states of HN in four categories. Based on these four categories, we draw a state diagram as presented in Figure \ref{fig:hn_diagram}. 
+
+\begin{figure}[!tbp]
+  \centering
+    \begin{minipage}[b]{\textwidth}
+    \includegraphics[width=\textwidth]{HN_diagram.eps}
+ \caption{State diagram of the solution for a user $s \in S$ at the HN end.}
+  \label{fig:hn_diagram}
+  \end{minipage}
+    \hfill
+  \vspace{.5cm}
+  \begin{minipage}[b]{\textwidth}
+    \includegraphics[width=\textwidth]{UE_diagram.eps}
+ \caption{Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$}
+  \label{fig:ue_diagram}
+  \end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[!tbp]
+  \centering
+    \includegraphics[width=\textwidth]{UE_diagram.eps}
+ \caption{Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$}
+  \label{fig:ue_diagram}
+\end{figure}
+
+\begin{enumerate}
+ \item discuss the replay attack by the UE
+ \item what if AKA is successful but pseudonym is in wrong format?
+ \item discuss the case where the SN gets multiple AVs
+ \item Comparing the changes with the BVR scheme and the UMTS AKA, one can see that changes are made only in HN and UE. Moreover, no changes are made in the existing message format, hence the solution is still
+\end{enumerate}
+
+
+
+
+
 \subsection{Propoerties of Our Solution}
 \subsection{Protects Identity Privacy}
 \subsection{Protects against a mobile botnet}
@@ -337,75 +455,9 @@ In our solution, each subscriber $s$ keeps record of the IMSI $i$ and two pseudo
 The fundamental idea of the solution is: when a location update message arrives for $s_{p'}$, the HN sets $s_p \leftarrow s_{p'}, s_{p'} = s_{p''}$ and $s_{p''} = null$. But complexity arises in this solution when location update message is delayed,  lost, or sent multiple times. Also in practice location update message for pseudonyms $s_{p},s_{p'},s_{p''}$ might arrive in different order because of the inherent characteristics of IP networks. To address this issue, we study the different states of  the HN and decide what should be the action at a certain state when the HN receives a certain message. Figure \ref{fig:hn_diagram} reresents the study. Taking a closer look at the state diagram, you can notice that state $3$ is reached when the location update message arrives in an unexpected order. According to this study, we propose the solution as described in the  Figure \ref{fig:solution}.
 
 
-\begin{figure}[!tbp]
-  \centering
-  \begin{minipage}[b]{0.44\textwidth}
-    \begin{algorithmic}
-		\Function{$g$}{$q,s_i, s_p,s_{p'},s_{p''},f_{p'}$}
-
-			\If {$ q = s_{p'} \land s_{p''} = null $} 
-    			\State \textbf{update} $ s_{p''} \leftarrow \left\lbrace 0,1\right\rbrace^{34} \notin  \left\lbrace t_p,t_{p'}\vert \forall t \in S \right\rbrace$    	
-			\EndIf
-	
-		\State \textbf{if} {$q = s_{i}$} \textbf{then return} $s_{p}$
-    	\State \textbf{if} {$q = s_{p}$} \textbf{then return} $s_{p'}$ 
-  	  	\State \textbf{if} {$q = s_{p'}$} \textbf{then return} $s_{p''}$ 
-    	\State \textbf{if} {$q = s_{p''}$} \textbf{then return} $s_{p''}$ 
-		\EndFunction
-	 \caption{Function $g$}
-	 \label{func:g}
-	\end{algorithmic}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.55\textwidth}
-    \begin{algorithmic}
-		\Function{$h$}{$q,s_i, s_p,s_{p'},s_{p''},f_{p'}$}
-
-			\State \textbf{if} $q = s_{i}$ \textbf{then return } $false, false$ 
-			\State \textbf{if} $q = s_{p}$ \textbf{then return } $false, false$ 
-
-			\If {$s_{p''} != null$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $true, false$ 
-    			\State \textbf{if} {$q = s_{p''}$} \textbf{then return} $true, true$
-			\EndIf
-
-			\If {$s_{p''} = null \land f_{p'} = 0$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $false, true$ 
-			\EndIf
-	
-			\If {$s_{p''} = null \land f_{p'} = 1$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $false, false$ 
-			\EndIf
-		
-		\EndFunction
-	\caption{Function $h$}
-	\label{func:h}
-	\end{algorithmic}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[]
-  \centering
-    \includegraphics[width=\textwidth]{solution.eps}
-  \caption{Solution}
-  \label{fig:solution}	
-\end{figure}
 
 
-\begin{figure}[!tbp]
-  \centering
-  \begin{minipage}[b]{\textwidth}
-    \includegraphics[width=\textwidth]{UE_diagram.eps}
- \caption{State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$}
-  \label{fig:ue_diagram}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{\textwidth}
-    \includegraphics[width=\textwidth]{HN_diagram.eps}
- \caption{State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$}
-  \label{fig:ue_diagram}
-  \end{minipage}
-\end{figure}
+
 
 
 \subsection{Analysis of the Solution}

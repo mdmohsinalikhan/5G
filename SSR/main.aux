@@ -3,6 +3,7 @@
 \citation{mobicom95,imsi_catcher_report_bochum,Ginzboorg_Niemi_2016,washingtonpost2014,pets2017,pki_umts_imsi_catcher}
 \citation{TS33401}
 \providecommand \oddpage@label [2]{}
+\providecommand\tcolorbox@label[2]{}
 \select@language{english}
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
@@ -60,52 +61,56 @@
 \citation{botnet_threat15}
 \citation{botnet_dreamdroid11}
 \citation{chinese_spam}
-\citation{wisec17}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces DDoS Attack. $ \mathcal  {M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model.\relax }}{9}}
 \newlabel{fig:simulation_and_modeling}{{3}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces DDoS Attack (with replacement), $\texttt  {botnet}_{\texttt  {size}} = 10^6$. Different lines represent the success rate as $\texttt  {bot}_{\texttt  {load}}$ varies.\relax }}{9}}
 \newlabel{fig:botplot}{{4}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}How Fatal The DDoS Attack Can be In Practice}{9}}
 \newlabel{sec:how_fatal_ddos}{{4.2}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Our Solution}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}A Solution To The DDoS Attack}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Analysis}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Propoerties of Our Solution}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Protects Identity Privacy}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Protects against a mobile botnet}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Protects against a malicious SN}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Solution}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Analysis of the Solution}{11}}
-\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Solution\relax }}{12}}
-\newlabel{fig:solution}{{5}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Function $g$\relax }}{13}}
-\newlabel{func:g}{{6}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Function $h$\relax }}{13}}
-\newlabel{func:h}{{7}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{14}}
-\newlabel{fig:ue_diagram}{{8}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$\relax }}{14}}
-\newlabel{fig:ue_diagram}{{9}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}SN is not a Potential Adversary Anymore}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}How a Malicious SN Could Attack}{15}}
-\newlabel{sec:attack_by_sn}{{8.1}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Values of $PMSI$ and $P_{new}$ in the absence of a malicious or buggy SN\relax }}{15}}
-\newlabel{fig:ue_cases}{{10}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Solution\relax }}{10}}
+\newlabel{fig:solution}{{5}{10}}
+\citation{wisec17}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Our Solution}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{At HN side}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{At UE side}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Analysis of Our Solution}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces State diagram of the solution for a user $s \in S$ at the HN end.\relax }}{12}}
+\newlabel{fig:hn_diagram}{{6}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$\relax }}{12}}
+\newlabel{fig:ue_diagram}{{7}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$\relax }}{13}}
+\newlabel{fig:ue_diagram}{{8}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Propoerties of Our Solution}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Protects Identity Privacy}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Protects against a mobile botnet}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Protects against a malicious SN}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Solution}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Analysis of the Solution}{14}}
+\@writefile{toc}{\contentsline {subsubsection}{why the solution is good}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}SN is not a Potential Adversary Anymore}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}How a Malicious SN Could Attack}{15}}
+\newlabel{sec:attack_by_sn}{{7.1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Values of $PMSI$ and $P_{new}$ in the absence of a malicious or buggy SN\relax }}{15}}
+\newlabel{fig:ue_cases}{{9}{15}}
 \@writefile{toc}{\contentsline {subsubsection}{Phase 1}{15}}
 \@writefile{toc}{\contentsline {subsubsection}{Phase 2}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Probality of Success of the Attack}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Probality of Success of the Attack}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to the subscribers who are visiting the SN\relax }}{16}}
+\newlabel{fig:expected_success_rate_attack_by_sn_insider}{{10}{16}}
 \newlabel{eqn:without_replacement}{{3}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to the subscribers who are visiting the SN\relax }}{17}}
-\newlabel{fig:expected_success_rate_attack_by_sn_insider}{{11}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to all subscribers of the HN\relax }}{18}}
-\newlabel{fig:expected_success_rate_attack_all_by_sn}{{12}{18}}
 \bibstyle{splncs}
 \bibdata{ref}
 \bibcite{mobicom95}{1}
 \bibcite{imsi_catcher_report_bochum}{2}
 \bibcite{Ginzboorg_Niemi_2016}{3}
 \bibcite{washingtonpost2014}{4}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Expected number of affected subscriber in the attack by SN. The attack is targeted to all subscribers of the HN\relax }}{17}}
+\newlabel{fig:expected_success_rate_attack_all_by_sn}{{11}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Usability of pseudonyms}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{17}}
+\newlabel{sec:conclusion}{{9}{17}}
+\newlabel{sec:acknowledgement}{{9}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{Acknowledgement.}{17}}
 \bibcite{pets2017}{5}
 \bibcite{pki_umts_imsi_catcher}{6}
 \bibcite{TS33401}{7}
@@ -116,11 +121,6 @@
 \bibcite{CCS15}{12}
 \bibcite{SSR15}{13}
 \bibcite{Norrman_Naslund_Dubrova_2016}{14}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Usability of pseudonyms}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{19}}
-\newlabel{sec:conclusion}{{10}{19}}
-\newlabel{sec:acknowledgement}{{10}{19}}
-\@writefile{toc}{\contentsline {subsubsection}{Acknowledgement.}{19}}
 \bibcite{yemen2017}{15}
 \bibcite{wisec17}{16}
 \bibcite{thesislund}{17}

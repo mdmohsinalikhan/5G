@@ -305,40 +305,67 @@ The intensity of the attack in practice will heavily depend on two parameters. T
 Mobile botnets are on the rise \cite{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}. Many mobile botnets have already been observed, e.g., Geinimi \cite{botnet_geinimi10}, Zeus \cite{botnet_zeus11}, AnserverBot \cite{botnet_anserverbot}, DreamDroid \cite{botnet_dreamdroid11}. A detailed survey of the state of mobile botnets can be found in \cite{botnet_threat15}. In 2011, it was estimated that Dreamdroid was installed on 120,000 mobile devices \cite{botnet_dreamdroid11}. In 2014, a mobile botnet of 650,000 mobile phones made an attack to a server \cite{chinese_spam}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near futrue. However, for the discussion of this paper, we conservatively set the variable $\texttt{botnet}_{\texttt{size}} = 1$ million ($10^6$). See Figure \ref{fig:botplot}, it shows how efficient a botnet of size $10^6$ can be for varied values of $\texttt{bot}_{\texttt{load}}$.
 
 
+
+\begin{figure}[]
+  \centering
+    \includegraphics[width=\textwidth]{solution.eps}
+  \caption{Solution}
+  \label{fig:solution}	
+\end{figure}
+
 \section{Our Solution}
-As in \cite{wisec17}, our solution also uses the location update message sent by an SN to the HN after the successful and positive completion of an AKA. In the legacy networks, the location update message is sent for an IMSI. As the pseudonyms and IMSIs are not distinguishable by an SN, the location update messages will be sent by an SN for the pseudonyms too. Let us assume that for a subscriber $s \in S$ an AV request has arrived using the pseudonym $s_{p}$ and the HN responds with an AV by embedding $s_{p'}$ in the RAND. When a location updated for pseudonym $s_p$ arrives, the HN considers it as the guarantee that pseudonym $s_{p'}$ has arrived in the UE of user $s$.
+As in \cite{wisec17}, our solution also uses the location update message sent by an SN to the HN after the successful and positive completion of an AKA. In the legacy networks, the location update message is sent for an IMSI. As the pseudonyms and IMSIs are not distinguishable by an SN, the location update messages will be sent by an SN for the pseudonyms too. Let us assume that for a subscriber $s \in S$ an AV request has arrived using the pseudonym $p$ and the HN has responded with an AV by embedding $p'$ in the RAND. When a location updated for pseudonym $p$ arrives, the HN considers it as the guarantee that pseudonym $p'$ has arrived in the UE of user $s$.
 
-In the HN, for a user $s \in S$, our solution stores three pseudonyms $s_p,s_p',s_p''$ and a binary flag $s_{f_{p'}}$. In the UE of the user $s$, two pseudonyms $PSMI,P_{new}$ are stored. In an ideal situation $PMSI = s_{p}, P_{new} = s_{p'}$. We build our solution on top of the BVR scheme. Figure \ref{fig:solution} presents our solution. The stricken out texts present the parts that we have discarded from the BVR scheme. The bold and underlined texts present the parts that we have added. 
-
-
-\section{A Solution To The DDoS Attack}
-The vulnerability of the pseudonym based solutions is that, the HN forgets an old pseudonym of a legitimate UE before being confirmed that the new pseudonym has been received by the legitimate UE. To mitigate the vulnerability, we look for a solution in which the HN will be acknowledged if the UE has received the new pseudonym. Untill the acknowledgement arrives, the HN will not forget the old pseudonym. But the question is, how the acknowledgement can be generated. We can not introduce a new message becasue we want our solution to be backward compatible with legacy SNs. We need to rely on the existing messages of 3G/4G networks. 
-
-There is a location update message that is sent by an SN to the HN after an AKA is successfully and positively run in between the SN and a UE \textcolor{red}{cite}. \textcolor{red}{discuss that the location update message goes to a different entity in HN than the HSS, but it is okay}. We design our solution by piggybacking this location update message as the desired acknowledgement. In an ideal case, if the location update message is sent by the SN to the HN, it is confirmed that the AKA has run positively and successfully. A successful and positive AKA run implies that the  UE has received the new pseudonym. Using this location update message, we present a modified version of the BVR scheme as our solution.
+In the HN, for a user $s \in S$, our solution stores the IMSI $i$ and three pseudonyms $p,p',p''$. In the UE of the user $s$, two pseudonyms $PSMI,P_{new}$ are stored. In an ideal situation $PMSI = p, P_{new} = p'$. We build our solution on top of the BVR scheme. Figure \ref{fig:solution} presents our solution. The bold texts present the changes over UMTS. The bold stricken out texts present the parts that we have discarded from the BVR scheme. The bold and underlined texts present the parts that we have added. 
 
 
+\subsubsection{At HN side}
+Whenever an AV request is received for a subscriber $s$, using any of its identity, i.e., $i,p,p'$ or $p''$, the HN responds with an AV that contains a pseudonym $p''$ in the RAND. If $p''$ is $null$ then an unused pseudonym is chosen and set as $p''$. When $p''$ is not null and a location update message arrives using any of the identities $p',p''$, the HN forgets $p$ by setting $p \leftarrow p', p' \leftarrow p''$ and $p'' \leftarrow null$. 
 
 
-\section{Analysis}
-discuss the case where the SN gets multiple AVs
-
-$i,\mathcal{K},SQN, \pmb{\kappa,p,p',\underline{p'',f_{p'}} \leftarrow s \in S}$ \textbf{where} \pmb{$s_p = q \vee s_{p'} = q \vee \underline{s_{p''} = q}$}
+\subsubsection{At UE side}
+If $MAC$ and $SEQN$ verification is successful then the UE verifies if $u_{SEQN}$ is the same as the $XSEQN$. If this verifications is also successful, then the UE sends the SRES to the SN, and sets $PMSI \leftarrow P_{new}$ and $P_{new} \leftarrow u_{p''}$
 
 
+\section{Analysis of Our Solution}
+In order to analyze our solution, we categorize all the possible states of HN in four categories. Based on these four categories, we draw a state diagram as presented in Figure \ref{fig:hn_diagram}. 
 
-\pmb{$RAND \leftarrow  E_{\kappa}\left( u = \left(\underline{p\_in\_RAND}, SQN\right)\right)$}
+\begin{figure}[!tbp]
+  \centering
+    \begin{minipage}[b]{\textwidth}
+    \includegraphics[width=\textwidth]{HN_diagram.eps}
+ \caption{State diagram of the solution for a user $s \in S$ at the HN end.}
+  \label{fig:hn_diagram}
+  \end{minipage}
+    \hfill
+  \vspace{.5cm}
+  \begin{minipage}[b]{\textwidth}
+    \includegraphics[width=\textwidth]{UE_diagram.eps}
+ \caption{Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$}
+  \label{fig:ue_diagram}
+  \end{minipage}
+\end{figure}
 
 
-\underline{\pmb{$i, \mathcal{K},SQN, \kappa,p,p' , p'', f_{p'} \leftarrow s \in S$} \textbf{where} \pmb{$s_p =  q \vee s_{p'} = q \vee s_{p''} = q$}}
+
+\begin{figure}[!tbp]
+  \centering
+    \includegraphics[width=\textwidth]{UE_diagram.eps}
+ \caption{Possible cases at at the UE of a user $s \in S$ end. Note that the UE has no knowledge about the cases. All a UE knows are two pseudonyms $PMSI,P_{new}$}
+  \label{fig:ue_diagram}
+\end{figure}
+
+\begin{enumerate}
+ \item discuss the replay attack by the UE
+ \item what if AKA is successful but pseudonym is in wrong format?
+ \item discuss the case where the SN gets multiple AVs
+ \item Comparing the changes with the BVR scheme and the UMTS AKA, one can see that changes are made only in HN and UE. Moreover, no changes are made in the existing message format, hence the solution is still
+\end{enumerate}
 
 
-\underline{\pmb{$forget\_p, flag\_toggle = h(q,s_i,s_p,s_{p'},s_{p''},f_{p'})$}}
 
-$\texttt{forgetp$\left(s_{i},s_{p},s_{p'},s_{p''}\right)$}$
 
-$\pmb{ \underline{p\_in\_RAND} \leftarrow E_{\kappa}^{-1}(RAND)}$
 
-Comparing the changes with the BVR scheme and the UMTS AKA, one can see that changes are made only in HN and UE. Moreover, no changes are made in the existing message format, hence the solution is still
 \subsection{Propoerties of Our Solution}
 \subsection{Protects Identity Privacy}
 \subsection{Protects against a mobile botnet}
@@ -351,78 +378,10 @@ In our solution, each subscriber $s$ keeps record of the IMSI $i$ and two pseudo
 
 The fundamental idea of the solution is: when a location update message arrives for $s_{p'}$, the HN sets $s_p \leftarrow s_{p'}, s_{p'} = s_{p''}$ and $s_{p''} = null$. But complexity arises in this solution when location update message is delayed,  lost, or sent multiple times. Also in practice location update message for pseudonyms $s_{p},s_{p'},s_{p''}$ might arrive in different order because of the inherent characteristics of IP networks. To address this issue, we study the different states of  the HN and decide what should be the action at a certain state when the HN receives a certain message. Figure \ref{fig:hn_diagram} reresents the study. Taking a closer look at the state diagram, you can notice that state $3$ is reached when the location update message arrives in an unexpected order. According to this study, we propose the solution as described in the  Figure \ref{fig:solution}.
 
-\begin{figure}[]
-  \centering
-    \includegraphics[width=\textwidth]{solution.eps}
-  \caption{Solution}
-  \label{fig:solution}	
-\end{figure}
-
-
-\begin{figure}[!tbp]
-  \centering
-  \begin{minipage}[b]{0.44\textwidth}
-    \begin{algorithmic}
-		\Function{$g$}{$q,s_i, s_p,s_{p'},s_{p''},f_{p'}$}
-
-			\If {$ q = s_{p'} \land s_{p''} = null $} 
-    			\State \textbf{update} $ s_{p''} \leftarrow \left\lbrace 0,1\right\rbrace^{34} \notin  \left\lbrace t_p,t_{p'}\vert \forall t \in S \right\rbrace$    	
-			\EndIf
-	
-		\State \textbf{if} {$q = s_{i}$} \textbf{then return} $s_{p}$
-    	\State \textbf{if} {$q = s_{p}$} \textbf{then return} $s_{p'}$ 
-  	  	\State \textbf{if} {$q = s_{p'}$} \textbf{then return} $s_{p''}$ 
-    	\State \textbf{if} {$q = s_{p''}$} \textbf{then return} $s_{p''}$ 
-		\EndFunction
-	 \caption{Function $g$}
-	 \label{func:g}
-	\end{algorithmic}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.55\textwidth}
-    \begin{algorithmic}
-		\Function{$h$}{$q,s_i, s_p,s_{p'},s_{p''},f_{p'}$}
-
-			\State \textbf{if} $q = s_{i}$ \textbf{then return } $false, false$ 
-			\State \textbf{if} $q = s_{p}$ \textbf{then return } $false, false$ 
-
-			\If {$s_{p''} != null$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $true, false$ 
-    			\State \textbf{if} {$q = s_{p''}$} \textbf{then return} $true, true$
-			\EndIf
-
-			\If {$s_{p''} = null \land f_{p'} = 0$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $false, true$ 
-			\EndIf
-	
-			\If {$s_{p''} = null \land f_{p'} = 1$} 
-    			\State \textbf{if} $q = s_{p'}$ \textbf{then return } $false, false$ 
-			\EndIf
-		
-		\EndFunction
-	\caption{Function $h$}
-	\label{func:h}
-	\end{algorithmic}
-  \end{minipage}
-\end{figure}
 
 
 
 
-\begin{figure}[!tbp]
-  \centering
-  \begin{minipage}[b]{\textwidth}
-    \includegraphics[width=\textwidth]{UE_diagram.eps}
- \caption{State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$}
-  \label{fig:ue_diagram}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{\textwidth}
-    \includegraphics[width=\textwidth]{HN_diagram.eps}
- \caption{State diagram of the solution for subscriber $s$ at the UE end. $AR_{i}$ = attach request using $i$. $IReq$ = identity request. $IRes_{i}$ = identity response with $i$. $IAV$ = Invalid $AV$. $VAV_i$ = Valid $AV$ that has pseudonym $i$ embeded in the $RAND$. $forget_{PMSI}$ = $PMSI \leftarrow P_{new}, P_{new} \leftarrow p''$}
-  \label{fig:ue_diagram}
-  \end{minipage}
-\end{figure}
 
 
 \subsection{Analysis of the Solution}
