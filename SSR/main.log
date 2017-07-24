@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.8)  20 JUL 2017 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.7.8)  23 JUL 2017 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1089,14 +1089,7 @@ e.tex
 \tikz@lib@dec@box=\box105
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
-decorations.pathreplacing.code.tex)) (./main.aux
-
-LaTeX Warning: Label `fig:ue_diagram' multiply defined.
-
-
-LaTeX Warning: Label `eqn:without_replacement' multiply defined.
-
-)
+decorations.pathreplacing.code.tex)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
@@ -1111,7 +1104,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
 LaTeX Font Info:    ... okay on input line 87.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
 LaTeX Font Info:    ... okay on input line 87.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count293
 \scratchdimen=\dimen314
@@ -1209,207 +1203,181 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-
-LaTeX Warning: Reference `fig:umts_AKA' on page 4 undefined on input line 218.
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 221.
+               Default added (so using `htbp') on input line 216.
+
+Package epstopdf Info: Source file: <UMTS_LTE_AKA.eps>
+(epstopdf)                    date: 2017-07-23 13:20:43
+(epstopdf)                    size: 506790 bytes
+(epstopdf)             Output file: <UMTS_LTE_AKA-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-23 13:20:53
+(epstopdf)                    size: 203128 bytes
+(epstopdf)             Command: <repstopdf --outfile=UMTS_LTE_AKA-eps-converted
+-to.pdf UMTS_LTE_AKA.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+<UMTS_LTE_AKA-eps-converted-to.pdf, id=33, 776.9025pt x 975.645pt>
+File: UMTS_LTE_AKA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use UMTS_LTE_AKA-eps-converted-to.pdf>
+Package pdftex.def Info: UMTS_LTE_AKA-eps-converted-to.pdf used on input line 2
+18.
+(pdftex.def)             Requested size: 312.40906pt x 392.33528pt.
+
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [5 <./UMTS_LTE_AKA-eps-converted-to.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 235.
 
 Package epstopdf Info: Source file: <BVR.eps>
-(epstopdf)                    date: 2017-07-16 22:13:07
-(epstopdf)                    size: 795220 bytes
+(epstopdf)                    date: 2017-07-23 13:16:19
+(epstopdf)                    size: 556501 bytes
 (epstopdf)             Output file: <BVR-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-16 22:13:15
-(epstopdf)                    size: 316664 bytes
+(epstopdf)                    date: 2017-07-23 13:16:22
+(epstopdf)                    size: 227939 bytes
 (epstopdf)             Command: <repstopdf --outfile=BVR-eps-converted-to.pdf B
 VR.eps>
-(epstopdf)             \includegraphics on input line 223.
+(epstopdf)             \includegraphics on input line 237.
 Package epstopdf Info: Output file is already uptodate.
-<BVR-eps-converted-to.pdf, id=30, 773.89125pt x 1121.18875pt>
+<BVR-eps-converted-to.pdf, id=40, 787.94376pt x 623.32875pt>
 File: BVR-eps-converted-to.pdf Graphic file (type pdf)
 
 <use BVR-eps-converted-to.pdf>
-Package pdftex.def Info: BVR-eps-converted-to.pdf used on input line 223.
-(pdftex.def)             Requested size: 347.12354pt x 502.90503pt.
- [4] [5 <./BVR-eps-converted-to.pdf>] [6]
+Package pdftex.def Info: BVR-eps-converted-to.pdf used on input line 237.
+(pdftex.def)             Requested size: 312.40906pt x 247.1395pt.
+ [6] [7 <./BVR-eps-converted-to.pdf>] [8]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 251.
-
-Package epstopdf Info: Source file: <DDoS.eps>
-(epstopdf)                    date: 2017-07-17 00:00:27
-(epstopdf)                    size: 237058 bytes
-(epstopdf)             Output file: <DDoS-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-17 00:00:40
-(epstopdf)                    size: 95709 bytes
-(epstopdf)             Command: <repstopdf --outfile=DDoS-eps-converted-to.pdf 
-DDoS.eps>
-(epstopdf)             \includegraphics on input line 253.
-Package epstopdf Info: Output file is already uptodate.
-<DDoS-eps-converted-to.pdf, id=44, 775.89874pt x 602.25pt>
-File: DDoS-eps-converted-to.pdf Graphic file (type pdf)
-
-<use DDoS-eps-converted-to.pdf>
-Package pdftex.def Info: DDoS-eps-converted-to.pdf used on input line 253.
-(pdftex.def)             Requested size: 312.40906pt x 242.4947pt.
- [7]
-
-LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 273.
+LaTeX Warning: Reference `appendix: A' on page 9 undefined on input line 285.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 276.
+               Default added (so using `htbp') on input line 288.
 
-<sim_and_mod.pdf, id=51, 1296.34312pt x 1084.05pt>
+<sim_and_mod.pdf, id=56, 1296.34312pt x 1084.05pt>
 File: sim_and_mod.pdf Graphic file (type pdf)
  <use sim_and_mod.pdf>
-Package pdftex.def Info: sim_and_mod.pdf used on input line 279.
+Package pdftex.def Info: sim_and_mod.pdf used on input line 291.
 (pdftex.def)             Requested size: 170.09244pt x 142.2382pt.
 
-<botplot.pdf, id=52, 1269.24188pt x 1068.69258pt>
+<botplot.pdf, id=57, 1269.24188pt x 1068.69258pt>
 File: botplot.pdf Graphic file (type pdf)
  <use botplot.pdf>
-Package pdftex.def Info: botplot.pdf used on input line 285.
+Package pdftex.def Info: botplot.pdf used on input line 297.
 (pdftex.def)             Requested size: 170.09244pt x 143.20732pt.
 
-Underfull \hbox (badness 1881) in paragraph at lines 286--286
+Underfull \hbox (badness 1881) in paragraph at lines 298--298
 []\T1/cmr/m/n/10 Fig.4: |DDoS At-tack (with re-place-
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 286--286
+Underfull \hbox (badness 2189) in paragraph at lines 298--298
 \T1/cmr/m/n/10 lines rep-re-sent the suc-cess rate as
  []
 
-
-LaTeX Warning: Reference `appendix: A' on page 8 undefined on input line 299.
-
-[8 <./DDoS-eps-converted-to.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 309.
-
-Package epstopdf Info: Source file: <solution.eps>
-(epstopdf)                    date: 2017-07-19 16:08:59
-(epstopdf)                    size: 1117611 bytes
-(epstopdf)             Output file: <solution-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-19 16:09:05
-(epstopdf)                    size: 425399 bytes
-(epstopdf)             Command: <repstopdf --outfile=solution-eps-converted-to.
-pdf solution.eps>
-(epstopdf)             \includegraphics on input line 311.
-Package epstopdf Info: Output file is already uptodate.
-<solution-eps-converted-to.pdf, id=59, 790.955pt x 1127.21124pt>
-File: solution-eps-converted-to.pdf Graphic file (type pdf)
-
-<use solution-eps-converted-to.pdf>
-Package pdftex.def Info: solution-eps-converted-to.pdf used on input line 311.
-(pdftex.def)             Requested size: 347.12354pt x 494.70169pt.
- [9 <./sim_and_mod.pdf> <./botplot.pdf
+[9 <./sim_and_mod.pdf> <./botplot.pdf
 
 pdfTeX warning: pdflatex (file ./botplot.pdf): PDF inclusion: multiple pdfs wit
 h page group included in a single page
->] [10 <./solution-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <HN_diagram.eps>
-(epstopdf)                    date: 2017-07-20 10:51:48
-(epstopdf)                    size: 116793 bytes
-(epstopdf)             Output file: <HN_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-20 10:51:57
-(epstopdf)                    size: 51028 bytes
-(epstopdf)             Command: <repstopdf --outfile=HN_diagram-eps-converted-t
-o.pdf HN_diagram.eps>
-(epstopdf)             \includegraphics on input line 336.
-Package epstopdf Info: Output file is already uptodate.
+>]
 
-<HN_diagram-eps-converted-to.pdf, id=190, 815.045pt x 233.87375pt>
-File: HN_diagram-eps-converted-to.pdf Graphic file (type pdf)
+LaTeX Warning: Reference `appendix: A' on page 10 undefined on input line 311.
 
-<use HN_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: HN_diagram-eps-converted-to.pdf used on input line 336
-.
-(pdftex.def)             Requested size: 347.12354pt x 99.60378pt.
-Package epstopdf Info: Source file: <UE_diagram.eps>
-(epstopdf)                    date: 2017-07-20 10:39:34
-(epstopdf)                    size: 662344 bytes
-(epstopdf)             Output file: <UE_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-20 10:40:29
-(epstopdf)                    size: 247374 bytes
-(epstopdf)             Command: <repstopdf --outfile=UE_diagram-eps-converted-t
-o.pdf UE_diagram.eps>
-(epstopdf)             \includegraphics on input line 343.
-Package epstopdf Info: Output file is already uptodate.
-
-<UE_diagram-eps-converted-to.pdf, id=191, 1575.8875pt x 1176.395pt>
-File: UE_diagram-eps-converted-to.pdf Graphic file (type pdf)
-
-<use UE_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 343
-.
-(pdftex.def)             Requested size: 347.12354pt x 259.11285pt.
-Package epstopdf Info: Source file: <UE_diagram.eps>
-(epstopdf)                    date: 2017-07-20 10:39:34
-(epstopdf)                    size: 662344 bytes
-(epstopdf)             Output file: <UE_diagram-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-20 10:40:29
-(epstopdf)                    size: 247374 bytes
-(epstopdf)             Command: <repstopdf --outfile=UE_diagram-eps-converted-t
-o.pdf UE_diagram.eps>
-(epstopdf)             \includegraphics on input line 353.
-Package epstopdf Info: Output file is already uptodate.
-File: UE_diagram-eps-converted-to.pdf Graphic file (type pdf)
- <use UE_diagram-eps-converted-to.pdf>
-Package pdftex.def Info: UE_diagram-eps-converted-to.pdf used on input line 353
-.
-(pdftex.def)             Requested size: 347.12354pt x 259.11285pt.
-
-[11] [12 <./HN_diagram-eps-converted-to.pdf> <./UE_diagram-eps-converted-to.pdf
->] [13]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 398.
+               Default added (so using `htbp') on input line 319.
 
-Package epstopdf Info: Source file: <UE_cases.eps>
-(epstopdf)                    date: 2017-07-11 14:26:22
-(epstopdf)                    size: 33559 bytes
-(epstopdf)             Output file: <UE_cases-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-11 14:26:40
-(epstopdf)                    size: 16195 bytes
-(epstopdf)             Command: <repstopdf --outfile=UE_cases-eps-converted-to.
-pdf UE_cases.eps>
-(epstopdf)             \includegraphics on input line 400.
+Package epstopdf Info: Source file: <solution.eps>
+(epstopdf)                    date: 2017-07-23 13:39:33
+(epstopdf)                    size: 1004019 bytes
+(epstopdf)             Output file: <solution-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-23 13:39:37
+(epstopdf)                    size: 390038 bytes
+(epstopdf)             Command: <repstopdf --outfile=solution-eps-converted-to.
+pdf solution.eps>
+(epstopdf)             \includegraphics on input line 321.
 Package epstopdf Info: Output file is already uptodate.
-<UE_cases-eps-converted-to.pdf, id=206, 597.23125pt x 79.29625pt>
-File: UE_cases-eps-converted-to.pdf Graphic file (type pdf)
+<solution-eps-converted-to.pdf, id=184, 790.955pt x 851.18pt>
+File: solution-eps-converted-to.pdf Graphic file (type pdf)
 
-<use UE_cases-eps-converted-to.pdf>
-Package pdftex.def Info: UE_cases-eps-converted-to.pdf used on input line 400.
-(pdftex.def)             Requested size: 347.12354pt x 46.08864pt.
- [14] [15 <./UE_cases-eps-converted-to.pdf>]
+<use solution-eps-converted-to.pdf>
+Package pdftex.def Info: solution-eps-converted-to.pdf used on input line 321.
+(pdftex.def)             Requested size: 347.12354pt x 373.55923pt.
+ [10] [11 <./solution-eps-converted-to.pdf>] [12]
+Package epstopdf Info: Source file: <HN_UE_diagrams.eps>
+(epstopdf)                    date: 2017-07-23 14:08:34
+(epstopdf)                    size: 258418 bytes
+(epstopdf)             Output file: <HN_UE_diagrams-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-23 14:08:57
+(epstopdf)                    size: 107419 bytes
+(epstopdf)             Command: <repstopdf --outfile=HN_UE_diagrams-eps-convert
+ed-to.pdf HN_UE_diagrams.eps>
+(epstopdf)             \includegraphics on input line 358.
+Package epstopdf Info: Output file is already uptodate.
+ <HN_UE_diagrams-eps-converted-to.pdf, id=197, 818.05624pt x 504.88625pt>
+File: HN_UE_diagrams-eps-converted-to.pdf Graphic file (type pdf)
+
+<use HN_UE_diagrams-eps-converted-to.pdf>
+Package pdftex.def Info: HN_UE_diagrams-eps-converted-to.pdf used on input line
+ 358.
+(pdftex.def)             Requested size: 312.40906pt x 192.81404pt.
+Package epstopdf Info: Source file: <solution_diagram.eps>
+(epstopdf)                    date: 2017-07-22 20:18:31
+(epstopdf)                    size: 333434 bytes
+(epstopdf)             Output file: <solution_diagram-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-22 20:18:40
+(epstopdf)                    size: 135048 bytes
+(epstopdf)             Command: <repstopdf --outfile=solution_diagram-eps-conve
+rted-to.pdf solution_diagram.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+
+<solution_diagram-eps-converted-to.pdf, id=198, 1002.74625pt x 606.265pt>
+File: solution_diagram-eps-converted-to.pdf Graphic file (type pdf)
+
+<use solution_diagram-eps-converted-to.pdf>
+Package pdftex.def Info: solution_diagram-eps-converted-to.pdf used on input li
+ne 367.
+(pdftex.def)             Requested size: 329.7663pt x 199.37425pt.
+ [13 <./HN_UE_diagrams-eps-converted-to.pdf>] [14 <./solution_diagram-eps-conve
+rted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 417.
+               Default added (so using `htbp') on input line 391.
 
-<expected_success_rate_attack_by_sn_insider.pdf, id=215, 578.16pt x 433.62pt>
+
+<expected_success_rate_attack_by_sn_insider.pdf, id=210, 1053.33528pt x 822.071
+24pt>
 File: expected_success_rate_attack_by_sn_insider.pdf Graphic file (type pdf)
-
-<use expected_success_rate_attack_by_sn_insider.pdf>
+ <use expected_success_rate_attack_by_sn_insider.pdf>
 Package pdftex.def Info: expected_success_rate_attack_by_sn_insider.pdf used on
- input line 419.
-(pdftex.def)             Requested size: 347.12354pt x 260.33942pt.
+ input line 394.
+(pdftex.def)             Requested size: 170.09244pt x 132.73828pt.
 
+Underfull \hbox (badness 1097) in paragraph at lines 395--395
+[]\T1/cmr/m/n/10 Fig.8: |Ex-pected num-ber of af-fected
+ []
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 435.
-
-<sn_attack_all.pdf, id=216, 578.16pt x 433.62pt>
+<sn_attack_all.pdf, id=211, 1145.47945pt x 888.92097pt>
 File: sn_attack_all.pdf Graphic file (type pdf)
- <use sn_attack_all.pdf>
-Package pdftex.def Info: sn_attack_all.pdf used on input line 437.
-(pdftex.def)             Requested size: 347.12354pt x 260.33942pt.
 
-[16 <./expected_success_rate_attack_by_sn_insider.pdf>] (./main.bbl
+<use sn_attack_all.pdf>
+Package pdftex.def Info: sn_attack_all.pdf used on input line 400.
+(pdftex.def)             Requested size: 170.09244pt x 131.98956pt.
+
+Underfull \hbox (badness 1097) in paragraph at lines 401--401
+[]\T1/cmr/m/n/10 Fig.9: |Ex-pected num-ber of af-fected
+ []
+
+[15] [16 <./expected_success_rate_attack_by_sn_insider.pdf> <./sn_attack_all.pd
+f
+
+pdfTeX warning: pdflatex (file ./sn_attack_all.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] (./main.bbl
 Underfull \hbox (badness 3000) in paragraph at lines 10--15
 []\T1/cmr/m/n/9 Strobel, D.:  IMSI Catcher.  $\T1/cmtt/m/n/9 https : / / www . 
 emsec . rub . de / media / crypto /
@@ -1427,7 +1395,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--29
 story . html ? utm _ term =
  []
 
-[17 <./sn_attack_all.pdf>]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 43--48
 \T1/cmtt/m/n/9 / / portal . 3gpp . org / desktopmodules / Specifications / Spec
 ificationDetails .
@@ -1439,46 +1407,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--74
  china _ clampdown _ police/$
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
+\T1/cmtt/m/n/9 / / portal . 3gpp . org / desktopmodules / Specifications / Spec
+ificationDetails .
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 116--122
+[]\T1/cmr/m/n/9 3GPP:  3GPP TS 23.012 V14.0.0 Lo-ca-tion man-age-ment pro-ce-du
+res
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 116--122
+\T1/cmr/m/n/9 (Re-lease 14).  $\T1/cmtt/m/n/9 https : / / portal . 3gpp . org /
+ desktopmodules / Specifications /
+ []
+
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
 []\T1/cmr/m/n/9 Linuxbsdos:  Gein-imi a So-phis-ti-cated New An-droid Tro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--145
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
 \T1/cmr/m/n/9 jan Found in Wild.  $\T1/cmtt/m/n/9 http : / / linuxbsdos . com /
  2010 / 12 / 29 /
  []
 
 
-Underfull \hbox (badness 3568) in paragraph at lines 147--152
+Underfull \hbox (badness 3568) in paragraph at lines 162--167
 []\T1/cmr/m/n/9 KrebsonSecurity:  ZeuS Tro-jan for Google An-droid Spot-ted.  $
 \T1/cmtt/m/n/9 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--152
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
 \T1/cmtt/m/n/9 / / krebsonsecurity . com / 2011 / 07 / zeus-[]trojan-[]for-[]go
 ogle-[]android-[]spotted/$
  []
 
 )
 
-LaTeX Warning: Empty `thebibliography' environment on input line 462.
+LaTeX Warning: Empty `thebibliography' environment on input line 437.
 
 [19] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 29745 strings out of 493029
- 627468 string characters out of 6136235
- 649058 words of memory out of 5000000
- 32798 multiletter control sequences out of 15000+600000
+ 29740 strings out of 493029
+ 627411 string characters out of 6136235
+ 649018 words of memory out of 5000000
+ 32794 multiletter control sequences out of 15000+600000
  20995 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,13n,93p,10429b,628s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1486,26 +1469,26 @@ Here is how much of TeX's memory you used:
 e/.texmf-var/fonts/pk/ljfour/public/ifsym/ifsym10.420pk></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx120
-0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.
-pfb>
-Output written on main.pdf (19 pages, 1570299 bytes).
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sftt0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (19 pages, 1506889 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 412 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

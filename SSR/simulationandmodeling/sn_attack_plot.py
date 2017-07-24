@@ -26,16 +26,27 @@ def xchoosey(x,y):
 #print(str(xchoosey(10**10,10**6)))
 
 x = np.linspace(0, 10**6, 1000)
-plt.plot(x, 1000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="black", alpha = 1);
-plt.plot(x, 10000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="red", alpha = 1);
-plt.plot(x, 100000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="green", alpha = 1);
+#plt.plot(x, 1000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="black", alpha = 1);
+#plt.plot(x, 10000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="red", alpha = 1);
+#plt.plot(x, 100000*(1 - (1 - 1/10**10)**x), linewidth=1, linestyle="-", c="green", alpha = 1);
+
+plt.plot(x, 2*1000*x/(10**10), linewidth=5, linestyle="--", c="black", alpha = 1, label = "$r = 10^3$");
+plt.plot(x, 2*10000*x/(10**10), linewidth=5, linestyle=":", c="black", alpha = 1, label = "$r = 10^4$");
+plt.plot(x, 2*100000*x/(10**10), linewidth=5, linestyle="-", c="black", alpha = 1, label = "$r = 10^5$");
+
+
+plt.rcParams.update({'font.size': 50})
+plt.ticklabel_format(style='sci', axis='x', scilimits=(0,0))
+
 
 
 #Formatting the plot
-plt.xlabel('Number Of Pseudonyms guessed (with replacement)')
-plt.ylabel('No of affected users ')
-#plt.yticks(np.arange(0, 100, 5))
-#plt.xticks(np.arange(0, 6*10**10+1, 5*10**9))
+plt.xlabel('#Pseudonyms ($m$)')
+plt.ylabel('#Affected Users ($2rm/\mathcal{M}$)')
+plt.yticks(np.arange(0, 22, 5))
+plt.xticks(np.arange(0, 10**6+1, 2*10**5))
+leg = plt.legend(fancybox=True, bbox_to_anchor=(.6, 1))
+leg.get_frame().set_alpha(0.5)
 plt.grid()
 plt.show()
 

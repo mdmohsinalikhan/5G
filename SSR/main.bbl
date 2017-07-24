@@ -105,6 +105,21 @@ Khan, M., Mitchell, C.:
   Wireless and Mobile Networks (WiSec 2017), Boston, USA, July 18-20, 2017,
   United States, Association for Computing Machinery (ACM) (May 2017)
 
+\bibitem{TS33102}
+3GPP:
+\newblock {3GPP} {TS} 33.102 {V}14.1.0 {S}ecurity architecture ({R}elease 14).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2262}
+  (March 2017)
+
+\bibitem{TS23012}
+3GPP:
+\newblock {3GPP} {TS} 23.012 {V}14.0.0 {L}ocation management procedures
+  ({R}elease 14).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=735}
+  (March 2017)
+
 \bibitem{thesislund}
 Ahlstr\"om, M., Holmberg, S.:
 \newblock Prototype {I}mplementation of a {5G} {G}roup-{B}ased {A}uthentication
