@@ -1,0 +1,17 @@
+
+
+1. Check if there is any doesn't
+2. Check if there is any "and and"
+
+3. check if there is any "an u**"
+4. change the TR reference to the latest version in the bibliography
+5. Fix all the references
+6. Tell about the static diffie-hellman for key exchange
+7. modify the comparison. don't say that pseudonym is not immune to AIC
+
+8. Check an SN vs a SN, an HN vs a HN and an UE vs a UE
+9. Take care of the certificate-less thing
+
+10. academic reference to IBE
+11. academic reference to DIffie-Hellman
+12. explain the importance of 3GPP TRs

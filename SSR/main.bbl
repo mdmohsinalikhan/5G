@@ -39,39 +39,6 @@ Intelligence, P.E.:
   \url{http://www.pki-electronic.com/products/interception-and-monitoring-systems/3g-umts-imsi-catcher/}
   [It was available online at least until 14-July-2017].
 
-\bibitem{TS33401}
-3GPP:
-\newblock {3GPP} {TS} 33.401 {V}15.0.0 {S}ecurity architecture ({R}elease 15).
-\newblock
-  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2296}
-  (June 2017)
-
-\bibitem{tracking_bins}
-Miller, J.:
-\newblock City of london calls halt to smartphone tracking bins.
-\newblock \url{http://www.bbc.com/news/technology-23665490} (August 2013) [It
-  was available online at least until 14-July-2017].
-
-\bibitem{goldman2007mobile}
-Goldman, S., Krock, R., Rauscher, K., Runyon, J.:
-\newblock Mobile forced premature detonation of improvised explosive devices
-  via wireless phone signaling.
-\newblock \url{http://www.google.com/patents/US20070234892} (October 2007) US
-  Patent App. 11/233,198.
-
-\bibitem{catch_me_if_you_can}
-Dabrowski, A., Pianta, N., Klepp, T., Mulazzani, M., Weippl, E.:
-\newblock Imsi-catch me if you can: Imsi-catcher-catchers.
-\newblock In: Proceedings of the 30th Annual Computer Security Applications
-  Conference. ACSAC '14, New York, NY, USA, ACM (2014)  246--255
-
-\bibitem{chinese_spam}
-Muncaster, P.:
-\newblock Chinese cops cuff 1,500 in fake base station spam raid.
-\newblock
-  \url{https://www.theregister.co.uk/2014/03/26/spam_text_china_clampdown_police/}
-  (March 2014) [It was available online at least until 14-July-2017].
-
 \bibitem{CCS15}
 Van~den Broek, F., Verdult, R., de~Ruiter, J.:
 \newblock {D}efeating {IMSI} {C}atchers.
@@ -111,6 +78,13 @@ Khan, M., Mitchell, C.:
 \newblock
   \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2262}
   (March 2017)
+
+\bibitem{TS33401}
+3GPP:
+\newblock {3GPP} {TS} 33.401 {V}15.0.0 {S}ecurity architecture ({R}elease 15).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2296}
+  (June 2017)
 
 \bibitem{TS23012}
 3GPP:
@@ -184,5 +158,17 @@ Karim, A., Shah, S.A.A., Salleh, R.B., Arif, M., Noor, R.M., Shamshirband, S.:
   {R}eview and {O}pen {I}ssues.
 \newblock In: KSII Transactions on Internet and Information Systems - Vol. 9,
   no. 4. (2015)  1471--1492
+
+\bibitem{chinese_spam}
+Muncaster, P.:
+\newblock Chinese cops cuff 1,500 in fake base station spam raid.
+\newblock
+  \url{https://www.theregister.co.uk/2014/03/26/spam_text_china_clampdown_police/}
+  (March 2014) [It was available online at least until 14-July-2017].
+
+\bibitem{dataretention}
+Wikipedia:
+\newblock Data {R}etention {D}irective.
+\newblock \url{https://en.wikipedia.org/wiki/Data_Retention_Directive}
 
 \end{thebibliography}

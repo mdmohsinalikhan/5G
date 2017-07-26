@@ -1,0 +1,36 @@
+digraph HN_states {
+size = "9,7"
+
+1 [shape = rectangle, label = "1: i, p, p', p'', 0"]
+
+2 [shape = rectangle, label = "2: i, p, p', null, 0"]
+
+3 [shape = rectangle, label = "3: i, p, p', null, 1"]
+
+4 [shape = rectangle, label = "4: i, p, p', p'', 1"]
+
+
+
+1 -> 1 [label = " LU: i, p / 0 \n AV-req: i / AV_p \n AV-req: p / AV_p' \n AV-req: p', p'' / AV_p''"]
+1 -> 2 [label = " LU: p' / forget_p"]
+1 -> 3 [label = " LU: p'' / forget_p"]
+
+2 -> 2  [label = " LU: i, p / 0 \n AV-req: i / AV_p \n AV-req: p / AV_p'"]
+2 -> 1  [label = " AV-req: p' / AV_p''"]
+2 -> 3  [label = " LU: p' / 0"]
+
+
+
+3 -> 3 [label = " LU: i, p, p' / 0 \n AV-req: i / AV_p \n AV-req: p / AV_p'"]
+3 -> 4 [label = " AV-req: p' / AV_p''"]
+
+
+4 -> 4 [label = " LU: i, p / 0 \n AV-req: i / AV_p \n AV-req: p / AV_p' \n AV-req: p', p'' / AV_p''"]
+4 -> 2 [label = " LU: p' / forget_p"]
+4 -> 3 [label = " LU: p'' / forget_p"]
+
+
+
+}
+
+/* forget_p = p <- p', p'<- p'', p'' <- null*/

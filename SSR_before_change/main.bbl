@@ -1,0 +1,188 @@
+\begin{thebibliography}{10}
+
+\bibitem{mobicom95}
+Samfat, D., Molva, R., Asokan, N.:
+\newblock Untraceability in {M}obile {N}etworks.
+\newblock In: Proceedings of the 1st Annual International Conference on Mobile
+  Computing and Networking. MobiCom '95, New York, NY, USA, ACM (1995)  26--36
+
+\bibitem{imsi_catcher_report_bochum}
+Strobel, D.:
+\newblock {IMSI} {C}atcher.
+\newblock
+  \url{https://www.emsec.rub.de/media/crypto/attachments/files/2011/04/imsi_catcher.pdf}
+  (July 2007) [It was available online at least until 14-July-2017].
+
+\bibitem{Ginzboorg_Niemi_2016}
+Ginzboorg, P., Niemi, V.:
+\newblock Privacy of the long-term identities in cellular networks.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia '16, ICST (2016)
+
+\bibitem{washingtonpost2014}
+Soltani, A., Timberg, C.:
+\newblock Tech firm tries to pull back curtain on surveillance efforts in
+  {W}ashington.
+\newblock
+  \url{https://www.washingtonpost.com/world/national-security/researchers-try-to-pull-back-curtain-on-surveillance-efforts-in-washington/2014/09/17/f8c1f590-3e81-11e4-b03f-de718edeb92f_story.html?utm_term=.96e31aa4440b}
+  (September 2014) [Online; Was available until 14-July-2017].
+
+\bibitem{pets2017}
+Ney, P., Smith, J., Gabriel, C., Tadayoshi, K.:
+\newblock Sea{G}lass: {E}nabling {C}ity-{W}ide {IMSI}-{C}atcher {D}etection.
+\newblock In: Proceedings on Privacy Enhancing Technologies. PoPETs (2017)
+
+\bibitem{pki_umts_imsi_catcher}
+Intelligence, P.E.:
+\newblock 3{G} {UMTS} {IMSI} {C}atcher.
+\newblock
+  \url{http://www.pki-electronic.com/products/interception-and-monitoring-systems/3g-umts-imsi-catcher/}
+  [It was available online at least until 14-July-2017].
+
+\bibitem{TS33401}
+3GPP:
+\newblock {3GPP} {TS} 33.401 {V}15.0.0 {S}ecurity architecture ({R}elease 15).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2296}
+  (June 2017)
+
+\bibitem{tracking_bins}
+Miller, J.:
+\newblock City of london calls halt to smartphone tracking bins.
+\newblock \url{http://www.bbc.com/news/technology-23665490} (August 2013) [It
+  was available online at least until 14-July-2017].
+
+\bibitem{goldman2007mobile}
+Goldman, S., Krock, R., Rauscher, K., Runyon, J.:
+\newblock Mobile forced premature detonation of improvised explosive devices
+  via wireless phone signaling.
+\newblock \url{http://www.google.com/patents/US20070234892} (October 2007) US
+  Patent App. 11/233,198.
+
+\bibitem{catch_me_if_you_can}
+Dabrowski, A., Pianta, N., Klepp, T., Mulazzani, M., Weippl, E.:
+\newblock Imsi-catch me if you can: Imsi-catcher-catchers.
+\newblock In: Proceedings of the 30th Annual Computer Security Applications
+  Conference. ACSAC '14, New York, NY, USA, ACM (2014)  246--255
+
+\bibitem{chinese_spam}
+Muncaster, P.:
+\newblock Chinese cops cuff 1,500 in fake base station spam raid.
+\newblock
+  \url{https://www.theregister.co.uk/2014/03/26/spam_text_china_clampdown_police/}
+  (March 2014) [It was available online at least until 14-July-2017].
+
+\bibitem{CCS15}
+Van~den Broek, F., Verdult, R., de~Ruiter, J.:
+\newblock {D}efeating {IMSI} {C}atchers.
+\newblock In: Proceedings of the 22nd ACM SIGSAC Conference on Computer and
+  Communications Security. CCS '15, ACM (2015)
+
+\bibitem{SSR15}
+Khan, M.S.A., Mitchell, C.J.:
+\newblock {I}mproving {A}ir {I}nterface {U}ser {P}rivacy in {M}obile
+  {T}elephony.
+\newblock In: Second International Conference, SSR 2015, Proceedings, Springer
+  International Publishing (2015)
+
+\bibitem{Norrman_Naslund_Dubrova_2016}
+Norrman, K., N\"{a}slund, M., Dubrova, E.:
+\newblock {P}rotecting {IMSI} and {U}ser {P}rivacy in {5G} {N}etworks.
+\newblock In: Proceedings of the 9th EAI International Conference on Mobile
+  Multimedia Communications. MobiMedia'16, ICST (2016)
+
+\bibitem{yemen2017}
+Muthana, A.A., Saeed, M.M.:
+\newblock Analysis of {U}ser {I}dentity {P}rivacy in {LTE} and {P}roposed
+  {S}olution.
+\newblock In: International Journal of Computer Network and Information
+  Security(IJCNIS), MECS Publisher (2017)
+
+\bibitem{wisec17}
+Khan, M., Mitchell, C.:
+\newblock Trashing {IMSI} {C}atchers in {M}obile {N}etworks.
+\newblock In: Proceedings of the 10th ACM Conference on Security and Privacy in
+  Wireless and Mobile Networks (WiSec 2017), Boston, USA, July 18-20, 2017,
+  United States, Association for Computing Machinery (ACM) (May 2017)
+
+\bibitem{TS33102}
+3GPP:
+\newblock {3GPP} {TS} 33.102 {V}14.1.0 {S}ecurity architecture ({R}elease 14).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2262}
+  (March 2017)
+
+\bibitem{TS23012}
+3GPP:
+\newblock {3GPP} {TS} 23.012 {V}14.0.0 {L}ocation management procedures
+  ({R}elease 14).
+\newblock
+  \url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=735}
+  (March 2017)
+
+\bibitem{thesislund}
+Ahlstr\"om, M., Holmberg, S.:
+\newblock Prototype {I}mplementation of a {5G} {G}roup-{B}ased {A}uthentication
+  and {K}ey {A}greement {P}rotocol.
+\newblock
+  \url{http://lup.lub.lu.se/luur/download?func=downloadFile&recordOId=8895975&fileOId=8895979}
+  (2016)
+
+\bibitem{botnet_ccs09_symbian}
+Traynor, P., Lin, M., Ongtang, M., Rao, V., Jaeger, T., McDaniel, P., La~Porta,
+  T.:
+\newblock On cellular botnets: Measuring the impact of malicious devices on a
+  cellular network core.
+\newblock In: Proceedings of the 16th ACM Conference on Computer and
+  Communications Security. CCS '09, New York, NY, USA, ACM (2009)  223--234
+
+\bibitem{botnet_usenix11}
+Xiang, C., Binxing, F., Lihua, Y., Xiaoyi, L., Tianning, Z.:
+\newblock Andbot: Towards advanced mobile botnets.
+\newblock In: Proceedings of the 4th USENIX Conference on Large-scale Exploits
+  and Emergent Threats. LEET'11, Berkeley, CA, USA, USENIX Association (2011)
+  11--11
+
+\bibitem{botnet_australia_2016}
+Chen, W., Luo, X., Yin, C., Xiao, B., Au, M.H., Tang, Y.:
+\newblock Muse: Towards robust and stealthy mobile botnets via multiple message
+  push services.
+\newblock In: Proceedings, Part I, of the 21st Australasian Conference on
+  Information Security and Privacy - Volume 9722, New York, NY, USA,
+  Springer-Verlag New York, Inc. (2016)  20--39
+
+\bibitem{botnet_geinimi10}
+Linuxbsdos:
+\newblock Geinimi a {S}ophisticated {N}ew {A}ndroid {T}rojan {F}ound in {W}ild.
+\newblock
+  \url{http://linuxbsdos.com/2010/12/29/geinimi-sophisticated-new-android-trojan-found-in-wild/}
+  (2010)
+
+\bibitem{botnet_zeus11}
+KrebsonSecurity:
+\newblock Zeu{S} {T}rojan for {G}oogle {A}ndroid {S}potted.
+\newblock
+  \url{https://krebsonsecurity.com/2011/07/zeus-trojan-for-google-android-spotted/}
+  (2011)
+
+\bibitem{botnet_anserverbot}
+Jiang, X.:
+\newblock Security {A}lert: {A}nserver{B}ot, {N}ew {S}ophisticated {A}ndroid
+  {B}ot {F}ound in {A}lternative {A}ndroid {M}arkets.
+\newblock \url{https://www.csc2.ncsu.edu/faculty/xjiang4/AnserverBot/} (2011)
+
+\bibitem{botnet_dreamdroid11}
+Tung, L.:
+\newblock Android {D}reamdroid two: rise of laced apps.
+\newblock
+  \url{https://www.itnews.com.au/news/android-dreamdroid-two-rise-of-lacedapps-259147}
+  (2011)
+
+\bibitem{botnet_threat15}
+Karim, A., Shah, S.A.A., Salleh, R.B., Arif, M., Noor, R.M., Shamshirband, S.:
+\newblock Mobile botnet attacks - an {E}merging {T}hreat: {C}lassification,
+  {R}eview and {O}pen {I}ssues.
+\newblock In: KSII Transactions on Internet and Information Systems - Vol. 9,
+  no. 4. (2015)  1471--1492
+
+\end{thebibliography}

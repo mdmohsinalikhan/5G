@@ -1,51 +1,51 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: splncs.bst
-Illegal, another \bibstyle command---line 100 of file main.aux
+Illegal, another \bibstyle command---line 73 of file main.aux
  : \bibstyle
  :          {splncs}
 I'm skipping whatever remains of this command
 Database file #1: ref.bib
-You've used 27 entries,
+You've used 25 entries,
             2087 wiz_defined-function locations,
-            642 strings with 9853 characters,
-and the built_in function-call counts, 6233 in all, are:
-= -- 644
-> -- 250
-< -- 6
-+ -- 96
-- -- 69
-* -- 357
-:= -- 900
-add.period$ -- 42
-call.type$ -- 27
-change.case$ -- 27
+            628 strings with 9305 characters,
+and the built_in function-call counts, 5586 in all, are:
+= -- 574
+> -- 219
+< -- 5
++ -- 85
+- -- 60
+* -- 307
+:= -- 808
+add.period$ -- 37
+call.type$ -- 25
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 303
-empty$ -- 690
-format.name$ -- 69
-if$ -- 1557
+cite$ -- 25
+duplicate$ -- 275
+empty$ -- 632
+format.name$ -- 60
+if$ -- 1398
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 13
-newline$ -- 138
-num.names$ -- 27
-pop$ -- 130
+int.to.str$ -- 25
+missing$ -- 12
+newline$ -- 128
+num.names$ -- 25
+pop$ -- 122
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 173
+skip$ -- 158
 stack$ -- 0
-substring$ -- 176
-swap$ -- 96
-text.length$ -- 6
+substring$ -- 144
+swap$ -- 83
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 45
-width$ -- 29
-write$ -- 308
+while$ -- 40
+width$ -- 27
+write$ -- 281
 (There was 1 error message)

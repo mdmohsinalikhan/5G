@@ -1,0 +1,24 @@
+Abstract. IMSI-catchers are still in existence in all the 3GPP defined
+cellular networks. Pseudonym based solutions to defeat IMSI-catchers
+have been published in the recent years. We have found one vulnerabil-
+ity in these solutions. The vulnerability enables an attacker to convince
+the home network (HN) to forget an old pseudonym of a legitimate UE
+and compute a new one. The attacker does not need any participation
+of the legitimate UE to mount this attack. A malicious UE or a serving
+network (SN) can exploit this vulnerability to kick a legitimate UE out of
+service. We show that, exploiting this vulnerability, a novel DDoS attack
+can be mounted against an entire cellular network. The attack can send
+50 percent of the UEs out of service using a reasonably large botnet of
+mobile users. We justify our claim by an analytical argument backed by
+a simulation. Even though, in principle, a malicious SN can also exploit
+the vulnerability, we argue that the SN can not gain anything meaning-
+ful before the attack is detected and stopped. Besides, an SN can behave
+maliciously in other even more fatal ways. Hence it is not important to
+protect against a malicious serving network in this context. We present
+a solution to fight against the DDoS attack by piggybacking the location
+update message sent by the serving network to the home network. We
+present a qualitative analysis of our solution. We argue that our solution
+is immune to the the DDoS attack and still protects the identity privacy,
+and remains backward compatible with the legacy networks. We also dis-
+cuss other practical issues of the usability of pseudonyms from charging
+and lawful interception point of view that appear to be ignored so

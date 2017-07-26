@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: splncs.bst
+Illegal, another \bibstyle command---line 100 of file main.aux
+ : \bibstyle
+ :          {splncs}
+I'm skipping whatever remains of this command
+Database file #1: ref.bib
+You've used 27 entries,
+            2087 wiz_defined-function locations,
+            642 strings with 9853 characters,
+and the built_in function-call counts, 6233 in all, are:
+= -- 644
+> -- 250
+< -- 6
++ -- 96
+- -- 69
+* -- 357
+:= -- 900
+add.period$ -- 42
+call.type$ -- 27
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 303
+empty$ -- 690
+format.name$ -- 69
+if$ -- 1557
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 13
+newline$ -- 138
+num.names$ -- 27
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 173
+stack$ -- 0
+substring$ -- 176
+swap$ -- 96
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 45
+width$ -- 29
+write$ -- 308
+(There was 1 error message)

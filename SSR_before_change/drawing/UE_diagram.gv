@@ -1,0 +1,6 @@
+digraph UE_states {
+size = "7,2"
+1 [shape = rectangle, label = "1: i, PMSI, P_new"]
+
+1 -> 1 [label = " null / AR_PMSI \n null / AR_P_new \n IReq / IRes:i \n IReq / IRes: PMSI \n IReq / IRes: P_new \n IAV / REJ  \n VAV_PMSI / RES \n VAV_P_new / RES \n VAV_p'' / RES, forget_PMSI"]
+}
