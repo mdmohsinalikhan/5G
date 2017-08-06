@@ -46,6 +46,7 @@
 
 
 %added by the author himself
+\usepackage[title]{appendix}
 \usepackage{subfig}
 \usepackage[]{algorithmicx}
 \usepackage[]{algorithm}
@@ -162,9 +163,9 @@ An active IMSI catcher impersonates a legitimate SN and ask for the identity of 
 %\subsubsection{Pseudonym Based Solutions}
 A potentially simple and backward compatible solution approach is to use frequently-changing temporary identities for mobile users \cite{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}. The idea is, even if an IMSI catcher play its trick, only the temporary identity of a user would be revealed. So, the IMSI catcher would not be able to associate the temporary identity with any user who is previously known. The temporary identities are called pseudonyms, hence the solutions use this approach are called pseudonym based solutions. 
 
-In 2015, Borek, Verdult, and Ruiter \cite{CCS15} and Khan and Mitchell \cite{SSR15}, described solutions based on pseudonyms that have the same format as IMSIs. From now on we will refer these two schemes as BVR and KM15 schemes. These solutions are prone to the loss of synchronization between the pseudonyms in the UE and the HN. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. There is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious serving network (SN).
+Borek, Verdult, and Ruiter \cite{CCS15} and Khan and Mitchell \cite{SSR15}, described solutions based on pseudonyms that have the same format as IMSIs. From now on we will refer these two schemes as BVR and KM15 schemes. These solutions are prone to the loss of synchronization between the pseudonyms in the UE and the home network (HN) of the suer. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. There is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious serving network (SN).
 
-In 2017, Khan and Mitchel \cite{wisec17} identified the loss of synchronization problem caused by a malicious UE and proposed a solution. In the rest of the paper we will refer to this solution as KM17 scheme. Careful investigation into this scheme shows that a UE has to use one pseudonym at least twice before it can get a new pseudonym from the network. The authors also argue that their solution is not immune to a pseudonym de-synchronization attack by a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of temporary identities per user increases from two to six. Moreover, as we will explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
+Khan and Mitchel \cite{wisec17} identified the loss of synchronization problem caused by a malicious UE and proposed a solution. In the rest of the paper we will refer to this solution as KM17 scheme. Careful investigation into this scheme shows that a UE has to use one pseudonym at least twice before it can get a new pseudonym from the network. The authors also argue that their their solution may be vulnerable to a pseudonym de-synchronization attack by a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of temporary identities per user increases from two to six. Moreover, as we will explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
 
 %\begin{figure}[!tbp]
 %  \centering
@@ -193,7 +194,7 @@ We propose a pseudonym based solution that builds on top of those in BVR, KM15 a
 
 
 \section{Preliminaries}
-From a high level, a cellular network consists of $3$ elements. A UE, SN and HN. The SN and HN are the same network when the user is not roaming. An SN or HN consist of many entities. In this paper we will not discuss those fine details. However, we need to know some detail about a UE. A UE consists of two entities. A mobile equipment (ME) and a subscriber identity module (SIM). The SIM is known as universal subscriber module (USIM) in UMTS. SIM or USIM, they are smart cards which are portable across different MEs. In LTE, the USIM is an application in the universal integrated circuit card (UICC). In this paper, for the sake of simplicity we will refer all of them as SIM.
+Conceptually, a cellular network can be divided into UE; the HN -- where the mobile user has a subscription; and the SN -- that is the network to which mobile device connects.  The SN and HN are the same when the user is not roaming. An SN or HN consist of many entities. In this paper we will not discuss those fine details. However, we need to know some detail about a UE. A UE consists of two entities. A mobile equipment (ME) and a subscriber identity module (SIM). The SIM is known as universal subscriber module (USIM) in UMTS. SIM or USIM, they are smart cards which are portable across different MEs. In LTE, the USIM is an application in the universal integrated circuit card (UICC). In this paper, for the sake of simplicity we will refer all of them as SIM.
 
 
 A user is identified by IMSI. IMSI is a string of $15$ decimal digits. An IMSI is a concatenation of mobile country code (MCC), mobile network code (MNC) and mobile subscription identification number (MSIN). MCC is a string of $3$ decimal digits. MNC is of $2$ to $3$ decimal digits and MSIN is of $9$ to $10$ decimal digits. Pseudonyms discussed in this paper are IMSI looking strings. In this paper we limit our discussion to only one HN. Consequently all the IMSIs or pseudonyms we discuss have the same MCC and MNC. When we talk about IMSI space or pseudonym space, we actually mean the MSIN space. We denote the size of this space by $\mathcal{M}$. The value of $\mathcal{M}$ can be either $10^9$ or $10^{10}$. We will also use $n$ to denote the total number of users subscribed with an HN.
@@ -225,7 +226,7 @@ In LTE, upon receiving the AV request, the HN also computes another key $K_{ASME
 
 
 \section{Related Work}
-The BVR and KM schemes describe how the use of HN recongnized pseudonym can be introduced in the legacy networks. Few other proposals \cite{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017} were published in 2016 and 2017. All these proposals use essentially the same idea of using frequently changing pseudonyms recognized by the HN. The vulnerability identified in \cite{wisec17} is present in all these solutions. So, for simplicity and limitation of space, we choose and explain only one of these schemes briefly and present our attack and solution in the context of the chosen scheme. We choose the BVR scheme.
+The BVR and KM schemes describe how the use of HN recongnized pseudonym can be introduced in the legacy networks. Also other proposals \cite{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017} were published in 2016 and 2017. All these proposals use essentially the same idea of using frequently changing pseudonyms recognized by the HN. The vulnerability identified in \cite{wisec17} is present in all these solutions. We will explain the DDoS attack and our solution in the context of the BVR scheme.
 
 \subsection{BVR Scheme}
 Along with the shared secret $\mathcal{K}$, every user shares another secret key $\kappa$ with the HN. The SIM inside the UE stores two pseudonyms at any point of time, $\left(PMSI,P_{new}\right)$. The SIM uses $P_{new}$ the next time the UE receives an IMSI inquiry and keep using $P_{new}$ until it receives a new pseudonym. The HN also stores two pseudonyms $\left(p,p'\right)$ for every users at any point of time. In an ideal situation, $PMSI = p$ and $P_{new} = p'$. 
@@ -240,7 +241,7 @@ The HN sends the next pseudonym encrypted by the key $\kappa$ as a part of the r
   \label{fig:bvr_solution}	
 \end{figure}
 
-Whenever an AV request arrives for $p'$, the HN forgets $p$. Forgetting an old pseudonym is important so that it can be reused. But forgetting before being confirmed that $p'$ has been received by the UE is a vulnerability as pointed in \cite{wisec17}. If a fake UE (FUE) identifies itself using a random pseudonym and if by chance, the random pseudonym is associated with a legitimate UE, the HN forgets an old pseudonym for the legitimate UE. In Section \ref{sec:attack} we will show how this vulnerability can be exploited into a fatal DoS attack.
+Whenever an AV request arrives for $p'$, the HN forgets $p$. Forgetting an old pseudonym is important so that it can be reused. But forgetting before being confirmed that $p'$ has been received by the UE is a vulnerability as pointed in \cite{wisec17}. If a malicious UE identifies itself using a random pseudonym and if by chance, the random pseudonym is associated with a legitimate UE, the HN forgets an old pseudonym for the legitimate UE. In Section \ref{sec:attack} we will show how this vulnerability can be exploited into a fatal DoS attack.
 
 
 \subsection{KM17 Scheme} \label{sec:km17scheme}
@@ -249,19 +250,19 @@ The KM17 scheme uses three pseudonyms at the HN end: $p_{past},p_{current}$ and 
 
 Careful investigation in KM17 scheme shows that a pseudonym has to be used at least two times before the UE can get a new pseudonym from the HN. The HN forgets $p_{past}$ only when $\texttt{LU}_{p_{future}}$ arrives at HN. $\texttt{LU}_{p_{future}}$ would arrive only if $p_{future}$ was used by the UE already at least once. Notice that the $p_{current}$ after arriving $\texttt{LU}_{p_{future}}$ is same as the $p_{future}$ before the $\texttt{LU}_{p_{future}}$ was arrived. And after the arrival of $\texttt{LU}_{p_{future}}$, the $p_{future}$ has become null. So, at this point, to get a new pseudonym, the UE has to use $p_{current}$. Consequently our claim follows. The use of same pseudonym twice happens because the scheme does not forget $p_{past}$ when $\texttt{LU}_{p_{current}}$ arrives. We take care of this issue in our solution.
 
-The authors argue that the scheme is not immune to a malicious SN who tries to attack by sending fake LU messages. As a reactive measure, the authors propose a recovery process that enables a UE and the HN to get back in a synchronized state of pseudonyms. The recovery process uses temporary recovery identity (RID). The HN sends the $RID_{future}$ as a part of the $RAND$ in a similar way a pseudonym is sent. When a UE gets convinced that the pseudonym synchronization has been lost, the UE sends the RID piggybacked in the reject message $AUTS$. Based on the RID, the process can recover to a synchronized pseudonym state. Detail of the process can be found in \cite{wisec17}. But, an IMSI catcher can convince a UE that the synchronization has been lost and learn the RID of the UE. After learning the RID, the IMSI catcher can track the user using this RID.
+The authors argue that the scheme is vulnerable to a malicious SN who tries to attack by sending fake LU messages. As a reactive measure, the authors propose a recovery process that enables a UE and the HN to get back in a synchronized state of pseudonyms. The recovery process uses temporary recovery identity (RID). The HN sends the $RID_{future}$ as a part of the $RAND$ in a similar way a pseudonym is sent. When a UE gets convinced that the pseudonym synchronization has been lost, the UE sends the RID piggybacked in the reject message $AUTS$. Based on the RID, the process can recover to a synchronized pseudonym state. Detail of the process can be found in \cite{wisec17}. But, an IMSI catcher can convince a UE that the synchronization has been lost and learn the RID of the UE. After learning the RID, the IMSI catcher can track the user using this RID.
 
-However, one might argue that the RIDs can be changed as frequent as the pseudonyms are changed. Note that, forgetting an old RID is also triggered by the same $\texttt{LU}_{p_{future}}$ that triggers forgetting an old pseudonym. Consequently, synchronization of RIDs become as vulnerable as synchronization of pseudonyms, when a malicious SN sends fake LU message. However in the analysis of our solution in Section \ref{sec:analysis}, we will show that a malicious SN can be very quickly detected and stopped before it can mount a meaningful attack.
+But one might argue that the RIDs can be changed as frequently as the pseudonyms. Note that, forgetting an old RID is also triggered by the same $\texttt{LU}_{p_{future}}$ that triggers forgetting an old pseudonym. Consequently, synchronization of RIDs become as vulnerable as synchronization of pseudonyms, when a malicious SN sends fake LU message. However in the analysis of our solution in Section \ref{sec:analysis}, we will show that a malicious SN can be very quickly detected and stopped before it can mount a meaningful attack.
 
 \section{Attack On BVR Scheme} \label{sec:attack}
-The attack is mounted by an FUE. The attack has two phases. 
+The attack is mounted by a malicious UE. The attack has two phases. 
 
 %\subsubsection{Phase 1} \label{sec:attac_fue_phase1}  
 
-\textbf{Phase 1 } An FUE sends an attach request using a random pseudonym $q_1$ to a legitimate SN. The legitimate SN sends an AV request for $q_1$ to the HN. If by chance, $q_1 = p'$, the HN forgets $p$ and sets $p \leftarrow p'$. The HN also generates an unused pseudonym $p''$ and sets $p' \leftarrow p^{''}$. As a result, in the HN, the current  pseudonym state for the user $s$ is $\left(p = P_{new},p' \notin \left\lbrace PMSI,P_{new} \right\rbrace \right)$. %See Figure \ref{fig:dos_attack}.
+\textbf{Phase 1 } A malicious UE sends an attach request using a random pseudonym $q_1$ to a legitimate SN. The legitimate SN sends an AV request for $q_1$ to the HN. If by chance, $q_1 = p'$, the HN forgets $p$ and sets $p \leftarrow p'$. The HN also generates an unused pseudonym $p''$ and sets $p' \leftarrow p^{''}$. As a result, in the HN, the current  pseudonym state for the user $s$ is $\left(p = P_{new},p' \notin \left\lbrace PMSI,P_{new} \right\rbrace \right)$. %See Figure \ref{fig:dos_attack}.
 
 %\subsubsection{Phase 2} \label{sec:attac_fue_phase2} 
-\textbf{Phase 2 }The FUE sends another attach request using a random pseudonym $q_2$ to a legitimate SN. The legitimate SN sends a AV request for $q_2$ to the HN. If again by chance, $q_2 = p'$, then the HN again forgets $p$, sets $p \leftarrow p'$. HN also generates an unused pseudonym $p'''$ and sets $p' \leftarrow p'''$. Consequently, the current pseudonym state of user $s$ is $\left\lbrace PMSI,P_{new} \right\rbrace \cap \left\lbrace p,p' \right\rbrace = \emptyset$. %See Figure \ref{fig:dos_attack}
+\textbf{Phase 2 }The malicious UE sends another attach request using a random pseudonym $q_2$ to a legitimate SN. The legitimate SN sends a AV request for $q_2$ to the HN. If again by chance, $q_2 = p'$, then the HN again forgets $p$, sets $p \leftarrow p'$. HN also generates an unused pseudonym $p'''$ and sets $p' \leftarrow p'''$. Consequently, the current pseudonym state of user $s$ is $\left\lbrace PMSI,P_{new} \right\rbrace \cap \left\lbrace p,p' \right\rbrace = \emptyset$. %See Figure \ref{fig:dos_attack}
 
 %\begin{figure}[]
 %  \centering
@@ -279,10 +280,9 @@ We have considered two different ways to mount this attack. In one way, the pseu
 
 \textbf{With Replacement:} In this case, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
 \begin{eqnarray}
-E\big[ u_a \big] &=& \left(1- \left(1 - \frac{1}{\mathcal{M}}\right)^m - m\left(\frac{1}{\mathcal{M}}\right)\left(1 - \frac{1}{\mathcal{M}}\right)^{\left(m-1 \right)} \right) \label{eqn:avg_with_replacement}
+E\big[ u_a \big] &=& 1- \left(1 - \frac{1}{\mathcal{M}}\right)^m - m\left(\frac{1}{\mathcal{M}}\right)\left(1 - \frac{1}{\mathcal{M}}\right)^{\left(m-1 \right)} \label{eqn:avg_with_replacement}
 \end{eqnarray} 
-
-We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}.
+See the derivation in Appendix \ref{appendix:A}.  We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}.
 
 
 \begin{figure}[]
@@ -302,16 +302,16 @@ We have run a simulation of this attack and found that above model is fairly acc
 
 \textbf{Without Replacement:} In this case the attacker runs two rounds of the attack. In the first round the attacker sends all the pseudonyms in the IMSI space without replacement, means each pseudonym is sent exactly once. Once the first round is completed, the attacker runs the attack for one more round. However, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
 \begin{eqnarray}
-E\big[ u_a \big] = \begin{cases} \frac{1}{\mathcal{M}}\frac{m^2}{2\cdot \mathcal{M}} & \mbox{if } 0 < m \leq \mathcal{M} \\ 
+E\big[ u_a \big] = \begin{cases} \frac{m^2}{2\cdot \mathcal{M}^2} & \mbox{if } 0 < m \leq \mathcal{M} \\ 
 \frac{1}{\mathcal{M}}(2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}}) & \mbox{if } \mathcal{M} < m \leq 2\mathcal{M} \end{cases}
 \label{eqn:without_replacement}
 \end{eqnarray} 
 
-We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}. Note that, this is an estimation where the without-replacement attack is not a distributed attack. Rather the attack is mounted by only a single FUE. In the case of distributed and without replacement attack, the expected percentage of affected users will be less than what is shown in the plot. However, we believe that, the distributed and without replacement attack will have higher number of affected users than that of distributed with replacement attack. %However, it can be a strategic decision of the attacker to choose the value of $\texttt{bot}_{\texttt{load}}$.
+See the derivation in Appendix \ref{appendix:B}. We have run a simulation of this attack and found that above model is fairly accurate. See Figure \ref{fig:simulation_and_modeling}. Note that, this is an estimation where the without-replacement attack is not a distributed attack. Rather the attack is mounted by only a single malicious UE. In the case of distributed and without replacement attack, the expected percentage of affected users will be less than what is shown in the plot. However, we believe that, the distributed and without replacement attack will have higher number of affected users than that of distributed with replacement attack. %However, it can be a strategic decision of the attacker to choose the value of $\texttt{bot}_{\texttt{load}}$.
 
 
 \subsection{How Fatal The DDoS Attack Can be In Practice} \label{sec:how_fatal_ddos}
-The intensity of the attack in practice will depend on two parameters: the size of the botnet and number of pseudonyms send by one bot in unit time. We name these parameters as $\texttt{botnet}_{\texttt{size}}$ and $\texttt{bot}_{\texttt{load}}$ respectively. According to \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds. So, the peak value of $\texttt{bot}_{\texttt{load}}$ can safely be considered as $1$ pseudonyms/second, i.e., 3600 pseudonyms/hour.
+The intensity of the attack will depend on the size of the botnet and number of pseudonyms send by one bot in a unit time. We name these parameters as $\texttt{botnet}_{\texttt{size}}$ and $\texttt{bot}_{\texttt{load}}$ respectively. According to \cite{thesislund}, the EPS AKA has the latency of $550$ milliseconds. So, the peak value of $\texttt{bot}_{\texttt{load}}$ can safely be considered as $1$ pseudonyms/second, i.e., 3600 pseudonyms/hour.
 
 Mobile botnets are on the rise \cite{botnet_ccs09_symbian,botnet_usenix11,botnet_australia_2016}. Many mobile botnets have already been observed, e.g., Geinimi \cite{botnet_geinimi10}, Zeus \cite{botnet_zeus11}, AnserverBot \cite{botnet_anserverbot}, DreamDroid \cite{botnet_dreamdroid11}. A detailed survey of the state of mobile botnets can be found in \cite{botnet_threat15}. In 2011, it was estimated that Dreamdroid was installed on 120,000 mobile devices \cite{botnet_dreamdroid11}. In 2014, a mobile botnet of 650,000 mobile phones made an attack to a server \cite{chinese_spam}. It would not be surprising if we see a mobile botnet consisting tens of millions of mobile bots in near future. However, for the discussion of this paper, we conservatively set the variable $\texttt{botnet}_{\texttt{size}} = 1$ million ($10^6$). See Figure \ref{fig:botplot}, it shows how efficient a botnet of size $10^6$ can be for varied values of $\texttt{bot}_{\texttt{load}}$.
 
@@ -336,10 +336,10 @@ However, it is upon the freedom of the UE to identify itself either with $PMSI$ 
 
 
 \section{Analysis of Our Solution} \label{sec:analysis}
-Our solution needs only three temporary identities comparing with the KM17 scheme which needs 6 temporary identities. However, complexity arises in our solution when the LU message is delayed, lost, or sent multiple times. Also in practice, the LU messages $\texttt{LU}_p,\texttt{LU}_{p'},\texttt{LU}_{p''}$ might arrive in different order because of the inherent characteristics of IP networks. A malicious or buggy SN might send a LU message even when the corresponding AKA was failed or maybe not even run. To understand, how our solution behaves in these unusual but possible situations, we study different categories of states a user $s$ can be in the HN or the UE, based on the relevant variables and eventually construct a global state diagram of our solution. Based on the global state diagram we show how our solution behaves in different situations.
+LU messages maybe delayed, lost, or sent multiple times. Also in practice, the LU messages $\texttt{LU}_p,\texttt{LU}_{p'},\texttt{LU}_{p''}$ might arrive in different order because of the inherent characteristics of IP networks. A malicious or faulty SN might send a LU message even when the corresponding AKA was failed or maybe not even run. To understand, how our solution behaves in these unusual but possible situations, we study different categories of states a user $s$ can be in the HN or the UE, based on the relevant variables and eventually construct a global state diagram of our solution. Based on the global state diagram we show how our solution behaves in different situations.
 
 \subsection{State Diagrams}
-We categorize all the possible states of a user $s$ in HN in two categories. The first category is the one where $p''$ is not null and the second category is the one where $p''$ is null. Based on these two categories, we draw a state diagram as presented in Figure \ref{fig:HN_UE_diagrams} (right side). The notation used in this diagrams are also explained in the diagram and are self explanatory. Hence we are not explaining them in the text to save space. Note that our solution is not sensitive to $\texttt{LU}_{i}$ and $\texttt{LU}_{p}$. Consequently only $\texttt{LU}_{p'}$ and $\texttt{LU}_{p''}$ are shown in the diagram.
+We divide all the possible states of a user $s$ in HN in two categories. The first category is the one where $p''$ is not null and the second category is the one where $p''$ is null. Based on these two categories, we draw a state diagram as presented in Figure \ref{fig:HN_UE_diagrams} (right side). The notation used below is explained in the lower part of Figure 6. Note that our solution is not sensitive to $\texttt{LU}_{i}$ and $\texttt{LU}_{p}$. Consequently only $\texttt{LU}_{p'}$ and $\texttt{LU}_{p''}$ are shown in the diagram.
 
 On the other hand, the UE has only one kind of states as shown in Figure \ref{fig:HN_UE_diagrams} (left side). It always has two pseudonyms $PMSI, P_{new}$. However, $PMSI$ and $P_{new}$ may have different values. The values of $PMSI,P_{new}$ may change only when a successful AKA happens. For a user $s$, we have excluded the possibility of  $\texttt{AKA($x,y$)}$ where $x \notin \left\lbrace PMSI,P_{new} \right\rbrace$ because the UE will receive a wrong $RAND$ in that case. We also have excluded the possibility of $\texttt{AKA($x,y$)}$ where $y \notin \left\lbrace p,p',p'' \right\rbrace$. The reason for this exclusion is discussed in detail in Section \ref{sec:analysis}. However, according to our solution, the UE does not do anything when $\texttt{AKA($x,y$)}$ happens where $x \in \left\lbrace PMSI,P_{new} \right\rbrace$ and $y \in \left\lbrace p,p' \right\rbrace$. Consequently only $\texttt{AKA}(PMSI,p'')$ and $\texttt{AKA}(P_{new},p'')$ are shown in the diagram.
 
@@ -397,7 +397,7 @@ Receiving the LU messages multiple times for the same pseudonym may lead to the 
 %\subsection{Backward Compatibility} 
 \textbf{Backward Compatibility} The solution does not require any changes in the legacy SNs since no existing message format has been changed. The only changes are required in the HN and the SIM. Hence, once an HN implements the solution, any user having the upgraded SIM can enjoy the claimed identity privacy. The solution is still operable if the SIM is not updated even after the HN has implemented the solution. This is because, in our solution, the HN keep accepting the AV requests using the real IMSIs. The effect is, the UE will not be able to extract the new pseudonyms from the $RAND$. Otherwise everything else remains same and operable. 
 
-Our solution builds on top of UMTS/LTE AKA without introducing any new messages or changes in any existing messages. Hence solution will provide the claimed privacy in the presence of SNs from UMTS and LTE networks too. However, our solution does not provide the privacy when the SN is from GSM.
+Our solution builds on top of UMTS/LTE AKA without introducing any new messages or changes in any existing messages. Hence solution will provide the claimed privacy in the presence of SNs from UMTS and LTE networks too. 
 
 
 A legacy SN may fetch multiple AVs from the HN for a single pseudonym $p$. This is not a problem because all those AVs will have the same next pseudonym embedded in them. So, once one of those AVs are used in a successful AKA, the pseudonym of the UE will change and the rest of the fetched AVs in the SN will never be used in any other AKA unless some other user in the same SN is assigned with pseudonym $p$. Let us assume a user $s_1$ receives a new pseudonym $p$ from the HN and sets $P_{new} \leftarrow p$. Then user $s_1$ uses $P_{new}=p$ in an SN where the SN already has a pre-fetched AV for the pseudonym $p$ associated with user $s_2$ (forgotten by both HN and UE of $s_2$). In this case, user $s_1$'s AKA will fail. But it is also very unlikely to happen because of the $SQN$ synchronization. Even if it happens, the user $s_1$ can still use its $PMSI$ and get a new pseudonym.
@@ -445,7 +445,7 @@ But the malicious SN has a large, $1 - n/\mathcal{M}$ chance to guess the pseudo
 
 
 %\subsection{Charging and Lawful Interception}
-\textbf{Charging and LI:} The HN has to keep track of the pseudonyms used by a particular user over time. This is needed, first, in order to bill the (right) user. Since the bills are typically settled once per month, the pseudonym usage records have to be retained for at least one month. Second, this is required for lawful surveillance of telecom traffic. The retention period of the records may be different in different countries, but in general, it will be longer than one month. For example, the European Union's Data Retention Directive \cite{dataretention} required to store call related data for a period of time between six and 24 months. The need of law enforcement agencies to know in real time the true identity of the mobile user can be met by the HN sending that identity to the SN during the connection establishment. But the handling of this identity would be a new feature in the SN. When deploying pseudonym-based enhancements to user identity privacy, some parts in the SN may have to be upgraded to meet law enforcement needs.
+\textbf{Charging and LI:} The HN has to keep track of the pseudonyms used by a particular user over time. This is needed, first, in order to bill the (right) user. Since the bills are typically settled once per month, the pseudonym usage records have to be retained for at least one month. Second, this is required for lawful surveillance of telecom traffic. The retention period of the records may be different in different countries, but in general, it will be longer than one month. For example, the European Union's Data Retention Directive \cite{dataretention} required to store call related data for a period of time between six and 24 months. The need of law enforcement agencies to know in real time the true identity of the mobile user can be met by the HN sending that identity to the SN during the connection establishment. But the handling of this identity would be a new feature in the legacy SN. When deploying pseudonym-based enhancements to user identity privacy, some parts in the SN may have to be upgraded to meet law enforcement needs.
 
 
 
@@ -458,9 +458,6 @@ But the malicious SN has a large, $1 - n/\mathcal{M}$ chance to guess the pseudo
 
 %\subsection{Parameter Choice}
 \textbf{Parameter Choice:} The encryption used in encrypting the pseudonyms will not have forward secrecy since the same key $\kappa$ is used all the time for encrypting pseudonyms. We have used $34$ bits (as the BVR scheme) for next pseudonym in the $RAND$ instead of $4$ bits per digit. This makes sense because the UE can convert it back into the required format. Besides, using less amount of bits for pseudonym encoding leaves room for the length of the $salt$, denoted by $l$ be longer. If the cipher used for encrypting $u=\left(p'',SQN,salt\right)$ has block length $128$, then embedding the same $p''$ in the successive $RAND$s can be randomized by the $48$ bit long $SQN$ and a $46$ bit long $salt$. As the same $p''$ might be sent over successively many $RAND$s, the cipher used for encrypting $u$ to generate $RAND$ should be immune against related plaintext attack \cite{CCS15}. AES is used in UMTS and LTE network for the implementation of authentication function and immune against related plaintext attack. So it would be enough to use AES for encrypting pseudonym also \cite{CCS15}. 
-
-
-
 
 
 \section{Conclusion} \label{sec:conclusion}
@@ -480,5 +477,57 @@ We thank Markku Antikainen for the useful discussion to characterize the DDoS at
 
 
 %\end{thebibliography}
+
+
+\begin{subappendices}
+\renewcommand{\thesection}{\Alph{section}}%
+% or try \arabic{section}
+
+\section{} \label{appendix:A}
+Let us consider that there are $\mathcal{M}$ number of bins, each labeled by a pseudonym or IMSI. Choosing $m$ random pseudonym with replacement and sending them in an attach request can be compared with the classic experiment of throwing $m$ balls to $\mathcal{M}$ bins. The number of affected users by sending $m$ number of attach requests is same as the number of bins that get two or more balls after throwing $m$ balls to $\mathcal{M}$ bins. The probability that a particular bin gets no balls is $\left(1-\frac{1}{\mathcal{M}}\right)^m$. The probability that this bin get exactly one ball is $\binom{m}{1}\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m$. Consequently, the probability that the bin will get two or more balls is:
+\begin{eqnarray*}
+ 1 - \left(1-\frac{1}{\mathcal{M}}\right)^m - \binom{m}{1}\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m
+\end{eqnarray*}
+If $n$ is the number of users in the HN, then by linearity of expectation, the expected number of affected user would be:
+\begin{eqnarray*}
+ n\left(1 - \left(1-\frac{1}{\mathcal{M}}\right)^m - m\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m\right)
+\end{eqnarray*}
+Consequently the expected portion of affected user would be:
+\begin{eqnarray*}
+ E[u_a] = 1 - \left(1-\frac{1}{\mathcal{M}}\right)^m - m\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m
+\end{eqnarray*}
+
+
+\section{} \label{appendix:B}
+In the without replacement attack, the attacker sends all the pseudonyms incrementally starting from $0$ across the whole MSIN space. Let us consider that the pseudonym $x$ is the first attack on a user's $p'$. Once the user's $p'$ is attacked, HN updates $p \leftarrow p'$ and choose a new unused $p'$ randomly. If the attacker sends total $m$ number of pseudonyms to the HN, then the probability that the user's new $p'$ will once again be attacked is: $\frac{m-x}{\mathcal{M}}$. If $n$ is the total number of subscribers in the HN and $m \leq \mathcal{M}$ (first round) then expected number of subscribers affected after sending $m$ pseudonyms is:
+\begin{eqnarray*}
+ \frac{n}{\mathcal{M}}\int_{0}^{m}\frac{m-x}{\mathcal{M}}dx &=& \frac{n}{\mathcal{M}^2}\int_{0}^{m}\left(m-x\right)dx\\
+ &=& \frac{nm}{\mathcal{M}^2}\int_{0}^{m}dx - \frac{n}{\mathcal{M}^2}\int_{0}^{m}xdx\\
+ &=& \frac{nm^2}{\mathcal{M}^2} - \frac{nm^2}{2\mathcal{M}^2}\\
+  &=& \frac{nm^2}{2\mathcal{M}^2}
+\end{eqnarray*}
+Consequently, the expected portion of affected users would be $\frac{m^2}{2\mathcal{M}^2}$ where $m \leq \mathcal{M}$.
+
+\paragraph{} Let us now consider the case where $\mathcal{M} < m \leq 2\mathcal{M}$ (second round). The attacker again sends all the pseudonyms incrementally starting from $0$. Choosing a pseudonym $x$ will affect a user (who has not yet been affected) only if $x$ is the pseudonym of a user who was attacked only once in the first round. The probability of that event is: $1 - \frac{x}{\mathcal{M}}$. So, after sending $m = \mathcal{M} + m'$ number of pseudonyms, the expected number of affected user would be:
+\begin{eqnarray*}
+ & & \frac{n\mathcal{M}^2}{2\mathcal{M}^2} + \frac{n}{\mathcal{M}} \int_{0}^{m'}\left(1 - \frac{x}{\mathcal{M}} \right)dx \\
+ &=&  \frac{n}{2} + \frac{n}{\mathcal{M}} \int_{0}^{m'}\left(1 - \frac{x}{\mathcal{M}} \right)dx \\
+ &=& \frac{n}{2} + \frac{n}{\mathcal{M}^2} \int_{0}^{m'}\left(\mathcal{M} - x \right)dx \\
+ &=& \frac{n}{2} + \frac{n}{\mathcal{M}^2} \int_{0}^{m'} \mathcal{M} dx  - \frac{n}{\mathcal{M}^2} \int_{0}^{m'} x dx \\
+  &=& \frac{n}{2} + \frac{nm'}{\mathcal{M}} - \frac{n}{\mathcal{M}^2} \frac{m'^2}{2} \\
+  &=& \frac{n}{2} + \frac{n\left( m - \mathcal{M} \right)}{\mathcal{M}} - \frac{n}{\mathcal{M}^2} \frac{\left( m - \mathcal{M} \right)^2}{2} \text{(since }  m = \mathcal{M} + m' \text{)}\\
+  &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}}{2} + \left( m - \mathcal{M} \right) - \frac{1}{\mathcal{M}} \frac{\left( m^2 - 2m\mathcal{M} + \mathcal{M}^2 \right)}{2} \right) \\
+  &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}^2 + 2 m\mathcal{M} - 2 \mathcal{M}^2 - m^2 + 2m\mathcal{M} - \mathcal{M}^2}{2\mathcal{M}} \right) \\
+  &=& \frac{n}{\mathcal{M}} \left( \frac{4m\mathcal{M} - 2\mathcal{M}^2 -m^2}{2\mathcal{M}} \right) \\
+    &=& \frac{n}{\mathcal{M}} \left( 2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}} \right) \\
+\end{eqnarray*}
+
+Consequently, the expected portion of affected users would be $\frac{1}{\mathcal{M}} \left( 2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}} \right)$ where $\mathcal{M} < m \leq 2\mathcal{M}$.
+
+\paragraph{} Even though $x$ in the above derivation is a discrete variable, we have used integration. So, the result we have found here is an approximation. We expect it to be a good approximation.
+
+
+\end{subappendices}
+
 
 \end{document}
