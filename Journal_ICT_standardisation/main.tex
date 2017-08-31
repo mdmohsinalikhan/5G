@@ -12,6 +12,9 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,positioning,arrows}
 % for alternatives, see appendix of manual
+\usepackage{url}
+\usepackage{bibspacing}
+
 
 \newtheorem{guess}{Conjecture}
 
@@ -21,6 +24,19 @@
 
 \raggedbottom
 \sloppy\par
+
+
+
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\itemsep}{0pt plus 0.1pt}\settowidth}
+  {}{}
+\apptocmd{\thebibliography}
+  {\small}
+  {}{}
+
 
 \begin{document}
 \begin{opening}
@@ -120,18 +136,9 @@ In the next section we discuss the basic principles of IBE and present a solutio
 \section{Details of the IBE Based Solution} 
 \label{sec:solutions_based_on_IBE}
 \subsection{How IBE works}
-The idea of IBE was proposed by Adi Shamir in 1984 \cite{IBE_shamir}. In IBE, the public and private keys of a receiver are computed from the identity of the receiver in conjunction with the public and private key of a trusted third party respectively. A sender does not need to authenticate the public key of a receiver each time the sender and the receiver agree on a security context. The authenticity of the public key in IBE is guaranteed by the trusted third party. 
+The idea of IBE was proposed by Adi Shamir in 1984 \cite{IBE_shamir}. For last two decades, there have been significant research effort in finding new IBE schemes. For example, Dan Boneh and Matthew Franklin published a fully functional IBE scheme in 2003 \cite{IBE_boneh_franklin} and Clifford Cocks presented an implementation in 2001 \cite{IBE_clifford}. There are plenty of other schemes. There are also a range of international standards e.g., ISO/IEC 11770-3, ISO/IEC 14888-2, ISO/IEC 14888-3, IEEE P1363.3. In this paper we do not investigate into these schemes and standards. Rather we investigate how a general IBE scheme can be used to solve the identity privacy problem in the cellular networks. We believe an appropriate standardized IBE scheme can be chosen later based on other niche practical requirements of the networks. However, we present a very simple description of how IBE works so that the readers can follow our proposed solution easily. 
 
-Usually in IBE, the trusted third party is known as the private key generator (PKG). The private key of the receiver has to be provisioned to the receiver by the PKG. It is impossible to revoke the public key in IBE unless the identity itself is revoked. Please note that a PKG knows the private keys of all the receivers. As a result a PKG can decrypt any message sent by any sender to any receiver. This implies that there must be a very high level of trust in the PKG.
-
-Dan Boneh and Matthew Franklin published a fully functional IBE scheme in 2003 \cite{IBE_boneh_franklin}. The security of this scheme was based on a natural analogue of the computational Diffie-Hellman assumption. Based on this assumption they showed that the new system has chosen ciphertext security in the random oracle model. To make the revocation of public keys easier, this scheme also suggests to use an expiry time as part of the identity of a receiver. We use this suggestion in our solution. Clifford Cocks present an implementation in 2001 \cite{IBE_clifford} and show that the security of the implementation is related to the difficulty of solving the quadratic residuosity problem.
-
-
-\subsection{Existing proposals of Using IBE in 5G Network}
-RFC 6508 \cite{RFC6508} presents an algorithm SAKKE for establishment of a secret shared value. Applications of SAKKE may include a date-time component in their identity to ensure that identities and hence the corresponding private-keys are only valid for a fixed period of time. Solution \#7.11 in 3GPP TR 33.899 \cite{TR33899} uses IBE to protect the long-term identity according to RFC 6508. However, the solution does not address the issue of revocation of the identity based public-keys. RFC 6507 \cite{RFC6507} describes a certificate-less signature scheme based on IBE. In this scheme a string called public validation token (PVT) randomly chosen by the PKG is assigned to an identity. Both the public and private key of a receiver are computed using the PVT along with the receiver's identity. So, the public key associated with an identity can be revoked by revoking the PVT. Solution \#2.14 in 3GPP TR 33.899 presents an authentication framework based on the signature scheme of RFC 6507 and the authentication protocol EAP-TLS. This solution uses the PVT to revoke the public key associated with an identity. However, in this solution it is not clear how a UE can check if the public key of an SN has been revoked or not.
-
-\subsection{The Proposed Solution}
-Next we present a protocol that serves the purposes of both privacy protected identification of UE and mutual authentication between UE and SN. This mutual authentication does not require a contact with the HN each time the protocol is run between a UE and an SN. In our solution we do not use PVT but instead use an expiry time with pre-agreed format. This expiry time can act as the PVT. If the public key of an identity needs to be revoked, the expiry time along with the identity is added to the revocation list. If the identity requires a new public key, the PKG uses another expiry time to compute the private key of the identity. The newly computed private key is then provisioned to the identity along with the the new expiry time. When the expiry time comes, all the public keys computed using the expiry time are automatically revoked. So, the revocation list does not need to include revocations whose expiry time is in the past.
+The fundamental difference between IBE and certificate based public key encryption is how the keys are generated and managed. In IBE, the public key of a receiver is computed as a function of the identity of the receiver in conjunction with the public key of a trusted third party. Similarly, the private key of a receiver is computed as a function of the identity of the receiver in conjunction with the private key of the trusted third party. Since the private key of the trusted third party is known only by the trusted third party, no one else than the trusted third party can compute the private key of a receiver. The trusted third party will provision a reciver with the private key through some other secured channel. Consequently, a sender does not need to authenticate the public key of a receiver. In IBE, the authenticity of the public key of a receiver is guaranteed by the trusted third party. Usually in IBE, the trusted third party is known as the private key generator (PKG). Figure \ref{fig:how_IBE_works} shows the mechanism.
 
 
 \begin{figure}
@@ -144,6 +151,24 @@ Next we present a protocol that serves the purposes of both privacy protected id
 \label{fig:how_IBE_works}       % Give a unique label
 \end{center}
 \end{figure}
+
+Relevant constraints of an IBE scheme:
+\begin{enumerate}
+ \item The private key of the receiver has to be provisioned to the receiver by the PKG.
+ \item It is impossible to revoke the public key in IBE unless the identity itself is revoked.
+ \item Since a PKG knows the private keys of all the receivers, a PKG can decrypt any message sent by any sender to any receiver. This implies that there must be a very high level of trust in the PKG.
+\end{enumerate}
+
+\subsection{Existing proposals of Using IBE in Cellular Network}
+Geir M. K{\o}ien proposed a privacy enhanced mututal authentication protocol in LTE in 2013 \cite{koienibe} based on IBE. The author named the proposed protocol as PEMMA. In PEMMA, the HN is the PKG and the SNs own public-private key pairs. In PEMMA the UE encrypts the IMSI using the public key of the SN before sending the IMSI. Consequently PEMMA can conceal the IMSI. However, the author designed PEMMA so that it requires all the three parties (UE,SN and HN) to be online during the authentication. Cosequently PEMMA can not support situation where the SN want to use a pre fetched AV. Also, in PEMMA, the authentication delay would most likely be dominated by the physical distance between the SN and the HN when they are in different continents. Besides, PEMMA requires an SN to agree with all the HNs on the same expiry date for its public key. It is not likely that a particular SN will be trusted to the same extent by all the HNs. 
+
+RFC 6508 \cite{RFC6508} presents an algorithm SAKKE for establishment of a secret shared value. Applications of SAKKE may include a date-time component in their identity to ensure that identities and hence the corresponding private-keys are only valid for a fixed period of time. Solution \#7.11 in 3GPP TR 33.899 \cite{TR33899} uses IBE to protect the long-term identity according to RFC 6508. However, the solution does not address the issue of revocation of the identity based public-keys. RFC 6507 \cite{RFC6507} describes a certificate-less signature scheme based on IBE. In this scheme a string called public validation token (PVT) randomly chosen by the PKG is assigned to an identity. Both the public and private key of a receiver are computed using the PVT along with the receiver's identity. So, the public key associated with an identity can be revoked by revoking the PVT. Solution \#2.14 in 3GPP TR 33.899 presents an authentication framework based on the signature scheme of RFC 6507 and the authentication protocol EAP-TLS. This solution uses the PVT to revoke the public key associated with an identity. However, in this solution it is not clear how a UE can check if the public key of an SN has been revoked or not.
+
+\subsection{The Proposed Solution}
+Next we present a protocol that serves the purposes of both privacy protected identification of UE and mutual authentication between UE and SN. This mutual authentication does not require a contact with the HN each time the protocol is run between a UE and an SN. In our solution we do not use PVT but instead use an expiry time with pre-agreed format. This expiry time can act as the PVT. If the public key of an identity needs to be revoked, the expiry time along with the identity is added to the revocation list. If the identity requires a new public key, the PKG uses another expiry time to compute the private key of the identity. The newly computed private key is then provisioned to the identity along with the the new expiry time. When the expiry time comes, all the public keys computed using the expiry time are automatically revoked. So, the revocation list does not need to include revocations whose expiry time is in the past.
+
+
+
 
 
 
@@ -217,388 +242,6 @@ If concealing $hnid$ is essential, then the only applicable solution is Certv1, 
 
 \subsubsection{Acknowledgement.}
 \label{sec:acknowledgement}
-We would like to thank Kimmo J\"arvinen for the useful comments and Jarno Niklas Alanko for his valuable feedback.
-
-The ends  of words and sentences are marked
-  by   spaces. It  doesn't matter how many
-spaces    you type; one is as good as 100.  The
-end of   a line counts as a space.
-
-One   or more   blank lines denote the  end
-of  a paragraph.
-
-Since any number of consecutive spaces are treated like a single
-one, the formatting of the input file makes no difference to
-      \TeX,         % The \TeX command generates the TeX logo.
-but it makes a difference to you.
-When you use
-      \LaTeX,       % The \LaTeX command generates the LaTeX logo.
-making your input file as easy to read as possible
-will be a great help as you write your document and when you
-change it.  This sample file shows how you can add comments to
-your own input file.
-
-Because printing is different from typewriting, there are a
-number of things that you have to do differently when preparing
-an input file than if you were just typing the document directly.
-Quotation marks like
-       ``this''
-have to be handled specially, as do quotes within quotes:
-       ``\,`this'                  % \, separates the double and single quote.
-    is what I just
-    wrote, not  `that'\,''.
-
-Dashes come in three sizes: an
-       intra-word
-dash, a medium dash for number ranges like
-       1--2,
-and a punctuation
-       dash---like
-this.
-
-A sentence-ending space should be larger than the space between words
-within a sentence.  You sometimes have to type special commands in
-conjunction with punctuation characters to get this right, as in the
-following sentence.
-       Gnats, gnus, etc.\    % `\ ' makes an inter-word space.
-       all begin with G\@.   % \@ marks end-of-sentence punctuation.
-You should check the spaces after periods when reading your output to
-make sure you haven't forgotten any special cases.
-Generating an ellipsis
-       \ldots\    % `\ ' needed because TeX ignores spaces after
-          % command names like \ldots made from \ + letters.
-          %
-          % Note how a `%' character causes TeX to ignore the
-          % end of the input line, so these blank lines do not
-          % start a new paragraph.
-with the right spacing around the periods
-requires a special  command.
-
-\TeX\ interprets some common characters as commands, so you must type
-special commands to generate them.  These characters include the
-following:
-       \$ \& \% \# \{ and~\}.
-
-In printing, text is emphasized by using an
-       {\em italic\/}  % The \/ command produces the tiny extra space that
-               % should be added between a slanted and a following
-               % unslanted letter.
-type style.
-
-\begin{em}
-   A long segment of text can also be emphasized in this way.  Text within
-   such a segment given additional emphasis
-      with\/ {\em Roman}
-   type.  Italic type loses its ability to emphasize and become simply
-   distracting when used excessively.
-\end{em}
-
-It is sometimes necessary to prevent \TeX\ from breaking a line where
-it might otherwise do so.  This may be at a space, as between the
-``Mr.'' and ``Jones'' in
-       ``Mr.~Jones'',        % ~ produces an unbreakable interword space.
-or within a word---especially when the word is a symbol like
-       \mbox{\em itemnum\/}
-that makes little sense when hyphenated across
-       lines.
-
-
-
-
-
-\TeX\ is good at typesetting mathematical formulas like
-       \( x-3y = 7 \)
-or
-       \( a_{1} > x^{2n} / y^{2n} > x' \).
-Remember that a letter like
-       $x$        % $ ... $  and  \( ... \)  are equivalent
-is a formula when it denotes a mathematical symbol, and should
-be treated as one.
-
-
-\section{Notes}
-Footnotes\footnote{This is an example of a footnote.}
-pose no problem.\footnote{And another one.}
-
-
-\section{Displayed Text}
-
-The following is an example of an {\em itemized} list.
-\begin{itemize}
-\item  This is the first item of an itemized list.  Each item
-      in the list is marked with a ``tick''.  The document
-      style determines what kind of tick mark is used.
-\item  This is the second item of the list.  It contains another
-      list nested inside it.  The inner list is an {\em enumerated}
-      list.
-    \begin{enumerate}
-       \item This is the first item of an enumerated list that
-            is nested within the itemized list.
-          \item This is the second item of the inner list.  \LaTeX\
-            allows you to nest lists deeper than you really should.
-      \end{enumerate}
-      This is the rest of the second item of the outer list.  It
-      is no more interesting than any other part of the item.
-   \item  This is the third item of the list.
-\end{itemize}
-
-
-The following is an example of an {\em enumerated} list, two levels deep.
-\begin{enumerate}
-\item  This is the first item of an enumerated list.  Each item
-      in the list is marked with a letter or number.  The document
-      style determines what kind of mark is used.
-\item  This is the second item of the list.  It contains another
-      enumerated list nested inside it.
-    \begin{enumerate}
-       \item This is the first item of an enumerated list that
-            is nested within the enumerated list.
-          \item This is the second item of the inner list.  \LaTeX\
-            allows you to nest lists deeper than you really should.
-      \end{enumerate}
-      This is the rest of the second item of the outer list.  It
-      is no more interesting than any other part of the item.
-   \item  This is the third item of the list.
-\end{enumerate}
-
-
-The following is an example of a {\em description} list.
-\begin{description}
-\item[Cow] Highly intelligent animal that can produce milk out of grass.
-\item[Horse] Less intelligent animal renowned for its legs.
-\item[Human being] Not so intelligent animal that thinks that it can think.
-\end{description}
-
-Quotations are implemented as lists. Here comes a sample quotation,
-repeated once to test paragraph indentation of additional
-paragraphs.
-\begin{quotation}
-Quotations are implemented as lists. Here comes a sample quotation,
-repeated once to test paragraph indentation of additional paragraphs.
-
-Quotations are implemented as lists. Here comes a sample quotation,
-repeated once to test paragraph indentation of additional paragraphs.
-\end{quotation}
-
-Mathematical formulas may also be displayed.  A displayed formula is
-one-line long; multiline formulas require special formatting
-instructions.
-   \[  x' + y^{2} = z_{i}^{2}\]
-Don't start a paragraph with a displayed equation, nor make
-one a paragraph by itself.
-
-Example of a theorem:
-
-
-\begin{guess}
-All conjectures are interesting, but some conjectures are more
-interesting than others.
-\end{guess}
-
-
-\section{Tables and Figures}
-
-Cross reference should be labelled, e.g., as you can see in
-Table~\ref{sphericcase} and also in Table~\ref{parset}.
-
-
-\begin{table} %
-\caption[]{Parameter set used in the model of Bunt \cite{Bunt}. }\label{parset}
-\begin{tabular}{lrl}
-\hline
-$Q_{s,\max}$   & [g/g DM h]  & 0.18\\
-$K_{s}$       & [g/L]        & 1.0\\
-$Y_{x/s}$     & [g DM/g]     & 0.5\\
-$Y_{p/s}$     & [g/g]        & 0.854\\
-$Q_{p,\max}$   & [g/g DM h]  & 0.0045\\
-$\mu_{\rm crit}$  & [h$^{-1}$]  & 0.01\\
-$k_{h}$       & [h$^{-1}$]  & 0.002\\
-$m_{s}$       & [g/g DM h]  & 0.025\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table*}
-\caption[]{The spherical case ($I_1=0$, $I_2=0$).}
-\label{sphericcase}
-\begin{tabular}{crrrrc}
-\hline
-Equil. \\
-Points & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} & \multicolumn{1}{c}{$C$} &
-S \\
-\hline
-$~~L_1$ & $-$2.485252241 & 0.000000000 & 0.017100631 & 8.230711648 & U \\
-$~~L_2$ &    0.000000000 & 0.000000000 & 3.068883732 & 0.000000000 & S \\
-$~~L_3$ &    0.009869059 & 0.000000000 & 4.756386544 & $-$0.000057922 & U \\
-$~~L_4$ &    0.210589855 & 0.000000000 & $-$0.007021459 & 9.440510897 & U \\
-$~~L_5$ &    0.455926604 & 0.000000000 & $-$0.212446624 & 7.586126667 & U \\
-$~~L_6$ &    0.667031314 & 0.000000000 & 0.529879957 & 3.497660052 & U \\
-$~~L_7$ &    2.164386674 & 0.000000000 & $-$0.169308438 & 6.866562449 & U \\
-$~~L_8$ &    0.560414471 & 0.421735658 & $-$0.093667445 & 9.241525367 & U \\
-$~~L_9$ &    0.560414471 & $-$0.421735658 & $-$0.093667445 & 9.241525367 & U
-\\
-$~~L_{10}$ & 1.472523232 & 1.393484549 & $-$0.083801333 & 6.733436505 & U \\
-$~~L_{11}$ & 1.472523232 & $-$1.393484549 & $-$0.083801333 & 6.733436505 & U
-\\ \hline
-\end{tabular}
-\end{table*}
-
-
-A major point of difference lies in the value of the specific
-production rate $\pi$ for large values of the specific growth rate
-$\mu$.  Already in the early publications \cite{Falzon87} it
-appeared that high glucose concentrations in the production phase
-are well correlated with a low penicillin yield (the `glucose
-effect'). It has been confirmed recently
-\cite{Bunt,Cahour-thesis,BrownAndBurton,Carr-Goldstein}
-that
-high glucose concentrations inhibit the synthesis of the enzymes of the
-penicillin pathway, but not the actual penicillin biosynthesis.
-In other words, glucose represses (and not inhibits) the penicillin
-biosynthesis.
-
-These findings do not contradict the results of
-\cite{Chin88-book} (on which Bunt \cite{Bunt} based their
-production kinetics) and of \cite{ChinThesis} which were
-obtained for continuous culture fermentations.  Because for high
-values of the specific growth rate $\mu$ it is most likely (as shall
-be discussed below) that maintenance metabolism occurs, it can be
-shown that in steady state continuous culture conditions, and with
-$\mu$ described by a Monod kinetics
-\begin{equation}
-    C_{s}  =  K_{M} \frac{\mu/\mu_{x}}{1-\mu/\mu_{x}} \label{cs}
-\end{equation}
-Pirt and Rhigelato determined $\pi$ for $\mu$ between
-$0.023$ and $0.086$ h$^{-1}$.
-They also reported a value $\mu_{x} \approx 0.095$
-h$^{-1}$, so that for their experiments $\mu/\mu_{x}$ is in the range
-of $0.24$ to $0.9$.
-Substituting $K _M$ in Eq. (\ref{cs}) by
-the value $K_{M}=1$ g/L as used by Bunt \cite{Bunt}, one finds
-with the above equation $0.3 < C_{s} < 9$ g/L. This agrees well with
-the work of Bunt \cite{Bunt}, who reported that penicillin biosynthesis
-repression only occurs at glucose concentrations from $C_{s}=10$ g/L on.
-The conclusion is that the glucose concentrations in the experiments of
-Pirt and Rhigelato probably were too low for glucose repression to be
-detected. The experimental data published by Ryu and Hospodka
-are not detailed sufficiently to permit a similar analysis.
-
-
-
-\begin{table}
-\caption[]{Parameter sets used by Bajpai and Reu{\ss}.}
-\begin{tabular}{lrll}
-\hline
-\multicolumn{2}{l}{\it parameter} & {\it Set 1} & {\it Set 2}\\
-\hline
-$\mu_{x}$           & [h$^{-1}$]  & 0.092       & 0.11          \\
-$K_{x}$             & [g/g DM]     & 0.15        & 0.006         \\
-$\mu_{p}$           & [g/g DM h]  & 0.005       & 0.004         \\
-$K_{p}$             & [g/L]        & 0.0002      & 0.0001        \\
-$K_{i}$             & [g/L]        & 0.1         & 0.1           \\
-$Y_{x/s}$           & [g DM/g]     & 0.45        & 0.47          \\
-$Y_{p/s}$           & [g/g]        & 0.9         & 1.2           \\
-$k_{h}$             & [h$^{-1}$]  & 0.04        & 0.01          \\
-$m_{s}$             & [g/g DM h]  & 0.014       & 0.029         \\
-\hline
-\end{tabular}
-\end{table}
-
-Bajpai and Reu{\ss} decided to disregard the
-differences between time constants for the two regulation mechanisms
-(glucose repression or inhibition) because of the
-relatively very long fermentation times, and therefore proposed a Haldane
-expression for $\pi$.
-
-It is interesting that simulations with the \cite{Bunt} model for the
-initial conditions given by these authors indicate that, when the
-remaining substrate is fed at a constant rate, a considerable and
-unrealistic amount of penicillin is
-produced when the glucose concentration is still very high \cite{CarberryCL88}
-Simulations with the Bajpai and Reu\ss\ model correctly predict almost
-no penicillin production in similar conditions.
-
-
-The maintenance coefficient used by Bunt \cite{Bunt}
-($m_{s}=0.025$ g/g DM h) corresponds well to
-the value $m_{s}=0.029$ g/g DM h (Set 2 of \cite{BuchananRBES}), to the
-value $m_{s}=0.024$ g/g DM h reported in \cite{MMI2-d3}, and to the
-value used in \cite{CawseyIJMMS} ($m_{s}=0.022$ g/g DM h) (1983).
-However, these values differ from the value in Set 1 of
-\cite{BuchananRBES} ($m_{s}=0.014$ g/g DM h).
-It is not clear where this difference originated from.
-Simulations indicated that the dynamic behaviour of the model is rather
-sensitive with respect to the value of $m_{s}$.
-
-In the model of Bunt \cite{Bunt}, at severe substrate limitation
-conditions, and thus most probably corresponding to endogenous
-metabolic behaviour, the biomass consumption due to maintenance and
-production requirements may exceed the conversion of substrate into
-biomass and $\mu$ eventually may become negative. This situation may
-occur at the end of the growth phase during a fed-batch
-fermentation.  For these conditions $\pi$ is not defined. A
-straightforward extension of the $\pi(\mu)$ kinetics (10) could be
-$\pi(\mu \leq 0)=0$, but there are some biochemical indications that
-the penicillin biosynthesis actually does not stop in that case.
-
-\begin{figure}
-\centerline{\includegraphics[width=3in]{bridge}}
-\caption[]{Lange ijzeren brug, Dordrecht, The Netherlands.}%
-\label{bridge}
-\end{figure}
-
-Sample of cross-reference to a figure:
-Figure~\ref{bridge} shows a color image.
-
-\section{Headings}
-
-\subsection{Subsection}
-\cite{Carr-Goldstein,Cohen-Jones88-book}
-based their model on balancing methods and biochemical
-knowledge. The original model (1980) contained an equation for the
-oxygen dynamics which has been omitted in a second paper
-(1981). This simplified model shall be discussed here.
-
-\subsubsection{Subsubsection}
-Carr and Goldstein \cite{Carr-Goldstein}
-based their model on balancing methods and biochemical
-knowledge. The original model (1980) contained an equation for the
-oxygen dynamics which has been omitted in a second paper
-(1981). This simplified model shall be discussed here.
-
-\paragraph{Paragraph.}
-Carr and Goldstein \cite{Carr-Goldstein}
-based their model on balancing methods and biochemical
-knowledge. The original model (1980) contained an equation for the
-oxygen dynamics which has been omitted in a second paper
-(1981). This simplified model shall be discussed here.
-
-\section{Equations and the Like}
-
-Two equations:
-\begin{equation}
-    C_{s}  =  K_{M} \frac{\mu/\mu_{x}}{1-\mu/\mu_{x}} \label{ccs}
-\end{equation}
-and
-\begin{equation}
-    G = \frac{P_{\rm opt} - P_{\rm ref}}{P_{\rm ref}} \mbox{\ }100 \mbox{\ }(\%)
-\end{equation}
-
-Two equation arrays:
-\begin{eqnarray}
-  \frac{dS}{dt} & = & - \sigma X + s_{F} F\\
-  \frac{dX}{dt} & = &   \mu    X\\
-  \frac{dP}{dt} & = &   \pi    X - k_{h} P\\
-  \frac{dV}{dt} & = &   F
-\end{eqnarray}
-and
-\begin{eqnarray}
- \mu_{\rm substr} & = & \mu_{x} \frac{C_{s}}{K_{x}C_{x}+C_{s}}  \\
- \mu              & = & \mu_{\rm substr} - Y_{x/s}(1-H(C_{s}))(m_{s}+\pi /Y_{p/s}) \\
- \sigma           & = & \mu_{\rm substr}/Y_{x/s}+ H(C_{s}) (m_{s}+ \pi /Y_{p/s})
-\end{eqnarray}
-
-Let us also recall the very first equation \ref{cs}.
 
 \appendix
 
@@ -611,7 +254,7 @@ Some text.
 \nocite{*} % add all entries from sample.bib
 
 
-\bibliography{plain}
+\bibliographystyle{plain}
 \bibliography{mybib}{}
 
 
