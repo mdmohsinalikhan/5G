@@ -164,3 +164,28 @@
  pages = {165--184},
  publisher = {Springer International Publishing},
 }
+
+
+@INPROCEEDINGS{koienibe, 
+author={G. M. K⊘ien}, 
+booktitle={2013 IEEE 9th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob)}, 
+title={Privacy enhanced mutual authentication in LTE}, 
+year={2013}, 
+pages={614-621}, 
+keywords={Long Term Evolution;data privacy;home networks;message authentication;public key cryptography;telecommunication security;telecommunication signalling;E-UTRAN system;EPS AV;EPS authentication vector;HPLMN;IBE;LTE-LTE-Advanced systems;M-TMSI;PKG;VPLMN;dummy identity;encrypted IMSI tracking;encrypted identity information element;home network;identity privacy;identity-based encryption;mobile nation code;mobile network code;online 3-way security context;privacy enhanced mutual authentication;private key generator;signalling mechanisms;user equipment identity;visited network}, 
+doi={10.1109/WiMOB.2013.6673421}, 
+ISSN={2160-4886}, 
+month={Oct},}
+
+@ARTICLE{IEE_transactions_mobile_computing_2014, 
+author={H. J. Jo and J. H. Paik and D. H. Lee}, 
+journal={IEEE Transactions on Mobile Computing}, 
+title={Efficient Privacy-Preserving Authentication in Wireless Mobile Networks}, 
+year={2014}, 
+volume={13}, 
+number={7}, 
+pages={1469-1481}, 
+keywords={cryptographic protocols;mobile radio;telecommunication security;Canetti-Krawczyk model;SIM card;authentication efficiency;communication efficiency;home servers;location privacy;privacy-preserving authentication;pseudo-identity-based signcryption scheme;revocation;secure authentication;signcryption algorithm;storage capacity;subscriber identification module;three-round anonymous roaming protocol;wireless mobile networks;wireless network services;Authentication;Mobile computing;Privacy;Protocols;Roaming;Servers;Algorithm/protocol design and analysis;Anonymity;Canetti-Krawczyk (CK) model;Network Protocols;Network-level security and protection;authentication;privacy;revocation;secure roaming}, 
+doi={10.1109/TMC.2013.134}, 
+ISSN={1536-1233}, 
+month={July},}

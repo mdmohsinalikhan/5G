@@ -9,4 +9,12 @@
 8. add the comparison table
 9. check the broken references
 10. add biography at the end
+11. is DoS possible on IEE paper ----> pseudonym descynchronization
+12. parameter choice - expiry time for SNs and UEs
+13. mention that it is an ME based solution, not SIM based
+14. what happens when the SIM is swtiched to another phone
+15. how the HN know which AV (UMTS/LTE) is to prepare
+16. ET standardization
+17. increased traffic due to key revocation?
+18. discuss that an AKA will follow soon
 

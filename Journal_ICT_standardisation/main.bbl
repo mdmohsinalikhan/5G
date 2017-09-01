@@ -71,6 +71,13 @@ Philip Ginzboorg and Valtteri Niemi.
 \newblock In {\em Proceedings of the 9th EAI International Conference on Mobile
   Multimedia Communications}, MobiMedia '16, pages 167--175. ICST, 2016.
 
+\bibitem{IEE_transactions_mobile_computing_2014}
+H.~J. Jo, J.~H. Paik, and D.~H. Lee.
+\newblock Efficient privacy-preserving authentication in wireless mobile
+  networks.
+\newblock {\em IEEE Transactions on Mobile Computing}, 13(7):1469--1481, July
+  2014.
+
 \bibitem{SSR15}
 Mohammed Shafiul~Alam Khan and Chris~J. Mitchell.
 \newblock {I}mproving {A}ir {I}nterface {U}ser {P}rivacy in {M}obile

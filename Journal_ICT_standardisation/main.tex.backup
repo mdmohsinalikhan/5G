@@ -160,16 +160,36 @@ Relevant constraints of an IBE scheme:
 \end{enumerate}
 
 \subsection{Existing proposals of Using IBE in Cellular Network}
-Geir M. K{\o}ien proposed a privacy enhanced mututal authentication protocol in LTE in 2013 \cite{koienibe} based on IBE. The author named the proposed protocol as PEMMA. In PEMMA, the HN is the PKG and the SNs own public-private key pairs. In PEMMA the UE encrypts the IMSI using the public key of the SN before sending the IMSI. Consequently PEMMA can conceal the IMSI. However, the author designed PEMMA so that it requires all the three parties (UE,SN and HN) to be online during the authentication. Cosequently PEMMA can not support situation where the SN might have a pre fetched AV. Besides PEMMA requires an SN to agree with all the HNs on the same expiry date for its public key. It is not likely that a particular SN will be trusted to the same extent by all the HNs. 
+Geir M. K{\o}ien proposed a privacy enhanced mututal authentication protocol in LTE in 2013 \cite{koienibe} based on IBE. The author named the proposed protocol as PEMMA. In PEMMA, the HN is the PKG and the SNs own public-private key pairs. In PEMMA the UE encrypts the IMSI using the public key of the SN before sending the IMSI. Consequently PEMMA can conceal the IMSI. However, the author designed PEMMA so that it requires all the three parties (UE,SN and HN) to be online during the authentication. Consequently PEMMA can not support the situation where the SN want to use a pre-fetched AV. Also, in PEMMA, the authentication delay would most likely be dominated by the physical distance between the SN and the HN when they are in different continents. It would be desirable to have an authentication protocol that can run even without contacting the HN when the HN is far from the SN. Besides, PEMMA requires an SN to agree with all the HNs on the same expiry date for its public key. It is not likely that a particular SN will be trusted to the same extent by all the HNs.
+
+
+Jo, Paik and Lee proposed a privacy-preserving authentication protocol in wireless mobile network in 2014 \cite{IEE_transactions_mobile_computing_2014} based on a pseudo-identity-based signcryption scheme. In this protocol the authors do not discuss how the public key of the SNs can be revoked. This protocol is not designed for the 3GPP defined cellular networks specifically but for any wireless mobile network. Naturally there are 3GPP specific requirements that the protocol does not address at all, e.g., the identity of a user is kept secret even from the SN which is not allowed in 3GPP networks. 
 
 RFC 6508 \cite{RFC6508} presents an algorithm SAKKE for establishment of a secret shared value. Applications of SAKKE may include a date-time component in their identity to ensure that identities and hence the corresponding private-keys are only valid for a fixed period of time. Solution \#7.11 in 3GPP TR 33.899 \cite{TR33899} uses IBE to protect the long-term identity according to RFC 6508. However, the solution does not address the issue of revocation of the identity based public-keys. RFC 6507 \cite{RFC6507} describes a certificate-less signature scheme based on IBE. In this scheme a string called public validation token (PVT) randomly chosen by the PKG is assigned to an identity. Both the public and private key of a receiver are computed using the PVT along with the receiver's identity. So, the public key associated with an identity can be revoked by revoking the PVT. Solution \#2.14 in 3GPP TR 33.899 presents an authentication framework based on the signature scheme of RFC 6507 and the authentication protocol EAP-TLS. This solution uses the PVT to revoke the public key associated with an identity. However, in this solution it is not clear how a UE can check if the public key of an SN has been revoked or not.
 
 \subsection{The Proposed Solution}
-Next we present a protocol that serves the purposes of both privacy protected identification of UE and mutual authentication between UE and SN. This mutual authentication does not require a contact with the HN each time the protocol is run between a UE and an SN. In our solution we do not use PVT but instead use an expiry time with pre-agreed format. This expiry time can act as the PVT. If the public key of an identity needs to be revoked, the expiry time along with the identity is added to the revocation list. If the identity requires a new public key, the PKG uses another expiry time to compute the private key of the identity. The newly computed private key is then provisioned to the identity along with the the new expiry time. When the expiry time comes, all the public keys computed using the expiry time are automatically revoked. So, the revocation list does not need to include revocations whose expiry time is in the past.
+Next we present a protocol that serves the purposes of both privacy protected identification of UE and mutual authentication between UE and SN. This mutual authentication does not require a contact with the HN each time the protocol is run between a UE and an SN. Hence a fast mutual authentication is achieved when SN and HN are located far from each other. We call this protocol as privacy enhanced fast mutual authentication (PEFMA).
 
 
+In PEFMA, the HN is the PKG. PEFMA does not use PVT but instead use an expiry time (ET). This expiry time can act as the PVT. HN computes private keys of all of its users using their IMSIs and suitably chosen ETs. These private keys are provisioned to the UEs using a secured channel. The SNs which have a roaming agreements with the HN are also provisioned with their respective private keys by the HN. Before the expiration of the ET, a UE or an SN may request for a new private key to the HN. The HN would choose a new ET, compute the private key and send the new private key to the UE or to the SN in a secure channel. A UE may request for a new private key if the UE believes that the private key has been compromised.
 
 
+PEFMA protocol may run only when a UE is asked to reveal its IMSI. If a UE identifies itself using a temporary identity and the SN can not recognize the temporary identity, the SN asks the UE to reveal the IMSI. In this case the UE encrypts the IMSI using the public key of the SN and send the encrypted IMSI to the SN. Since the private key of the SN is known only by the SN and the HN, no one else except the SN and HN can decrypt it. If the temporary identity used by the user is recognized by the SN then the SN may run the PEFMA protocol if there is no appropriate pre-fetched AV available in the SN and the HN is far from the SN. If the HN is near, the SN will fetch an AV and run the traditional UMTS or LTE AKA. If there is already an appropriate pre-fetched AV available, the SN runs the appropriate AKA protocol. Figure \ref{fig:when_pefma_runs} shows pictorially when PEFMA is run.
+
+
+If the public key of a user needs to be revoked, the expiry time along with the identity of the user is added to the revocation list. If the user requires a new public key (e.g., the old one is compromised), the PKG uses another expiry time to compute the private key of the user. The newly computed private key is then provisioned to the identity along with the the new expiry time. When the expiry time comes, all the public keys computed using the expiry time are automatically revoked. So, the revocation list does not need to include revocations whose expiry time is in the past. 
+
+
+\begin{figure}
+\begin{center}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[height=6cm]{when_to_run_PEFMA.eps}
+% figure caption is below the figure
+\caption{When PEFMA Runs (decided by the SN)}
+\label{fig:when_pefma_runs}       % Give a unique label
+\end{center}
+\end{figure}
 
 
 \begin{figure}
@@ -185,33 +205,75 @@ Next we present a protocol that serves the purposes of both privacy protected id
 
 
 
-\subsubsection{Description of the proposed solution}
-The UE's HN acts as the PKG. The solution is pictorially presented in Figure \ref{fig:solution_ibc}. It has two different phases. In the first phase, the key generations and provisioning take place. In the second phase the identification and authentication happens. The description follows:
+\subsubsection{PEFMA}
+The UE's HN acts as the PKG. The solution is pictorially presented in Figure \ref{fig:PEFMA}. The description follows:
+
+\begin{itemize}
+\item[1:] The SN makes an IMSI Inquiry to the UE. 
+\item[2:] The UE computes $e_{snid} = g\left(e_{hnid},snid||ET \right)$
+\item[3:] The UE sends $E(IMSI||ET_{IMSI}||RAND1,e_{snid}),hnid,hnkid,ET$ to the SN. Here $ET_{IMSI}$ is the expiry time of the public-private key pair of the UE. $RAND1$ is a random challenge chosen by the UE using a cryptograhically secure random number generator function. $hnkid$ is the key ID of the HN that is used by the UE to compute $e_{snid}$
+\item[4.0:] The SN looks for a private key $d_{snid}$ that is compatible with $hnkid$ and $ET$. If not found, it jumps to step $7$, otherwise continues from step $4$.
+\item[4.1:] The SN extract $IMSI,ET_{IMSI}$ and $RAND1$ received in step $3$. The SN also computes the public key of the UE $e_{IMSI}$ using the public key of the HN identified by $hnkid$ as $e_{IMSI} = g(e_{hnid},IMSI||ET_{IMSI})$.
+\item[4.2:] If the SN has a pre-fetched UMTS/LTE AV for IMSI then jump to step $10$.
+\item[5:] The SN chooses a random challenge $RAND2$ using a cryptograhically secure random number generator function. The SN encrypts both $RAND1$ and $RAND2$ using the public key of the UE computed in step $4.1$. The SN also signs the message $IMSI||RAND1||RAND2$ using its private key $d_{snid}$ and send the signature to the UE so that the UE can verify it using the SN's public key. 
+\item[6:] The UE extracts $RAND1$ and $RAND2$ using its private key $d_{IMSI}$. It verifies the signature received in step $5$ using the public key $e_{snid}$. If the verification is successful, the UE signs the message $IMSI||RAND1||RAND2$ using its private key $d_{IMSI}$. The SN verifies the signature using the public key $e_{snid}$. If this verification is successful then authentication is completed and both the UE and SN are mutually authenticated to each other. Based on $RAND1$ and $RAND2$ they can create shared secrets $CK,IK$ or $K_{ASME}$ as required using key derivation functions.
+
+\item[7:] If the SN does not have the appropriate private key to decrypt the message it received in step $3$, it forwards the received message to the HN. The SN might not have the appropriate private key because the UE is using an $ET$ for which the SN has not been provisioned with a private key by the HN. Another reason could be that the UE and SN are having different public keys $e_{hnid}$ identified by different $hnkid$. The reason for having different public keys $e_{hnid}$ could be that the HN has switched to a new public-private key pair while either the UE or the SN is not yet aware of the change.
+\item[8:] Given $snid,hnkid$ and $ET$, the HN can compute the appropriate $d_{snid}$. The HN then extracts $IMSI,ET_{IMSI}$ and $RAND1$ using $d_{snid}$. The HN then prepares an appropriate (UMTS/LTE) $AV$ for the received $IMSI$.
+\item[9:] The HN forwards the $IMSI,AV$ and the private key $d_{snid}$ to the SN. The SN stores the $d_{snid}$ mapped with the respective $hnkid$ and $ET$ so that next time a UE uses the same $hnkid,ET$, the SN would not need to contact the HN.
+\item[10:] The SN has an $AV$ and based on the $AV$ it sends an UMTS or an LTE authentication request to the UE.
+\item[11:] The UE sends the appropriate UMTS or LTE authentication response to the SN.
+\end{itemize}
+
+
+\subsection{Key provisioning}
+The UEs and the SNs need to be provisioned with their respective private keys and the HN's public key. Keys will be expired and new keys will be needed to be provisioned. Keys might be compromised and be needed to be revoked (key revocation is discussed in next section). Once a key is revoked, a new key is needed to be provisioned to the appropriate entities (either to UE or SN, or both).
+
+An SN is provisioned with the public key $d_{hnid}$ of an HN and with a key ID $hnkid$ first time when a roaming contract is signed between the SN and the HN. When the public key of the HN expires or the private key be compromised (an extremely rare event), the HN chooses a new public-private key pair. This new public key along with the new $hnkid$ is provisioned by the HN to all the SNs who have a roaming contract with the HN. There is already a secure channel between a HN and an SN, hence the keys can be provisioned with both confidentiality and integrity protection. The SN does not request for a new private key even if the SN believes that its private key has been compromised. Because there is no way to inform the UE about it and consequently getting a new private key does not not help in anyway. When the expiry time of the compromised private key comes, the key is automatically expired. Hence, the expiry time of the public-private key pairs of SNs' is recommended to be near in the future.
+
+We design our solution so that no change is required in the USIM. This enables the legacy SIMs to work with our solution without any change. This means, the public key of the HN and the private key of the UE have to be provisioned to the ME. When a USIM is inserted into an ME, the ME has no idea about the respective HN's public key and the UE's private key. So, for the very first time after a USIM is inserted in an ME, the UE identifies itself with the IMSI. This is not a problem because this IMSI will not be used anymore while the USIM is inside the same ME. Once authentication is successful between the SN and the UE, there is a security context available. If the UE is not roaming then the ME requests for key provisioning via the control plane and the SN (which is also the HN) sends back the public key of the HN along with the key ID and the private key of the UE along with the $ET_{IMSI}$ also via the control plane. This message is both confidentiality and integrity protected since it is exchanged via the control plane. Note that the UE can not be provisioned with the keys when it is roaming.
+
+If a UE believes that its private key has been compromised, and if the UE is not roaming then it requests for new keys to the HN via the SN. HN revokes the current key of the UE, chooses a new $ET_{IMSI}$, compute the new private key and send the new private key along with the chosen $ET_{IMSI}$. The SN forwards the same to the UE with both confidentiality and integrity protection via the control plane.
+
+\begin{itemize}
+ \item UEs' private key provisioning to the UEs
+ \item HN's public key provisioning to the SNs and UEs 
+\end{itemize}
+
 
 \begin{itemize}
 \item In step $1.1$ the HN generates a public-private key pair $e_{hnid},d_{hnid}$.
 \item In $1.2$, the HN provisions the UE with $e_{hnid}$ and $d_{ue}$. $d_{ue}$ is generated using the private key $d_{hnid}$, $IMSI$, and a chosen expiry time $ET_{eu}$. 
 \item In  $1.3$, the SN sends the $snid$ to the HN. In  $1.4$ the HN chooses an expiry time $ET$ and $d_{snid}$ is computed considering $snid||ET$ as the SN's identity. 
 \item In  $1.5$, the HN sends $d_{snid},ET,e_{hnid}$ to the SN. The SN stores these information in its key-table. 
-\item In  $2.1$, the SN broadcasts the $snid$. 
-\item In  $2.2$, the UE sends $hnid,E(IMSI||ET_{ue}||RAND1,e_{snid}),ET$ to the SN. 
-\item In  $2.3$, the SN looks for a suitable $d_{snid}$ and if found, it jumps to step $2.8$, Otherwise continues from step $2.4$ and stops at $2.7$
-\item In $2.4$, SN sends $snid,E(IMSI||ET_{ue}||RAND1),ET$ to HN. 
-\item In $2.5$, HN computes the key $d_{snid}$ using $d_{hnid},snid$ and $ET$. Then HN decrypts the IMSI using $d_{snid}$ and  prepares an $AV$.
-\item In $2.6$, HN sends  $AV,IMSI,d_{snid}$ to SN. The SN stores $d_{snid},ET$ and in $2.7$ uses the $AV$ to run the EPS-AKA.
-\item In $2.8$, SN decrypts the received message and compute $e_{ue}$ using. 
-\item In $2.9$ HN sends the signature $S(IMSI||RAND1||RAND2,d_{snid})$ along with $E(RAND2,e_{ue})$ to the UE. The signature is verifiable by $e_{snid}$ in the UE. 
-\item In $2.10$, the UE sends the signature $S(IMSI||RAND1||RAND2,d_{ue})$ to the SN which is verifiable by $e_{ue}$. If both UE and SN can verify the signatures as valid, the mutual authentication is completed successfully.
 \end{itemize}
 
-Note that the UE and the SN have successfully exchanged two randomly chosen values RAND1 and RAND2 with confidentiality protection. A symmetric key can be computed at both UE and SN using these random values and $e_{hnid}$ using a function like key derivation function used in LTE security. There is also an alternative option of using Diffie-Hellman key exchange protocol. 
 
-\subsubsection{Revocation of Public Keys}
+\subsubsection{Key Revocation}
 The $ET$ used to generate the public key $d_{snid}$ is quite near in the future, e.g., the day end. So, if the public key needs to be revoked, it would automatically be revoked when the expiration time comes. In this way, a compromised SN would be able mount an attack only for a short period of time. However, the SN would need to get new $d_{snid}$ from the HN before the old $d_{snid}$ expires. 
 
 When the public key of a UE is revoked, the IMSI and relevant $ET$ is stored in a revocation list in the HN.  An SN serving UEs of an HN has a copy of the list. The SN also periodically checks with the HN if there is any new revocations. Before computing the public key of the UE in step $2.8$, the SN checks the revocation list. If it is revoked, the SN discards the message received from the UE and the authentication fails. 
 
 All the entries with expiry time older than current date-time can be removed from the revocation list, hence the revocation list will not grow to a very large size. This frequent private key exchange and refreshing the revocation list would create a bit increased traffic between an SN and HN. On the other hand, this increased traffic is not in the air interface but in the back haul network, which apparently is not very critical. 
+
+
+\subsection{Impact of compromised/lost private keys}
+
+\subsubsection{parameter choice}
+
+\subsection{Identity Privacy}
+
+\subsubsection{Passive Intruder}
+
+\subsubsection{Active Intruder}
+
+\subsection{Effectiveness and Efficiency}
+
+\subsubsection{System Impact}
+
+\subsubsection{Security Impact}
+
+
 
 
 \section{Comparison of Solutions}
