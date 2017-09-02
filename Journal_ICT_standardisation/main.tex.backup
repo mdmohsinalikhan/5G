@@ -14,6 +14,7 @@
 % for alternatives, see appendix of manual
 \usepackage{url}
 \usepackage{bibspacing}
+\usepackage{rotating}
 
 
 \newtheorem{guess}{Conjecture}
@@ -160,10 +161,9 @@ Relevant constraints of an IBE scheme:
 \end{enumerate}
 
 \subsection{Existing proposals of Using IBE in Cellular Network}
+Jo, Paik and Lee proposed a privacy-preserving authentication protocol in wireless mobile network in 2014 \cite{IEE_transactions_mobile_computing_2014} based on a pseudo-identity-based signcryption scheme. In this protocol the authors do not discuss how the public key of the SNs can be revoked. This protocol is not designed for the 3GPP defined cellular networks specifically but for any wireless mobile network. Naturally there are 3GPP specific requirements that the protocol does not address at all, e.g., the identity of a user is kept secret even from the SN which is not allowed in 3GPP networks. In the rest of the paper we will refer this protocol as JPL protocol.
+
 Geir M. K{\o}ien proposed a privacy enhanced mututal authentication protocol in LTE in 2013 \cite{koienibe} based on IBE. The author named the proposed protocol as PEMMA. In PEMMA, the HN is the PKG and the SNs own public-private key pairs. In PEMMA the UE encrypts the IMSI using the public key of the SN before sending the IMSI. Consequently PEMMA can conceal the IMSI. However, the author designed PEMMA so that it requires all the three parties (UE,SN and HN) to be online during the authentication. Consequently PEMMA can not support the situation where the SN want to use a pre-fetched AV. Also, in PEMMA, the authentication delay would most likely be dominated by the physical distance between the SN and the HN when they are in different continents. It would be desirable to have an authentication protocol that can run even without contacting the HN when the HN is far from the SN. Besides, PEMMA requires an SN to agree with all the HNs on the same expiry date for its public key. It is not likely that a particular SN will be trusted to the same extent by all the HNs.
-
-
-Jo, Paik and Lee proposed a privacy-preserving authentication protocol in wireless mobile network in 2014 \cite{IEE_transactions_mobile_computing_2014} based on a pseudo-identity-based signcryption scheme. In this protocol the authors do not discuss how the public key of the SNs can be revoked. This protocol is not designed for the 3GPP defined cellular networks specifically but for any wireless mobile network. Naturally there are 3GPP specific requirements that the protocol does not address at all, e.g., the identity of a user is kept secret even from the SN which is not allowed in 3GPP networks. 
 
 RFC 6508 \cite{RFC6508} presents an algorithm SAKKE for establishment of a secret shared value. Applications of SAKKE may include a date-time component in their identity to ensure that identities and hence the corresponding private-keys are only valid for a fixed period of time. Solution \#7.11 in 3GPP TR 33.899 \cite{TR33899} uses IBE to protect the long-term identity according to RFC 6508. However, the solution does not address the issue of revocation of the identity based public-keys. RFC 6507 \cite{RFC6507} describes a certificate-less signature scheme based on IBE. In this scheme a string called public validation token (PVT) randomly chosen by the PKG is assigned to an identity. Both the public and private key of a receiver are computed using the PVT along with the receiver's identity. So, the public key associated with an identity can be revoked by revoking the PVT. Solution \#2.14 in 3GPP TR 33.899 presents an authentication framework based on the signature scheme of RFC 6507 and the authentication protocol EAP-TLS. This solution uses the PVT to revoke the public key associated with an identity. However, in this solution it is not clear how a UE can check if the public key of an SN has been revoked or not.
 
@@ -229,30 +229,20 @@ The UE's HN acts as the PKG. The solution is pictorially presented in Figure \re
 \subsection{Key provisioning}
 The UEs and the SNs need to be provisioned with their respective private keys and the HN's public key. Keys will be expired and new keys will be needed to be provisioned. Keys might be compromised and be needed to be revoked (key revocation is discussed in next section). Once a key is revoked, a new key is needed to be provisioned to the appropriate entities (either to UE or SN, or both).
 
-An SN is provisioned with the public key $d_{hnid}$ of an HN and with a key ID $hnkid$ first time when a roaming contract is signed between the SN and the HN. When the public key of the HN expires or the private key be compromised (an extremely rare event), the HN chooses a new public-private key pair. This new public key along with the new $hnkid$ is provisioned by the HN to all the SNs who have a roaming contract with the HN. There is already a secure channel between a HN and an SN, hence the keys can be provisioned with both confidentiality and integrity protection. The SN does not request for a new private key even if the SN believes that its private key has been compromised. Because there is no way to inform the UE about it and consequently getting a new private key does not not help in anyway. When the expiry time of the compromised private key comes, the key is automatically expired. Hence, the expiry time of the public-private key pairs of SNs' is recommended to be near in the future.
+An SN is provisioned with the public key $d_{hnid}$ of an HN and with a key ID $hnkid$ first time when a roaming contract is signed between the SN and the HN. When the public key of the HN expires or the private key be compromised (an extremely rare event), the HN chooses a new public-private key pair. This new public key along with the new $hnkid$ is provisioned by the HN to all the SNs who have a roaming contract with the HN.There is already a secure channel between a HN and an SN, hence the keys can be provisioned with both confidentiality and integrity protection. The HN also provisions all the UEs who are in home and have a valid security context with the new public key and the respective $hnkid$ via the control plane. Messages in the control plane are both confidentiality and integrity protected.
 
-We design our solution so that no change is required in the USIM. This enables the legacy SIMs to work with our solution without any change. This means, the public key of the HN and the private key of the UE have to be provisioned to the ME. When a USIM is inserted into an ME, the ME has no idea about the respective HN's public key and the UE's private key. So, for the very first time after a USIM is inserted in an ME, the UE identifies itself with the IMSI. This is not a problem because this IMSI will not be used anymore while the USIM is inside the same ME. Once authentication is successful between the SN and the UE, there is a security context available. If the UE is not roaming then the ME requests for key provisioning via the control plane and the SN (which is also the HN) sends back the public key of the HN along with the key ID and the private key of the UE along with the $ET_{IMSI}$ also via the control plane. This message is both confidentiality and integrity protected since it is exchanged via the control plane. Note that the UE can not be provisioned with the keys when it is roaming.
+The SN does not request for a new private key even if the SN believes that its private key has been compromised. Because there is no way to inform the UE about it and consequently getting a new private key does not not help in anyway. When the expiry time of the compromised private key comes, the key is automatically expired. Hence, the expiry time of the public-private key pairs of SNs' is recommended to be near in the future.
+
+We design our solution so that no change is required in the USIM. This enables the legacy USIMs to work with our solution without any change. This means, the public key of the HN and the private key of the UE have to be provisioned to the ME. When a USIM is inserted into an ME, the ME has no idea about the respective HN's public key and the UE's private key. So, for the very first time after a USIM is inserted in an ME, the UE identifies itself with the IMSI. This is not a problem because this IMSI will not be used anymore while the USIM is inside the same ME. Once authentication is successful between the SN and the UE, there is a security context available. If the UE is not roaming then the ME requests for key provisioning via the control plane and the SN (which is also the HN) sends back the public key of the HN along with the key ID and the private key of the UE along with the $ET_{IMSI}$ also via the control plane. This message is both confidentiality and integrity protected since it is exchanged via the control plane. Note that the UE can not be provisioned with the keys when it is roaming.
 
 If a UE believes that its private key has been compromised, and if the UE is not roaming then it requests for new keys to the HN via the SN. HN revokes the current key of the UE, chooses a new $ET_{IMSI}$, compute the new private key and send the new private key along with the chosen $ET_{IMSI}$. The SN forwards the same to the UE with both confidentiality and integrity protection via the control plane.
 
-\begin{itemize}
- \item UEs' private key provisioning to the UEs
- \item HN's public key provisioning to the SNs and UEs 
-\end{itemize}
-
-
-\begin{itemize}
-\item In step $1.1$ the HN generates a public-private key pair $e_{hnid},d_{hnid}$.
-\item In $1.2$, the HN provisions the UE with $e_{hnid}$ and $d_{ue}$. $d_{ue}$ is generated using the private key $d_{hnid}$, $IMSI$, and a chosen expiry time $ET_{eu}$. 
-\item In  $1.3$, the SN sends the $snid$ to the HN. In  $1.4$ the HN chooses an expiry time $ET$ and $d_{snid}$ is computed considering $snid||ET$ as the SN's identity. 
-\item In  $1.5$, the HN sends $d_{snid},ET,e_{hnid}$ to the SN. The SN stores these information in its key-table. 
-\end{itemize}
 
 
 \subsubsection{Key Revocation}
 The $ET$ used to generate the public key $d_{snid}$ is quite near in the future, e.g., the day end. So, if the public key needs to be revoked, it would automatically be revoked when the expiration time comes. In this way, a compromised SN would be able mount an attack only for a short period of time. However, the SN would need to get new $d_{snid}$ from the HN before the old $d_{snid}$ expires. 
 
-When the public key of a UE is revoked, the IMSI and relevant $ET$ is stored in a revocation list in the HN.  An SN serving UEs of an HN has a copy of the list. The SN also periodically checks with the HN if there is any new revocations. Before computing the public key of the UE in step $2.8$, the SN checks the revocation list. If it is revoked, the SN discards the message received from the UE and the authentication fails. 
+When the public key of a UE is revoked, the IMSI and relevant $ET$ is stored in a revocation list in the HN.  An SN serving UEs of an HN has a copy of the list. The SN also periodically checks with the HN if there is any new revocations. Before computing the public key of the UE, the SN checks the revocation list. If it is revoked, the SN discards the message received from the UE and the authentication fails. 
 
 All the entries with expiry time older than current date-time can be removed from the revocation list, hence the revocation list will not grow to a very large size. This frequent private key exchange and refreshing the revocation list would create a bit increased traffic between an SN and HN. On the other hand, this increased traffic is not in the air interface but in the back haul network, which apparently is not very critical. 
 
@@ -273,10 +263,37 @@ All the entries with expiry time older than current date-time can be removed fro
 
 \subsubsection{Security Impact}
 
+\begin{sidewaystable}
+\begin{center}
+\caption{Comparative evaluation of the solutions}
+\begin{tabular}[t]{|l|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{} & \multicolumn{7}{|c|}{\textbf{Public-key based Solutions}}\\
+\cline{3-9}
+\multicolumn{1}{|c|}{\textbf{Criteria}} & \multicolumn{1}{|c|}{\textbf{Pseudonym based}} & \multicolumn{3}{|c|}{\textbf{Certificate based}} & \multicolumn{1}{|c|}{\textbf{Root-key based}} & \multicolumn{3}{|c|}{\textbf{IBE based}}\\
+\cline{3-5} \cline{7-9}
+\textbf{} &  & \textbf{CertV1} & \textbf{CertV2} & \textbf{CertV3} & \textbf{} & \textbf{JPL} & \textbf{PEMMA} & \textbf{PEFMA}\\
+\hline \hline
+Immunity to AIC & + - & + & + & + & + & + & + & + \\ \hline
+Concealing $hnid$ & - & + & - & - & - & - & - & - \\ \hline
+Signalling overhead & + + & - & - & - & + & + & + & + \\ \hline
+Computational overhead & + & - & - & - & + & + & + & + \\ \hline
+Latency while roaming & - & - & -  & - & - & + & - & + \\ \hline
+Latency while at home & + + & - & -  & - & + & + & + & + \\ \hline
+PKI effort & + + &  - & + & + & + & + & + & + \\ \hline
+Key revocation & ++ & - & - & - & + & - & - & - \\ \hline
+Provisioning effort & + & + & + & - & + &  & & + \\ \hline
+Using existing gear & + & - & + & + & + & & & + \\ \hline
+Maturity  & - & + & + & - & + & & & - \\ \hline
+Mutual Authentication & - & + & + & + & - & & & + \\ \hline
+\end{tabular}
+\label{table:comparison}
+\end{center}
+\end{sidewaystable}
 
 
 
-\section{Comparison of Solutions}
+\section{qualitative Comparison of Solutions}
 \label{sec:evaluation}
 In this paper we have discussed two different categories of solutions: pseudonym based and public-key based. Different solutions \cite{pseudonym_valtteri_philip,pseudonym_ericsson,CCS15,SSR15} have been and more could be devised based on pseudonyms. All these solutions would require the UE and the HN to synchronize their pseudonym states between a UE and the HN.
 
@@ -290,9 +307,7 @@ We have proposed a novel solution based on IBE that can both accomplish the iden
 
 Apparently pseudonym based solution is very good in most of the criteria. One downside of pseudonym based approach is, if the pseudonym is unsynchronized between UE and HN, the user has to visit the HN physically and get back to synchronized state by giving the IMSI in a trusted environment. The need of visiting the HN physically might make the pseudonym based solution a little clumsy. Variant 1 of certificate based approach is good in preventing AIC and also conceals $hnid$. But this is bad in many other important criteria because of exchanging and verifying certificates. Considering the concealment of $hnid$ with a bit less priority, the CertV1 is outperformed by both root-key based and IBE based solution. CertV2 and CertV3 can not even conceal $hnid$. So, the extra overhead of using Certv2 and CertV3 is not worth comparing to root-key and IBE. When comparing IBE and root-key, both of them are almost similar except that IBE based solution is extendible to a mutual authentication protocol between UE and HN. However, Cert1V can also be extended to a mutual authentication protocol. 
 
-
-
-
+%|l p{3.5cm}|l P{1.25cm}| l P{1.25cm}|l P{1.25cm}|l P{1.25cm}|l P{1.5cm}|l P{1cm}|
 
 If concealing $hnid$ is essential, then the only applicable solution is Certv1, the certificate based solution with global root of trust. If concealment of $hnid$ can be compromised, then the choice  of the solution depends on the requirement of mutual authentication. If mutual authentication of UE and SN without involving HN is considered important and useful then IBE based solution is the winner. Otherwise, root-key based solution is just enough.
 
