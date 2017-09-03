@@ -1,20 +1,4 @@
-1. explain why hnkid is added
-2. koien does not discuss how the me would get the public key of the HN at the first place. phones can be frequently changed. in our paper we mention that when an USIM is first inserted in an ME, the ME connects using IMSI
-3. PEFMA is run when received TMSI is not recognized or 
-	received TMSI is recognized but there is no pre-fectched AV available and the HN is far from the SN
-4. How the authentication management field is affected?
-5. sequence number in protocol diagram
-6. mention explicitly again that f and g are key generating functions
-7. fix the appendices
-8. add the comparison table
-9. check the broken references
+6. mention explicitly again that f and g are key generating functions in the solution description section
 10. add biography at the end
 11. is DoS possible on IEE paper ----> pseudonym descynchronization
-12. parameter choice - expiry time for SNs and UEs
-13. mention that it is an ME based solution, not SIM based
-14. what happens when the SIM is swtiched to another phone
 15. how the HN know which AV (UMTS/LTE) is to prepare
-16. ET standardization
-17. increased traffic due to key revocation?
-18. discuss that an AKA will follow soon
-

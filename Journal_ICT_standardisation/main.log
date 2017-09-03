@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  2 SEP 2017 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 SEP 2017 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,12 +545,12 @@ sion > 4. Object streams disabled now.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Package epstopdf Info: Source file: <security_architecture_abstraction.eps>
-(epstopdf)                    date: 2017-08-20 10:34:34
-(epstopdf)                    size: 124621 bytes
+(epstopdf)                    date: 2017-09-02 20:48:59
+(epstopdf)                    size: 125778 bytes
 (epstopdf)             Output file: <security_architecture_abstraction-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2017-08-31 07:01:57
-(epstopdf)                    size: 55231 bytes
+(epstopdf)                    date: 2017-09-02 20:49:16
+(epstopdf)                    size: 67446 bytes
 (epstopdf)             Command: <repstopdf --outfile=security_architecture_abst
 raction-eps-converted-to.pdf security_architecture_abstraction.eps>
 (epstopdf)             \includegraphics on input line 86.
@@ -561,16 +561,16 @@ pdfTeX warning: pdflatex (file ./security_architecture_abstraction-eps-converte
 d-to.pdf): PDF inclusion: found PDF version <1.5>, but at most version <1.4> al
 lowed
 
-<security_architecture_abstraction-eps-converted-to.pdf, id=17, 284.06125pt x 9
-4.3525pt>
+<security_architecture_abstraction-eps-converted-to.pdf, id=17, 636.3775pt x 24
+1.90375pt>
 File: security_architecture_abstraction-eps-converted-to.pdf Graphic file (type
  pdf)
  <use security_architecture_abstraction-eps-converted-to.pdf>
 Package pdftex.def Info: security_architecture_abstraction-eps-converted-to.pdf
  used on input line 86.
-(pdftex.def)             Requested size: 214.15067pt x 71.13188pt.
- [3]
-[4 <./security_architecture_abstraction-eps-converted-to.pdf>]
+(pdftex.def)             Requested size: 299.40819pt x 113.81102pt.
+
+[3] [4 <./security_architecture_abstraction-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 107--108
 []$\OML/cmm/m/it/10.95 E; D$ \OT1/ptm/m/n/10.95 are en-cryp-tion and de-cryp-ti
 on func-tions so that
@@ -600,118 +600,121 @@ Package pdftex.def Info: how_IBE_works-eps-converted-to.pdf used on input line
 (pdftex.def)             Requested size: 259.58072pt x 199.16928pt.
  [7] [8 <./how_IBE_works-eps-converted-to.pdf>] [9]
 Package epstopdf Info: Source file: <when_to_run_PEFMA.eps>
-(epstopdf)                    date: 2017-09-02 09:34:20
-(epstopdf)                    size: 197750 bytes
+(epstopdf)                    date: 2017-09-03 09:50:42
+(epstopdf)                    size: 133001 bytes
 (epstopdf)             Output file: <when_to_run_PEFMA-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-02 09:34:20
-(epstopdf)                    size: 45002 bytes
+(epstopdf)                    date: 2017-09-03 09:50:48
+(epstopdf)                    size: 69593 bytes
 (epstopdf)             Command: <repstopdf --outfile=when_to_run_PEFMA-eps-conv
 erted-to.pdf when_to_run_PEFMA.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
-<when_to_run_PEFMA-eps-converted-to.pdf, id=48, 618.31pt x 368.37625pt>
+
+pdfTeX warning: pdflatex (file ./when_to_run_PEFMA-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<when_to_run_PEFMA-eps-converted-to.pdf, id=48, 643.40375pt x 581.17125pt>
 File: when_to_run_PEFMA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use when_to_run_PEFMA-eps-converted-to.pdf>
 Package pdftex.def Info: when_to_run_PEFMA-eps-converted-to.pdf used on input l
 ine 187.
-(pdftex.def)             Requested size: 286.53941pt x 170.71652pt.
+(pdftex.def)             Requested size: 283.50104pt x 256.0748pt.
 Package epstopdf Info: Source file: <PEFMA.eps>
-(epstopdf)                    date: 2017-09-02 09:34:20
-(epstopdf)                    size: 751712 bytes
+(epstopdf)                    date: 2017-09-02 22:59:22
+(epstopdf)                    size: 540036 bytes
 (epstopdf)             Output file: <PEFMA-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-09-02 09:34:20
-(epstopdf)                    size: 218772 bytes
+(epstopdf)                    date: 2017-09-02 22:59:28
+(epstopdf)                    size: 216046 bytes
 (epstopdf)             Command: <repstopdf --outfile=PEFMA-eps-converted-to.pdf
  PEFMA.eps>
 (epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
 
+
+pdfTeX warning: pdflatex (file ./PEFMA-eps-converted-to.pdf): PDF inclusion: fo
+und PDF version <1.5>, but at most version <1.4> allowed
 <PEFMA-eps-converted-to.pdf, id=49, 771.88374pt x 807.015pt>
 File: PEFMA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use PEFMA-eps-converted-to.pdf>
 Package pdftex.def Info: PEFMA-eps-converted-to.pdf used on input line 199.
 (pdftex.def)             Requested size: 326.56812pt x 341.43306pt.
- [10 <./when_to_run_PEFMA-eps-converted-to.pdf>] [11 <./PEFMA-eps-converted-to.
-pdf>]
+ [10]
 Underfull \hbox (badness 1360) in paragraph at lines 219--220
 \OT1/ptm/m/n/10.95 It ver-i-fies the sig-na-ture re-ceived in step $\OT1/cmr/m/
 n/10.95 5$ \OT1/ptm/m/n/10.95 us-ing the pub-lic key
  []
 
-[12] [13]
+[11 <./when_to_run_PEFMA-eps-converted-to.pdf>] [12 <./PEFMA-eps-converted-to.p
+df>] [13] [14] [15] [16]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 269.
+(Font)              <9> on input line 279.
 
-Overfull \hbox (5.45067pt too wide) in paragraph at lines 269--291
+Overfull \hbox (5.45067pt too wide) in paragraph at lines 279--302
  [] 
  []
 
-[14] [15] [16] [17] (./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
+[17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
+\OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
+ =
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 365--369
 \OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
  =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
+Underfull \hbox (badness 10000) in paragraph at lines 371--375
 \OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
  =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 377--381
 \OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
  =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--34
+Underfull \hbox (badness 10000) in paragraph at lines 383--388
 \OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
  =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--41
+Underfull \hbox (badness 10000) in paragraph at lines 390--395
 \OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
  =
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--48
-\OT1/cmtt/m/n/10 Specifications / SpecificationDetails . aspx ? specificationId
- =
- []
-
-[18]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no ˜ in font ptmr7t!
-) [19] [20] (./main.aux) ) 
+[21] [22] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 13016 strings out of 493029
- 262085 string characters out of 6136234
- 302226 words of memory out of 5000000
- 16270 multiletter control sequences out of 15000+600000
+ 13012 strings out of 493029
+ 262042 string characters out of 6136234
+ 303213 words of memory out of 5000000
+ 16269 multiletter control sequences out of 15000+600000
  26843 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,14n,56p,1253b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8
-r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (20 pages, 574732 bytes).
+ 55i,14n,56p,1318b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (22 pages, 615954 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
+ 137 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
