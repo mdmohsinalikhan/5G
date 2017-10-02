@@ -154,18 +154,18 @@ International mobile subscriber identity (IMSI) catchers are threats to the iden
 %\subsubsection{IMSI Catching}
 %The network a UE has a subscription with is called the home network (HN). The network a UE visits and gets services from is called serving network (SN). In an ideal situation, a UE has to identify and authenticate itself to an SN before receiving any services from it. In cellular networks the encryption key in a UE is generated using the pre-shared symmetric key during authentication \cite{TS33401}. So, before authentication, neither a UE nor the SN/HN knows the key to use for encryption or decryption.  Consequently, the identity of the UE has to be sent in plaintext to the SN. This enables an active IMSI catcher to play its trick.
 
-An active IMSI catcher impersonates a legitimate SN and ask for the identity of all the UEs in the range of the IMSI catcher. The UEs have no way to differentiate an IMSI catcher from a legitimate SN, hence reveal their IMSIs as if they were revealing to a legitimate SN. 
+An active IMSI catcher impersonates a legitimate serving network (SN) and asks for the identity of all the UEs in the range of the IMSI catcher. The UEs have no way to differentiate an IMSI catcher from a legitimate SN, hence reveal their IMSIs as if they were revealing to a legitimate SN. 
 
 %An IMSI catcher can exploit the knowledge of caught IMSIs to monitor and track the physical location of a mobile user \cite{tracking_bins,goldman2007mobile}. Please note that the term "IMSI catcher" is also used in a wider meaning, referring to extended attacks, including man-in-the-middle type of attacks or just spamming \cite{catch_me_if_you_can,chinese_spam}. In this paper we limit our discussion only to prevent the IMSI catchers from catching the IMSIs (identities) of the users.
 
 %Different kind of solutions to defeat IMSI catchers have been proposed over the years. In addition to protect privacy, a desirable property of the solution is backward compatibility, i.e., it should protect the identity privacy even in the presence of a legacy SN. This is because, if the solution to defeat IMSI catchers works only in the latest generation of cellular network (e.g., 5G), then an attacker may be able to mount a downgrade attack. 
 
 %\subsubsection{Pseudonym Based Solutions}
-A potentially simple and backward compatible solution approach is to use frequently-changing temporary identities for mobile users \cite{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}. The idea is, even if an IMSI catcher play its trick, only the temporary identity of a user would be revealed. So, the IMSI catcher would not be able to associate the temporary identity with any user who is previously known. The temporary identities are called pseudonyms, hence the solutions use this approach are called pseudonym based solutions. 
+A potentially simple and backward compatible solution approach is to use frequently-changing temporary identities for mobile users \cite{CCS15,SSR15,Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017}. The idea is, even if an IMSI catcher plays its trick, only the temporary identity of a user would be revealed. So, the IMSI catcher would not be able to associate the temporary identity with any user who is previously known. The temporary identities are called pseudonyms, hence the solutions use this approach are called pseudonym based solutions. 
 
-Borek, Verdult, and Ruiter \cite{CCS15} and Khan and Mitchell \cite{SSR15}, described solutions based on pseudonyms that have the same format as IMSIs. From now on we will refer these two schemes as BVR and KM15 schemes. These solutions are prone to the loss of synchronization between the pseudonyms in the UE and the home network (HN) of the suer. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. There is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious serving network (SN).
+Borek, Verdult, and Ruiter \cite{CCS15} and Khan and Mitchell \cite{SSR15}, described solutions based on pseudonyms that have the same format as IMSIs. From now on we will refer these two schemes as BVR and KM15 schemes. These solutions are prone to the loss of synchronization between the pseudonyms in the UE and the home network (HN) of the user. In the worst loss of synchronization case, there is not even one pseudonym left in the UE that the HN accepts. Hence all the identification and authentication attempt would fail thereafter and the UE would go out of the service. There is a vulnerability in these solutions that can be exploited by an attacker to cause the loss of pseudonym synchronization. The attacker can be a malicious UE or a malicious SN.
 
-Khan and Mitchel \cite{wisec17} identified the loss of synchronization problem caused by a malicious UE and proposed a solution. In the rest of the paper we will refer to this solution as KM17 scheme. Careful investigation into this scheme shows that a UE has to use one pseudonym at least twice before it can get a new pseudonym from the network. The authors also argue that their their solution may be vulnerable to a pseudonym de-synchronization attack by a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of temporary identities per user increases from two to six. Moreover, as we will explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
+Khan and Mitchel \cite{wisec17} identified the loss of synchronization problem caused by a malicious UE and proposed a solution. In the rest of the paper we will refer to this solution as KM17 scheme. Careful investigation into this scheme shows that a UE has to use one pseudonym at least twice before it can get a new pseudonym from the network. The authors also argue that their solution may be vulnerable to a pseudonym de-synchronization attack by a malicious SN. To address the issue of malicious SNs, they introduce an identity recovery procedure. But this procedure adds complexity: the number of temporary identities per user increases from two to six. Moreover, as we will explain, the recovery mechanism itself can be exploited by an IMSI catcher to track the mobile user.
 
 %\begin{figure}[!tbp]
 %  \centering
@@ -226,7 +226,7 @@ In LTE, upon receiving the AV request, the HN also computes another key $K_{ASME
 
 
 \section{Related Work}
-The BVR and KM schemes describe how the use of HN recongnized pseudonym can be introduced in the legacy networks. Also other proposals \cite{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017} were published in 2016 and 2017. All these proposals use essentially the same idea of using frequently changing pseudonyms recognized by the HN. The vulnerability identified in \cite{wisec17} is present in all these solutions. We will explain the DDoS attack and our solution in the context of the BVR scheme.
+The BVR and KM schemes describe how the use of HN recognized pseudonym can be introduced in the legacy networks. Also other proposals \cite{Ginzboorg_Niemi_2016,Norrman_Naslund_Dubrova_2016,yemen2017} were published in 2016 and 2017. All these proposals use essentially the same idea of using frequently changing pseudonyms recognized by the HN. The vulnerability identified in \cite{wisec17} is present in all these solutions. We will explain the DDoS attack and our solution in the context of the BVR scheme.
 
 \subsection{BVR Scheme}
 Along with the shared secret $\mathcal{K}$, every user shares another secret key $\kappa$ with the HN. The SIM inside the UE stores two pseudonyms at any point of time, $\left(PMSI,P_{new}\right)$. The SIM uses $P_{new}$ the next time the UE receives an IMSI inquiry and keep using $P_{new}$ until it receives a new pseudonym. The HN also stores two pseudonyms $\left(p,p'\right)$ for every users at any point of time. In an ideal situation, $PMSI = p$ and $P_{new} = p'$. 
@@ -276,6 +276,7 @@ The next time the user would need to authenticate itself to a network, the authe
 \subsection{The DDoS Attack Against the BVR Scheme} \label{sec:ddos_attack}
 The DDoS attack is mounted by a botnet of mobile devices. The mobile bots send many attach requests using different pseudonyms to legitimate SNs. The legitimate SNs in turn sends AV request for those pseudonyms to the HN. Let us assume, the total number of pseudonyms sent to the HN is a large integer $m$. In this case, a user $s$ will be affected by the attack if there exists two integers $0 < x < y \leq m$ such that $q_{x} = p'$ and $q_{y} = p'$. 
 
+
 We have considered two different ways to mount this attack. In one way, the pseudonyms used in the attach requests are chosen randomly with replacement, which means the attack might sent one pseudonym more than once to the HN. In the other way, the pseudonyms are chosen without replacement, which means the attack send one pseudonym only once.
 
 \textbf{With Replacement:} In this case, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
@@ -292,6 +293,7 @@ See the derivation in Appendix \ref{appendix:A}.  We have run a simulation of th
    \caption{DDoS Attack. $ \mathcal{M} = 10^{10}, n = 10^{7}$. The model fits so well that it is difficult to distinguish the empirical lines from the model.}
 \label{fig:simulation_and_modeling}
   \end{minipage}
+
   \hfill
   \begin{minipage}[b]{0.49\textwidth}
     \includegraphics[width=\textwidth]{botplot.pdf}
@@ -300,7 +302,8 @@ See the derivation in Appendix \ref{appendix:A}.  We have run a simulation of th
   \end{minipage}
 \end{figure}
 
-\textbf{Without Replacement:} In this case the attacker runs two rounds of the attack. In the first round the attacker sends all the pseudonyms in the IMSI space without replacement, means each pseudonym is sent exactly once. Once the first round is completed, the attacker runs the attack for one more round. However, after sending $m$ number of pseudonyms to the HN, the expected portion of affected users $E[u_a]$ is
+\textbf{Without Replacement:} In this case the attacker runs two rounds of the attack. In the first round the attacker sends all the pseudonyms in the IMSI space without replacement, means each pseudonym is sent exactly once. Once the first round is completed, the attacker runs the attack for one more round. However, after sending $m$ number of pseudonyms to the HN, the expected
+ portion of affected users $E[u_a]$ is
 \begin{eqnarray}
 E\big[ u_a \big] = \begin{cases} \frac{m^2}{2\cdot \mathcal{M}^2} & \mbox{if } 0 < m \leq \mathcal{M} \\ 
 \frac{1}{\mathcal{M}}(2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}}) & \mbox{if } \mathcal{M} < m \leq 2\mathcal{M} \end{cases}
@@ -329,8 +332,7 @@ In the HN, for a user $s$, our solution stores the IMSI $i$ and three pseudonyms
 
 \textbf{At HN side } Whenever an AV request is received for a user $s$, using any of its identity, i.e., $i,p,p'$ or $p''$, the HN responds with an AV that contains the pseudonym $p''$ in the $RAND$. If $p''$ is $null$ then an unused pseudonym is chosen and set as $p''$. When $p''$ is not null and LU message $\texttt{LU}_{p'}$ or $\texttt{LU}_{p''}$ arrives, the HN forgets $p$ by setting $p \leftarrow p', p' \leftarrow p''$ and $p'' \leftarrow null$. 
 
-\textbf{At UE side } During the AKA, if $MAC$ and $SEQN$ verification is successful then the UE sends the $SRES$ to the SN. Then the UE verifies if $u_{SEQN}$ is the same as the $XSEQN$. See Figure \ref{fig:solution}. If this verification is also successful and $u_{p''} \notin \left\lbrace PMSI,P_{new} \right\rbrace$, then the UE sets $PMSI \leftarrow P_{new}$ and $P_{new} \leftarrow u_{p''}$. After a successful AKA the old pseudonym $PMSI$ will still be used in place of permanent identity IMSI by the current serving network, for example, in paging messages, and in subsequent communications between home network
-and serving network. The identity $P_{new}$ comes into play in the next serving network. 
+\textbf{At UE side } During the AKA, if $MAC$ and $SEQN$ verification is successful then the UE sends the $SRES$ to the SN. Then the UE verifies if $u_{SEQN}$ is the same as the $XSEQN$. See Figure \ref{fig:solution}. If this verification is also successful and $u_{p''} \notin \left\lbrace PMSI,P_{new} \right\rbrace$, then the UE sets $PMSI \leftarrow P_{new}$ and $P_{new} \leftarrow u_{p''}$. After a successful AKA the old pseudonym $PMSI$ will still be used in place of permanent identity IMSI by the current SN, for example, in paging messages, and in subsequent communications between an HN and an SN. The identity $P_{new}$ comes into play in the next SN. 
 
 However, it is upon the freedom of the UE to identify itself either with $PMSI$ or $P_{new}$ in an attach request or in response to an IMSI inquiry. If the consequent AKA fails many times after identifying with $PMSI$, the UE would identify itself using $P_{new}$.
 
@@ -401,7 +403,7 @@ Our solution builds on top of UMTS/LTE AKA without introducing any new messages 
 
 
 A legacy SN may fetch multiple AVs from the HN for a single pseudonym $x$. Since $\texttt{AKA($x,y$)}$ where $x= PMSI$ does not trigger any pseudonym update, let us consider the cases where $x=P_{new}$, i.e.,
-$\texttt{AKA($P_{new},y$)}$. In such cases, if $y \notin  \left\lbrace PMSI,P_{new} \right\rbrace$ then the UE forgets $PMSI$ and the $P_{new}$ becomes the new $PMSI$. Consequently if the SN uses the pre-fetched AVs thereafter, it would be the $\texttt{AKA($PMSI,y$)}$ cases -- which has no impact on the pseudonym states of a user. Hence, our solution works smoothly even when an SN uses pre-fetched AVs for a pseudonym $x$ unless some other user in the same SN is assigned with pseudonym $x$. Let us assume a user $s_1$ receives a new pseudonym $x$ from the HN and sets $P_{new} \leftarrow x$. Then user $s_1$ uses $P_{new}=x$ in an SN where the SN already has a pre-fetched AV for the pseudonym $x$ associated with user $s_2$ (forgotten by both HN and UE of $s_2$). In this case, user $s_1$'s AKA will fail. But it is also very unlikely to happen.
+$\texttt{AKA($P_{new},y$)}$. In such cases, if $y \notin  \left\lbrace PMSI,P_{new} \right\rbrace$ then the UE forgets $PMSI$ and the $P_{new}$ becomes the new $PMSI$. Consequently if the SN uses the pre-fetched AVs thereafter, it would be the $\texttt{AKA($PMSI,y$)}$ cases -- which has no impact on the pseudonym states of a user. Hence, our solution works smoothly even when an SN uses pre-fetched AVs for a pseudonym $x$ unless some other user in the same SN is assigned with pseudonym $x$. Let us assume a user $s_1$ receives a new pseudonym $x$ from the HN and sets $P_{new} \leftarrow x$. Then user $s_1$ uses $P_{new}=x$ in an SN where the SN already has a pre-fetched AV for the pseudonym $x$ associated with user $s_2$ (forgotten by both HN and UE of $s_2$). In this case, user $s_1$'s AKA will fail. But it is also very unlikely to happen. If it happens, the user $s_1$ can still run $\texttt{AKA($PMSI,y$)}$. However, such AKAs will not enable the UE to receive a new pseudonym. One remedy of this problem can be that the UE may trigger an $SQN$ resynchronization process if an AKA fails after identifying using $P_{new}$. By triggering such an $SQN$ resynchronization process, the UE may force the SN to get a fresh AV from the HN.
 
 %\subsection{Protection Against the DDos Attack} 
 \textbf{Protection Against the DDos Attack:} The DDoS attack is mounted by a botnet of mobile devices. The objective of the attack is to bring as many mobile users as possible to bring to State $6$ of Figure \ref{fig:solution_diagram}. However, any path in the state diagram (Figure \ref{fig:solution_diagram}) that leads to State $6$ involves at least one LU message. An SN will send an LU message for a pseudonym only if the corresponding AKA was successful. A mobile bot can not participate in a successful AKA with an SN using an arbitrary pseudonym. Hence, the attack does not work without an SN helping the botnet to do so.
@@ -517,9 +519,9 @@ Consequently, the expected portion of affected users would be $\frac{m^2}{2\math
  &=& \frac{n}{2} + \frac{n}{\mathcal{M}^2} \int_{0}^{m'} \mathcal{M} dx  - \frac{n}{\mathcal{M}^2} \int_{0}^{m'} x dx \\
   &=& \frac{n}{2} + \frac{nm'}{\mathcal{M}} - \frac{n}{\mathcal{M}^2} \frac{m'^2}{2} \\
   &=& \frac{n}{2} + \frac{n\left( m - \mathcal{M} \right)}{\mathcal{M}} - \frac{n}{\mathcal{M}^2} \frac{\left( m - \mathcal{M} \right)^2}{2} \text{(since }  m = \mathcal{M} + m' \text{)}\\
-  &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}}{2} + \left( m - \mathcal{M} \right) - \frac{1}{\mathcal{M}} \frac{\left( m^2 - 2m\mathcal{M} + \mathcal{M}^2 \right)}{2} \right) \\
-  &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}^2 + 2 m\mathcal{M} - 2 \mathcal{M}^2 - m^2 + 2m\mathcal{M} - \mathcal{M}^2}{2\mathcal{M}} \right) \\
-  &=& \frac{n}{\mathcal{M}} \left( \frac{4m\mathcal{M} - 2\mathcal{M}^2 -m^2}{2\mathcal{M}} \right) \\
+ % &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}}{2} + \left( m - \mathcal{M} \right) - \frac{1}{\mathcal{M}} \frac{\left( m^2 - 2m\mathcal{M} + \mathcal{M}^2 \right)}{2} \right) \\
+ % &=& \frac{n}{\mathcal{M}} \left( \frac{\mathcal{M}^2 + 2 m\mathcal{M} - 2 \mathcal{M}^2 - m^2 + 2m\mathcal{M} - \mathcal{M}^2}{2\mathcal{M}} \right) \\
+ % &=& \frac{n}{\mathcal{M}} \left( \frac{4m\mathcal{M} - 2\mathcal{M}^2 -m^2}{2\mathcal{M}} \right) \\
     &=& \frac{n}{\mathcal{M}} \left( 2m - \mathcal{M} - \frac{m^2}{2\mathcal{M}} \right) \\
 \end{eqnarray*}
 
