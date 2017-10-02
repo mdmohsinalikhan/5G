@@ -269,12 +269,15 @@ Patching the legacy MEs will be the challenge. On the other hand, when the 5G ME
 
 Unlike PEMMA \cite{koienibe}, PEFMA does not require to standardize the ET (expiry time of the key of an SN) so that all the HN assigns the same ET to a particular SN. Instead, in PEFMA, all the UEs of a particular HN uses the same ET when they go roaming. This means an SN will need a private key associated with the HN and the ET used by the UEs of the HN. In this way, ET needs to be standardized only within a single HN, not across all the HNs.
 
-PEFMA will introduce some extra signaling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
+PEFMA will introduce some extra signalling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
 
 One usability issue is that, a user can not move its USIM from one ME to another while roaming. If does so, the new ME can not be provisioned with the HN's public key and the users private key and hence the users IMSI privacy will become vulnerable to an AIC until the user go back to the HN.
 
-\begin{sidewaystable}
-\begin{center}
+
+ %\begin{sidewaystable}
+\begin{table}
+\begin{tiny}
+ \begin{center}
 \caption{Comparative evaluation of the solutions}
 \begin{tabular}[t]{|l|c|c|c|c|c|c|c|c|}
 \hline
@@ -282,12 +285,12 @@ One usability issue is that, a user can not move its USIM from one ME to another
 \cline{3-9}
 \multicolumn{1}{|c|}{\textbf{Criteria}} & \multicolumn{1}{|c|}{\textbf{Pseudonym}} & \multicolumn{3}{|c|}{\textbf{Certificate based}} & \multicolumn{1}{|c|}{\textbf{Root-key}} & \multicolumn{3}{|c|}{\textbf{IBE based}}\\
 \cline{3-5} \cline{7-9}
-\textbf{} &  & \textbf{CertV1} & \textbf{CertV2} & \textbf{CertV3} & \textbf{} & \textbf{JPL} & \textbf{PEMMA} & \textbf{PEFMA}\\
+\textbf{} &  & \textbf{V1} & \textbf{V2} & \textbf{V3} & \textbf{} & \textbf{JPL} & \textbf{PEMMA} & \textbf{PEFMA}\\
 \hline \hline
 Immunity to AIC & + & + & + & + & + & + & + & + \\ \hline
 Concealing $hnid$ & - & + & - & - & - & + & - & - \\ \hline
 Lawful interception & + & + & + & + & - & - & + & + \\ \hline
-UE-SN Mutual Authentication without HN & - & + & + & + & - & + & - & + \\ \hline
+Mutual Authentication & - & + & + & + & - & + & - & + \\ \hline
 Signaling overhead & + + & - & - & - & + & + & + & + \\ \hline
 Computational overhead & + & - & - & - & + & + & + & + \\ \hline
 Latency while roaming & - & - & -  & - & - & + & - & + \\ \hline
@@ -300,7 +303,10 @@ Maturity  & - & + & + & - & + & - & - & - \\ \hline
 \end{tabular}
 \label{table:comparison}
 \end{center}
-\end{sidewaystable}
+\end{tiny}
+\end{table}
+%\end{sidewaystable}
+
 
 
 
@@ -468,26 +474,18 @@ Fabian van~den Broek, Roel Verdult, and Joeri de~Ruiter.
 
 \section*{Biography}
 
-\fbox{\parbox[t]{3cm}{Here is space for \\
-a photograph of \\
-the author. \\
-will be added \\
-while revising
-\vspace*{2cm}
+\fbox{\parbox[t]{3cm}{
+\includegraphics[width=3cm, height=3.5cm]{mohsin.jpg}
 }}
 
 \medskip
 \noindent
-{\bf Mohsin Khan}. A short vitae can be included here. Will be included while revising.
+{\bf Mohsin Khan}. Mohsin Khan received his M.Sc. degree in 2006 from Aalto University, Espoo, Finland, majoring in foundations of advanced computing. Currently he is studying in University of Helsinki as a PhD student. His PhD topic is cryptographic techniques in 5G networks.
 
 
 
-\fbox{\parbox[t]{3cm}{Here is space for \\
-a photograph of \\
-the author. \\
-will be added \\
-while revising
-\vspace*{2cm}
+\fbox{\parbox[t]{3cm}{
+\includegraphics[width=3cm, height=4cm]{valtteri.jpg}
 }}
 
 \medskip

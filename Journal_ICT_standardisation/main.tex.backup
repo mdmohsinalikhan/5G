@@ -269,12 +269,15 @@ Patching the legacy MEs will be the challenge. On the other hand, when the 5G ME
 
 Unlike PEMMA \cite{koienibe}, PEFMA does not require to standardize the ET (expiry time of the key of an SN) so that all the HN assigns the same ET to a particular SN. Instead, in PEFMA, all the UEs of a particular HN uses the same ET when they go roaming. This means an SN will need a private key associated with the HN and the ET used by the UEs of the HN. In this way, ET needs to be standardized only within a single HN, not across all the HNs.
 
-PEFMA will introduce some extra signaling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
+PEFMA will introduce some extra signalling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
 
 One usability issue is that, a user can not move its USIM from one ME to another while roaming. If does so, the new ME can not be provisioned with the HN's public key and the users private key and hence the users IMSI privacy will become vulnerable to an AIC until the user go back to the HN.
 
-\begin{sidewaystable}
-\begin{center}
+
+ %\begin{sidewaystable}
+\begin{table}
+\begin{tiny}
+ \begin{center}
 \caption{Comparative evaluation of the solutions}
 \begin{tabular}[t]{|l|c|c|c|c|c|c|c|c|}
 \hline
@@ -282,12 +285,12 @@ One usability issue is that, a user can not move its USIM from one ME to another
 \cline{3-9}
 \multicolumn{1}{|c|}{\textbf{Criteria}} & \multicolumn{1}{|c|}{\textbf{Pseudonym}} & \multicolumn{3}{|c|}{\textbf{Certificate based}} & \multicolumn{1}{|c|}{\textbf{Root-key}} & \multicolumn{3}{|c|}{\textbf{IBE based}}\\
 \cline{3-5} \cline{7-9}
-\textbf{} &  & \textbf{CertV1} & \textbf{CertV2} & \textbf{CertV3} & \textbf{} & \textbf{JPL} & \textbf{PEMMA} & \textbf{PEFMA}\\
+\textbf{} &  & \textbf{V1} & \textbf{V2} & \textbf{V3} & \textbf{} & \textbf{JPL} & \textbf{PEMMA} & \textbf{PEFMA}\\
 \hline \hline
-Immunity to AIC & + - & + & + & + & + & + & + & + \\ \hline
-Concealing $hnid$ & - & + & - & - & - & - & - & - \\ \hline
-Lawful interception & - & + & + & + & - & - & + & + \\ \hline
-UE-SN Mutual Authentication without HN & - & + & + & + & - & + & - & + \\ \hline
+Immunity to AIC & + & + & + & + & + & + & + & + \\ \hline
+Concealing $hnid$ & - & + & - & - & - & + & - & - \\ \hline
+Lawful interception & + & + & + & + & - & - & + & + \\ \hline
+Mutual Authentication & - & + & + & + & - & + & - & + \\ \hline
 Signaling overhead & + + & - & - & - & + & + & + & + \\ \hline
 Computational overhead & + & - & - & - & + & + & + & + \\ \hline
 Latency while roaming & - & - & -  & - & - & + & - & + \\ \hline
@@ -300,7 +303,10 @@ Maturity  & - & + & + & - & + & - & - & - \\ \hline
 \end{tabular}
 \label{table:comparison}
 \end{center}
-\end{sidewaystable}
+\end{tiny}
+\end{table}
+%\end{sidewaystable}
+
 
 
 
@@ -314,11 +320,13 @@ In certificate based solutions there is a need of a global PKI. However, in some
 
 The root-key based solution does not require any extra round trips or certificates, hence it has better signaling and computational overhead compared to certificate based. However, it still suffers from the increased latency in a roaming situation because every authentication needs to travel all the way to the HN. This is because no one else except the HN can decrypt the message sent by the UE. The solution creates also computational pressure in the HN. 
 
-We have proposed a novel solution based on IBE that can both accomplish the identification and mutual authentication. The solution does not need to maintain synchronized states between a UE and the HN. The solution does not require a global PKI and does not need certificates. Unlike the root-key based approach, our solution does not need to involve HN each time authentication is needed. The aforementioned argument makes the IBE based solution a potential candidate to solve the problem in question. In Table \ref{table:comparison}, we present a comparison among the different solutions based on different criteria.
+In the category of identity based solutions, the JPL scheme was not designed specifically for the 3GPP defined networks and hence does not support an important 3GPP requirement: LI. It also does not support the revocation of the private keys of the SNs. PEMMA needs all the three parties (UE,SN and HN) to be online which implies higher latency. PEMMA also requires high standardization effort to revoke the public private key pairs of the SNs.
 
-Apparently pseudonym based solution is very good in most of the criteria. One downside of pseudonym based approach is, if the pseudonym is unsynchronized between UE and HN, the user has to visit the HN physically and get back to synchronized state by giving the IMSI in a trusted environment. The need of visiting the HN physically might make the pseudonym based solution a little clumsy. Variant 1 of certificate based approach is good in preventing AIC and also conceals $hnid$. But this is bad in many other important criteria because of exchanging and verifying certificates. Considering the concealment of $hnid$ with a bit less priority, the CertV1 is outperformed by both root-key based and IBE based solution. CertV2 and CertV3 can not even conceal $hnid$. So, the extra overhead of using Certv2 and CertV3 is not worth comparing to root-key and IBE. When comparing IBE and root-key, both of them are almost similar except that IBE based solution can be extended to a mutual authentication protocol between UE and HN. However, Cert1V can also be extended to a mutual authentication protocol. 
+Our novel solution based on IBE that we call PEFMA, can both accomplish the identification and mutual authentication. The solution does not need to maintain synchronized states between a UE and the HN. The solution does not require a global PKI and does not need certificates. Unlike the root-key based approach, our solution does not need to involve HN each time authentication is needed. It requires standardization effort only within a single HN. The solution can co-exist with the existing protocols and does not need a hard cut off date for implementation. The aforementioned argument makes the IBE based solution a potential candidate to solve the problem in question. In Table \ref{table:comparison}, we present a comparison among the different solutions based on different criteria.
 
-If concealing $hnid$ is essential, then the only applicable solution is Certv1, the certificate based solution with global root of trust. If concealment of $hnid$ can be compromised, then the choice  of the solution depends on the requirement of mutual authentication. If mutual authentication of UE and SN without involving HN is considered important and useful then IBE based solution is the winner. Otherwise, root-key based solution is just enough.
+Apparently pseudonym based solution is very good in most of the criteria. One downside of pseudonym based approach is, if the pseudonym is unsynchronized between UE and HN, the user has to visit the HN physically and get back to synchronized state by giving the IMSI in a trusted environment. The need of visiting the HN physically might make the pseudonym based solution a little clumsy. Variant 1 of certificate based approach is good in preventing AIC and also conceals $hnid$. But this is bad in many other important criteria because of exchanging and verifying certificates. Considering the concealment of $hnid$ with a bit less priority, the CertV1 is outperformed by both root-key based and IBE based solution. CertV2 and CertV3 can not even conceal $hnid$. So, the extra overhead of using Certv2 and CertV3 is not worth comparing to root-key, PEMMA or PEFMA. When comparing PEMMA, PEFMA and root-key, all of them are almost similar except that PEMMA and PEFMA provide mutual authentication. However, Cert1V can also be extended to a mutual authentication protocol. 
+
+If concealing $hnid$ is essential, then the only applicable solution is Certv1, the certificate based solution with global root of trust. If concealment of $hnid$ can be compromised, then the choice  of the solution depends on the requirement of mutual authentication. If mutual authentication of UE and SN without involving HN is considered important and useful then PEFMA is the winner. Otherwise, root-key based solution is just enough.
 
 
 \section{Conclusion}
@@ -466,12 +474,8 @@ Fabian van~den Broek, Roel Verdult, and Joeri de~Ruiter.
 
 \section*{Biography}
 
-\fbox{\parbox[t]{3cm}{Here is space for \\
-a photograph of \\
-the author. \\
-will be added \\
-while revising
-\vspace*{2cm}
+\fbox{\parbox[t]{3cm}{
+\includegraphics[width=3cm, height=3.5cm]{mohsin.jpg}
 }}
 
 \medskip
@@ -480,12 +484,8 @@ while revising
 
 
 
-\fbox{\parbox[t]{3cm}{Here is space for \\
-a photograph of \\
-the author. \\
-will be added \\
-while revising
-\vspace*{2cm}
+\fbox{\parbox[t]{3cm}{
+\includegraphics[width=3cm, height=4cm]{valtteri.jpg}
 }}
 
 \medskip
