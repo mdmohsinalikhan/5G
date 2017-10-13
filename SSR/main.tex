@@ -92,7 +92,7 @@
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{On De-synchronization of User Pseudonyms in Mobile Network}
+\title{On De-synchronization of User Pseudonyms in Mobile Networks}
 %Concealing IMSI in 5G Network Using Identity Based Cryptography
 
 % a short form should be given in case it is too long for the running head
@@ -502,7 +502,7 @@ We thank Markku Antikainen for the useful discussion to characterize the DDoS at
 \section{} \label{appendix:A}
 Let us consider that there are $\mathcal{M}$ number of bins, each labeled with a pseudonym or IMSI. Choosing $m$ random pseudonyms with replacement and sending them in an attach request can be compared with the classic experiment of throwing $m$ balls to $\mathcal{M}$ bins. The number of affected users by sending $m$ attach requests is the same as the number of bins that get two or more balls after throwing $m$ balls to $\mathcal{M}$ bins. The probability that a particular bin gets no balls is $\left(1-\frac{1}{\mathcal{M}}\right)^m$. The probability that this bin gets exactly one ball is $\binom{m}{1}\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m$. Consequently, the probability that the bin will get two or more balls is:
 \begin{eqnarray*}
- Pr[text{more than 1 balls}] = 1 - \left(1-\frac{1}{\mathcal{M}}\right)^m - \binom{m}{1}\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m
+ Pr[\text{2 or more balls in a fixed bin}] = 1 - \left(1-\frac{1}{\mathcal{M}}\right)^m - \binom{m}{1}\frac{1}{\mathcal{M}}\left(1-\frac{1}{\mathcal{M}}\right)^m
 \end{eqnarray*}
 If $n$ is the number of users in the HN, then by linearity of expectation, the expected number of affected user would be:
 \begin{eqnarray*}
