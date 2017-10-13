@@ -1,0 +1,31 @@
+\documentclass[14pt]{article}
+
+\usepackage{csquotes}
+
+
+\begin{document}
+
+
+\begin{titlepage}
+
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center 
+\Large \bfseries Long-term Identity Privacy In Cellular Networks
+
+
+%}\\[0.4cm] % Title of your document
+%\HRule \\[1.5cm]
+ 
+
+\end{titlepage}
+
+
+
+\section{Abstract}
+Long-term identity privacy is an old problem that has persisted in 2G,3G, and even in 4G networks. The use of temporary identity called TMSI or GUTI has been effective only against the passive attackers who listens to the radio channel. However, the active attackers who impersonate a legitimate serving network can still trick a user equipment and obtain its long-term identity. Even though the weakness is known since the time of 2G networks, no solution has been adopted due to the additional complexity. Use of public key cryptography is one of the promising solutions. Another promising solution is to use a one time identity known as pseudonym that is recognized by the user's home network. Both of these solutions have different  
+
+
+\end{document}
