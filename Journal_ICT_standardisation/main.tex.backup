@@ -248,13 +248,13 @@ All the entries with expiry time older than current date-time can be removed fro
 
 \subsection{Discussion and Evaluation}
 \subsubsection{Identity Privacy}
-A PIC can learn the IMSI of a user during the first time the UE identifies itself after the USIM is inserted into an ME. Moving USIM from one ME to another is a very rare event and the PIC would have a very tiny chance in catching an IMSI. However, a PIC learn the $hndi$ of a subscriber who identifies itself using the encrypted IMSI.
+A PIC can learn the IMSI of a user during the first time the UE identifies itself after the USIM is inserted into an ME. Moving USIM from one ME to another is a very rare event and the PIC would have a very tiny chance in catching an IMSI. However, a PIC learn the $hnid$ of a subscriber who identifies itself using the encrypted IMSI.
 
 All a PIC can do, an AIC is also able to do. However, an AIC can still impersonate a legitimate SN and present itself as not PEFMA enabled. The UEs will be provisioned by the HN with the list of the PEFMA enabled SNs it might visit. An PEFMA enabled UE will never reveal its IMSI to an SN which is in the trusted list and marked as PEFMA enabled. Over the time as more and more SNs become PEFMA enabled, the success rate of an AIC in catching an IMSI decreases.
 
 
 \subsubsection{Impact of compromised/lost private keys}
-If the UE's private key is compromised, the attacker who has the compromised key can learn the IMSI and can impersonate the user by running PEFMA protocol. The attacker can do this until the compromised key is revoked. However, even before the revocation, when UMTS/LTE AKA is run, the attacker would not be able to pass through and consequently be denied any service. This means, using a compromised private key of a user, an attacker can impersonate the user only until the compromised key is revoked and only until the UMTS/LTE AKA is run. If the private kye of the user is lost but not compromised, the user can still identify itself using encrypted IMSI but can not perform PEFMA which implies the user can not participate in the fast authentication without involving the HN. Nevertheless, UE's compromised/lost private key can not keep it from authenticating itself to the SN hence the user still remain connected with all the services. When the user comes to the HN, a new private key can be provisioned to the UE by the HN.
+If the UE's private key is compromised, the attacker who has the compromised key can learn the IMSI and can impersonate the user by running PEFMA protocol. The attacker can do this until the compromised key is revoked. However, even before the revocation, when UMTS/LTE AKA is run, the attacker would not be able to pass through and consequently be denied any service. This means, using a compromised private key of a user, an attacker can impersonate the user only until the compromised key is revoked and only until the UMTS/LTE AKA is run. If the private key of the user is lost but not compromised, the user can still identify itself using encrypted IMSI but can not perform PEFMA which implies the user can not participate in the fast authentication without involving the HN. Nevertheless, UE's compromised/lost private key can not keep it from authenticating itself to the SN hence the user still remain connected with all the services. When the user comes to the HN, a new private key can be provisioned to the UE by the HN.
 
 If an SN's private key is compromised, an attacker who knows the compromised key can impersonate the compromised SN to a UE, can run PEFMA and consequently can breach the identity privacy, data confidentiality and integrity. However, once the key expiry time comes the compromised key is automatically revoked and the attacker can not attack anymore thereafter. However, compromisation of SN's private key is an extremely rare event. Even if it happens, the attacker can not keep attacking for long since the expiration time of SN's private-public key pair is near in the future. If SN's private key is lost but not compromised, the SN can not identify any user of the respective HN and hence can not provide any service until the SN get private key from the HN. However, losing the private key is also an extremely rare event. Even if it happens, the SN knows it immediately a user from the respective HN visits. This means, the SN can be quickly re-provisioned with the private keys by the HN.
 
@@ -263,13 +263,12 @@ If the HN's private key is compromised, the attacker who has the compromised key
 
 If the HN's public key is lost, no UE and SN can be provisioned with private keys any more. This implies that after the expiration of the private key of an SN, the SN would not be able to identify a user who tries to identify itself using the encrypted IMSI. The HN chooses a new public private key pairs and provisions the new public key to all the SNs and all the UEs who are already assigned a TMSI or GUIT and currently not roaming. However, all the UEs who are roaming or are not assigned a TMSI or GUTI remains out of the network until it manually get the new public key of the HN.
 
-\subsubsection{Effectiveness and Efficiency}
-PEFMA is effective when both the UE and the SN are PEFMA enabled. However, when an SN is not PEFMA enabled and in the trusted list, an attacker can mount an active IMSI catching attack. Nevertheless, over the time more and more SNs become PEFMA enabled and IMSI privacy enhances. It is better than some other approaches that need a hard cut off date for implementing the solution. PEFMA is also transparent to the USIM.  
-Patching the legacy MEs will be the challenge. On the other hand, when the 5G MEs can be patched with PEFMA ability before making them available in the market. Thus, a user switching to a 5G enabled ME avail PEFMA ability even for UMTS or LTE network. 
+\subsubsection{Deployment Complexity and Efficiency}
+PEFMA is effective when both the UE and the SN are PEFMA enabled. However, when an SN is not PEFMA enabled and in the trusted list, an attacker can mount an active IMSI catching attack. Nevertheless, over the time more and more SNs become PEFMA enabled and IMSI privacy enhances. It is better than some other approaches that need a hard cut off date for implementing the solution. PEFMA is also transparent to the USIM. Patching the legacy MEs will be the challenge. There are still many 2G networks widely deployed across the world. Both 3G and 4G networks are expected to exist few more decades. PEFMA has to be explicitly patched into these widely implemented legacy networks. On the other hand, when the 5G MEs can be patched with PEFMA ability before making them available in the market. Thus, a user switching to a 5G enabled ME avail PEFMA ability even for UMTS or LTE network. 
 
 Unlike PEMMA \cite{koienibe}, PEFMA does not require to standardize the ET (expiry time of the key of an SN) so that all the HN assigns the same ET to a particular SN. Instead, in PEFMA, all the UEs of a particular HN uses the same ET when they go roaming. This means an SN will need a private key associated with the HN and the ET used by the UEs of the HN. In this way, ET needs to be standardized only within a single HN, not across all the HNs.
 
-PEFMA will introduce some extra signalling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
+PEFMA will introduce some extra signaling and computational overhead between UE and SN due to public key encryption and introduction of new message flows. However, PEFMA will run very infrequently and hence the additional signaling overhead may not be much of a problem. Private keys of SNs would need to be frequently provisioned by the HN. Generating private keys frequently would add some additional computational load on HSS. However, HSS is a very powerful server and should be able to serve the extra load.
 
 One usability issue is that, a user can not move its USIM from one ME to another while roaming. If does so, the new ME can not be provisioned with the HN's public key and the users private key and hence the users IMSI privacy will become vulnerable to an AIC until the user go back to the HN.
 
@@ -480,7 +479,7 @@ Fabian van~den Broek, Roel Verdult, and Joeri de~Ruiter.
 
 \medskip
 \noindent
-{\bf Mohsin Khan}. A short vitae can be included here. Will be included while revising.
+{\bf Mohsin Khan}. Mohsin Khan received his M.Sc. degree in 2015 from Aalto University, Espoo, Finland, majoring in foundations of advanced computing. Currently he is studying in University of Helsinki as a PhD student. His PhD topic is cryptographic techniques in 5G networks.
 
 
 
@@ -490,6 +489,7 @@ Fabian van~den Broek, Roel Verdult, and Joeri de~Ruiter.
 
 \medskip
 \noindent
-{\bf Valtteri Niemi}. A short vitae can be included here. Will be included while revising.
+{\bf Valtteri Niemi}. Valtteri Niemi is a Professor of Computer Science in University of Helsinki and leads the Secure Systems research group. Earlier he has been a Professor of Mathematics in two other Finnish universities: University of Vaasa during 1993-97 and University of Turku during 2012-2015. Between these two academic positions Niemi served for 15 years in various roles at Nokia Research Center and was nominated as a Nokia Fellow in 2009. At Nokia, Dr. Niemi worked for wireless security, including cryptological aspects and privacy-enhancing technologies. He participated 3GPP SA3 (security) standardization group from its beginning and during 2003-2009 he was the chairman of the group. He has published more than 70 scientific articles and he is a co-author of four books and more than 30 patent families.
+
 
 \end{document}
