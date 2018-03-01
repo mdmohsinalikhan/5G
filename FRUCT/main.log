@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  27 FEB 2018 14:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  1 MAR 2018 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,8 +221,11 @@ Package: flushend 1997/10/01
 \atColsBreak=\toks24
 \@extra@skip=\dimen128
 \@nd@page@rule=\dimen129
+) (./main.aux
+
+LaTeX Warning: Label `tab1' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -237,7 +240,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
@@ -286,94 +289,52 @@ Package etexcmds Info: Could not find \expanded.
 Package epstopdf Warning: Drivers other than `pdftex.def' are not supported.
 
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 31.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-
-LaTeX Warning: Reference `fig1' on page 1 undefined on input line 34.
-
 File: Fig1.eps Graphic file (type eps)
-<Fig1.eps>
-Overfull \hbox (0.89888pt too wide) in paragraph at lines 38--39
+ <Fig1.eps>
+Overfull \hbox (0.89888pt too wide) in paragraph at lines 41--42
  [][] 
  []
 
 
-LaTeX Warning: Reference `alg:algorithm' on page 1 undefined on input line 81.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 Non-PDF special ignored!]
-
-LaTeX Warning: Reference `fig2' on page 2 undefined on input line 96.
-
 File: Fig2.eps Graphic file (type eps)
-<Fig2.eps>
-
-LaTeX Warning: Citation `Cover' on page 2 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Dobrushin' on page 2 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Blachman' on page 2 undefined on input line 143.
-
+ <Fig2.eps>
 Missing character: There is no — in font ptmr7t!
-
-LaTeX Warning: Citation `Blachman' on page 2 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Blachman' on page 2 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Blachman' on page 2 undefined on input line 143.
-
-
-LaTeX Warning: Citation `Elissa' on page 2 undefined on input line 145.
-
-
-LaTeX Warning: Citation `Nicole' on page 2 undefined on input line 145.
-
-
-LaTeX Warning: Citation `Cover' on page 2 undefined on input line 161.
-
-
-LaTeX Warning: Citation `Dobrushin' on page 2 undefined on input line 170.
-
-
-LaTeX Warning: Citation `Blachman' on page 2 undefined on input line 170.
-
 Missing character: There is no “ in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
 
-LaTeX Warning: Citation `IEEE' on page 2 undefined on input line 179.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 []\OT1/ptm/m/it/8 (Example for web-links) \OT1/ptm/m/n/8 IEEE of-fi-cial web-si
 te,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 \OT1/ptm/m/n/8 Manuscript Tem-plates for Con-fer-ence Pro-ceed-ings, Web:
  []
 
 
-Overfull \hbox (3.46748pt too wide) in paragraph at lines 200--201
+Overfull \hbox (3.46748pt too wide) in paragraph at lines 203--204
 \OT1/ptm/m/n/8 http://www.ieee.org/conferences[]events/conferences/publishing/t
 emplates. 
  []
@@ -391,28 +352,35 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Extra height:11.0pt when 32.11597pt
-
-Underfull \vbox (badness 3364) has occurred while \output is active []
-
-Extra height:11.0pt when 33.11597pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 34.11597pt
+Extra height:11.0pt when 21.86597pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:34.11597pt Right:34.73193pt Output:34.11597pt
+Extra height:11.0pt when 22.86597pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:34.73193pt Right:34.73193pt Output:34.73193pt
+Extra height:11.0pt when 23.86597pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 24.86597pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:24.86597pt Right:25.73193pt Output:24.86597pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:25.73193pt Right:25.73193pt Output:25.73193pt
 - LAST -
 Extra skip:0.0pt
-Left:34.73193pt
-Right:34.73193pt
-Output:34.73193pt
+Left:25.73193pt
+Right:25.73193pt
+Output:25.73193pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -421,20 +389,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 (./main.aux)
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2903 strings out of 493304
- 41887 string characters out of 6139872
- 106188 words of memory out of 5000000
+ 2905 strings out of 493304
+ 41905 string characters out of 6139872
+ 107285 words of memory out of 5000000
  6317 multiletter control sequences out of 15000+600000
  41373 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,26p,803b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,7n,26p,794b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
@@ -443,7 +408,7 @@ type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 90637 bytes).
+Output written on main.pdf (3 pages, 92098 bytes).
 PDF statistics:
  47 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
