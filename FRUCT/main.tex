@@ -156,8 +156,8 @@ We also look at the solutions from the point of view of the maturity of the tech
 Looking at the table, it seems evident that IBE based solution is the most promising solution. Certificate based approach is good in preventing AIC and handling the requirement of lawful interception. But the solution is costly in almost all other aspects. So maybe, the industry is not yet ready to spend such expenses to provide user identity privacy. Even though pseudonym based approach is inexpensive from almost all the aspects, it becomes a bit less effective to achieve its original purpose - immunity against AIC. Because of the LI issues, it also loses its most important merit - transparency with legacy SNs. The root-key based approach is also a bit less effective in serving its original purpose - immunity against AIC. It also makes the lawful interception a bit more complicated than that of IBE based solution. However, key revocation in IBE may have some latency whereas no key revocation is required in root-key. But still, considering the effectiveness of the solution, we would like to conclude that IBE based solution is a better choice than the root-key based solution.
 
 
-\begin{table*}
-\begin{small}
+\begin{table}
+\begin{tiny}
 \begin{center}
 \caption{Comparative evaluation of the solutions}
 \begin{tabular}[t]{|l|c|c|c|c|}
@@ -181,12 +181,12 @@ Mutual Authentication & - & + & - & + \\ \hline
 \end{tabular}
 \label{table:comparison}
 \end{center}
-\end{small}
-\end{table*}
+\end{tiny}
+\end{table}
 
 
 \section{Conclusion}
-Recently two concerns were raised in 3GPP community regarding the routing of IMSIs and LI. These two concerns are now affecting the effectiveness of different alternative solutions of identity privacy. We have analysed the impact of these two concerns in different solutions made a qualitative comparison between different categories of solutions. We have surprisingly found that IBE based solution outperforms the root-key based solution. In the 3GPP community root-key based solution is most likely going to be standardised. Nonetheless, based on this analysis, it would be worth for 3GPP community to reconsider their decision.
+Recently two concerns were raised in 3GPP community regarding the routing of IMSIs and LI. We have explained these two concerns. We have discussed how these two concerns are affecting the effectiveness of different alternative solutions of identity privacy. We have analysed the impact of them in different solutions. We have presented a detailed a qualitative comparison between different categories of solutions. We have surprisingly found that IBE based solution outperforms the root-key based solution. In the 3GPP community root-key based solution is most likely going to be standardised. Nonetheless, based on our qualitative analysis, we believe, it would be worth for 3GPP community to reconsider their decision.
 
 \section*{Acknowledgment}
 
