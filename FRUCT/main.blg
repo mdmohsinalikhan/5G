@@ -1,0 +1,118 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: acm.bst
+Database file #1: ref.bib
+You're missing a field name---line 80 of file ref.bib
+ : 
+ : %  title={{3GPP} {TS} 33.401 {V}15.0.0 {S}ecurity architecture ({R}elease 15)},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 214 of file ref.bib
+ : 
+ : %  pages   = {201-213},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 227 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 237 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 247 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 257 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 267 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 277 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 287 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 297 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 308 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 317 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 327 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 336 of file ref.bib
+ :   
+ :   %month={March},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty journal in TR33821
+You've used 31 entries,
+            2253 wiz_defined-function locations,
+            683 strings with 9953 characters,
+and the built_in function-call counts, 8792 in all, are:
+= -- 806
+> -- 357
+< -- 0
++ -- 149
+- -- 118
+* -- 515
+:= -- 1387
+add.period$ -- 93
+call.type$ -- 31
+change.case$ -- 152
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 401
+empty$ -- 849
+format.name$ -- 118
+if$ -- 1911
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 16
+newline$ -- 158
+num.names$ -- 62
+pop$ -- 256
+preamble$ -- 1
+purify$ -- 121
+quote$ -- 0
+skip$ -- 267
+stack$ -- 0
+substring$ -- 311
+swap$ -- 101
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 124
+warning$ -- 1
+while$ -- 76
+width$ -- 33
+write$ -- 315
+(There were 14 error messages)

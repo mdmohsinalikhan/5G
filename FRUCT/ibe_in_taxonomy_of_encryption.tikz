@@ -1,0 +1,79 @@
+\begin{tikzpicture}
+\draw[black,thick] (6,21) rectangle (10,20);
+\draw node at (8,20.5) {\large Encryption};
+
+\draw[black,thick] (1.6,13) rectangle (7.4,18);
+\draw node at (4.5,17.5) {\large Symmetric-key encryption};
+\draw node at (4.2,16.5) {+ Computationally inexpensive};
+\draw node at (3.47,16) {+ Longer ciphertexts};
+\draw node at (4.25,14.5) {- Sharing secret key is difficult};
+
+
+
+
+\draw[black,thick] (8.6,13) rectangle (14.4,18);
+\draw node at (11.5,17.5) {\large Public-key encryption};
+\draw node at (10.7,16.5) {+ No secret key sharing};
+\draw node at (10.57,16) {+ Anyone can encrypt};
+\draw node at (11.43,15.5) {+ Private key is at only one place};
+
+\draw node at (11.21,14.5) {- Computationally inexpensive};
+\draw node at (10.47,14) {- Longer ciphertexts};
+\draw node at (11.05,13.5) {- Key revocation is complex};
+
+
+
+\draw[black,thick] (-2,4.5) rectangle (3.9,11);
+\draw node at (.95,10.5) {\large Identity based};
+\draw node at (0.2,9.5) {+ No certificate required};
+\draw node at (.35,9) {+ PKG's secret key can be };
+\draw node at (.65,8.5) { destroyed at certain point};
+
+
+\draw node at (0.4,7) {- Key revocation is difficult};
+\draw node at (0.27,6.5) {- Too much trust on PKG};
+
+
+
+
+\draw[black,thick] (4.1,4.5) rectangle (10,11);
+\draw node at (7.01,10.5) {\large Certificate based};
+\draw node at (6.5,9.5) {+ Distributed trust network};
+\draw node at (6.45,9) {+ Key revocation is easier};
+
+
+\draw node at (7,7) {- Long certificate chain increases};
+\draw node at (5.93,6.5) {communication};
+\draw node at (6.85,6) { and computational overhead};
+\draw node at (6.65,5.5) {- Network of CA is required};
+
+
+
+\draw[black,thick] (10.2,4.5) rectangle (16.1,11);
+\draw node at (13.15,10.5) {\large Root-key based};
+\draw node at (12.4,9.5) {+ Easy key management};
+\draw node at (12.4,9) {+ No certificate required};
+\draw node at (12.6,8.5) {+ Very easy key revocation};
+\draw node at (12.97,8) {+ Less communication overhead};
+
+
+\draw node at (12.9,7) {- Only trusted root can decrypt};
+\draw node at (12.83,6.5) { the message which creates};
+\draw node at (12.91,6) { computational pressure at a};
+\draw node at (11.78, 5.5) { single point};
+\draw node at (12.95,5) {- Trust Distribution not possible};
+
+
+
+%the lines of the tree
+
+\draw[black,very thick] (8,20) -- (4.5,18);
+\draw[black,very thick] (8,20) -- (11.5,18);
+
+\draw[black,very thick] (11.5,13) -- (.95,11);
+\draw[black,very thick] (11.5,13) -- (7.01,11);
+\draw[black,very thick] (11.5,13) -- (13.15,11);
+
+
+
+\end{tikzpicture}
