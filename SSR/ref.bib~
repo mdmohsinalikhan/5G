@@ -18,6 +18,20 @@
  year = {2017},
 }
 
+@inproceedings{DBLP:conf/ndss/ShaikSBAN16,
+  author    = {Altaf Shaik and
+               Jean{-}Pierre Seifert and
+               Ravishankar Borgaonkar and
+               N. Asokan and
+               Valtteri Niemi},
+  title     = {Practical Attacks Against Privacy and Availability in 4G/LTE Mobile
+               Communication Systems},
+  booktitle = {23rd Annual Network and Distributed System Security Symposium, {NDSS}
+               2016, San Diego, California, USA, February 21-24, 2016},
+  year      = {2016},
+}
+
+
 
 @inproceedings{catch_me_if_you_can,
  author = {Dabrowski, Adrian and Pianta, Nicola and Klepp, Thomas and Mulazzani, Martin and Weippl, Edgar},
@@ -30,7 +44,37 @@
  address = {New York, NY, USA},
 } 
 
-3GPP TS 33.401 V15.0.0 (2017-06)
+
+@misc{TS23012,
+  title={{3GPP} {TS} 23.012 {V}14.0.0 {L}ocation management procedures ({R}elease 14)},
+  author={3GPP},
+  howpublished = "\url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=735}",
+  year={2017},
+  month={March},
+  publisher={3GPP},
+}
+
+
+
+
+@misc{dataretention,
+  title={Data {R}etention {D}irective},
+  author={Wikipedia},
+  howpublished = "\url{https://en.wikipedia.org/wiki/Data_Retention_Directive}",
+  year={},
+  month={},
+  publisher={},
+}
+
+
+@misc{TS33102,
+  title={{3GPP} {TS} 33.102 {V}14.1.0 {S}ecurity architecture ({R}elease 14)},
+  author={3GPP},
+  howpublished = "\url{https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=2262}",
+  year={2017},
+  month={March},
+  publisher={3GPP},
+}
 
 
 @misc{TS33401,
