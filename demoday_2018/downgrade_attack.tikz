@@ -1,0 +1,48 @@
+
+\begin{tikzpicture}[scale=3]
+
+
+\node[inner sep=0pt] (wsn) at (12.2,6)
+    {\includegraphics[height = 7cm]{home_network.jpg}};
+\draw node at (12,4) {\textbf{Home Network (5G)}};
+
+
+\node[inner sep=0pt] (wsn) at (1,6)
+    {\includegraphics[height = 5cm]{smartphone.png}};
+
+\node[inner sep=0pt] (wsn) at (8,8)
+    {\includegraphics[height = 5cm]{tower.jpg}};
+\filldraw[draw=white,fill=white] (7,7.1) rectangle (10,7.4);
+
+\draw node at (8,7) {\textbf{Serving Network (5G/LTE)}};
+
+
+
+
+
+
+\draw[<->, black,line width = 3pt] (7,8) -- (1.8,8);
+\draw node at (3,8) {\Huge \textcolor{red}{$\times$}};
+
+\node[inner sep=0pt] (wsn) at (8,4.75)
+    {\includegraphics[height = 10cm]{fake_tower.jpg}};
+
+
+\draw [black, line width = 5pt, ->] (7,6) -- (1.8,6);
+\draw node at (4.4,6.6) {\small (Stronger signal)};
+\draw node at (4.4,6.3) {\small Reveal your \textbf{IMSI}};
+
+
+\draw node at (8,2.8) {\textbf{\textcolor{red}{Fake Serving Network (LTE)}}};
+\draw node at (8,2.4) {\textbf{\textcolor{red}{Active IMSI Catcher}}};
+
+
+\draw[<-, black,line width = 5pt] (7,4) -- (1.8,4);
+\draw node at (4.25,4.2) {\small \textbf{IMSI}};
+
+%\draw[<-, dotted, black,line width = 2pt] (7,6) arc (60:128:4.95);
+
+%\draw[<-, dotted, black,line width = 3pt] (7,6) arc (60:113:6);
+
+
+\end{tikzpicture}

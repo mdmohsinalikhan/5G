@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  4 JUN 2018 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  5 JUN 2018 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -840,39 +840,280 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count155
-) (./poster.aux)
+)
+(/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks22
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box77
+
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks23
+\pgfkeys@temptoks=\toks24
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks25
+))
+\pgf@x=\dimen187
+\pgf@y=\dimen188
+\pgf@xa=\dimen189
+\pgf@ya=\dimen190
+\pgf@xb=\dimen191
+\pgf@yb=\dimen192
+\pgf@xc=\dimen193
+\pgf@yc=\dimen194
+\w@pgf@writea=\write4
+\r@pgf@reada=\read2
+\c@pgf@counta=\count156
+\c@pgf@countb=\count157
+\c@pgf@countc=\count158
+\c@pgf@countd=\count159
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count160
+\pgfsyssoftpath@bigbuffer@items=\count161
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen195
+\pgfmath@count=\count162
+\pgfmath@box=\box78
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count163
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen196
+\pgf@picmaxx=\dimen197
+\pgf@picminy=\dimen198
+\pgf@picmaxy=\dimen199
+\pgf@pathminx=\dimen200
+\pgf@pathmaxx=\dimen201
+Normal \dimen register pool exhausted, switching to extended pool.
+\pgf@pathminy=\dimen256
+\pgf@pathmaxy=\dimen257
+\pgf@xx=\dimen258
+\pgf@xy=\dimen259
+\pgf@yx=\dimen260
+\pgf@yy=\dimen261
+\pgf@zx=\dimen262
+\pgf@zy=\dimen263
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen264
+\pgf@path@lasty=\dimen265
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen266
+\pgf@shorten@start@additional=\dimen267
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box79
+\pgf@hbox=\box80
+\pgf@layerbox@main=\box81
+\pgf@picture@serial@count=\count164
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen268
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen269
+\pgf@pt@y=\dimen270
+\pgf@pt@temp=\dimen271
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen272
+\pgf@sys@shading@range@num=\count165
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box82
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box83
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen273
+\pgf@nodesepend=\dimen274
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen275
+\pgffor@skip=\dimen276
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count166
+\pgfplotmarksize=\dimen277
+)
+\tikz@lastx=\dimen278
+\tikz@lasty=\dimen279
+\tikz@lastxsaved=\dimen280
+\tikz@lastysaved=\dimen281
+\tikzleveldistance=\dimen282
+\tikzsiblingdistance=\dimen283
+\tikz@figbox=\box84
+\tikz@tempbox=\box85
+\tikztreelevel=\count167
+\tikznumberofchildren=\count168
+\tikznumberofcurrentchild=\count169
+\tikz@fig@count=\count170
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count171
+\pgfmatrixcurrentcolumn=\count172
+\pgf@matrix@numberofcolumns=\count173
+)
+\tikz@expandcount=\count174
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+))) (./poster.aux)
 \openout1 = `poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 30.
-
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 32.
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen187
-\scratchbox=\box77
-\nofMPsegments=\count157
-\nofMParguments=\count158
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen188
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
-\everyMPtoPDFconversion=\toks23
+\scratchcounter=\count175
+\scratchdimen=\dimen284
+\scratchbox=\box86
+\nofMPsegments=\count176
+\nofMParguments=\count177
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count178
+\MPscratchDim=\dimen285
+\MPnumerator=\count179
+\makeMPintoPDFobject=\count180
+\everyMPtoPDFconversion=\toks32
 )
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -1002,208 +1243,232 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c__siunitx_mathsf_int=\count162
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 30.
 
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+ABD: EveryShipout initializing macros
+\c__siunitx_mathsf_int=\count181
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 32.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 30.
-
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 32.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 30.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 30.
+(Font)              <24.88> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 30.
+(Font)              <20.74> on input line 32.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 30.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 30.
+(Font)              <14.4> on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count163
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 30.
+\c__siunitx_mathtt_int=\count182
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 32.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<HYlogo_fac_text-en.jpg, id=1, 270.0489pt x 254.8722pt>
+<HYlogo_fac_text-en.jpg, id=4, 270.0489pt x 254.8722pt>
 File: HYlogo_fac_text-en.jpg Graphic file (type jpg)
 
 <use HYlogo_fac_text-en.jpg>
-Package pdftex.def Info: HYlogo_fac_text-en.jpg used on input line 43.
+Package pdftex.def Info: HYlogo_fac_text-en.jpg used on input line 45.
 (pdftex.def)             Requested size: 337.51497pt x 318.51224pt.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 54.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <61.92> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <51.6> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 78.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 59.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <35.83> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
 
-Overfull \hbox (571.27063pt too wide) in paragraph at lines 72--84
+Overfull \hbox (571.27063pt too wide) in paragraph at lines 76--88
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 93.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 98.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <29.86> on input line 93.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <61.92> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 109.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <43> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 108.
-Package epstopdf Info: Source file: <IMSI-catcher.eps>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 196857 bytes
-(epstopdf)             Output file: <IMSI-catcher-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 31637 bytes
-(epstopdf)             Command: <repstopdf --outfile=IMSI-catcher-eps-converted
--to.pdf IMSI-catcher.eps>
-(epstopdf)             \includegraphics on input line 118.
-Package epstopdf Info: Output file is already uptodate.
-
-<IMSI-catcher-eps-converted-to.pdf, id=2, 308.15125pt x 173.64874pt>
-File: IMSI-catcher-eps-converted-to.pdf Graphic file (type pdf)
-
-<use IMSI-catcher-eps-converted-to.pdf>
-Package pdftex.def Info: IMSI-catcher-eps-converted-to.pdf used on input line 1
-18.
-(pdftex.def)             Requested size: 801.02733pt x 451.42838pt.
-Package epstopdf Info: Source file: <IMSI-catcher1.eps>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 213625 bytes
-(epstopdf)             Output file: <IMSI-catcher1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 40269 bytes
-(epstopdf)             Command: <repstopdf --outfile=IMSI-catcher1-eps-converte
-d-to.pdf IMSI-catcher1.eps>
-(epstopdf)             \includegraphics on input line 130.
-Package epstopdf Info: Output file is already uptodate.
-
-<IMSI-catcher1-eps-converted-to.pdf, id=3, 581.17125pt x 175.65625pt>
-File: IMSI-catcher1-eps-converted-to.pdf Graphic file (type pdf)
-
-<use IMSI-catcher1-eps-converted-to.pdf>
-Package pdftex.def Info: IMSI-catcher1-eps-converted-to.pdf used on input line 
-130.
-(pdftex.def)             Requested size: 1001.28035pt x 302.65353pt.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 138.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 119.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 122.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <29.86> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 138.
-Package epstopdf Info: Source file: <ccs_solution.eps>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 72839 bytes
-(epstopdf)             Output file: <ccs_solution-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 32838 bytes
-(epstopdf)             Command: <repstopdf --outfile=ccs_solution-eps-converted
--to.pdf ccs_solution.eps>
-(epstopdf)             \includegraphics on input line 151.
-Package epstopdf Info: Output file is already uptodate.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <51.6> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 122.
+ (./IMSI.tikz)
+(./passive_imsi_catcher.tikz <home_network.jpg, id=5, 192.72pt x 159.9576pt>
+File: home_network.jpg Graphic file (type jpg)
 
-<ccs_solution-eps-converted-to.pdf, id=4, 692.5875pt x 174.6525pt>
-File: ccs_solution-eps-converted-to.pdf Graphic file (type pdf)
+<use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+ <tower.jpg, id=6, 1304.875pt x 1395.2125pt>
+File: tower.jpg Graphic file (type jpg)
 
-<use ccs_solution-eps-converted-to.pdf>
-Package pdftex.def Info: ccs_solution-eps-converted-to.pdf used on input line 1
-51.
-(pdftex.def)             Requested size: 1001.28035pt x 252.50409pt.
-Package epstopdf Info: Source file: <attack.eps>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 84563 bytes
-(epstopdf)             Output file: <attack-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 35919 bytes
-(epstopdf)             Command: <repstopdf --outfile=attack-eps-converted-to.pd
-f attack.eps>
-(epstopdf)             \includegraphics on input line 181.
-Package epstopdf Info: Output file is already uptodate.
+<use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 9.
+(pdftex.def)             Requested size: 266.10735pt x 284.52756pt.
+ <smartphone.png, id=7, 295.1025pt x 602.25pt>
+File: smartphone.png Graphic file (type png)
 
-<attack-eps-converted-to.pdf, id=5, 528.97626pt x 203.76125pt>
-File: attack-eps-converted-to.pdf Graphic file (type pdf)
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 17.
+(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+ <listening_tower.png, id=9, 184.69pt x 275.0275pt>
+File: listening_tower.png Graphic file (type png)
 
-<use attack-eps-converted-to.pdf>
-Package pdftex.def Info: attack-eps-converted-to.pdf used on input line 181.
-(pdftex.def)             Requested size: 1001.28035pt x 385.71706pt.
-Package epstopdf Info: Source file: <solution.eps>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 98304 bytes
-(epstopdf)             Output file: <solution-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-02 11:37:33
-(epstopdf)                    size: 45247 bytes
-(epstopdf)             Command: <repstopdf --outfile=solution-eps-converted-to.
-pdf solution.eps>
-(epstopdf)             \includegraphics on input line 212.
-Package epstopdf Info: Output file is already uptodate.
+<use listening_tower.png>
+Package pdftex.def Info: listening_tower.png used on input line 31.
+(pdftex.def)             Requested size: 76.42792pt x 113.81102pt.
+) (./active_imsi_catcher.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 6.
+(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+File: smartphone.png Graphic file (type png)
 
-<solution-eps-converted-to.pdf, id=6, 689.57625pt x 228.855pt>
-File: solution-eps-converted-to.pdf Graphic file (type pdf)
-
-<use solution-eps-converted-to.pdf>
-Package pdftex.def Info: solution-eps-converted-to.pdf used on input line 212.
-(pdftex.def)             Requested size: 1001.28035pt x 332.30615pt.
- (./poster.bbl)
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 11.
+(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 14.
+(pdftex.def)             Requested size: 133.04372pt x 142.26378pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 232.
+(Font)              <61.92> on input line 25.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 232.
+(Font)              <43> on input line 25.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 232.
+(Font)              <29.86> on input line 25.
+
+<fake_tower.jpg, id=10, 250.0542pt x 313.17pt>
+File: fake_tower.jpg Graphic file (type jpg)
+ <use fake_tower.jpg>
+Package pdftex.def Info: fake_tower.jpg used on input line 28.
+(pdftex.def)             Requested size: 227.191pt x 284.52756pt.
+)
+(./defeating_imsi_catcher_5G.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 4.
+(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 7.
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 11.
+(pdftex.def)             Requested size: 239.48666pt x 256.0748pt.
+File: smartphone.png Graphic file (type png)
+
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 19.
+(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+
+Overfull \hbox (22.08363pt too wide) in paragraph at lines 36--37
+ [] 
+ []
+
+) (./downgrade_attack.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 6.
+(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+File: smartphone.png Graphic file (type png)
+ <use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 11.
+(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+File: tower.jpg Graphic file (type jpg)
+
+<use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 14.
+(pdftex.def)             Requested size: 133.04372pt x 142.26378pt.
+File: fake_tower.jpg Graphic file (type jpg)
+ <use fake_tower.jpg>
+Package pdftex.def Info: fake_tower.jpg used on input line 28.
+(pdftex.def)             Requested size: 227.191pt x 284.52756pt.
+)
+Overfull \hbox (22.08363pt too wide) in paragraph at lines 48--164
+ [] 
+ []
+
+(./defeating_downgrade_attack.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 4.
+(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 11.
+(pdftex.def)             Requested size: 239.48666pt x 256.0748pt.
+File: smartphone.png Graphic file (type png)
+
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 19.
+(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+
+Overfull \hbox (22.08363pt too wide) in paragraph at lines 36--37
+ [] 
+ []
+
+) (./poster.bbl)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 192.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 192.
  [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./
-HYlogo_fac_text-en.jpg> <./IMSI-catcher-eps-converted-to.pdf> <./IMSI-catcher1-
-eps-converted-to.pdf> <./ccs_solution-eps-converted-to.pdf> <./attack-eps-conve
-rted-to.pdf> <./solution-eps-converted-to.pdf>] (./poster.aux) ) 
+HYlogo_fac_text-en.jpg> <./home_network.jpg> <./tower.jpg> <./smartphone.png> <
+./listening_tower.png> <./fake_tower.jpg>] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
- 12586 strings out of 493304
- 260236 string characters out of 6139872
- 398592 words of memory out of 5000000
- 15802 multiletter control sequences out of 15000+600000
- 107501 words of font info for 74 fonts, out of 8000000 for 9000
+ 20960 strings out of 493304
+ 426674 string characters out of 6139872
+ 556147 words of memory out of 5000000
+ 23960 multiletter control sequences out of 15000+600000
+ 167108 words of font info for 98 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,7n,38p,10419b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on poster.pdf (1 page, 463870 bytes).
+ 56i,7n,55p,10419b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fo
+nts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr
+/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
+usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on poster.pdf (1 page, 1003506 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
