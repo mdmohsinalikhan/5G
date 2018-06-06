@@ -118,8 +118,13 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 \section{IMSI}
 
-\begin{itemize} \huge
- \item  Identity of a mobile subscriber
+\begin{Large}
+ 
+\end{Large}
+
+
+\begin{itemize} \Large
+ \item Stands for International Mobile Subscriber Identity.
  \item Globally Unique
  \item Also called SUPI in 5G
 \end{itemize}
@@ -135,30 +140,39 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 \section{Passive IMSI Catchers}
 
+\begin{Large}
+A passive IMSI catcher is always listening and waiting for an IMSI to be sent in plaintext.
+\end{Large}
+
 \begin{center}
     \input{passive_imsi_catcher.tikz}
 \end{center}
 
-%\begin{Large} Protected in GSM, 3G and LTE and will be protected in 5G. \end{Large}
+\begin{Large} Protected in GSM, 3G and LTE. It will be protected in 5G too. \end{Large}
                                                                                                                                                                      
 
 
 \section{Active IMSI Catchers}
+\begin{Large}
+An active IMSI catcher impersonates a legitimate SN.
+\end{Large}
 
 \begin{center}
     \input{active_imsi_catcher.tikz}
 \end{center}
-\begin{large} There is no protection against against active IMSI catchers in GSM, 3G and LTE. There will be protection in 5G. \end{large}
+
+\begin{Large} There is no protection against against active IMSI catchers in GSM, 3G and LTE. There will be a protection in 5G. \end{Large}
 
 \section{Defeating IMSI Catchers in 5G (Standardized)}
-
+\begin{Large} 3GPP has decided to solve the problem using public-key encryption as follows. \end{Large}
 \begin{center}
     \input{defeating_imsi_catcher_5G.tikz}
 \end{center}
 
 
-\section{Downgrade Attack}
 
+\section{Downgrade Attack}
+\begin{Large} 5G phones will be interworking with LTE networks. So, an LTE based active IMSI catcher can still mount an attack.\end{Large}
 \begin{center}
     \input{downgrade_attack.tikz}
 \end{center}
@@ -168,8 +182,6 @@ Valtteri Niemi%$^\textbf{1}$\\
 \begin{large}
  A hybrid solution using public-key encryption and pseudonyms. Significant amount of study have been performed on pseudonym based solutions to defeat IMSI catchers \cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. We propose a mixing of pseudonym and public-key encryption to defeat the downgrade attack.
 \end{large}
-
-
 
 
 \begin{center}

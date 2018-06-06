@@ -118,10 +118,15 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 \section{IMSI}
 
-\begin{itemize}
- \item \huge Identity of a mobile subscriber
- \item \huge Globally Unique}
- \item \huge Also called SUPI in 5G
+\begin{Large}
+ 
+\end{Large}
+
+
+\begin{itemize} \Large
+ \item Stands for International Mobile Subscriber Identity.
+ \item Globally Unique
+ \item Also called SUPI in 5G
 \end{itemize}
 
 \vspace{30pt}
@@ -133,17 +138,23 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 
 
-%\section{Passive IMSI Catchers}
+\section{Passive IMSI Catchers}
 
-%\begin{center}
-%    \input{passive_imsi_catcher.tikz}
-%\end{center}
+\begin{Large}
+ Passive IMSI catchers are always listening and waiting for an IMSI to sent in plaintext.
+\end{Large}
+
+
+
+\begin{center}
+    \input{passive_imsi_catcher.tikz}
+\end{center}
 
 %\begin{Large} Protected in GSM, 3G and LTE and will be protected in 5G. \end{Large}
                                                                                                                                                                      
 
 
-\section{IMSI Catchers}
+\section{Active IMSI Catchers}
 
 \begin{center}
     \input{active_imsi_catcher.tikz}

@@ -1,36 +1,44 @@
 \begin{tikzpicture}[scale=3]
 
 
-\node[inner sep=0pt] (wsn) at (12.2,12)
-    {\includegraphics[height = 7cm]{home_network.jpg}};
-\draw node at (12,10) {\textbf{Home Network}};
+\node[inner sep=0pt] (wsn) at (12,12)
+    {\includegraphics[height = 3cm]{home_network.jpg}};
+\draw node at (12,11.2) {\textbf{HN}};
 
-\node[inner sep=0pt] (wsn) at (8,12)
-    {\includegraphics[height = 10cm]{tower.jpg}};
+\draw [black, line width = 4pt] (12,11) -- (12,8);
 
-\draw node at (8,10) {\textbf{Serving Network}};
+\node[inner sep=0pt] (wsn) at (6,12)
+    {\includegraphics[height = 3cm]{tower.jpg}};
+\filldraw[draw=white,fill=white] (4.5,11.25) rectangle (6.5,11.6);
 
-\filldraw[draw=white,fill=white] (6,10.25) rectangle (10,10.6);
+\draw node at (6,11.2) {\textbf{SN}};
 
-
-\node[inner sep=0pt] (wsn) at (1,11.9)
-    {\includegraphics[height = 5cm]{smartphone.png}};
-
-%\draw[->, dotted, black,line width = 3pt] (7.5,13.2) arc (60:122:5.8);
-
-\draw [black, line width = 4pt, ->] (6.8,13) -- (1.8,13);
-\draw node at (4.3,13.5) {\small Want to use the service?};
-\draw node at (4.3,13.2) {\small Reveal your \textbf{IMSI} so that you can be billed.};
+\draw [black, line width = 4pt] (6,11) -- (6,8);
 
 
-%\draw[<-, dotted, black,line width = 3pt] (7.5,11) arc (300:238:5.8);
-\draw [black, line width = 4pt, <-] (6.8,10.8) -- (1.8,10.8);
-\draw node at (4.3,11) {\small \textbf{IMSI}};
 
-\node[inner sep=0pt] (wsn) at (5,12)
-    {\includegraphics[height = 4cm]{listening_tower.png}};
-\draw node at (3.3,12) {\small \textbf{\textcolor{red}{Passive IMSI Catcher}}};
-\draw node at (3.4,11.7) {\small \textbf{\textcolor{red}{Evesdropping only}}};
+\node[inner sep=0pt] (wsn) at (0,11.9)
+    {\includegraphics[height = 3cm]{smartphone.png}};
+\draw node at (0,11.2) {\textbf{UE}};
+
+
+\draw [black, line width = 4pt] (0,11) -- (0,8);
+
+
+\draw [black, line width = 4pt, ->] (6.0,10) -- (0,10);
+\draw node at (3.0,10.5) {\small Want to use the service?};
+\draw node at (3.0,10.2) {\small Reveal your \textbf{IMSI} so that you can be billed.};
+
+
+\draw [black, line width = 4pt, <-] (6,9) -- (0,9);
+\draw node at (3,9.2) {\small \textbf{IMSI}};
+
+\node[inner sep=0pt] (wsn) at (3,12)
+    {\includegraphics[height = 3cm]{listening_tower.png}};
+\draw node at (3,11.2) {\small \textbf{\textcolor{red}{Passive IMSI Catcher}}};
+\draw node at (3,10.9) {\small \textbf{\textcolor{red}{Evesdropping only}}};
+
+\filldraw[-, dotted, fill opacity=0.1, cyan,line width = 3pt] (3,12.3) arc (90:450:2.5);
 
 
 \end{tikzpicture}

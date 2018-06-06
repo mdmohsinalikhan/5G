@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  5 JUN 2018 18:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  6 JUN 2018 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,162 +1313,155 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <61.92> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 109.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <43> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 119.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 122.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 127.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <51.6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 122.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <35.83> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 127.
  (./IMSI.tikz)
 (./passive_imsi_catcher.tikz <home_network.jpg, id=5, 192.72pt x 159.9576pt>
 File: home_network.jpg Graphic file (type jpg)
 
 <use home_network.jpg>
 Package pdftex.def Info: home_network.jpg used on input line 5.
-(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
  <tower.jpg, id=6, 1304.875pt x 1395.2125pt>
 File: tower.jpg Graphic file (type jpg)
 
 <use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 9.
-(pdftex.def)             Requested size: 266.10735pt x 284.52756pt.
+Package pdftex.def Info: tower.jpg used on input line 11.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
  <smartphone.png, id=7, 295.1025pt x 602.25pt>
 File: smartphone.png Graphic file (type png)
 
 <use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 17.
-(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+Package pdftex.def Info: smartphone.png used on input line 21.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
  <listening_tower.png, id=9, 184.69pt x 275.0275pt>
 File: listening_tower.png Graphic file (type png)
 
 <use listening_tower.png>
-Package pdftex.def Info: listening_tower.png used on input line 31.
-(pdftex.def)             Requested size: 76.42792pt x 113.81102pt.
+Package pdftex.def Info: listening_tower.png used on input line 37.
+(pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
 ) (./active_imsi_catcher.tikz
 File: home_network.jpg Graphic file (type jpg)
  <use home_network.jpg>
-Package pdftex.def Info: home_network.jpg used on input line 6.
-(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
-File: smartphone.png Graphic file (type png)
-
-<use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 11.
-(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 File: tower.jpg Graphic file (type jpg)
- <use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 14.
-(pdftex.def)             Requested size: 133.04372pt x 142.26378pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <61.92> on input line 25.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <43> on input line 25.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <29.86> on input line 25.
 
-<fake_tower.jpg, id=10, 250.0542pt x 313.17pt>
-File: fake_tower.jpg Graphic file (type jpg)
- <use fake_tower.jpg>
-Package pdftex.def Info: fake_tower.jpg used on input line 28.
-(pdftex.def)             Requested size: 227.191pt x 284.52756pt.
+<use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 11.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
+File: smartphone.png Graphic file (type png)
+ <use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 19.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <61.92> on input line 34.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <43> on input line 34.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <29.86> on input line 34.
+File: listening_tower.png Graphic file (type png)
+ <use listening_tower.png>
+Package pdftex.def Info: listening_tower.png used on input line 41.
+(pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
 )
 (./defeating_imsi_catcher_5G.tikz
 File: home_network.jpg Graphic file (type jpg)
  <use home_network.jpg>
-Package pdftex.def Info: home_network.jpg used on input line 4.
-(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 7.
+(Font)              <12> on input line 8.
 File: tower.jpg Graphic file (type jpg)
  <use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 11.
-(pdftex.def)             Requested size: 239.48666pt x 256.0748pt.
+Package pdftex.def Info: tower.jpg used on input line 14.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
 File: smartphone.png Graphic file (type png)
 
 <use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 19.
-(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+Package pdftex.def Info: smartphone.png used on input line 24.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
 
-Overfull \hbox (22.08363pt too wide) in paragraph at lines 36--37
+Overfull \hbox (49.53912pt too wide) in paragraph at lines 47--48
  [] 
  []
 
 ) (./downgrade_attack.tikz
 File: home_network.jpg Graphic file (type jpg)
  <use home_network.jpg>
-Package pdftex.def Info: home_network.jpg used on input line 6.
-(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
-File: smartphone.png Graphic file (type png)
- <use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 11.
-(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
-File: tower.jpg Graphic file (type jpg)
-
-<use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 14.
-(pdftex.def)             Requested size: 133.04372pt x 142.26378pt.
-File: fake_tower.jpg Graphic file (type jpg)
- <use fake_tower.jpg>
-Package pdftex.def Info: fake_tower.jpg used on input line 28.
-(pdftex.def)             Requested size: 227.191pt x 284.52756pt.
-)
-Overfull \hbox (22.08363pt too wide) in paragraph at lines 48--164
- [] 
- []
-
-(./defeating_downgrade_attack.tikz
-File: home_network.jpg Graphic file (type jpg)
- <use home_network.jpg>
-Package pdftex.def Info: home_network.jpg used on input line 4.
-(pdftex.def)             Requested size: 239.9672pt x 199.16928pt.
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 File: tower.jpg Graphic file (type jpg)
  <use tower.jpg>
 Package pdftex.def Info: tower.jpg used on input line 11.
-(pdftex.def)             Requested size: 239.48666pt x 256.0748pt.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
 File: smartphone.png Graphic file (type png)
 
 <use smartphone.png>
 Package pdftex.def Info: smartphone.png used on input line 19.
-(pdftex.def)             Requested size: 69.70932pt x 142.26378pt.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
+File: listening_tower.png Graphic file (type png)
+ <use listening_tower.png>
+Package pdftex.def Info: listening_tower.png used on input line 41.
+(pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
 
-Overfull \hbox (22.08363pt too wide) in paragraph at lines 36--37
+Overfull \hbox (20.47417pt too wide) in paragraph at lines 49--50
  [] 
  []
 
+) (./defeating_downgrade_attack.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 14.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
+File: smartphone.png Graphic file (type png)
+
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 24.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
 ) (./poster.bbl)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 192.
+(Font)              <17.28> on input line 204.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 192.
+(Font)              <10> on input line 204.
  [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./
 HYlogo_fac_text-en.jpg> <./home_network.jpg> <./tower.jpg> <./smartphone.png> <
-./listening_tower.png> <./fake_tower.jpg>] (./poster.aux) ) 
+./listening_tower.png>] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
- 20960 strings out of 493304
- 426674 string characters out of 6139872
- 556147 words of memory out of 5000000
- 23960 multiletter control sequences out of 15000+600000
+ 20968 strings out of 493304
+ 427025 string characters out of 6139872
+ 562147 words of memory out of 5000000
+ 23969 multiletter control sequences out of 15000+600000
  167108 words of font info for 98 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,7n,55p,10419b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fo
-nts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
-usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on poster.pdf (1 page, 1003506 bytes).
+ 56i,7n,55p,10419b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/
+enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fon
+ts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on poster.pdf (1 page, 916448 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,48 +1,50 @@
-
 \begin{tikzpicture}[scale=3]
 
 
-\node[inner sep=0pt] (wsn) at (12.2,6)
-    {\includegraphics[height = 7cm]{home_network.jpg}};
-\draw node at (12,4) {\textbf{Home Network}};
+\node[inner sep=0pt] (wsn) at (12,12)
+    {\includegraphics[height = 3cm]{home_network.jpg}};
+\draw node at (12,11.2) {\textbf{HN}};
+
+\draw [black, line width = 4pt] (12,11) -- (12,6.8);
+
+\node[inner sep=0pt] (wsn) at (6,12)
+    {\includegraphics[height = 3cm]{tower.jpg}};
+\filldraw[draw=white,fill=white] (4.5,11.25) rectangle (6.5,11.6);
+
+\draw node at (6,11.2) {\textbf{SN}};
+
+\draw [black, line width = 4pt] (6,11) -- (6,6.8);
+
+\node[inner sep=0pt] (wsn) at (0,11.9)
+    {\includegraphics[height = 3cm]{smartphone.png}};
+\draw node at (0,11.2) {\textbf{UE}};
+
+\draw [black, line width = 4pt] (0,11) -- (0,6.8);
 
 
-\node[inner sep=0pt] (wsn) at (1,6)
-    {\includegraphics[height = 5cm]{smartphone.png}};
-
-\node[inner sep=0pt] (wsn) at (8,8)
-    {\includegraphics[height = 5cm]{tower.jpg}};
-\filldraw[draw=white,fill=white] (7,7.1) rectangle (10,7.4);
-
-\draw node at (8,7) {\textbf{Serving Network}};
+\draw [black, line width = 3pt, <->] (6.0,10) -- (0,10);
+\draw node at (3.0,10.2) {\small Established connection};
 
 
+\draw [black, line width = 4pt, ->] (3,9) -- (0,9);
+\draw node at (1.5,9.5) {\small Stronger Signal};
+\draw node at (1.5,9.2) {\small Reveal \textbf{IMSI}};
+
+\draw [black, line width = 3pt, <->] (6.0,8) -- (0,8);
+\draw node at (1.5,8) {\Huge \textcolor{red}{$\times$}};
+
+\draw [black, line width = 4pt, <-] (3,7) -- (0,7);
+\draw node at (1.5,7.2) {\small \textbf{IMSI}};
 
 
+\node[inner sep=0pt] (wsn) at (3,12)
+    {\includegraphics[height = 3cm]{listening_tower.png}};
+\draw [red, line width = 2pt,dotted,] (3,10.7) -- (3,6.8);
+\draw node at (3,11.2) {\small \textbf{\textcolor{red}{Fake SN}}};
+\draw node at (3,10.9) {\small \textbf{\textcolor{red}{Active IMSI Catcher}}};
 
-
-\draw[<->, black,line width = 3pt] (7,8) -- (1.8,8);
-\draw node at (3,8) {\Huge \textcolor{red}{$\times$}};
-
-\node[inner sep=0pt] (wsn) at (8,4.75)
-    {\includegraphics[height = 10cm]{fake_tower.jpg}};
-
-
-\draw [black, line width = 5pt, ->] (7,6) -- (1.8,6);
-\draw node at (4.4,6.6) {\small (Stronger signal)};
-\draw node at (4.4,6.3) {\small Reveal your \textbf{IMSI}};
-
-
-\draw node at (8,2.8) {\textbf{\textcolor{red}{Fake Serving Network}}};
-\draw node at (8,2.4) {\textbf{\textcolor{red}{Active IMSI Catcher}}};
-
-
-\draw[<-, black,line width = 5pt] (7,4) -- (1.8,4);
-\draw node at (4.25,4.2) {\small \textbf{IMSI}};
-
-%\draw[<-, dotted, black,line width = 2pt] (7,6) arc (60:128:4.95);
-
-%\draw[<-, dotted, black,line width = 3pt] (7,6) arc (60:113:6);
+%\filldraw[-, dotted, fill opacity=0.2, cyan,line width = 3pt] (3,12.3) arc (90:450:2.5);
 
 
 \end{tikzpicture}
+

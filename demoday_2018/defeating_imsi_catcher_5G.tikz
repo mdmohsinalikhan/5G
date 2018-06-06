@@ -1,36 +1,47 @@
 \begin{tikzpicture}[scale=3]
 
-\node[inner sep=0pt] (wsn) at (12.2,12)
-    {\includegraphics[height = 7cm]{home_network.jpg}};
-\draw node at (12,10) {\textbf{Home Network (5G)}};
 
-\draw node at (12,14.1) {\small Public Key: $\mathit{HN}_e$};
-\draw node at (12.05,13.7) {\small Private Key: $\mathit{HN}_d$};
+\node[inner sep=0pt] (wsn) at (12,12)
+    {\includegraphics[height = 3cm]{home_network.jpg}};
+\draw node at (12,11.2) {\textbf{HN(5G)}};
 
-\node[inner sep=0pt] (wsn) at (8,12)
-    {\includegraphics[height = 9cm]{tower.jpg}};
+\draw node at (10,12) {\small Public Key: $\mathit{HN}_e$};
+\draw node at (10,11.5) {\small Private Key: $\mathit{HN}_d$};
 
-\draw node at (8,10) {\textbf{Serving Network (5G)}};
+\draw [black, line width = 4pt] (12,11) -- (12,7);
 
-\filldraw[draw=white,fill=white] (6,10.25) rectangle (10,10.6);
+\node[inner sep=0pt] (wsn) at (6,12)
+    {\includegraphics[height = 3cm]{tower.jpg}};
+\filldraw[draw=white,fill=white] (4.5,11.25) rectangle (6.5,11.6);
 
+\draw node at (6,11.2) {\textbf{SN(5G)}};
 
-\node[inner sep=0pt] (wsn) at (1,12)
-    {\includegraphics[height = 5cm]{smartphone.png}};
-
-
-\draw [black, line width = 4pt, ->] (6.5,13) -- (1.8,13);
-\draw node at (4.15,13.5) {\small Reveal \textbf{IMSI}};
-\draw [black, line width = 4pt, <-] (6.5,12) -- (1.8,12);
-\draw node at (4.15,12.3) {\small MCC||MNC||$E(\text{MSIN},\mathit{HN}_e)$};
+\draw [black, line width = 4pt] (6,11) -- (6,7);
 
 
-\draw [black, line width = 4pt, ->] (9.2,12) -- (10.6,12);
-\draw node at (9.9,12.3) {\small $E(\text{MSIN},\mathit{HN}_e)$};
+
+\node[inner sep=0pt] (wsn) at (0,11.9)
+    {\includegraphics[height = 3cm]{smartphone.png}};
+\draw node at (0,11.2) {\textbf{UE(5G)}};
+
+\draw node at (1.5,12) {\small Public Key: $\mathit{HN}_e$};
 
 
-\draw [black, line width = 4pt, <-] (9.2,11) -- (10.6,11);
-\draw node at (9.9,11.3) {\small MSIN};
+\draw [black, line width = 4pt] (0,11) -- (0,7);
+
+
+\draw [black, line width = 4pt, ->] (6.0,10) -- (0,10);
+\draw node at (3.0,10.2) {\small Reveal \textbf{IMSI}};
+
+
+\draw [black, line width = 4pt, <-] (6,9) -- (0,9);
+\draw node at (3,9.2) {\small MCC||MNC||$E(\text{MSIN},\mathit{HN}_e)$};
+
+\draw [black, line width = 4pt, ->] (6,9) -- (12,9);
+\draw node at (9,9.2) {\small $E(\text{MSIN},\mathit{HN}_e)$};
+
+\draw [black, line width = 4pt, <-] (6,8) -- (12,8);
+\draw node at (9,8.2) {\small MSIN};
 
 
 \end{tikzpicture}
