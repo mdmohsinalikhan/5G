@@ -16,6 +16,7 @@
 \usepackage{lipsum} % Lorem ipsum generator
 \usepackage{caption}
 \usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
 
 
 \columnsep = 50pt % change this for separation of the columns
@@ -40,8 +41,11 @@
 
 %\vspace{0.008\linewidth} % Increase the top margin
 %\begin{multicols}{2} 
+
+
 \begin{minipage}[t]{.4\linewidth} % logo
-\vspace{0pt} % Alingns the parallel minipages on top
+%\vspace{-10cm}
+\vspace{-2cm} % Alingns the parallel minipages on top
 \includegraphics[height=0.35\linewidth]{HYlogo_fac_text-en}
 \hspace{50pt}
 %\includegraphics[width=0.35\linewidth]{division}
@@ -103,14 +107,14 @@ Valtteri Niemi%$^\textbf{1}$\\
 \end{multicols}
 
 
-\vspace{30pt}
+\vspace{0pt}
 
 \begin{center}
  {\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{Identity Privacy in 5G, Defeating Downgrade Attack}} \MakeUppercase{}}
 \end{center}
 
 %\end{minipage}
-\vspace{20pt}
+\vspace{0pt}
 %\vfill % some more marginal between header and text
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{5pt}}
 
@@ -141,58 +145,87 @@ Valtteri Niemi%$^\textbf{1}$\\
 \section{Passive IMSI Catchers}
 
 \begin{Large}
- Passive IMSI catchers are always listening and waiting for an IMSI to sent in plaintext.
+A passive IMSI catcher is always listening and waiting for an IMSI to be sent in plaintext.
 \end{Large}
-
-
 
 \begin{center}
     \input{passive_imsi_catcher.tikz}
 \end{center}
 
-%\begin{Large} Protected in GSM, 3G and LTE and will be protected in 5G. \end{Large}
+\begin{Large} Protected in GSM, 3G and LTE. It will be protected in 5G too. \end{Large}
                                                                                                                                                                      
 
 
 \section{Active IMSI Catchers}
+\begin{Large}
+An active IMSI catcher impersonates a legitimate SN.
+\end{Large}
 
 \begin{center}
     \input{active_imsi_catcher.tikz}
 \end{center}
-\begin{large} There is no protection against against active IMSI catchers in GSM, 3G and LTE. There will be protection in 5G. \end{large}
+
+\begin{Large} There is no protection against against active IMSI catchers in GSM, 3G and LTE. There will be a protection in 5G. \end{Large}
 
 \section{Defeating IMSI Catchers in 5G (Standardized)}
-
+\begin{Large} 3GPP has decided to solve the problem using public-key encryption as follows. \end{Large}
 \begin{center}
     \input{defeating_imsi_catcher_5G.tikz}
 \end{center}
 
 
-\section{Downgrade Attack}
 
+\section{Downgrade Attack}
+\begin{Large} 5G phones will be interworking with LTE networks. So, an LTE based active IMSI catcher can still mount an attack.\end{Large}
 \begin{center}
     \input{downgrade_attack.tikz}
 \end{center}
 
 
 \section{Defeating Downgrade Attack}
+
 \begin{large}
- A hybrid solution using public-key encryption and pseudonyms. Significant amount of study have been performed on pseudonym based solutions to defeat IMSI catchers \cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. We propose a mixing of pseudonym and public-key encryption to defeat the downgrade attack.
+ A hybrid solution using public-key encryption and pseudonyms. Significant amount of study have been performed on pseudonym based solutions to defeat IMSI catchers. We propose a mixing of pseudonym and public-key encryption to defeat the downgrade attack.
+ %\cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. 
+ 
 \end{large}
 
-
-
+\vspace{1cm}
+{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{5G SN:}} \MakeUppercase{}}\\
 
 \begin{center}
     \input{defeating_downgrade_attack.tikz}
 \end{center}
 
+\vspace{1cm}
+{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{LTE SN:}} \MakeUppercase{}}\\
 
+
+\begin{center}
+    \input{defeating_downgrade_attack_LTE.tikz}
+\end{center}
+
+\section{Advantages}
+\begin{itemize}
+ \item No standardization required
+ \item Major Disdvantages of pseudonym based solution disappears
+  \begin{itemize}
+   \item If any desynchronization of pseudonyms happens, the user can be synchronized again by connecting through a 5G SN.
+   \item A maclicious SN can not mount a pseudonym-desynchronization attack, because the HN can verify the success of an AKA.
+   \item Because of all these Advantages, the management of pseudonyms in the Subscriber becomes less vulnerable from desynchronization point of view.
+  \end{itemize}
+  \item We have not shown in this poster but the hybrid solution works even when EAP-AKA' is used.
+\end{itemize}
+
+\section{Disdvantages}
+\begin{itemize}
+ \item Who computes the SUCI? USIM or ME? both ME and USIM can compute the SUCI.
+\end{itemize}
 
 %\normalsize
 
-\bibliographystyle{plain}
-\bibliography{ref}
+%\bibliographystyle{plain}
+%\bibliography{ref}
 
 \end{multicols}
 
@@ -200,7 +233,7 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 \begin{minipage}[t]{0.9\linewidth} % footer
 \footnotesize
-\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
+%\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
 \end{minipage}
 
 

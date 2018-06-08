@@ -21,15 +21,10 @@
 \draw node at (5.75,.2) {\small (Mobile Subscription Identification Number)};
 
 \draw node at (3.5,-.4) {\textbf{IMSI}};
-\draw node at (3.5,-.6) {15 decimal digits};
+\draw node at (3.5,-.65) {15 decimal digits};
 
 
 \draw [black, line width = 4pt, <->] (0,-0.2) -- (7.5,-0.2);
-
-%\draw node at (.87,-1.3) {\textbf{MCC}=Mobile Country Code};
-%\draw node at (.87,-1.6) {\textbf{MCC}=Mobile Network Code};
-%\draw node at (1.63,-1.9) {\textbf{MSIN}=Mobile Subscription Identification Number};
-
 
 \end{tikzpicture}
 

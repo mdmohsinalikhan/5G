@@ -1,11 +1,11 @@
-\begin{tikzpicture}[scale=3]
+\begin{tikzpicture}[scale=2.75]
 
 
 \node[inner sep=0pt] (wsn) at (12,12)
     {\includegraphics[height = 3cm]{home_network.jpg}};
 \draw node at (12,11.2) {\textbf{HN}};
 
-\draw [black, line width = 4pt] (12,11) -- (12,8);
+\draw [black, line width = 4pt] (12,11) -- (12,7.5);
 
 \node[inner sep=0pt] (wsn) at (6,12)
     {\includegraphics[height = 3cm]{tower.jpg}};
@@ -13,7 +13,7 @@
 
 \draw node at (6,11.2) {\textbf{SN}};
 
-\draw [black, line width = 4pt] (6,11) -- (6,8);
+\draw [black, line width = 4pt] (6,11) -- (6,7.5);
 
 
 
@@ -22,7 +22,7 @@
 \draw node at (0,11.2) {\textbf{UE}};
 
 
-\draw [black, line width = 4pt] (0,11) -- (0,8);
+\draw [black, line width = 4pt] (0,11) -- (0,7.5);
 
 
 \draw [black, line width = 4pt, ->] (6.0,10) -- (0,10);
@@ -35,6 +35,7 @@
 
 \node[inner sep=0pt] (wsn) at (3,12)
     {\includegraphics[height = 3cm]{listening_tower.png}};
+\draw [red, dotted, line width = 1pt] (3,10.75) -- (3,8);
 \draw node at (3,11.2) {\small \textbf{\textcolor{red}{Passive IMSI Catcher}}};
 \draw node at (3,10.9) {\small \textbf{\textcolor{red}{Evesdropping only}}};
 

@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=3]
+\begin{tikzpicture}[scale=2.75]
 
 
 \node[inner sep=0pt] (wsn) at (12,12)

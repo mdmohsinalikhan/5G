@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=3]
+\begin{tikzpicture}[scale=2.75]
 
 
 \node[inner sep=0pt] (wsn) at (12,12)
@@ -43,7 +43,7 @@
 \draw node at (3,11.2) {\small \textbf{\textcolor{red}{Fake SN}}};
 \draw node at (3,10.9) {\small \textbf{\textcolor{red}{Active IMSI Catcher}}};
 
-%\filldraw[-, dotted, fill opacity=0.2, cyan,line width = 3pt] (3,12.3) arc (90:450:2.5);
+
 
 
 \end{tikzpicture}

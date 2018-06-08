@@ -8,7 +8,12 @@
 \draw node at (8,12) {\small Public Key: $\mathit{HN}_e$};
 \draw node at (8,11.5) {\small Private Key: $\mathit{HN}_d$};
 
-\draw [black, line width = 4pt] (10,11) -- (10,7);
+
+\draw node at (11.5,11) {\small \textbf{Pseudonyms}};
+\draw node at (11.5,10.5) {\small $P,P^{'}$};
+
+
+\draw [black, line width = 4pt] (10,11) -- (10,6.5);
 
 \node[inner sep=0pt] (wsn) at (6,12)
     {\includegraphics[height = 3cm]{tower.jpg}};
@@ -16,7 +21,7 @@
 
 \draw node at (6,11.2) {\textbf{SN(5G)}};
 
-\draw [black, line width = 4pt] (6,11) -- (6,7);
+\draw [black, line width = 4pt] (6,11) -- (6,6.5);
 
 
 
@@ -26,8 +31,12 @@
 
 \draw node at (3.5,12) {\small Public Key: $\mathit{HN}_e$};
 
+\draw node at (0.5,11) {\small \textbf{Pseudonyms}};
 
-\draw [black, line width = 4pt] (2,11) -- (2,7);
+\draw node at (0.5,10.5) {\small $P,P^{'}$};
+
+
+\draw [black, line width = 4pt] (2,11) -- (2,6.5);
 
 
 \draw [black, line width = 4pt, ->] (6.0,10) -- (2,10);
@@ -35,14 +44,26 @@
 
 
 \draw [black, line width = 4pt, <-] (6,9) -- (2,9);
-\draw node at (4,9.2) {\small MCC||MNC||$E(\text{MSIN},\mathit{HN}_e)$};
+\draw node at (4,9.2) {\small MCC||MNC||$E(\text{MSIN}||P||P^{'},\mathit{HN}_e)$};
 
 \draw [black, line width = 4pt, ->] (6,9) -- (10,9);
-\draw node at (8,9.2) {\small $E(\text{MSIN},\mathit{HN}_e)$};
+\draw node at (8,9.2) {\small $E(\text{MSIN}||P||P^{'},\mathit{HN}_e)$};
+
+
+\draw node at (11.5,9) {\small $P,P^{'},P^{''}$};
 
 \draw [black, line width = 4pt, <-] (6,8) -- (10,8);
-\draw node at (8,8.2) {\small MSIN};
+\draw node at (8,8.2) {\small 5G AV ($P^{''} is embedded$),MSIN};
 
+\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=2mm, anchor=center,line width = 2pt] at (4,7) {};
+\draw node at (4,7) {\small 5G AKA};
+
+\draw node at (0.5,6.5) {\small $P^{'},P^{''}$};
+
+\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=2mm, anchor=center, line width = 2pt] at (8,7) {};
+\draw node at (8,7) {\small Success Verification of 5G AKA};
+
+\draw node at (11.5,6.5) {\small $P^{'},P^{''}$};
 
 \end{tikzpicture}
 

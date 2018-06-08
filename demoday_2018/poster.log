@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  6 JUN 2018 16:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.5)  8 JUN 2018 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,22 +1082,30 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
-))) (./poster.aux)
+)))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshape
+s.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code
+.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v2.10 (rcs-revision 1.1)
+)) (./poster.aux)
 \openout1 = `poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 33.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1246,40 +1254,40 @@ Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 \c__siunitx_mathsf_int=\count181
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 33.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 32.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 33.
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 32.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 33.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 32.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 33.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 32.
+(Font)              <24.88> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 32.
+(Font)              <20.74> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 32.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 32.
+(Font)              <14.4> on input line 33.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 33.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \c__siunitx_mathtt_int=\count182
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 33.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -1289,30 +1297,35 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: HYlogo_fac_text-en.jpg Graphic file (type jpg)
 
 <use HYlogo_fac_text-en.jpg>
-Package pdftex.def Info: HYlogo_fac_text-en.jpg used on input line 45.
+Package pdftex.def Info: HYlogo_fac_text-en.jpg used on input line 49.
 (pdftex.def)             Requested size: 337.51497pt x 318.51224pt.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 59.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <51.6> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 59.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <35.83> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 63.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <35.83> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 67.
 
-Overfull \hbox (571.27063pt too wide) in paragraph at lines 76--88
+Overfull \hbox (565.02063pt too wide) in paragraph at lines 80--92
 [][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 98.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 102.
+
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <35.83> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <61.92> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 109.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <43> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 119.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 124.
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 127.
 
 
@@ -1321,43 +1334,41 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <35.83> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 127.
- (./IMSI.tikz)
-(./passive_imsi_catcher.tikz <home_network.jpg, id=5, 192.72pt x 159.9576pt>
-File: home_network.jpg Graphic file (type jpg)
-
-<use home_network.jpg>
-Package pdftex.def Info: home_network.jpg used on input line 5.
-(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
- <tower.jpg, id=6, 1304.875pt x 1395.2125pt>
-File: tower.jpg Graphic file (type jpg)
-
-<use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 11.
-(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
- <smartphone.png, id=7, 295.1025pt x 602.25pt>
+ (./IMSI.tikz) (./architecture.tikz
+<smartphone.png, id=5, 295.1025pt x 602.25pt>
 File: smartphone.png Graphic file (type png)
-
-<use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 21.
+ <use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 5.
 (pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
- <listening_tower.png, id=9, 184.69pt x 275.0275pt>
-File: listening_tower.png Graphic file (type png)
 
-<use listening_tower.png>
-Package pdftex.def Info: listening_tower.png used on input line 37.
-(pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
+<tower.jpg, id=7, 1304.875pt x 1395.2125pt>
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 9.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
+
+<home_network.jpg, id=8, 192.72pt x 159.9576pt>
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 14.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
+
+Overfull \hbox (40.61067pt too wide) in paragraph at lines 40--41
+ [] 
+ []
+
 ) (./active_imsi_catcher.tikz
 File: home_network.jpg Graphic file (type jpg)
  <use home_network.jpg>
 Package pdftex.def Info: home_network.jpg used on input line 5.
 (pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 File: tower.jpg Graphic file (type jpg)
-
-<use tower.jpg>
+ <use tower.jpg>
 Package pdftex.def Info: tower.jpg used on input line 11.
 (pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
 File: smartphone.png Graphic file (type png)
- <use smartphone.png>
+
+<use smartphone.png>
 Package pdftex.def Info: smartphone.png used on input line 19.
 (pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1366,14 +1377,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <43> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <29.86> on input line 34.
+ <listening_tower.png, id=9, 184.69pt x 275.0275pt>
 File: listening_tower.png Graphic file (type png)
- <use listening_tower.png>
+
+<use listening_tower.png>
 Package pdftex.def Info: listening_tower.png used on input line 41.
 (pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
-)
-(./defeating_imsi_catcher_5G.tikz
+) (./defeating_imsi_catcher_5G.tikz
 File: home_network.jpg Graphic file (type jpg)
- <use home_network.jpg>
+
+<use home_network.jpg>
 Package pdftex.def Info: home_network.jpg used on input line 5.
 (pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1383,12 +1396,11 @@ File: tower.jpg Graphic file (type jpg)
 Package pdftex.def Info: tower.jpg used on input line 14.
 (pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
 File: smartphone.png Graphic file (type png)
-
-<use smartphone.png>
+ <use smartphone.png>
 Package pdftex.def Info: smartphone.png used on input line 24.
 (pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
 
-Overfull \hbox (49.53912pt too wide) in paragraph at lines 47--48
+Overfull \hbox (4.22798pt too wide) in paragraph at lines 47--48
  [] 
  []
 
@@ -1410,58 +1422,72 @@ File: listening_tower.png Graphic file (type png)
  <use listening_tower.png>
 Package pdftex.def Info: listening_tower.png used on input line 41.
 (pdftex.def)             Requested size: 57.32094pt x 85.35826pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
-Overfull \hbox (20.47417pt too wide) in paragraph at lines 49--50
- [] 
  []
 
-) (./defeating_downgrade_attack.tikz
+(./defeating_downgrade_attack.tikz
 File: home_network.jpg Graphic file (type jpg)
  <use home_network.jpg>
 Package pdftex.def Info: home_network.jpg used on input line 5.
 (pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
 File: tower.jpg Graphic file (type jpg)
  <use tower.jpg>
-Package pdftex.def Info: tower.jpg used on input line 14.
+Package pdftex.def Info: tower.jpg used on input line 19.
 (pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
 File: smartphone.png Graphic file (type png)
 
 <use smartphone.png>
-Package pdftex.def Info: smartphone.png used on input line 24.
+Package pdftex.def Info: smartphone.png used on input line 29.
 (pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
-) (./poster.bbl)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 204.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 204.
- [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+(./defeating_downgrade_attack_LTE.tikz
+File: home_network.jpg Graphic file (type jpg)
+ <use home_network.jpg>
+Package pdftex.def Info: home_network.jpg used on input line 5.
+(pdftex.def)             Requested size: 102.84097pt x 85.35826pt.
+File: tower.jpg Graphic file (type jpg)
+ <use tower.jpg>
+Package pdftex.def Info: tower.jpg used on input line 19.
+(pdftex.def)             Requested size: 79.82225pt x 85.35826pt.
+File: smartphone.png Graphic file (type png)
+
+<use smartphone.png>
+Package pdftex.def Info: smartphone.png used on input line 29.
+(pdftex.def)             Requested size: 41.82289pt x 85.35826pt.
+) [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./
-HYlogo_fac_text-en.jpg> <./home_network.jpg> <./tower.jpg> <./smartphone.png> <
+HYlogo_fac_text-en.jpg> <./smartphone.png> <./tower.jpg> <./home_network.jpg> <
 ./listening_tower.png>] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
- 20968 strings out of 493304
- 427025 string characters out of 6139872
- 562147 words of memory out of 5000000
- 23969 multiletter control sequences out of 15000+600000
- 167108 words of font info for 98 fonts, out of 8000000 for 9000
+ 21158 strings out of 493304
+ 432636 string characters out of 6139872
+ 592012 words of memory out of 5000000
+ 24158 multiletter control sequences out of 15000+600000
+ 167004 words of font info for 97 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,7n,55p,10419b,786s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,55p,10419b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm
--ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/
-enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{
+-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fo
+nts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{
 /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fon
 ts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on poster.pdf (1 page, 916448 bytes).
+Output written on poster.pdf (1 page, 908024 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

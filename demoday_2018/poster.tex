@@ -16,9 +16,10 @@
 \usepackage{lipsum} % Lorem ipsum generator
 \usepackage{caption}
 \usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
 
 
-\columnsep = 50pt % change this for separation of the columns
+\columnsep = 75pt % change this for separation of the columns
 
 \definecolor{facultyColor}{cmyk}{0,.37,.88,.02} % faculty of science
 \definecolor{gray}{cmyk}{.13,.05,0,.25}
@@ -31,7 +32,7 @@
 
 \begin{document}
 
-\large
+\Large
 
 %\vspace*{\fill} %some more marginal up
 
@@ -40,8 +41,11 @@
 
 %\vspace{0.008\linewidth} % Increase the top margin
 %\begin{multicols}{2} 
+
+
 \begin{minipage}[t]{.4\linewidth} % logo
-\vspace{0pt} % Alingns the parallel minipages on top
+%\vspace{-10cm}
+\vspace{-2cm} % Alingns the parallel minipages on top
 \includegraphics[height=0.35\linewidth]{HYlogo_fac_text-en}
 \hspace{50pt}
 %\includegraphics[width=0.35\linewidth]{division}
@@ -59,8 +63,8 @@
 {\huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{University of Helsinki}} \MakeUppercase{}}\\
 %{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Matemaattis-Luonnontieteellinen tiedekunta}} \MakeUppercase{}}\\
 %{\Huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Matematisk-Naturvetenskapliga fakulteten}} \MakeUppercase{}}\\
-{\huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Faculty of Science}} \MakeUppercase{}}\\
-{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{{Department of Computer Science}}{}}\\
+%{\huge\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{Faculty of Science}} \MakeUppercase{}}\\
+{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{{Department of Computer Science}}{}}
 \end{spacing}
 \end{flushright}
 \hspace{50pt}
@@ -90,27 +94,28 @@
 \vspace{-110pt} % Alingns the parallel minipages on top
 \begin{flushright}
 \textsf{\bfseries
-Mohsin Khan%$^\textbf{1}$ 
+Mohsin Khan$^\textbf{1}$ 
 \\
 %Kimmo Järvinen$^\textbf{1}$\\
-%Philip Ginzboorg$^\textbf{2}$\\
-Valtteri Niemi%$^\textbf{1}$\\
+Philip Ginzboorg$^\textbf{2,3}$\\
+Valtteri Niemi$^\textbf{1}$\\
 } % Text size for a1 posters
-%\textcolor{gray}{\textsf{\bfseries{$^\textbf{1}$Department of Computer Science, University of Helsinki}}}\\
-%\textcolor{gray}{\textsf{\bfseries{$^\textbf{2}$Huawei Technologies}}}
+\textcolor{gray}{\textsf{\bfseries{$^\textbf{1}$University of Helsinki}}}\\
+\textcolor{gray}{\textsf{\bfseries{$^\textbf{2}$Huawei Technologies,}}}
+\textcolor{gray}{\textsf{\bfseries{$^\textbf{3}$Aalto University}}}\\
 \end{flushright}
 \end{minipage}
 \end{multicols}
 
 
-\vspace{30pt}
+\vspace{10pt}
 
 \begin{center}
  {\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{Identity Privacy in 5G, Defeating Downgrade Attack}} \MakeUppercase{}}
 \end{center}
 
 %\end{minipage}
-\vspace{20pt}
+\vspace{0pt}
 %\vfill % some more marginal between header and text
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{5pt}}
 
@@ -118,53 +123,57 @@ Valtteri Niemi%$^\textbf{1}$\\
 
 \section{IMSI}
 
-\begin{Large}
- 
-\end{Large}
-
-
 \begin{itemize} \Large
- \item Stands for International Mobile Subscriber Identity.
+ \item Stands for International Mobile Subscriber Identity. Also called SUPI in 5G
  \item Globally Unique
- \item Also called SUPI in 5G
 \end{itemize}
 
-\vspace{30pt}
+%\vspace{10pt}
 
 \begin{center}
     \input{IMSI.tikz}
 \end{center}
 
 
-
-
-\section{Passive IMSI Catchers}
-
-\begin{Large}
-A passive IMSI catcher is always listening and waiting for an IMSI to be sent in plaintext.
-\end{Large}
+\section{Mobile Network}
+The SN and the HN are in a roaming contract. In case the UE is not roaming, SN and HN are the same network.
 
 \begin{center}
-    \input{passive_imsi_catcher.tikz}
+    \input{architecture.tikz}
 \end{center}
 
-\begin{Large} Protected in GSM, 3G and LTE. It will be protected in 5G too. \end{Large}
+%\section{Passive IMSI Catchers}
+
+
+%A passive IMSI catcher is always listening and waiting for an IMSI to be sent in plaintext.
+
+%\begin{center}
+%    \input{passive_imsi_catcher.tikz}
+%\end{center}
+
+%Protected in GSM, 3G and LTE. It will be protected in 5G too.
                                                                                                                                                                      
 
 
 \section{Active IMSI Catchers}
-\begin{Large}
+
 An active IMSI catcher impersonates a legitimate SN.
-\end{Large}
+
 
 \begin{center}
     \input{active_imsi_catcher.tikz}
 \end{center}
 
-\begin{Large} There is no protection against against active IMSI catchers in GSM, 3G and LTE. There will be a protection in 5G. \end{Large}
+\begin{Large}
+No protection in GSM, 3G and LTE. There will be a protection in 5G.  
+\end{Large}
+
+
+
 
 \section{Defeating IMSI Catchers in 5G (Standardized)}
-\begin{Large} 3GPP has decided to solve the problem using public-key encryption as follows. \end{Large}
+3GPP has decided to solve the problem using public-key encryption as follows.
+
 \begin{center}
     \input{defeating_imsi_catcher_5G.tikz}
 \end{center}
@@ -172,28 +181,68 @@ An active IMSI catcher impersonates a legitimate SN.
 
 
 \section{Downgrade Attack}
-\begin{Large} 5G phones will be interworking with LTE networks. So, an LTE based active IMSI catcher can still mount an attack.\end{Large}
+
+\begin{Large}
+5G and LTE interworks $\Rightarrow$ An LTE based active IMSI catcher can mount an attack. 
+\end{Large}
+
+
+
 \begin{center}
     \input{downgrade_attack.tikz}
 \end{center}
 
 
 \section{Defeating Downgrade Attack}
-\begin{large}
- A hybrid solution using public-key encryption and pseudonyms. Significant amount of study have been performed on pseudonym based solutions to defeat IMSI catchers \cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. We propose a mixing of pseudonym and public-key encryption to defeat the downgrade attack.
-\end{large}
 
+
+ \begin{Large}
+ Hybrid solution using public-key encryption and pseudonyms. 
+ \end{Large}
+ 
+ %\cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. 
+ 
+
+\vspace{.5cm}
+{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{5G SN:}} \MakeUppercase{}}\\
 
 \begin{center}
     \input{defeating_downgrade_attack.tikz}
 \end{center}
 
+\vspace{.5cm}
+{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{LTE SN:}} \MakeUppercase{}}\\
 
+
+\begin{center}
+    \input{defeating_downgrade_attack_LTE.tikz}
+\end{center}
+
+\subsection*{Advantages}
+%\begin{large}
+\begin{itemize}
+ \item No standardization. Works even when $\text{EAP-AKA}^{'}$ is used.
+ \item Major Disadvantages of pseudonym based solution disappears 
+  \begin{itemize}
+   \item In case of de-synchronization of pseudonyms, resynchronization can be done just by connecting through a 5G SN.
+   \item A malicious SN can not mount an attack to de-synchronize pseudonyms, because the HN verifies the success of a 5G AKA and $\text{EAP-AKA}^{'}$.
+   \item Hence, the management of pseudonyms in the subscriber database becomes less vulnerable to unwanted modification.
+  \end{itemize}
+\end{itemize}
+%\end{large}
+
+\subsection*{Challenges}
+%\begin{large}
+\begin{itemize}
+ \item A 5G UE may connect with multiple SNs. Thus the UE will have multiple active connection using different pseudonyms simultaneously. These may create complications -- when a UE or the HN may forget an old pseudonym.
+ \item SN has to rely on the HN for lawful interception -- identifying a user using SUPI (IMSI). 
+\end{itemize}
+%\end{large}
 
 %\normalsize
 
-\bibliographystyle{plain}
-\bibliography{ref}
+%\bibliographystyle{plain}
+%\bibliography{ref}
 
 \end{multicols}
 
@@ -201,7 +250,7 @@ An active IMSI catcher impersonates a legitimate SN.
 
 \begin{minipage}[t]{0.9\linewidth} % footer
 \footnotesize
-\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
+%\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
 \end{minipage}
 
 

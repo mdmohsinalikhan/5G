@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=3]
+\begin{tikzpicture}[scale=2.75]
 
 
 \node[inner sep=0pt] (wsn) at (12,12)
@@ -8,7 +8,7 @@
 \draw node at (10,12) {\small Public Key: $\mathit{HN}_e$};
 \draw node at (10,11.5) {\small Private Key: $\mathit{HN}_d$};
 
-\draw [black, line width = 4pt] (12,11) -- (12,7);
+\draw [black, line width = 4pt] (12,11) -- (12,7.75);
 
 \node[inner sep=0pt] (wsn) at (6,12)
     {\includegraphics[height = 3cm]{tower.jpg}};
@@ -16,7 +16,7 @@
 
 \draw node at (6,11.2) {\textbf{SN(5G)}};
 
-\draw [black, line width = 4pt] (6,11) -- (6,7);
+\draw [black, line width = 4pt] (6,11) -- (6,7.75);
 
 
 
@@ -27,7 +27,7 @@
 \draw node at (1.5,12) {\small Public Key: $\mathit{HN}_e$};
 
 
-\draw [black, line width = 4pt] (0,11) -- (0,7);
+\draw [black, line width = 4pt] (0,11) -- (0,7.75);
 
 
 \draw [black, line width = 4pt, ->] (6.0,10) -- (0,10);
