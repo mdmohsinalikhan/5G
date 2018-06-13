@@ -19,6 +19,9 @@
 \usetikzlibrary{shapes.arrows}
 
 
+\setlength{\columnseprule}{6pt}
+
+
 \columnsep = 75pt % change this for separation of the columns
 
 \definecolor{facultyColor}{cmyk}{0,.37,.88,.02} % faculty of science
@@ -76,7 +79,7 @@
 %\end{multicols}
 
 
-\begin{multicols}{2} 
+%\begin{multicols}{1} 
 \begin{minipage}[t]{1.5\linewidth}
 \vspace{10pt}
 \begin{flushleft}
@@ -90,6 +93,7 @@
 \end{flushleft}
 \end{minipage}
 
+\hspace{1.65cm}
 \begin{minipage}[t]{.95\linewidth} % title
 \vspace{-110pt} % Alingns the parallel minipages on top
 \begin{flushright}
@@ -105,19 +109,19 @@ Valtteri Niemi$^\textbf{1}$\\
 \textcolor{gray}{\textsf{\bfseries{$^\textbf{3}$Aalto University}}}\\
 \end{flushright}
 \end{minipage}
-\end{multicols}
+%\end{multicols}
 
 
-\vspace{10pt}
+\vspace{20pt}
 
 \begin{center}
  {\Huge\usefont{T1}{phv}{bx}{n}\textcolor{black}{\MakeUppercase{Identity Privacy in 5G, Defeating Downgrade Attack}} \MakeUppercase{}}
 \end{center}
 
 %\end{minipage}
-\vspace{0pt}
+%\vspace{50pt}
 %\vfill % some more marginal between header and text
-\noindent\makebox[\linewidth]{\rule{\paperwidth}{5pt}}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{8pt}}
 
 \begin{multicols}{2} % change this for different number of columns
 
@@ -155,9 +159,9 @@ The SN and the HN are in a roaming contract. In case the UE is not roaming, SN a
                                                                                                                                                                      
 
 
-\section{Active IMSI Catchers}
+\section{IMSI Catchers}
 
-An active IMSI catcher impersonates a legitimate SN.
+An IMSI catcher impersonates a legitimate SN.
 
 
 \begin{center}
@@ -165,14 +169,15 @@ An active IMSI catcher impersonates a legitimate SN.
 \end{center}
 
 \begin{Large}
-No protection in GSM, 3G and LTE. There will be a protection in 5G.  
+No protection against IMSI catchers in GSM, 3G and LTE. There will be a protection in 5G.
 \end{Large}
 
 
 
 
 \section{Defeating IMSI Catchers in 5G (Standardized)}
-3GPP has decided to solve the problem using public-key encryption as follows.
+3GPP solves the problem by encrypting the MSIN using the public key of the HN.
+
 
 \begin{center}
     \input{defeating_imsi_catcher_5G.tikz}
@@ -183,14 +188,14 @@ No protection in GSM, 3G and LTE. There will be a protection in 5G.
 \section{Downgrade Attack}
 
 \begin{Large}
-5G and LTE interworks $\Rightarrow$ An LTE based active IMSI catcher can mount an attack. 
+5G and LTE interwork -- a 5G phone can connect to an LTE SN. So, even though 5G has a protection against IMSI catchers, LTE based IMSI catcher can mount a downgrade attack. 
 \end{Large}
 
 
 
-\begin{center}
-    \input{downgrade_attack.tikz}
-\end{center}
+%\begin{center}
+%    \input{downgrade_attack.tikz}
+%\end{center}
 
 
 \section{Defeating Downgrade Attack}
@@ -200,41 +205,44 @@ No protection in GSM, 3G and LTE. There will be a protection in 5G.
  Hybrid solution using public-key encryption and pseudonyms. 
  \end{Large}
  
- %\cite{Norrman_Naslund_Dubrova_2016,Ginzboorg_Niemi_2016,CCS15,SSR15}. 
+ \subsection*{When the SN is from an LTE Network:}
+ 
+ 
+ %\vspace{.5cm}
+%{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{ When the SN is from an LTE network:}} \MakeUppercase{}}\\
+
+
+ 
+\begin{center}
+    \input{defeating_downgrade_attack_LTE.tikz}
+\end{center}
  
 
-\vspace{.5cm}
-{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{5G SN:}} \MakeUppercase{}}\\
+ \subsection*{When the SN is from a 5G Network:}
+ 
+%\vspace{.5cm}
+%{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{When the SN is from a 5G network:}} \MakeUppercase{}}\\
 
 \begin{center}
     \input{defeating_downgrade_attack.tikz}
 \end{center}
 
-\vspace{.5cm}
-{\Large\usefont{T1}{phv}{bx}{n}\textcolor{facultyColor}{\MakeUppercase{LTE SN:}} \MakeUppercase{}}\\
 
 
-\begin{center}
-    \input{defeating_downgrade_attack_LTE.tikz}
-\end{center}
-
-\subsection*{Advantages}
-%\begin{large}
+\subsection*{Other Advantages:}
+Apart from defeating the downgrade attack there are other advantages of using the hybrid solution
 \begin{itemize}
- \item No standardization. Works even when $\text{EAP-AKA}^{'}$ is used.
- \item Major Disadvantages of pseudonym based solution disappears 
-  \begin{itemize}
-   \item In case of de-synchronization of pseudonyms, resynchronization can be done just by connecting through a 5G SN.
-   \item A malicious SN can not mount an attack to de-synchronize pseudonyms, because the HN verifies the success of a 5G AKA and $\text{EAP-AKA}^{'}$.
-   \item Hence, the management of pseudonyms in the subscriber database becomes less vulnerable to unwanted modification.
-  \end{itemize}
+\item If synchronization of pseudonyms is lost, resynchronization can be done just by connecting through a 5G SN.
+\item Works for both 5G AKA and $\text{EAP-AKA}^{'}$.
+% \item A malicious SN can not mount an attack to de-synchronize pseudonyms, because the HN verifies the success of a 5G AKA and $\text{EAP-AKA}^{'}$.
+% \item Hence, the management of pseudonyms in the subscriber database becomes less vulnerable to unwanted modification.
 \end{itemize}
 %\end{large}
 
-\subsection*{Challenges}
+\subsection*{Challenges:}
 %\begin{large}
 \begin{itemize}
- \item A 5G UE may connect with multiple SNs. Thus the UE will have multiple active connection using different pseudonyms simultaneously. These may create complications -- when a UE or the HN may forget an old pseudonym.
+ \item A 5G UE may connect with multiple SNs. Thus the UE will have multiple active connection using different pseudonyms simultaneously. These may create complications -- when a UE or the HN may forget an old pseudonym?
  \item SN has to rely on the HN for lawful interception -- identifying a user using SUPI (IMSI). 
 \end{itemize}
 %\end{large}
@@ -248,10 +256,12 @@ No protection in GSM, 3G and LTE. There will be a protection in 5G.
 
 \vfill % some more marginal in the end
 
-\begin{minipage}[t]{0.9\linewidth} % footer
-\footnotesize
+%\noindent\makebox[\linewidth]{\rule{\paperwidth}{3pt}}
+
+%\begin{minipage}[t]{0.9\linewidth} % footer
+%\footnotesize
 %\color{gray}{\textsf{\textbf{The {\LaTeX} template by Jussi Tiira used in this poster is licensed under a Creative Commons Attribution 4.0 International License.}}}
-\end{minipage}
+%\end{minipage}
 
 
 \end{document}

@@ -4,38 +4,39 @@
 
 \node[inner sep=0pt] (wsn) at (-0.1,12) {\includegraphics[height = 3cm]{smartphone.png}};
 \draw node at (-0.1,11.2) {\textbf{UE}};
-\draw node at (-0.1,10.8) {\small (User Equipment)};
+\draw node at (-0.1,10.8) { (User Equipment)};
 
 \node[inner sep=0pt] (wsn) at (6,12) {\includegraphics[height = 3cm]{tower.jpg}};
 \filldraw[draw=white,fill=white] (5.5,11.4) rectangle (6.5,11.6);
 \draw node at (6,11.2) {\textbf{SN}};
-\draw node at (6,10.8) {\small (Serving Network)};
+\draw node at (6,10.8) { (Serving Network)};
 
-\node[inner sep=0pt] (wsn) at (12,12) {\includegraphics[height = 3cm]{home_network.jpg}};
-\draw node at (12,11.2) {\textbf{HN}};
-\draw node at (12,10.8) {\small (Home Network)};
-\draw node at (12,10.6) {\small The user is subscribed with};
+\node[inner sep=0pt] (wsn) at (11,12) {\includegraphics[height = 3cm]{home_network.jpg}};
+\draw node at (11,11.2) {\textbf{HN}};
+\draw node at (11,10.8) { (Home Network)};
+%\draw node at (12,10.6) {\small The user is subscribed with};
 
 
 
-\draw [black, line width = 4pt] (-0.15,10.3) -- (-0.15,8.0);
+\draw [black, line width = 4pt] (-0.15,10.3) -- (-0.15,7.5);
 
-\draw [black, line width = 4pt] (6,10.3) -- (6,8.0);
+\draw [black, line width = 4pt] (6,10.3) -- (6,7.5);
 
-\draw [black, line width = 4pt] (12,10.3) -- (12,8.0);
+\draw [black, line width = 4pt] (11,10.3) -- (11,7.5);
 
 
 %\node[draw, double arrow, minimum height=120mm, minimum width=20mm, single arrow head extend=2mm, anchor=center, line width = 2pt] at (9,12) {};
 %\draw node at (9,12) {\small Roaming agreement};
 
 
-\draw [black, line width = 4pt, ->] (6.0,9.5) -- (-0.15,9.5);
-\draw node at (3,10.0) {\small Want to use the service?};
-\draw node at (3,9.7) {\small Reveal \textbf{IMSI} so that you can be billed.};
+\draw [black, line width = 4pt, ->] (6.0,9) -- (-0.15,9);
+\draw node at (3,10.2) {Want to use the service?};
+\draw node at (3,9.8) {Reveal \textbf{IMSI}};
+\draw node at (3,9.4) {so that you can be billed.};
 
 
-\draw [black, line width = 4pt, ->] (-0.15,8.5) -- (6,8.5);
-\draw node at (3,8.7) {\small \textbf{IMSI}};
+\draw [black, line width = 4pt, ->] (-0.15,8) -- (6,8);
+\draw node at (3,8.4) {\textbf{IMSI}};
 
 \end{tikzpicture}
 

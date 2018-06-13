@@ -5,8 +5,8 @@
     {\includegraphics[height = 3cm]{home_network.jpg}};
 \draw node at (12,11.2) {\textbf{HN(5G)}};
 
-\draw node at (10,12) {\small Public Key: $\mathit{HN}_e$};
-\draw node at (10,11.5) {\small Private Key: $\mathit{HN}_d$};
+\draw node at (10.6,13.5) { HN's public key: $\mathit{pk}$};
+\draw node at (10.7,13) {HN's private Key: $\mathit{sk}$};
 
 \draw [black, line width = 4pt] (12,11) -- (12,7.75);
 
@@ -24,24 +24,24 @@
     {\includegraphics[height = 3cm]{smartphone.png}};
 \draw node at (0,11.2) {\textbf{UE(5G)}};
 
-\draw node at (1.5,12) {\small Public Key: $\mathit{HN}_e$};
+\draw node at (1.6,13) {HN's public key: $\mathit{pk}$};
 
 
 \draw [black, line width = 4pt] (0,11) -- (0,7.75);
 
 
 \draw [black, line width = 4pt, ->] (6.0,10) -- (0,10);
-\draw node at (3.0,10.2) {\small Reveal \textbf{IMSI}};
+\draw node at (3.0,10.4) {Reveal \textbf{IMSI}};
 
 
 \draw [black, line width = 4pt, <-] (6,9) -- (0,9);
-\draw node at (3,9.2) {\small MCC||MNC||$E(\text{MSIN},\mathit{HN}_e)$};
+\draw node at (3,9.4) {$\text{MCC},\text{MNC},E_{\mathit{pk}}(\text{MSIN})$};
 
 \draw [black, line width = 4pt, ->] (6,9) -- (12,9);
-\draw node at (9,9.2) {\small $E(\text{MSIN},\mathit{HN}_e)$};
+\draw node at (9,9.4) { $E_{\mathit{pk}}(\text{MSIN})$};
 
 \draw [black, line width = 4pt, <-] (6,8) -- (12,8);
-\draw node at (9,8.2) {\small MSIN};
+\draw node at (9,8.4) {MSIN};
 
 
 \end{tikzpicture}

@@ -1,8 +1,33 @@
-\begin{tikzpicture}[scale=3]
+\documentclass[convert={density=600,outext=.png}]{standalone}
+\usepackage{color,multicol}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%\usepackage[round]{natbib}
+\usepackage[font=small]{caption}
+\usepackage{lmodern}
+\usepackage[overload]{textcase}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{lipsum} % Lorem ipsum generator
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
+
+\begin{document}
+
+
+
+
+\begin{tikzpicture}[scale=1]
 
 
 \node[inner sep=0pt] (wsn) at (10,12)
-    {\includegraphics[height = 3cm]{home_network.jpg}};
+    {\includegraphics[height = 1cm]{home_network.jpg}};
 \draw node at (10,11.2) {\textbf{HN(5G)}};
 
 
@@ -21,7 +46,7 @@
 \draw [black, line width = 4pt] (10,11) -- (10,5);
 
 \node[inner sep=0pt] (wsn) at (6,12)
-    {\includegraphics[height = 3cm]{tower.jpg}};
+    {\includegraphics[height = 1cm]{tower.jpg}};
 \filldraw[draw=white,fill=white] (4.5,11.25) rectangle (6.5,11.6);
 
 \draw node at (6,11.2) {\textbf{SN(5G)}};
@@ -31,7 +56,7 @@
 
 
 \node[inner sep=0pt] (wsn) at (2,11.9)
-    {\includegraphics[height = 3cm]{smartphone.png}};
+    {\includegraphics[height = 1cm]{smartphone.png}};
 \draw node at (2,11.2) {\textbf{UE(5G)}};
 
 
@@ -63,15 +88,21 @@
 \draw node at (8,7.35) { ($P^{''}$ is embedded),};
 \draw node at (8,6.85) { MSIN};
 
-\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=3mm, anchor=center,line width = 2pt] at (4,5.25) {};
+\node[draw, double arrow, minimum height=38.5mm, minimum width=15mm, single arrow head extend=.1mm, anchor=center,line width = 1pt] at (4,5.25) {};
 \draw node at (4,5.25) {5G AKA};
 
 \draw node at (0.5,5) { $P^{'},P^{''}$};
 
-\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=3mm, anchor=center, line width = 2pt] at (8,5.25) {};
-\draw node at (8,5.25) {\small Success Verification of 5G AKA};
+\node[draw, double arrow, minimum height=38.5mm, minimum width=15mm, single arrow head extend=.1mm, anchor=center, line width = 1pt] at (8,5.25) {};
+\draw node at (8,5.25) {Success Verification};
 
 \draw node at (11.5,5) {$P^{'},P^{''}$};
 
 \end{tikzpicture}
 
+
+
+
+
+
+\end{document}

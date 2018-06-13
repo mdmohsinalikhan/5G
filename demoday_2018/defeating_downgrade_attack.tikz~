@@ -5,15 +5,20 @@
     {\includegraphics[height = 3cm]{home_network.jpg}};
 \draw node at (10,11.2) {\textbf{HN(5G)}};
 
-\draw node at (8,12) {\small Public Key: $\mathit{HN}_e$};
-\draw node at (8,11.5) {\small Private Key: $\mathit{HN}_d$};
 
 
-\draw node at (11.5,11) {\small \textbf{Pseudonyms}};
-\draw node at (11.5,10.5) {\small $P,P^{'}$};
+\draw node at (9.96,13.5) {HN's public key: $\mathit{pk}$};
+\draw node at (10,13) {HN's private key: $\mathit{sk}$};
 
 
-\draw [black, line width = 4pt] (10,11) -- (10,6.5);
+\draw node at (11.35,10.8) { Pseudonyms};
+\draw node at (11.5,10) { $P,P^{'}$};
+
+\draw node at (9.96,13.5) {HN's public key: $\mathit{pk}$};
+\draw node at (10,13) {HN's private key: $\mathit{sk}$};
+
+
+\draw [black, line width = 4pt] (10,11) -- (10,5);
 
 \node[inner sep=0pt] (wsn) at (6,12)
     {\includegraphics[height = 3cm]{tower.jpg}};
@@ -21,7 +26,7 @@
 
 \draw node at (6,11.2) {\textbf{SN(5G)}};
 
-\draw [black, line width = 4pt] (6,11) -- (6,6.5);
+\draw [black, line width = 4pt] (6,11) -- (6,5);
 
 
 
@@ -29,41 +34,44 @@
     {\includegraphics[height = 3cm]{smartphone.png}};
 \draw node at (2,11.2) {\textbf{UE(5G)}};
 
-\draw node at (3.5,12) {\small Public Key: $\mathit{HN}_e$};
 
-\draw node at (0.5,11) {\small \textbf{Pseudonyms}};
+\draw node at (2.0,13) {HN's public key: $\mathit{pk}$};
 
-\draw node at (0.5,10.5) {\small $P,P^{'}$};
+\draw node at (0.65,10.8) {Pseudonyms};
+\draw node at (0.5,10) {$P,P^{'}$};
 
 
-\draw [black, line width = 4pt] (2,11) -- (2,6.5);
+\draw [black, line width = 4pt] (2,11) -- (2,5);
 
 
 \draw [black, line width = 4pt, ->] (6.0,10) -- (2,10);
-\draw node at (4.0,10.2) {\small Reveal \textbf{IMSI}};
+\draw node at (4.0,10.4) {Reveal \textbf{IMSI}};
 
 
-\draw [black, line width = 4pt, <-] (6,9) -- (2,9);
-\draw node at (4,9.2) {\small MCC||MNC||$E(\text{MSIN}||P||P^{'},\mathit{HN}_e)$};
+\draw [black, line width = 4pt, <-] (6,8.5) -- (2,8.5);
+\draw node at (4,9.35) { $\text{MCC},\text{MNC},$};
+\draw node at (4,8.85) { $E_{\mathit{pk}}(\text{MSIN}||P||P^{'})$};
 
-\draw [black, line width = 4pt, ->] (6,9) -- (10,9);
-\draw node at (8,9.2) {\small $E(\text{MSIN}||P||P^{'},\mathit{HN}_e)$};
+\draw [black, line width = 4pt, ->] (6,8.5) -- (10,8.5);
+\draw node at (8,8.85) {$E_{\mathit{pk}}(\text{MSIN}||P||P^{'})$};
 
 
-\draw node at (11.5,9) {\small $P,P^{'},P^{''}$};
+\draw node at (11.5,8.85) { $P,P^{'},P^{''}$};
 
-\draw [black, line width = 4pt, <-] (6,8) -- (10,8);
-\draw node at (8,8.2) {\small 5G AV ($P^{''} is embedded$),MSIN};
+\draw [black, line width = 4pt, <-] (6,6.5) -- (10,6.5);
+\draw node at (8,7.85) { 5G AV};
+\draw node at (8,7.35) { ($P^{''}$ is embedded),};
+\draw node at (8,6.85) { MSIN};
 
-\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=2mm, anchor=center,line width = 2pt] at (4,7) {};
-\draw node at (4,7) {\small 5G AKA};
+\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=3mm, anchor=center,line width = 2pt] at (4,5.25) {};
+\draw node at (4,5.25) {5G AKA};
 
-\draw node at (0.5,6.5) {\small $P^{'},P^{''}$};
+\draw node at (0.5,5) { $P^{'},P^{''}$};
 
-\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=2mm, anchor=center, line width = 2pt] at (8,7) {};
-\draw node at (8,7) {\small Success Verification of 5G AKA};
+\node[draw, double arrow, minimum height=118mm, minimum width=30mm, single arrow head extend=3mm, anchor=center, line width = 2pt] at (8,5.25) {};
+\draw node at (8,5.25) {\small Success Verification of 5G AKA};
 
-\draw node at (11.5,6.5) {\small $P^{'},P^{''}$};
+\draw node at (11.5,5) {$P^{'},P^{''}$};
 
 \end{tikzpicture}
 

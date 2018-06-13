@@ -1,0 +1,108 @@
+\documentclass[preview,border=4mm,convert={density=600,outext=.png}]{standalone}
+\usepackage{color,multicol}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%\usepackage[round]{natbib}
+\usepackage[font=small]{caption}
+\usepackage{lmodern}
+\usepackage[overload]{textcase}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{lipsum} % Lorem ipsum generator
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows}
+
+\begin{document}
+
+
+
+
+\begin{tikzpicture}[scale=1]
+
+
+\node[inner sep=0pt] (wsn) at (10,12)
+    {\includegraphics[height = 1cm]{home_network.jpg}};
+\draw node at (10,11.2) {\textbf{HN(5G)}};
+
+
+
+\draw node at (9.96,13.5) {HN's public key: $\mathit{pk}$};
+\draw node at (10,13) {HN's private key: $\mathit{sk}$};
+
+
+\draw node at (11.1,10.8) { Pseudonyms};
+\draw node at (11.1,10) { $P,P^{'}$};
+
+\draw node at (9.96,13.5) {HN's public key: $\mathit{pk}$};
+\draw node at (10,13) {HN's private key: $\mathit{sk}$};
+
+
+\draw [black, line width = 2pt] (10,11) -- (10,5);
+
+\node[inner sep=0pt] (wsn) at (6,12)
+    {\includegraphics[height = 1cm]{tower.jpg}};
+\filldraw[draw=white,fill=white] (4.5,11.25) rectangle (6.5,11.6);
+
+\draw node at (6,11.2) {\textbf{SN(5G)}};
+
+\draw [black, line width = 2pt] (6,11) -- (6,5);
+
+
+
+\node[inner sep=0pt] (wsn) at (2,11.9)
+    {\includegraphics[height = 1cm]{smartphone.png}};
+\draw node at (2,11.2) {\textbf{UE(5G)}};
+
+
+\draw node at (2.0,13) {HN's public key: $\mathit{pk}$};
+
+\draw node at (0.9,10.8) {Pseudonyms};
+\draw node at (0.9,10) {$P,P^{'}$};
+
+
+\draw [black, line width = 2pt] (2,11) -- (2,5);
+
+
+\draw [black, line width = 2pt, ->] (6.0,10) -- (2,10);
+\draw node at (4.0,10.4) {Reveal \textbf{IMSI}};
+
+
+\draw [black, line width = 2pt, <-] (6,8.5) -- (2,8.5);
+\draw node at (4,9.35) { $\text{MCC},\text{MNC},$};
+\draw node at (4,8.85) { $E_{\mathit{pk}}(\text{MSIN}||P||P^{'})$};
+
+\draw [black, line width = 2pt, ->] (6,8.5) -- (10,8.5);
+\draw node at (8,8.85) {$E_{\mathit{pk}}(\text{MSIN}||P||P^{'})$};
+
+
+\draw node at (11.1,8.85) { $P,P^{'},P^{''}$};
+
+\draw [black, line width = 2pt, <-] (6,6.5) -- (10,6.5);
+\draw node at (8,7.85) { 5G AV};
+\draw node at (8,7.35) { ($P^{''}$ is embedded),};
+\draw node at (8,6.85) { MSIN};
+
+\node[draw, double arrow, minimum height=38.5mm, minimum width=15mm, single arrow head extend=.1mm, anchor=center,line width = 1pt] at (4,5.25) {};
+\draw node at (4,5.25) {5G AKA};
+
+\draw node at (0.9,5) { $P^{'},P^{''}$};
+
+\node[draw, double arrow, minimum height=38.5mm, minimum width=15mm, single arrow head extend=.1mm, anchor=center, line width = 1pt] at (8,5.25) {};
+\draw node at (8,5.25) {Success Verification};
+
+\draw node at (11.1,5) {$P^{'},P^{''}$};
+
+\end{tikzpicture}
+
+
+
+
+
+
+\end{document}
